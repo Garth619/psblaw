@@ -1,0 +1,214 @@
+html.webp {
+  #section_five {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.webp) repeat;
+    }
+  }
+}
+
+html.no-webp {
+  #section_five {
+    &:after {
+      background: url(#{$themepath}/images/bkg-pattern.jpg) repeat;
+    }
+  }
+}
+
+#section_five {
+  position: relative;
+  padding: 63px 33px 43px;
+  @include mq(small_tablet) {
+    padding: 63px 60px 43px;
+  }
+  @include mq(small_laptop) {
+    padding: 82px 88px 53px;
+  }
+  @include mq(large_laptop) {
+    padding: 112px 88px 100px;
+  }
+  @include mq(small_monitor) {
+    padding: 168px 88px 100px;
+  }
+  &:after {
+    background-size: (500px, 500px);
+    opacity: 1;
+    @include abs(0, null, null, 0);
+    @include box(100%, 100%);
+    @include contentdisplay();
+    @include mq(small_laptop) {
+      opacity: 0.54;
+    }
+  }
+}
+
+#sec_five_inner {
+  position: relative;
+  z-index: 1;
+  @include mq(small_laptop) {
+    max-width: 930px;
+    @include margin_lr;
+    @include flex();
+  }
+  @include mq(large_laptop) {
+    max-width: 100%;
+  }
+  @include mq(small_monitor) {
+    max-width: 1380px;
+    @include margin_lr;
+  }
+}
+
+#sec_five_left {
+  @include mq(mobile) {
+    text-align: center;
+    max-width: 375px;
+    @include margin_lr;
+  }
+  @include mq(small_tablet) {
+    max-width: 100%;
+    text-align: left;
+    margin-bottom: 45px;
+    //@include flex(space-between);
+  }
+  @include mq(small_laptop) {
+    display: block;
+    flex-shrink: 0;
+    flex-basis: 336px;
+  }
+  @include mq(large_laptop) {
+    flex-basis: 490px;
+  }
+  @include mq(small_monitor) {
+    flex-basis: 576px;
+  }
+  span.double_line {
+    max-width: 76px;
+    @include mq(mobile) {
+      @include margin_lr;
+    }
+    @include mq(small_tablet) {
+      margin: 0;
+    }
+    &:before,
+    &:after {
+      background: $sec_five_double_line_bg_color;
+    }
+  }
+}
+
+#sec_five_image_wrapper {
+  overflow: hidden;
+  margin-bottom: 30px;
+  @include mq(small_tablet) {
+    flex-shrink: 0;
+    flex-basis: 316px;
+  }
+  @include mq(large_laptop) {
+    margin-top: 110px;
+  }
+  img {
+    @include image();
+    @include mq(mobile) {
+      @include margin_lr;
+    }
+  }
+}
+
+#sec_five_left_content {
+  text-align: center;
+  @include mq(small_tablet) {
+    flex-grow: 1;
+    margin: 26px 0 0 28px;
+  }
+  @include mq(small_laptop) {
+    margin: 26px 0 0 0px;
+  }
+  @include mq(small_monitor) {
+    margin: 41px 0 0 0px;
+  }
+}
+
+#sec_five_intro {
+  display: none;
+  margin: 25px 0 18px;
+  padding-right: 10px;
+  @include type(
+    (
+      size: $sec_five_intro_size,
+      height: $sec_five_intro_height,
+      family: $secondaryfont,
+      color: $sec_five_intro_color,
+      weight: $sec_five_intro_weight,
+    )
+  );
+  @include mq(small_tablet) {
+    max-width: 435px;
+  }
+  @include mq(small_laptop) {
+    max-width: 306px;
+    margin: 17px 0 19px;
+  }
+  @include mq(large_laptop) {
+    max-width: 100%;
+    margin: 22px 0 38px;
+    @include quick_type(
+      $sec_five_intro_size_large_laptop,
+      $sec_five_intro_height_large_laptop,
+      null
+    );
+  }
+  @include mq(small_monitor) {
+    margin: 27px 0 30px;
+    max-width: 545px;
+    @include quick_type(
+      $sec_five_intro_size_small_monitor,
+      $sec_five_intro_height_small_monitor,
+      null
+    );
+  }
+}
+
+#sec_five_right {
+  margin: 42px 0 0;
+  @include mq(small_tablet) {
+    margin: 13px 0 0;
+  }
+  @include mq(small_laptop) {
+    padding-left: 53px;
+    margin-top: 0;
+  }
+  @include mq(large_laptop) {
+    padding-left: 120px;
+    padding-right: 0;
+  }
+  &.content {
+    h2 {
+      @include mq(small_monitor) {
+        padding-bottom: 31px;
+      }
+    }
+    span.double_line.blockquote {
+      margin-top: 48px;
+      &:before,
+      &:after {
+        max-width: 80px;
+        background: $color_bright_one;
+      }
+    }
+    blockquote {
+      max-width: 495px;
+      @include mq(large_laptop) {
+        max-width: 585px;
+        @include quick_type(
+          $sec_five_blockquote_size_small_monitor,
+          $sec_five_blockquote_height_small_monitor,
+          null
+        );
+      }
+      @include mq(small_laptop) {
+        max-width: 655px;
+        margin-bottom: 41px;
+      }
+    }
+  }
+}

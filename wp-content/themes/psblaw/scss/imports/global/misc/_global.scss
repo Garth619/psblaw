@@ -1,0 +1,85 @@
+.preload-section {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+
+.load-after {
+  opacity: 1;
+}
+
+.preload-slider {
+  display: none;
+}
+
+.slick-slider {
+  display: block;
+}
+
+.alignleft,
+img.alignleft {
+  display: block;
+  float: left;
+  margin-right: 24px;
+  margin-top: 4px;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.alignright,
+img.alignright {
+  display: block;
+  float: right;
+  margin-left: 24px;
+  margin-top: 4px;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+.aligncenter,
+img.aligncenter {
+  clear: both;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+img.alignleft,
+img.alignright,
+img.aligncenter {
+  margin-bottom: 12px;
+  max-width: 100%;
+  height: auto;
+  @include mq(xlarge_mobile) {
+    margin: 20px auto 30px;
+    float: none;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+.gform_wrapper ul li ::-webkit-input-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li :-moz-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li :-ms-input-placeholder {
+  color: $gform_placeholder;
+}
+.gform_wrapper ul li ::-moz-placeholder {
+  opacity: 1;
+}
