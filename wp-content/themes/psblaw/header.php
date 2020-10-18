@@ -88,47 +88,11 @@
 
 <body <?php body_class(); ?>>
 
-<header>
-
-	<div id='header-inner'>
-
-	 <div id='header-left'>
-	 
-		 <a href="<?php bloginfo('url');?>">
-		 
-				<?php echo file_get_contents( get_template_directory() . '/images/logo.svg') ?>
-		 
-		 </a>
-	 
-	 </div><!-- header_left -->
-
-	 <div id='header-right'>
-	 
-		 <div id='cta-wrapper'>
-		 
-			 <span>Call for a free consultation</span>
-
-			 <a href="tel:+19149930393">(914) 993-0393</a>
-		 
-		 </div><!-- cta-wrapper -->
-
-		 <div id='menu-wrapper'>
-		 
-			 <span></span>
-			 <span></span>
-			 <span></span>
-		 
-		 </div><!-- menu-wrapper -->
+<span>Garrett</span>
 
 		 <nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
 	 
-	 </div><!-- header-right -->
-
-	</div><!-- header-inner -->
-
-</header>
-
-
+	 
 		
 		
 		
