@@ -108,6 +108,19 @@
 
 	</div><!-- header-left -->
 
+	<div id='header-right'>
+	
+		<div id='free-consult-wrapper'>
+		
+			<span>Free Consultation</span>
+			<span>Available 24/7</span>
+		
+		</div><!-- free-consult-wrapper -->
+
+		<a id="header-phone" href="tel:+13109286200">(310) 928-6200<a><!-- header-phone -->
+	
+	</div><!-- header-right -->
+
 	<div id='menu-wrapper'>
 	
 		<span class='menu-bar'></span><!-- menu-bar -->
