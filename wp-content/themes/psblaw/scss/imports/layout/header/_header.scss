@@ -2,6 +2,10 @@ header {
   position: relative;
   width: 100%;
   @include fixed(0, null, null, 0, 5);
+  @include mq(small_tablet) {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+    @include flex(space-between);
+  }
 }
 
 #header-left {
@@ -9,13 +13,23 @@ header {
   border-bottom: 1px solid rgba(112, 112, 112, 0.25);
   @include box(100%, 93px);
   @include flex(space-between, flex-end);
+  @include mq(small_tablet) {
+    flex-shrink: 0;
+    width: auto;
+    padding: 15px 20px;
+    border: none;
+  }
 }
 
 .translate-wrapper {
   margin-left: 60px;
   flex-grow: 1;
-  max-width: 180px;
+  max-width: 150px;
   @include flex(space-between);
+  @include mq(small_tablet) {
+    width: 115px;
+    @include abs(15px, 73px, null, null);
+  }
   a {
     @include type(
       (
@@ -32,11 +46,26 @@ header {
 
 #header-right {
   padding: 11px 20px 10px;
-  @include flex(center, center);
+  @include flex(space-between, center);
+  @include mq(small_tablet) {
+    padding: 21px 70px 10px 20px;
+    flex-grow: 1;
+    justify-content: flex-end;
+  }
 }
 
 #free-consult-wrapper {
   padding-top: 1px;
+  @media screen and (min-width: 370px) {
+    margin-right: 20px;
+  }
+  @media screen and (min-width: 428px) {
+    @include flex(center, center);
+  }
+  @include mq(small_tablet) {
+    margin-right: 13px;
+    padding-top: 5px;
+  }
   span {
     display: inline-block;
     @include type(
@@ -49,8 +78,25 @@ header {
         transform: uppercase,
       )
     );
+    @media screen and (min-width: 428px) {
+      @include flex(center, center);
+    }
+    @include mq(small_tablet) {
+      font-size: 16px;
+    }
     &:first-of-type {
-      //margin-right: 9px;
+      @media screen and (min-width: 370px) {
+        margin-right: 9px;
+      }
+      &:after {
+        @media screen and (min-width: 428px) {
+          border-radius: 50%;
+          background: $color_bright_one;
+          margin: 0 2px 0 8px;
+          @include contentdisplay(inline-block);
+          @include box(6px);
+        }
+      }
     }
   }
 }
@@ -73,6 +119,9 @@ a#header-phone {
     margin: 0 19px;
     @include contentdisplay(inline-block);
     @include box(6px);
+    @media screen and (min-width: 370px) {
+      display: none;
+    }
   }
 }
 

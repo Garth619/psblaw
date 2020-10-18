@@ -117,7 +117,7 @@
 		
 		</div><!-- free-consult-wrapper -->
 
-		<a id="header-phone" href="tel:+13109286200">(310) 928-6200<a><!-- header-phone -->
+		<a id="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
 	
 	</div><!-- header-right -->
 
