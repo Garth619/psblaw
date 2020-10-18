@@ -88,7 +88,37 @@
 
 <body <?php body_class(); ?>>
 
+<header>
 
+	<div id='header-left'>
+
+		<a id='logo' href="<?php bloginfo('url');?>">
+	
+			<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
+	
+		</a><!-- logo -->
+
+		<div class='translate-wrapper'>
+		
+			<a href=''>Es</a>
+			<a href=''>Cn</a>
+			<a href=''>Kr</a>
+		
+		</div><!-- translate-wrapper -->
+
+	</div><!-- header-left -->
+
+	<div id='menu-wrapper'>
+	
+		<span class='menu-bar'></span><!-- menu-bar -->
+		<span class='menu-bar'></span><!-- menu-bar -->
+		<span class='menu-bar'></span><!-- menu-bar -->
+
+		<span id='menu-title'>Menu</span><!-- menu-title -->
+	
+	</div><!-- menu-wrapper -->
+
+</header>
 
 		 <nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
 	 
