@@ -326,11 +326,11 @@ jQuery(document).ready(function ($) {
 
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-  $("#menu_wrapper").on("click", function (e) {
-    $("#header-right").toggleClass("open");
+  // $("#menu_wrapper").on("click", function (e) {
+  //   $("#header-right").toggleClass("open");
 
-    $("nav").slideToggle(400);
-  });
+  //   $("nav").slideToggle(400);
+  // });
 
   function navDesktop() {
     $("header nav").addClass("nav-desktop");
@@ -359,7 +359,7 @@ jQuery(document).ready(function ($) {
   }
 
   // nav
-
+// can i make this a function? so there isnt redundant code below with the wondo resizes?
   if ($(window).width() >= 1066) {
     navDesktop();
   }

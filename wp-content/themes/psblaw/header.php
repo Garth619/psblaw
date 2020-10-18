@@ -131,9 +131,17 @@
 	
 	</div><!-- menu-wrapper -->
 
+	<nav>
+		
+		<div id='close'></div><!-- close -->
+		
+		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
+	
+	</nav>
+
 </header>
 
-		 <nav><?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?></nav>
+		 
 	 
 	 
 		

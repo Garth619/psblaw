@@ -1,5 +1,93 @@
 // navigation - refer to the resize functions in js->custom-min.js
 
 nav {
-  display:none;
+  //display:none;
+  background: $color_light_one;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  @include box(100%, 100vh);
+  @include fixed(0, null, null, 0);
+  #close {
+    @include box(28px);
+    @include abs(22px, 30px, null, null);
+    &:before,
+    &:after {
+      background: $color_dark_three;
+      @include abs(12px, null, null, 0);
+      @include box(100%, 2px);
+      @include contentdisplay();
+    }
+    &:before {
+      transform: rotate(45deg);
+    }
+    &:after {
+      transform: rotate(-45deg);
+    }
+  }
+  .menu-header {
+    margin-top: 75px;
+  }
+}
+
+nav {
+  ul {
+    list-style: none;
+    li {
+      a {
+        text-decoration: none;
+        padding: 0 60px;
+      }
+    }
+  }
+}
+
+nav {
+  ul.menu {
+    > li {
+      margin-bottom: 50px;
+      @include type(
+        (
+          size: 16px,
+          height: 19px,
+          family: $primaryfont,
+          weight: 800,
+        )
+      );
+      > a {
+        color: $color_dark_three;
+      }
+    }
+    > li.menu-item-has-children {
+      // &:active {
+      //   display: none;
+      // }
+      // after opened
+      background: $color_light_two;
+      padding: 28px 0;
+      margin: -35px 0 20px 0;
+    }
+  }
+}
+
+nav {
+  ul.sub-menu {
+    padding: 14px 0 0;
+    li {
+      margin-bottom: 15px;
+      @include type(
+        (
+          size: 16px,
+          height: 19px,
+          family: $primaryfont,
+          weight: 600,
+        )
+      );
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+      a {
+        color: #62676d;
+      }
+    }
+  }
 }
