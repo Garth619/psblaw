@@ -1,7 +1,5 @@
 #section-one {
   width: 100%;
-  position: relative;
-  padding-bottom: 48px;
 }
 
 #sec-one-content {
@@ -46,6 +44,12 @@
       )
     );
   }
+}
+
+#sec-one-content-inner {
+  position: relative;
+  z-index: 1;
+  padding-bottom: 48px;
 }
 
 img#hero {
