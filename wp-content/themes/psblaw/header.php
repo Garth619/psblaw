@@ -96,7 +96,17 @@
 
 			<a id='logo' href="<?php bloginfo('url');?>">
 		
-				<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
+				<div id="logo_mobile">
+					
+					<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
+
+				</div><!-- logo_mobile -->
+
+				<div id="logo_desktop">
+					
+					<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-main.svg' ); ?>
+
+				</div><!-- logo_desktop -->
 		
 			</a><!-- logo -->
 

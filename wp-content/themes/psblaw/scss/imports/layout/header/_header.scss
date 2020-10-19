@@ -11,6 +11,7 @@ header {
     left: 32px;
     border: none;
     width: calc(100% - 400px);
+    background: pink;
   }
 }
 
@@ -36,6 +37,20 @@ header {
   @include mq(small_laptop) {
     padding: 26px 70px 19px 7px;
     height: auto;
+  }
+}
+
+#logo_mobile {
+  display: block;
+  @include mq(small_laptop) {
+    display: none;
+  }
+}
+
+#logo_desktop {
+  display: none;
+  @include mq(small_laptop) {
+    display: block;
   }
 }
 
