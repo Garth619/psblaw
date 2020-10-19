@@ -16,6 +16,13 @@ nav {
     @include fixed(0, 0, null, auto);
     @include box(360px, 100vh);
   }
+  @include mq(small_laptop) {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0px);
+    position: static;
+    @include box(100%, auto);
+  }
   &.nav-open {
     opacity: 1;
     visibility: visible;

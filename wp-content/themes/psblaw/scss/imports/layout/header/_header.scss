@@ -6,6 +6,17 @@ header {
     border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     @include flex(space-between);
   }
+  @include mq(small_laptop) {
+    display: block;
+    left: 32px;
+    width: calc(100% - 400px);
+  }
+}
+
+#header-desktop-wrapper {
+  @include mq(small_laptop) {
+    @include flex(space-between);
+  }
 }
 
 #header-left {
@@ -19,6 +30,9 @@ header {
     padding: 15px 20px;
     border: none;
   }
+  @include mq(small_laptop) {
+    padding: 15px 70px 15px 7px;
+  }
 }
 
 .translate-wrapper {
@@ -29,6 +43,9 @@ header {
   @include mq(small_tablet) {
     width: 115px;
     @include abs(15px, 73px, null, null);
+  }
+  @include mq(small_laptop) {
+    right: 9px;
   }
   a {
     @include type(
@@ -51,6 +68,9 @@ header {
     padding: 21px 70px 10px 20px;
     flex-grow: 1;
     justify-content: flex-end;
+  }
+  @include mq(small_laptop) {
+    padding: 21px 5px 10px 20px;
   }
 }
 
@@ -130,6 +150,9 @@ a#header-phone {
   @include flex(center, center, column);
   @include box(53px, 93px);
   @include abs(0, 0, null, null);
+  @include mq(small_laptop) {
+    display: none;
+  }
   span.menu-bar {
     display: block;
     background: $color_dark_three;

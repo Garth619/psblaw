@@ -90,36 +90,40 @@
 
 <header>
 
-	<div id='header-left'>
+	<div id='header-desktop-wrapper'>
 
-		<a id='logo' href="<?php bloginfo('url');?>">
-	
-			<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
-	
-		</a><!-- logo -->
+		<div id='header-left'>
 
-		<div class='translate-wrapper'>
+			<a id='logo' href="<?php bloginfo('url');?>">
 		
-			<a href=''>Es</a>
-			<a href=''>Cn</a>
-			<a href=''>Kr</a>
+				<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
 		
-		</div><!-- translate-wrapper -->
+			</a><!-- logo -->
 
-	</div><!-- header-left -->
+			<div class='translate-wrapper'>
+			
+				<a href=''>Es</a>
+				<a href=''>Cn</a>
+				<a href=''>Kr</a>
+			
+			</div><!-- translate-wrapper -->
 
-	<div id='header-right'>
-	
-		<div id='free-consult-wrapper'>
+		</div><!-- header-left -->
+
+		<div id='header-right'>
 		
-			<span>Free Consultation</span>
-			<span>Available 24/7</span>
-		
-		</div><!-- free-consult-wrapper -->
+			<div id='free-consult-wrapper'>
+			
+				<span>Free Consultation</span>
+				<span>Available 24/7</span>
+			
+			</div><!-- free-consult-wrapper -->
 
-		<a id="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
-	
-	</div><!-- header-right -->
+			<a id="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
+		
+		</div><!-- header-right -->
+
+	</div><!-- header-desktop-wrapper -->
 
 	<div id='menu-wrapper'>
 	
