@@ -326,11 +326,13 @@ jQuery(document).ready(function ($) {
 
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-  // $("#menu_wrapper").on("click", function (e) {
-  //   $("#header-right").toggleClass("open");
+  $("#menu-wrapper").on("click", function (e) {
+    $("nav").addClass('nav-open');
+  });
 
-  //   $("nav").slideToggle(400);
-  // });
+  $("nav #close").on("click", function (e) {
+    $("nav").removeClass('nav-open');
+  });
 
   function navDesktop() {
     $("header nav").addClass("nav-desktop");
