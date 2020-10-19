@@ -4,7 +4,7 @@ nav {
   opacity: 0;
   visibility: hidden;
   transform: translateY(-35px);
-  background: $color_light_one;
+  background: $color-light-one;
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
@@ -29,6 +29,9 @@ nav {
   @include mq(large_laptop) {
     padding: 0px 33px 0 6px;
   }
+  @include mq(small_monitor) {
+    max-width: 1200px;
+  }
   &.nav-open {
     opacity: 1;
     visibility: visible;
@@ -42,7 +45,7 @@ nav {
     }
     &:before,
     &:after {
-      background: $color_dark_three;
+      background: $color-dark-three;
       @include abs(12px, null, null, 0);
       @include box(100%, 2px);
       @include contentdisplay();
@@ -86,9 +89,12 @@ nav {
     @include mq(small_laptop) {
       @include flex(space-between);
     }
+    @include mq(small_monitor) {
+      @include flex(flex-start);
+    }
     > li {
-      margin-bottom: 0px;
-      padding-bottom: 25px;
+      margin-bottom: 50px;
+      margin-right: 50px;
       @include type(
         (
           size: 16px,
@@ -99,13 +105,18 @@ nav {
       );
       @include mq(small_laptop) {
         font-size: 12px;
+        margin-bottom: 0;
+        padding-bottom: 25px;
       }
       @include mq(large_laptop) {
         font-size: 13px;
       }
+      @include mq(small_monitor) {
+        font-size: 14px;
+      }
       &:hover {
         > a {
-          color: $color_bright_one;
+          color: $color-bright-one;
           &:before {
             @include mq(small_laptop) {
               opacity: 1;
@@ -114,16 +125,16 @@ nav {
         }
       }
       > a {
-        color: $color_dark_three;
+        color: $color-dark-three;
         transition: all 200ms ease-in-out;
         @include mq(small_laptop) {
-          color: $color_light_one;
+          color: $color-light-one;
           position: relative;
         }
         &:before {
           @include mq(small_laptop) {
             opacity: 0;
-            background: $color_bright_one;
+            background: $color-bright-one;
             transition: all 200ms ease-in-out;
             @include abs(31px, null, null, 0);
             @include box(100%, 2px);
@@ -132,34 +143,34 @@ nav {
         }
         &:hover {
           @include mq(small_laptop) {
-            color: $color_bright_one;
+            color: $color-bright-one;
           }
         }
       }
     }
     > li.current-menu-item {
       > a {
-        color: $color_bright_two;
+        color: $color-bright-two;
         @include mq(small_laptop) {
-          color: $color_bright_one;
+          color: $color-bright-one;
           position: relative;
         }
       }
     }
     > li.current-menu-ancestor {
       > a {
-        color: $color_bright_two;
+        color: $color-bright-two;
       }
     }
     > li.menu-item-has-children {
       background: transparent;
-      margin: 0px 0 50px 0;
+      margin-bottom: 50px;
       transition: all 300ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       @include mq(small_laptop) {
-        margin: 0;
+        margin-bottom: 0;
       }
       &.active {
-        background: $color_light_two;
+        background: $color-light-two;
         padding: 28px 0;
         margin: -35px 0 20px 0;
       }
@@ -176,7 +187,7 @@ nav {
           }
         }
         &.active {
-          color: $color_bright_two;
+          color: $color-bright-two;
           &:after {
             content: "-";
           }
@@ -218,13 +229,13 @@ nav {
       a {
         color: #62676d;
         &:hover {
-          color: $color_bright_two;
+          color: $color-bright-two;
         }
       }
     }
     li.current-menu-item {
       > a {
-        color: $color_bright_two;
+        color: $color-bright-two;
       }
     }
   }

@@ -1,5 +1,55 @@
 #section-one {
-  height: 3000px;
   width: 100%;
-  background: grey;
+  position: relative;
+  padding-bottom: 48px;
+}
+
+#sec-one-content {
+  padding: 160px 0 0 0;
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  span {
+    display: block;
+    color: $color-light-one;
+  }
+  span#sec-one-subtitle {
+    @include type(
+      (
+        size: 35px,
+        height: 40px,
+        weight: 300,
+        family: $secondaryfont,
+      )
+    );
+  }
+  span#sec-one-title {
+    @include type(
+      (
+        size: 70px,
+        height: 72px,
+        family: $secondaryfont,
+        weight: 500,
+        transform: uppercase,
+      )
+    );
+  }
+  span#sec-one-descrip {
+    max-width: 265px;
+    margin: 0 auto 22px;
+    @include type(
+      (
+        size: 15px,
+        height: 20px,
+        family: $primaryfont,
+        weight: 600,
+      )
+    );
+  }
+}
+
+img#hero {
+  object-fit: cover;
+  @include box(100%);
+  @include abs(0, null, null, 0);
 }

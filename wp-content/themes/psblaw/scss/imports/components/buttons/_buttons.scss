@@ -1,0 +1,42 @@
+.button {
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  z-index: 1;
+  @include type(
+    (
+      size: 18px,
+      height: 20px,
+      spacing: 0.45px,
+      family: $secondaryfont,
+      color: $color_light_one,
+      weight: 500,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
+  }
+  &:before,
+  &:after {
+    border-radius: 50px;
+    @include box(100%);
+    @include abs(0, null, null, 0, -1);
+    @include contentdisplay();
+  }
+  &:before {
+    background: linear-gradient(0deg, #f2962f 0%, #ff9119 100%) 0% 0% no-repeat
+      padding-box;
+  }
+  &:after {
+    opacity: 1;
+    transition: all 200ms ease-in-out;
+    background: linear-gradient(0deg, #bf7b30 0%, #f49c3b 100%) 0% 0% no-repeat
+      padding-box;
+  }
+  &.free-consult-button {
+    padding: 17px 35px;
+  }
+}

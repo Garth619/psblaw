@@ -1,7 +1,13 @@
 header {
   position: relative;
   width: 100%;
-  @include fixed(0, null, null, 0, 5);
+  background: linear-gradient(
+    to bottom,
+    rgba(14, 19, 38, 0.9) 5%,
+    rgba(255, 255, 255, 0) 60%
+  );
+  //background: pink;
+  @include abs(0, null, null, 0, 5);
   @include mq(small_tablet) {
     border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     @include flex(space-between);
@@ -11,7 +17,6 @@ header {
     left: 32px;
     border: none;
     width: calc(100% - 400px);
-    background: pink;
   }
   @include mq(large_laptop) {
     width: calc(100% - 440px);
@@ -76,19 +81,30 @@ header {
     top: 52px;
     right: 24px;
   }
+  @include mq(small_monitor) {
+    width: 137px;
+    top: 101px;
+  }
   a {
+    transition: all 200ms ease-in-out;
     @include type(
       (
         size: 12px,
         height: 14px,
         family: $primaryfont,
-        color: $color_light_one,
+        color: $color-light-one,
         weight: 800,
         transform: uppercase,
       )
     );
     @include mq(small_laptop) {
       font-size: 13px;
+    }
+    @include mq(small_monitor) {
+      font-size: 15px;
+    }
+    &:hover {
+      color: $color-bright-one;
     }
   }
 }
@@ -107,6 +123,9 @@ header {
   @include mq(large_laptop) {
     padding: 20px 21px 10px 20px;
     align-items: flex-start;
+  }
+  @include mq(small_monitor) {
+    padding: 34px 21px 10px 20px;
   }
 }
 
@@ -133,7 +152,7 @@ header {
         size: 15px,
         height: 18px,
         family: $secondaryfont,
-        color: $color_light_one,
+        color: $color-light-one,
         weight: 500,
         transform: uppercase,
       )
@@ -147,6 +166,9 @@ header {
     @include mq(small_laptop) {
       font-size: 18px;
     }
+    @include mq(small_monitor) {
+      font-size: 22px;
+    }
     &:first-of-type {
       @media screen and (min-width: 370px) {
         margin-right: 9px;
@@ -154,7 +176,7 @@ header {
       &:after {
         @media screen and (min-width: 428px) {
           border-radius: 50%;
-          background: $color_bright_one;
+          background: $color-bright-one;
           margin: -3px 2px 0 10px;
           @include contentdisplay(inline-block);
           @include box(6px);
@@ -172,16 +194,19 @@ a#header-phone {
       size: 24px,
       height: 24px,
       family: $primaryfont,
-      color: $color_bright_one,
+      color: $color-bright-one,
       weight: 800,
     )
   );
   @include mq(small_laptop) {
     font-size: 25px;
   }
+  @include mq(large_laptop) {
+    font-size: 30px;
+  }
   &:before {
     border-radius: 50%;
-    background: $color_bright_one;
+    background: $color-bright-one;
     margin: 0 19px;
     @include contentdisplay(inline-block);
     @include box(6px);
@@ -192,7 +217,7 @@ a#header-phone {
 }
 
 #menu-wrapper {
-  background: $color_light_one;
+  background: $color-light-one;
   @include flex(center, center, column);
   @include box(53px, 93px);
   @include abs(0, 0, null, null);
@@ -201,7 +226,7 @@ a#header-phone {
   }
   span.menu-bar {
     display: block;
-    background: $color_dark_three;
+    background: $color-dark-three;
     margin-bottom: 5px;
     @include box(26px, 2px);
   }
@@ -212,7 +237,7 @@ a#header-phone {
         size: 10px,
         height: 13px,
         family: $primaryfont,
-        color: $color_dark_three,
+        color: $color-dark-three,
         weight: 800,
       )
     );
