@@ -9,12 +9,14 @@ header {
   @include mq(small_laptop) {
     display: block;
     left: 32px;
+    border: none;
     width: calc(100% - 400px);
   }
 }
 
 #header-desktop-wrapper {
   @include mq(small_laptop) {
+    border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     @include flex(space-between);
   }
 }
