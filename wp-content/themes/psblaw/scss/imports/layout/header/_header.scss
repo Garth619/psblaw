@@ -15,7 +15,8 @@ header {
 }
 
 #header-desktop-wrapper {
-  @include mq(small_laptop) {
+  @include mq(small_tablet) {
+    width: 100%;
     border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     @include flex(space-between);
   }
@@ -33,7 +34,8 @@ header {
     border: none;
   }
   @include mq(small_laptop) {
-    padding: 15px 70px 15px 7px;
+    padding: 26px 70px 19px 7px;
+    height: auto;
   }
 }
 
@@ -60,6 +62,9 @@ header {
         transform: uppercase,
       )
     );
+    @include mq(small_laptop) {
+      font-size: 13px;
+    }
   }
 }
 
@@ -88,6 +93,9 @@ header {
     margin-right: 13px;
     padding-top: 5px;
   }
+  @include mq(small_Laptop) {
+    margin-right: 18px;
+  }
   span {
     display: inline-block;
     @include type(
@@ -106,6 +114,9 @@ header {
     @include mq(small_tablet) {
       font-size: 16px;
     }
+    @include mq(small_laptop) {
+      font-size: 18px;
+    }
     &:first-of-type {
       @media screen and (min-width: 370px) {
         margin-right: 9px;
@@ -114,7 +125,7 @@ header {
         @media screen and (min-width: 428px) {
           border-radius: 50%;
           background: $color_bright_one;
-          margin: 0 2px 0 8px;
+          margin: -3px 2px 0 10px;
           @include contentdisplay(inline-block);
           @include box(6px);
         }
@@ -135,6 +146,9 @@ a#header-phone {
       weight: 800,
     )
   );
+  @include mq(small_laptop) {
+    font-size: 25px;
+  }
   &:before {
     border-radius: 50%;
     background: $color_bright_one;
