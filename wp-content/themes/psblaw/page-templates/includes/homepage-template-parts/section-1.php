@@ -80,11 +80,11 @@
 
         <div class='sec-one-slide-inner'>
         
-          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+          <span class='sec-one-subtitle'>LAMPE VS. CONTINENTAL GENERAL TIRE</span><!-- sec-one-subtitle -->
 
-          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+          <span class='sec-one-title'>$55.4 million</span><!-- sec-one-title -->
 
-          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+          <span class='sec-one-descrip'>Verdict in a spinal cord injury case involving a tire tread separation</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
       

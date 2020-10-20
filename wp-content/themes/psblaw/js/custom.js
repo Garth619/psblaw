@@ -124,6 +124,8 @@ jQuery(document).ready(function ($) {
     $(".preload-section").addClass("load-after");
   });
 
+
+
    $("#sec-one-slider").slick({
     infinite: true,
     slidesToShow: 1,
@@ -140,14 +142,46 @@ jQuery(document).ready(function ($) {
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
+          adaptiveHeight:false,
         },
+        
       },
       {
         breakpoint: 1170,
-        settings: "unslick",
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          vertical:true,
+        },
+        
       },
+
+      
     ],
   });
+
+  // adaptive heights on vertical slides
+
+  // var maxHeight = -1;
+  // $('.sec-one-slide').each(function() {
+  //   if ($(this).height() > maxHeight) {
+  //   maxHeight = $(this).height();
+  //   }
+  // });
+  // $('.sec-one-slide').each(function() {
+  //   if ($(this).height() < maxHeight) {
+  //     $(this).css('margin', Math.ceil((maxHeight-$(this).height())/2) + 'px 0');
+  //   }
+  // });
+
+  // var hidelastline = $('.slick-active');
+
+  // hidelastline.each(function() {
+  //   var $this = $(this);
+  //   if($this[0] === hidelastline.last()[0]) {
+  //       $(this).addClass('garrett');
+  //   }
+  // });
 
   // $("#sec_one_slider").slick({
   //   infinite: true,
