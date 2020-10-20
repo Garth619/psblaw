@@ -5,16 +5,12 @@ header {
   @include abs(0, null, null, 0, 5);
   @include mq(small-tablet) {
     @include flex(space-between);
-    background: linear-gradient(
-      to bottom,
-      rgba(14, 19, 38, 0.9) 5%,
-      rgba(255, 255, 255, 0) 116%
-    );
   }
   @include mq(small-laptop) {
     display: block;
     border: none;
     width: calc(100% - 353px);
+    padding: 0 35px;
   }
   @include mq(large-laptop) {
     width: calc(100% - 440px);
@@ -35,6 +31,9 @@ header {
         rgba(255, 255, 255, 0) 90%
       );
       @include box(100%, 170px);
+    }
+    @include mq(small-laptop) {
+      height: 290px;
     }
   }
 }
@@ -91,7 +90,7 @@ header {
     @include abs(15px, 73px, null, null);
   }
   @include mq(small-laptop) {
-    right: 9px;
+    right: 46px;
   }
   @include mq(large-laptop) {
     top: 52px;

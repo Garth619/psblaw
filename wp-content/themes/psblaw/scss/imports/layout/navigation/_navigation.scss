@@ -17,7 +17,7 @@ nav {
     @include box(360px, 100vh);
   }
   @include mq(small-laptop) {
-    padding: 0 20px;
+    padding: 0 10px;
     opacity: 1;
     visibility: visible;
     transform: translateY(0px);
@@ -105,7 +105,7 @@ nav {
       @include mq(small-laptop) {
         font-size: 12px;
         margin-bottom: 0;
-        margin-right: 50px;
+        //margin-right: 50px;
         padding-bottom: 25px;
       }
       @include mq(large-laptop) {
@@ -138,7 +138,7 @@ nav {
             opacity: 0;
             background: $color-bright-one;
             transition: all 200ms ease-in-out;
-            @include abs(31px, null, null, 0);
+            @include abs(29px, null, null, 0);
             @include box(100%, 2px);
             @include contentdisplay();
           }
@@ -156,6 +156,11 @@ nav {
         @include mq(small-laptop) {
           color: $color-bright-one;
           position: relative;
+        }
+        &:before {
+          @include mq(small-laptop) {
+            opacity: 1;
+          }
         }
       }
     }
