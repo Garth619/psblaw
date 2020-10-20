@@ -18,9 +18,9 @@
 
     <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-tablet.jpg'>
+    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1400.jpg'>
 
-    
+    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-tablet.jpg'>
 
     <img id='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-la-mobile.jpg' alt='' />
 
@@ -30,93 +30,97 @@
 
 <div id='sec-one-cr-wrapper' class="preload-section">
 
-  <div id='sec-one-slider' class="preload-slider">
+  <div id='sec-one-slider-wrapper'>
   
-    <div class='sec-one-slide'>
+    <div id='sec-one-slider' class="preload-slider">
+    
+      <div class='sec-one-slide'>
 
-      <div class='sec-one-slide-inner'>
+        <div class='sec-one-slide-inner'>
+        
+          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+
+          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+
+          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+
+        </div><!-- sec-one-slide-inner -->
       
-        <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+      </div><!-- sec-one-slide -->
 
-        <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+      <div class='sec-one-slide'>
 
-        <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
-
-      </div><!-- sec-one-slide-inner -->
-    
-    </div><!-- sec-one-slide -->
-
-    <div class='sec-one-slide'>
-
-      <div class='sec-one-slide-inner'>
-    
-        <span class='sec-one-subtitle'>TRAUMATIC BRAIN INJURY</span><!-- sec-one-subtitle -->
-
-        <span class='sec-one-title'>$160.5 million</span><!-- sec-one-title -->
-
-       <span class='sec-one-descrip'>Verdict in a brian injury case involving assault by nightclub security</span><!-- sec-one-descrip -->
-
-      </div><!-- sec-one-slide-inner -->
-    
-    </div><!-- sec-one-slide -->
-
-    <div class='sec-one-slide'>
-
-      <div class='sec-one-slide-inner'>
+        <div class='sec-one-slide-inner'>
       
-        <span class='sec-one-subtitle'>GRIGGS VS. CATERPILLAR, ET AL.</span><!-- sec-one-subtitle -->
+          <span class='sec-one-subtitle'>TRAUMATIC BRAIN INJURY</span><!-- sec-one-subtitle -->
 
-        <span class='sec-one-title'>$58 million</span><!-- sec-one-title -->
+          <span class='sec-one-title'>$160.5 million</span><!-- sec-one-title -->
 
-        <span class='sec-one-descrip'>Verdict in burn injury case involving a defective product</span><!-- sec-one-descrip -->
+        <span class='sec-one-descrip'>Verdict in a brian injury case involving assault by nightclub security</span><!-- sec-one-descrip -->
 
-      </div><!-- sec-one-slide-inner -->
-    
-    </div><!-- sec-one-slide -->
-
-    <div class='sec-one-slide'>
-
-      <div class='sec-one-slide-inner'>
+        </div><!-- sec-one-slide-inner -->
       
-        <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+      </div><!-- sec-one-slide -->
 
-        <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+      <div class='sec-one-slide'>
 
-        <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+        <div class='sec-one-slide-inner'>
+        
+          <span class='sec-one-subtitle'>GRIGGS VS. CATERPILLAR, ET AL.</span><!-- sec-one-subtitle -->
 
-      </div><!-- sec-one-slide-inner -->
-    
-    </div><!-- sec-one-slide -->
+          <span class='sec-one-title'>$58 million</span><!-- sec-one-title -->
 
-    <div class='sec-one-slide'>
+          <span class='sec-one-descrip'>Verdict in burn injury case involving a defective product</span><!-- sec-one-descrip -->
 
-      <div class='sec-one-slide-inner'>
+        </div><!-- sec-one-slide-inner -->
       
-        <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+      </div><!-- sec-one-slide -->
 
-        <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+      <div class='sec-one-slide'>
 
-        <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+        <div class='sec-one-slide-inner'>
+        
+          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
 
-      </div><!-- sec-one-slide-inner -->
-    
-    </div><!-- sec-one-slide -->
+          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
 
-    <div class='sec-one-slide'>
+          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
 
-      <div class='sec-one-slide-inner'>
+        </div><!-- sec-one-slide-inner -->
       
-        <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+      </div><!-- sec-one-slide -->
 
-        <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+      <div class='sec-one-slide'>
 
-        <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+        <div class='sec-one-slide-inner'>
+        
+          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
 
-      </div><!-- sec-one-slide-inner -->
+          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+
+          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+
+        </div><!-- sec-one-slide-inner -->
+      
+      </div><!-- sec-one-slide -->
+
+      <div class='sec-one-slide'>
+
+        <div class='sec-one-slide-inner'>
+        
+          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+
+          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+
+          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+
+        </div><!-- sec-one-slide-inner -->
+      
+      </div><!-- sec-one-slide -->
     
-    </div><!-- sec-one-slide -->
-  
-  </div><!-- sec-one-slider -->
+    </div><!-- sec-one-slider -->
+
+  </div><!-- sec-one-slider-wrapper -->
 
   <div class='sec-one-arrow sec-one-arrow-left'>
   

@@ -1,6 +1,9 @@
 #section-one {
   width: 100%;
   background: $color-dark-three;
+  @include mq(small_laptop) {
+    @include flex();
+  }
   &:after {
     background: #2e4389;
     margin: -36px auto 0;
@@ -20,7 +23,11 @@
   z-index: 1;
   text-align: center;
   @include mq(small_tablet) {
-    padding: 120px 0 0 0;
+    padding: 122px 0 0 0;
+  }
+  @include mq(small_laptop) {
+    flex-grow: 1;
+    text-align: left;
   }
   span {
     display: block;
@@ -39,6 +46,9 @@
       font-size: 40px;
       margin-bottom: 10px;
     }
+    @include mq(small_laptop) {
+      font-size: 75px;
+    }
   }
   span#sec-one-title {
     @include type(
@@ -53,6 +63,9 @@
     @include mq(small_tablet) {
       font-size: 90px;
     }
+    @include mq(small_laptop) {
+      font-size: 120px;
+    }
   }
   span#sec-one-descrip {
     max-width: 265px;
@@ -66,9 +79,14 @@
       )
     );
     @include mq(small_tablet) {
-      margin-top: 15px;
+      margin-top: 19px;
       max-width: 435px;
       @include quick_type(18px, 25px, null);
+    }
+    @include mq(small_laptop) {
+      max-width: 500px;
+      margin: 19px 0 0px;
+      @include quick_type(22px, 35px, null);
     }
   }
 }
@@ -92,18 +110,30 @@ img#hero {
   @include mq(small_tablet) {
     padding: 0 10px;
     min-height: 194px;
-    @include flex(null, center);
+    @include flex(space-between, center);
+  }
+  @include mq(small_laptop) {
+    flex-basis: 353px;
+    flex-shrink: 0;
+    height: 750px;
+  }
+}
+
+#sec-one-slider-wrapper {
+  @include mq(small_tablet) {
+    order: 2;
+    overflow: hidden;
+    padding: 16px 0px;
+    width: calc(100% - 60px);
   }
 }
 
 #sec-one-slider {
   @include mq(small_tablet) {
-    order: 2;
-    //background: pink;
-    padding: 16px 30px;
-    width: calc(100% - 46px);
-    //height: 197px;
-    //@include box(calc(100% - 46px), 197px);
+    width: 104%;
+    margin: 0 auto 0px;
+    position: relative;
+    left: -2%;
   }
 }
 
@@ -114,6 +144,8 @@ img#hero {
   @include mq(small_tablet) {
     height: 161px;
     padding: 0 20px;
+    position: relative;
+    left: 1px;
     border-right: 1px solid #2d58a6;
   }
   .sec-one-slide-inner {

@@ -13,9 +13,8 @@ header {
   }
   @include mq(small_laptop) {
     display: block;
-    left: 32px;
     border: none;
-    width: calc(100% - 400px);
+    width: calc(100% - 353px);
   }
   @include mq(large_laptop) {
     width: calc(100% - 440px);

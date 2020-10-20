@@ -5,7 +5,6 @@
   z-index: 1;
   @include type(
     (
-      size: 18px,
       height: 20px,
       spacing: 0.45px,
       family: $secondaryfont,
@@ -38,5 +37,9 @@
   }
   &.free-consult-button {
     padding: 17px 35px;
+    font-size: 18px;
+    @include mq(small_laptop) {
+      font-size: 22px;
+    }
   }
 }
