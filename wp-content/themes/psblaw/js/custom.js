@@ -124,6 +124,31 @@ jQuery(document).ready(function ($) {
     $(".preload-section").addClass("load-after");
   });
 
+   $("#sec-one-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    adaptiveHeight:true,
+    dots: false,
+    prevArrow:".sec-one-arrow-left",
+    nextArrow:".sec-one-arrow-right",
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 1170,
+        settings: "unslick",
+      },
+    ],
+  });
+
   // $("#sec_one_slider").slick({
   //   infinite: true,
   //   slidesToShow: 2,

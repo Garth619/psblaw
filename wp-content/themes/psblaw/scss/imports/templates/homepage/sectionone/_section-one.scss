@@ -1,5 +1,17 @@
 #section-one {
   width: 100%;
+  background: $color-dark-three;
+  &:after {
+    background: #2e4389;
+    margin: -36px auto 0;
+    @include contentdisplay();
+    @include box(1px, 36px);
+    position: relative;
+    z-index: 1;
+    @include mq(small_tablet) {
+      display: none;
+    }
+  }
 }
 
 #sec-one-content {
@@ -7,6 +19,9 @@
   position: relative;
   z-index: 1;
   text-align: center;
+  @include mq(small_tablet) {
+    padding: 120px 0 0 0;
+  }
   span {
     display: block;
     color: $color-light-one;
@@ -20,6 +35,10 @@
         family: $secondaryfont,
       )
     );
+    @include mq(small_tablet) {
+      font-size: 40px;
+      margin-bottom: 10px;
+    }
   }
   span#sec-one-title {
     @include type(
@@ -31,6 +50,9 @@
         transform: uppercase,
       )
     );
+    @include mq(small_tablet) {
+      font-size: 90px;
+    }
   }
   span#sec-one-descrip {
     max-width: 265px;
@@ -43,6 +65,11 @@
         weight: 600,
       )
     );
+    @include mq(small_tablet) {
+      margin-top: 15px;
+      max-width: 435px;
+      @include quick_type(18px, 25px, null);
+    }
   }
 }
 
@@ -56,4 +83,118 @@ img#hero {
   object-fit: cover;
   @include box(100%);
   @include abs(0, null, null, 0);
+}
+
+#sec-one-cr-wrapper {
+  background: $color-dark-three;
+  width: 100%;
+  min-height: 197px;
+  @include mq(small_tablet) {
+    padding: 0 10px;
+    min-height: 194px;
+    @include flex(null, center);
+  }
+}
+
+#sec-one-slider {
+  @include mq(small_tablet) {
+    order: 2;
+    //background: pink;
+    padding: 16px 30px;
+    width: calc(100% - 46px);
+    //height: 197px;
+    //@include box(calc(100% - 46px), 197px);
+  }
+}
+
+.sec-one-slide {
+  text-align: center;
+  padding: 35px 20px;
+  height: 100%;
+  @include mq(small_tablet) {
+    height: 161px;
+    padding: 0 20px;
+    border-right: 1px solid #2d58a6;
+  }
+  .sec-one-slide-inner {
+    height: 100%;
+    @include flex(center, center, column);
+    span {
+      display: block;
+      &.sec-one-subtitle {
+        margin-bottom: 7px;
+        @include type(
+          (
+            size: 12px,
+            height: 14px,
+            family: $primaryfont,
+            color: $color-bright-one,
+            weight: 800,
+            transform: uppercase,
+          )
+        );
+        @include mq(small_tablet) {
+          font-size: 9px;
+        }
+      }
+      &.sec-one-title {
+        margin-bottom: 18px;
+        @include type(
+          (
+            size: 35px,
+            height: 37px,
+            family: $secondaryfont,
+            color: $color-light-one,
+            weight: 500,
+            transform: lowercase,
+          )
+        );
+        @include mq(small_tablet) {
+          font-size: 30px;
+          margin-bottom: 5px;
+        }
+      }
+      &.sec-one-descrip {
+        max-width: 240px;
+        margin: 0 auto;
+        @include type(
+          (
+            size: 13px,
+            height: 15px,
+            family: $primaryfont,
+            color: $color-light-one,
+          )
+        );
+        @include mq(small_tablet) {
+          max-width: 152px;
+        }
+      }
+    }
+  }
+}
+
+.sec-one-arrow {
+  width: 50%;
+  float: left;
+  background: $color-dark-four;
+  padding: 10px 0;
+  @include flex(center, center);
+  @include mq(small_tablet) {
+    background: transparent;
+    @include box(23px, 100%);
+  }
+  svg {
+    @include box(7px, 16px);
+    @include mq(small_tablet) {
+      @include box(23px, 23px);
+    }
+  }
+}
+
+.sec-one-arrow-left {
+  order: 1;
+}
+
+.sec-one-arrow-right {
+  order: 2;
 }

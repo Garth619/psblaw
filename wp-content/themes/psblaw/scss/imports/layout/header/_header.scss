@@ -1,16 +1,15 @@
 header {
   position: relative;
   width: 100%;
-  background: linear-gradient(
-    to bottom,
-    rgba(14, 19, 38, 0.9) 5%,
-    rgba(255, 255, 255, 0) 60%
-  );
   //background: pink;
   @include abs(0, null, null, 0, 5);
   @include mq(small_tablet) {
-    border-bottom: 1px solid rgba(112, 112, 112, 0.25);
     @include flex(space-between);
+    background: linear-gradient(
+      to bottom,
+      rgba(14, 19, 38, 0.9) 5%,
+      rgba(255, 255, 255, 0) 116%
+    );
   }
   @include mq(small_laptop) {
     display: block;
@@ -21,19 +20,37 @@ header {
   @include mq(large_laptop) {
     width: calc(100% - 440px);
   }
+  &:after {
+    background: linear-gradient(
+      to bottom,
+      rgba(14, 19, 38, 0.9) 8%,
+      rgba(255, 255, 255, 0) 67%
+    );
+    @include contentdisplay();
+    @include abs(0, null, null, 0, -1);
+    @include box(100%, 93px);
+    @include mq(small_tablet) {
+      background: linear-gradient(
+        to bottom,
+        rgba(14, 19, 38, 0.9) 0%,
+        rgba(255, 255, 255, 0) 90%
+      );
+      @include box(100%, 170px);
+    }
+  }
 }
 
 #header-desktop-wrapper {
   @include mq(small_tablet) {
     width: 100%;
-    border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     @include flex(space-between);
   }
 }
 
 #header-left {
   padding: 15px 70px 15px 20px;
-  border-bottom: 1px solid rgba(112, 112, 112, 0.25);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   @include box(100%, 93px);
   @include flex(space-between, flex-end);
   @include mq(small_tablet) {
