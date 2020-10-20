@@ -162,17 +162,17 @@ jQuery(document).ready(function ($) {
 
   // adaptive heights on vertical slides
 
-  // var maxHeight = -1;
-  // $('.sec-one-slide').each(function() {
-  //   if ($(this).height() > maxHeight) {
-  //   maxHeight = $(this).height();
-  //   }
-  // });
-  // $('.sec-one-slide').each(function() {
-  //   if ($(this).height() < maxHeight) {
-  //     $(this).css('margin', Math.ceil((maxHeight-$(this).height())/2) + 'px 0');
-  //   }
-  // });
+  var maxHeight = -1;
+  $('.sec-one-slide').each(function() {
+    if ($(this).height() > maxHeight) {
+    maxHeight = $(this).height();
+    }
+  });
+  $('.sec-one-slide').each(function() {
+    if ($(this).height() < maxHeight) {
+      $(this).css('margin', Math.ceil((maxHeight-$(this).height())/2) + 'px 0');
+    }
+  });
 
   // var hidelastline = $('.slick-active');
 

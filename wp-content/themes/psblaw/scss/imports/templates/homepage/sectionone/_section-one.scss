@@ -265,7 +265,7 @@ img#hero {
   @include mq(small-tablet) {
     background: transparent;
     float: none;
-    @include box(23px, 100%);
+    @include box(52px, 100%);
   }
   @include mq(small-laptop) {
     position: absolute;
@@ -280,8 +280,17 @@ img#hero {
     }
     @include mq(small-laptop) {
       transform: rotate(90deg);
-      margin-left: 4px;
+      margin-left: 37px;
+      transform-origin: 0 0 0;
       @include box(15px, 23px);
+    }
+    &:hover {
+      path {
+        fill: $color-bright-one;
+      }
+    }
+    path {
+      transition: all 200ms ease-in-out;
     }
   }
 }
@@ -289,13 +298,17 @@ img#hero {
 .sec-one-arrow-left {
   order: 1;
   @include mq(small-laptop) {
-    top: 0;
+    top: 5px;
+  }
+  svg {
   }
 }
 
 .sec-one-arrow-right {
   order: 2;
   @include mq(small-laptop) {
-    bottom: 0;
+    bottom: 28px;
+  }
+  svg {
   }
 }
