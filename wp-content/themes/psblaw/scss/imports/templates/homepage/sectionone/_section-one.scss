@@ -1,7 +1,7 @@
 #section-one {
   width: 100%;
   background: $color-dark-three;
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     @include flex();
   }
   &:after {
@@ -11,7 +11,7 @@
     @include box(1px, 36px);
     position: relative;
     z-index: 1;
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       display: none;
     }
   }
@@ -22,10 +22,10 @@
   position: relative;
   z-index: 1;
   text-align: center;
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     padding: 122px 0 0 0;
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     flex-grow: 1;
     text-align: left;
   }
@@ -42,11 +42,11 @@
         family: $secondaryfont,
       )
     );
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       font-size: 40px;
       margin-bottom: 10px;
     }
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       font-size: 75px;
     }
   }
@@ -60,10 +60,10 @@
         transform: uppercase,
       )
     );
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       font-size: 90px;
     }
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       font-size: 120px;
     }
   }
@@ -78,12 +78,12 @@
         weight: 600,
       )
     );
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       margin-top: 19px;
       max-width: 435px;
       @include quick_type(18px, 25px, null);
     }
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       max-width: 500px;
       margin: 19px 0 0px;
       @include quick_type(22px, 35px, null);
@@ -107,12 +107,12 @@ img#hero {
   background: $color-dark-three;
   width: 100%;
   min-height: 197px;
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     padding: 0 10px;
     min-height: 194px;
     @include flex(space-between, center);
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     flex-basis: 353px;
     flex-shrink: 0;
     height: 750px;
@@ -120,7 +120,7 @@ img#hero {
 }
 
 #sec-one-slider-wrapper {
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     order: 2;
     overflow: hidden;
     padding: 16px 0px;
@@ -129,7 +129,7 @@ img#hero {
 }
 
 #sec-one-slider {
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     width: 104%;
     margin: 0 auto 0px;
     position: relative;
@@ -141,7 +141,7 @@ img#hero {
   text-align: center;
   padding: 35px 20px;
   height: 100%;
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     height: 161px;
     padding: 0 20px;
     position: relative;
@@ -165,7 +165,7 @@ img#hero {
             transform: uppercase,
           )
         );
-        @include mq(small_tablet) {
+        @include mq(small-tablet) {
           font-size: 9px;
         }
       }
@@ -181,7 +181,7 @@ img#hero {
             transform: lowercase,
           )
         );
-        @include mq(small_tablet) {
+        @include mq(small-tablet) {
           font-size: 30px;
           margin-bottom: 5px;
         }
@@ -197,7 +197,7 @@ img#hero {
             color: $color-light-one,
           )
         );
-        @include mq(small_tablet) {
+        @include mq(small-tablet) {
           max-width: 152px;
         }
       }
@@ -211,13 +211,13 @@ img#hero {
   background: $color-dark-four;
   padding: 10px 0;
   @include flex(center, center);
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     background: transparent;
     @include box(23px, 100%);
   }
   svg {
     @include box(7px, 16px);
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       @include box(23px, 23px);
     }
   }

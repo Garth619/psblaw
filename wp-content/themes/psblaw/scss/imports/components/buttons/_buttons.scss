@@ -38,7 +38,7 @@
   &.free-consult-button {
     padding: 17px 35px;
     font-size: 18px;
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       font-size: 22px;
     }
   }

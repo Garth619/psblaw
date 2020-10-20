@@ -3,7 +3,7 @@ header {
   width: 100%;
   //background: pink;
   @include abs(0, null, null, 0, 5);
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     @include flex(space-between);
     background: linear-gradient(
       to bottom,
@@ -11,12 +11,12 @@ header {
       rgba(255, 255, 255, 0) 116%
     );
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     display: block;
     border: none;
     width: calc(100% - 353px);
   }
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     width: calc(100% - 440px);
   }
   &:after {
@@ -28,7 +28,7 @@ header {
     @include contentdisplay();
     @include abs(0, null, null, 0, -1);
     @include box(100%, 93px);
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       background: linear-gradient(
         to bottom,
         rgba(14, 19, 38, 0.9) 0%,
@@ -40,7 +40,7 @@ header {
 }
 
 #header-desktop-wrapper {
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
     @include flex(space-between);
@@ -52,31 +52,31 @@ header {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   @include box(100%, 93px);
   @include flex(space-between, flex-end);
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     flex-shrink: 0;
     width: auto;
     padding: 15px 20px;
     border: none;
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     padding: 26px 70px 19px 7px;
     height: auto;
   }
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     padding: 35px 70px 25px 7px;
   }
 }
 
 #logo_mobile {
   display: block;
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     display: none;
   }
 }
 
 #logo_desktop {
   display: none;
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     display: block;
   }
 }
@@ -86,18 +86,18 @@ header {
   flex-grow: 1;
   max-width: 150px;
   @include flex(space-between);
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     width: 115px;
     @include abs(15px, 73px, null, null);
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     right: 9px;
   }
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     top: 52px;
     right: 24px;
   }
-  @include mq(small_monitor) {
+  @include mq(small-monitor) {
     width: 137px;
     top: 101px;
   }
@@ -113,10 +113,10 @@ header {
         transform: uppercase,
       )
     );
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       font-size: 13px;
     }
-    @include mq(small_monitor) {
+    @include mq(small-monitor) {
       font-size: 15px;
     }
     &:hover {
@@ -128,19 +128,19 @@ header {
 #header-right {
   padding: 11px 20px 10px;
   @include flex(space-between, center);
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     padding: 21px 70px 10px 20px;
     flex-grow: 1;
     justify-content: flex-end;
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     padding: 21px 5px 10px 20px;
   }
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     padding: 20px 21px 10px 20px;
     align-items: flex-start;
   }
-  @include mq(small_monitor) {
+  @include mq(small-monitor) {
     padding: 34px 21px 10px 20px;
   }
 }
@@ -153,11 +153,11 @@ header {
   @media screen and (min-width: 428px) {
     @include flex(center, center);
   }
-  @include mq(small_tablet) {
+  @include mq(small-tablet) {
     margin-right: 13px;
     padding-top: 6px;
   }
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     margin-right: 18px;
   }
 
@@ -176,13 +176,13 @@ header {
     @media screen and (min-width: 428px) {
       @include flex(center, center);
     }
-    @include mq(small_tablet) {
+    @include mq(small-tablet) {
       font-size: 16px;
     }
-    @include mq(small_laptop) {
+    @include mq(small-laptop) {
       font-size: 18px;
     }
-    @include mq(small_monitor) {
+    @include mq(small-monitor) {
       font-size: 22px;
     }
     &:first-of-type {
@@ -214,10 +214,10 @@ a#header-phone {
       weight: 800,
     )
   );
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     font-size: 25px;
   }
-  @include mq(large_laptop) {
+  @include mq(large-laptop) {
     font-size: 30px;
   }
   &:before {
@@ -237,7 +237,7 @@ a#header-phone {
   @include flex(center, center, column);
   @include box(53px, 93px);
   @include abs(0, 0, null, null);
-  @include mq(small_laptop) {
+  @include mq(small-laptop) {
     display: none;
   }
   span.menu-bar {

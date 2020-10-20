@@ -21,7 +21,7 @@ img.alignleft {
   float: left;
   margin-right: 24px;
   margin-top: 4px;
-  @include mq(xlarge_mobile) {
+  @include mq(xlarge-mobile) {
     margin: 20px auto 30px;
     float: none;
     max-width: 100%;
@@ -34,7 +34,7 @@ img.alignright {
   float: right;
   margin-left: 24px;
   margin-top: 4px;
-  @include mq(xlarge_mobile) {
+  @include mq(xlarge-mobile) {
     margin: 20px auto 30px;
     float: none;
     max-width: 100%;
@@ -47,7 +47,7 @@ img.aligncenter {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  @include mq(xlarge_mobile) {
+  @include mq(xlarge-mobile) {
     margin: 20px auto 30px;
     float: none;
     max-width: 100%;
@@ -60,7 +60,7 @@ img.aligncenter {
   margin-bottom: 12px;
   max-width: 100%;
   height: auto;
-  @include mq(xlarge_mobile) {
+  @include mq(xlarge-mobile) {
     margin: 20px auto 30px;
     float: none;
     max-width: 100%;

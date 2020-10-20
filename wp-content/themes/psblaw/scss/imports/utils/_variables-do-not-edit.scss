@@ -33,22 +33,22 @@ $media-queries: (
   mobile: (
     breakpoint: "(min-width: #{$mobile})",
   ),
-  large_mobile: (
+  large-mobile: (
     breakpoint: "(min-width: #{$large-mobile})",
   ),
-  small_tablet: (
+  small-tablet: (
     breakpoint: "(min-width: #{$small-tablet})",
   ),
   tablet: (
     breakpoint: "(min-width: #{$tablet})",
   ),
-  small_laptop: (
+  small-laptop: (
     breakpoint: "(min-width: #{$small-laptop})",
   ),
-  large_laptop: (
+  large-laptop: (
     breakpoint: "(min-width: #{$large-laptop})",
   ),
-  small_monitor: (
+  small-monitor: (
     breakpoint: "(min-width: #{$small-monitor})",
   ),
   monitor: (
