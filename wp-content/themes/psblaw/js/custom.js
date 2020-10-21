@@ -160,19 +160,31 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+
+  $("#hero-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    dots: false,
+    fade:true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+  });
+
   // adaptive heights on vertical slides
 
-  var maxHeight = -1;
-  $('.sec-one-slide').each(function() {
-    if ($(this).height() > maxHeight) {
-    maxHeight = $(this).height();
-    }
-  });
-  $('.sec-one-slide').each(function() {
-    if ($(this).height() < maxHeight) {
-      $(this).css('margin', Math.ceil((maxHeight-$(this).height())/2) + 'px 0');
-    }
-  });
+  // var maxHeight = -1;
+  // $('.slick-slide').each(function() {
+  //   if ($(this).height() > maxHeight) {
+  //   maxHeight = $(this).height();
+  //   }
+  // });
+  // $('.slick-slide').each(function() {
+  //   if ($(this).height() < maxHeight) {
+  //     $(this).css('margin', Math.ceil((maxHeight-$(this).height())/2) + 'px 0');
+  //   }
+  // });
 
   // var hidelastline = $('.slick-active');
 

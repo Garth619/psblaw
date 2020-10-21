@@ -14,17 +14,97 @@
   
   </div><!-- sec-one-content-inner -->
 
-  <picture>
+  <div id='hero-slider'>
+  
+    <div class='hero-slide'>
 
-    <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+      <div class='hero-slide-inner'>
+      
+        <picture>
 
-    <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1400.jpg'>
+          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-    <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-tablet.jpg'>
+          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1920.jpg'>
 
-    <img id='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-la-mobile.jpg' alt='' />
+          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1400.jpg'>
 
-  </picture>
+          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-tablet.jpg'>
+
+          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-la-mobile.jpg' alt='' />
+
+        </picture>
+
+      </div><!-- hero-slide-inner -->
+
+    </div><!-- hero-slide -->
+
+    <div class='hero-slide'>
+
+      <div class='hero-slide-inner'>
+    
+        <picture>
+
+          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+
+          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-1920.jpg'>
+
+          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-1400.jpg'>
+
+          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-tablet.jpg'>
+
+          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-mobile.jpg' alt='' />
+
+        </picture>
+
+      </div><!-- hero-slide-inner -->
+
+    </div><!-- hero-slide -->
+
+    <div class='hero-slide'>
+
+      <div class='hero-slide-inner'>
+      
+        <picture>
+
+          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+
+          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-1920.jpg'>
+
+          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-1400.jpg'>
+
+          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-tablet.jpg'>
+
+          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-mobile.jpg' alt='' />
+
+        </picture>
+
+      </div><!-- hero-slide-inner -->
+
+    </div><!-- hero-slide -->
+
+    <div class='hero-slide'>
+
+      <div class='hero-slide-inner'>
+      
+        <picture>
+
+          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+
+          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-1920.jpg'>
+
+          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-1400.jpg'>
+
+          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-tablet.jpg'>
+
+          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-mobile.jpg' alt='' />
+
+        </picture>
+
+      </div><!-- hero-slide-inner -->
+
+    </div><!-- hero-slide -->
+
+  </div><!-- hero-slider -->
 
 </div><!-- sec-one-content -->
 

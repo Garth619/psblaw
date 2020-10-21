@@ -13,7 +13,11 @@ header {
     padding: 0 35px;
   }
   @include mq(large-laptop) {
-    width: calc(100% - 440px);
+    width: calc(100% - 398px);
+    padding: 0 0 0 35px;
+  }
+  @include mq(small-monitor) {
+    padding: 0 35px;
   }
   &:after {
     background: linear-gradient(
@@ -30,10 +34,17 @@ header {
         rgba(14, 19, 38, 0.9) 0%,
         rgba(255, 255, 255, 0) 90%
       );
-      @include box(100%, 170px);
+      @include box(100%, 149px);
     }
     @include mq(small-laptop) {
-      height: 290px;
+      height: 266px;
+    }
+    @include mq(large-laptop) {
+      background: linear-gradient(
+        to bottom,
+        rgba(14, 19, 38, 0.9) 0%,
+        rgba(255, 255, 255, 0) 100%
+      );
     }
   }
 }
@@ -98,7 +109,8 @@ header {
   }
   @include mq(small-monitor) {
     width: 137px;
-    top: 101px;
+    top: 108px;
+    right: 42px;
   }
   a {
     transition: all 200ms ease-in-out;
@@ -140,7 +152,7 @@ header {
     align-items: flex-start;
   }
   @include mq(small-monitor) {
-    padding: 34px 21px 10px 20px;
+    padding: 34px 0px 10px 20px;
   }
 }
 
@@ -216,7 +228,7 @@ a#header-phone {
   @include mq(small-laptop) {
     font-size: 25px;
   }
-  @include mq(large-laptop) {
+  @include mq(small-monitor) {
     font-size: 30px;
   }
   &:before {

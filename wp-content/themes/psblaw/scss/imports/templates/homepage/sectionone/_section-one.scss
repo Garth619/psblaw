@@ -22,6 +22,7 @@
   position: relative;
   z-index: 1;
   text-align: center;
+  overflow: hidden;
   @include mq(small-tablet) {
     padding: 122px 0 0 0;
   }
@@ -29,6 +30,9 @@
     flex-grow: 1;
     text-align: left;
     padding: 241px 0 0 0;
+  }
+  @include mq(large-laptop) {
+    padding: 261px 0 0 0;
   }
   span {
     display: block;
@@ -45,10 +49,15 @@
     );
     @include mq(small-tablet) {
       font-size: 40px;
-      margin-bottom: 50px;
+      margin-bottom: 10px;
     }
     @include mq(small-laptop) {
       font-size: 75px;
+      margin-bottom: 45px;
+    }
+    @include mq(large-laptop) {
+      font-size: 100px;
+      margin-bottom: 62px;
     }
   }
   span#sec-one-title {
@@ -66,6 +75,9 @@
     }
     @include mq(small-laptop) {
       font-size: 120px;
+    }
+    @include mq(large-laptop) {
+      font-size: 150px;
     }
   }
   span#sec-one-descrip {
@@ -89,6 +101,11 @@
       margin: 37px 0 40px;
       @include quick_type(22px, 35px, null);
     }
+    @include mq(large-laptop) {
+      margin: 45px 0 40px;
+      font-size: 25px;
+      max-width: 630px;
+    }
   }
 }
 
@@ -99,9 +116,38 @@
   @include mq(small-laptop) {
     margin-left: 93px;
   }
+  @include mq(large-laptop) {
+    margin-left: 113px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
 }
 
-img#hero {
+#hero-slider {
+  width: 100%;
+  @include abs(0, null, null, 0);
+}
+
+.hero-slide {
+}
+
+.hero-slide-inner {
+  height: 456px;
+  position: relative;
+  @include mq(small_tablet) {
+    height: 431px;
+  }
+  @include mq(small-laptop) {
+    height: 750px;
+  }
+  @include mq(large-laptop) {
+    height: 876px;
+  }
+}
+
+img.hero {
   object-fit: cover;
   @include box(100%);
   @include abs(0, null, null, 0);
@@ -124,6 +170,9 @@ img#hero {
     display: block;
     position: relative;
   }
+  @include mq(large-laptop) {
+    flex-basis: 398px;
+  }
 }
 
 #sec-one-slider-wrapper {
@@ -138,6 +187,9 @@ img#hero {
     height: 735px;
     margin: 15px 0 0 0;
     width: 100%;
+  }
+  @include mq(large-laptop) {
+    height: 861px;
   }
   &:after {
     @include mq(small-laptop) {
@@ -162,6 +214,9 @@ img#hero {
     padding: 0 35px;
     width: calc(100% - 52px);
   }
+  @include mq(small-monitor) {
+    padding: 0 42px;
+  }
 }
 
 .sec-one-slide {
@@ -179,14 +234,15 @@ img#hero {
     text-align: left;
     border-right: none;
     border-bottom: 1px solid #2d58a6;
-    padding: 15px 0 25px;
-    padding: 0;
+    padding: 15px 10px 25px;
     height: auto;
+  }
+  @include mq(large-laptop) {
+    padding: 45px 5px 45px;
   }
   .sec-one-slide-inner {
     height: 100%;
     @include flex(center, center, column);
-
     @include mq(small-laptop) {
       display: block;
     }
@@ -231,6 +287,9 @@ img#hero {
           font-size: 35px;
           margin-bottom: 16px;
         }
+        @include mq(large-laptop) {
+          font-size: 42px;
+        }
       }
       &.sec-one-descrip {
         max-width: 240px;
@@ -250,6 +309,10 @@ img#hero {
           margin: 0;
           max-width: 200px;
           line-height: 18px;
+        }
+        @include mq(large-laptop) {
+          max-width: 100%;
+          @include quick_type(15px, 22px, null);
         }
       }
     }
