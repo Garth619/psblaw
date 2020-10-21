@@ -44,3 +44,105 @@ img#psb-playbook {
   margin: 0 auto;
   @include image();
 }
+
+#sec-two-right {
+  margin-top: 35px;
+  span {
+    display: block;
+  }
+}
+
+span#sec-two-title {
+  @include type(
+    (
+      size: 18px,
+      height: 21px,
+      family: $secondaryfont,
+      color: $color-dark-three,
+      weight: 600,
+      transform: uppercase,
+    )
+  );
+}
+
+#sec-two-slide-wrapper {
+  &:after {
+    background: #91979f;
+    margin: -36px auto 0;
+    @include contentdisplay();
+    @include box(1px, 36px);
+    position: relative;
+    z-index: 1;
+    @include mq(small-tablet) {
+      display: none;
+    }
+  }
+}
+#sec-two-slider {
+  margin-top: 15px;
+}
+
+.sec-two-slide {
+  padding: 0 0 18px 0;
+  .sec-two-image-wrapper {
+    display: none;
+    img {
+    }
+  }
+  span {
+    display: block;
+    &.sec-two-slide-cat {
+      @include type(
+        (
+          size: 13px,
+          height: 15px,
+          family: $primaryfont,
+          color: $color-bright-two,
+          weight: 800,
+          transform: uppercase,
+        )
+      );
+      &:after {
+        border-bottom: 1px solid #c6ced8;
+        margin-top: 10px;
+        @include box(100%, 1px);
+        @include contentdisplay();
+      }
+    }
+    &.sec-two-slide-title {
+      margin-top: 11px;
+      @include type(
+        (
+          size: 16px,
+          height: 20px,
+          family: $primaryfont,
+          color: $color-dark-five,
+          weight: 800,
+        )
+      );
+    }
+    &.sec-two-slide-date {
+      margin-top: 10px;
+      @include type(
+        (
+          size: 13px,
+          height: 15px,
+          family: $primaryfont,
+          color: #62676d,
+          weight: 600,
+        )
+      );
+    }
+  }
+}
+
+.sec-two-arrow {
+  width: 50%;
+  float: left;
+  background: #62676d;
+  padding: 10px 0px;
+  @include flex(center, center);
+  svg {
+    @include box(7px, 16px);
+  }
+}

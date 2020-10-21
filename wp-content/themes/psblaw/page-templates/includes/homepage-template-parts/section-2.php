@@ -18,102 +18,108 @@
 		
 			<span id='sec-two-title'>Breaking News And Current Cases</span><!-- sec-two-title -->
 
-			<div id='sec-two-slider'>
+			<div id='sec-two-slide-wrapper'>
 			
-				<div class='sec-two-slide'>
-				
-					<div class='sec-two-image-wrapper'>
-					
-						<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-					
-					</div><!-- sec-two-image-wrapper -->
-
-					<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-					<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
-
-					<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-				
-				</div><!-- sec-two-slide -->
-
-				<div class='sec-two-slide'>
-				
-					<div class='sec-two-image-wrapper'>
-					
-						<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-					
-					</div><!-- sec-two-image-wrapper -->
-
-					<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-					<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
-
-					<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-				
-				</div><!-- sec-two-slide -->
-
-				<div class='sec-two-slide'>
-				
-					<div class='sec-two-image-wrapper'>
-					
-						<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-					
-					</div><!-- sec-two-image-wrapper -->
-
-					<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-					<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
-
-					<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-				
-				</div><!-- sec-two-slide -->
-
-				<div class='sec-two-slide'>
-				
-					<div class='sec-two-image-wrapper'>
-					
-						<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-					
-					</div><!-- sec-two-image-wrapper -->
-
-					<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-					<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
-
-					<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-				
-				</div><!-- sec-two-slide -->
-
-				<div class='sec-two-slide'>
-				
-					<div class='sec-two-image-wrapper'>
-					
-						<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-					
-					</div><!-- sec-two-image-wrapper -->
-
-					<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-					<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
-
-					<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-				
-				</div><!-- sec-two-slide -->
+				<div id='sec-two-slider'>
 			
-			</div><!-- sec-two-slider -->
+					<div class='sec-two-slide'>
+					
+						<div class='sec-two-image-wrapper'>
+						
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+						
+						</div><!-- sec-two-image-wrapper -->
 
-			<div class='sec-two-arrow sec-two-arrow-left'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/arrow-left.svg' ); ?>
-			
-			</div><!-- sec-two-arrow sec-two-arrow-left -->
+						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
 
-			<div class='sec-two-arrow sec-two-arrow-right'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/arrow-right.svg' ); ?>
-			
-			</div><!-- sec-two-arrow sec-two-arrow-right -->
-		
+						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+
+						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+					
+					</div><!-- sec-two-slide -->
+
+					<div class='sec-two-slide'>
+					
+						<div class='sec-two-image-wrapper'>
+						
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+						
+						</div><!-- sec-two-image-wrapper -->
+
+						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
+
+						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+
+						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+					
+					</div><!-- sec-two-slide -->
+
+					<div class='sec-two-slide'>
+					
+						<div class='sec-two-image-wrapper'>
+						
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+						
+						</div><!-- sec-two-image-wrapper -->
+
+						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
+
+						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+
+						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+					
+					</div><!-- sec-two-slide -->
+
+					<div class='sec-two-slide'>
+					
+						<div class='sec-two-image-wrapper'>
+						
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+						
+						</div><!-- sec-two-image-wrapper -->
+
+						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
+
+						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+
+						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+					
+					</div><!-- sec-two-slide -->
+
+					<div class='sec-two-slide'>
+					
+						<div class='sec-two-image-wrapper'>
+						
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+						
+						</div><!-- sec-two-image-wrapper -->
+
+						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
+
+						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+
+						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+					
+					</div><!-- sec-two-slide -->
+				
+				</div><!-- sec-two-slider -->
+
+				<div class='sec-two-arrow sec-two-arrow-left'>
+				
+					<?php echo file_get_contents( get_template_directory() . '/images/arrow-left.svg' ); ?>
+				
+				</div><!-- sec-two-arrow sec-two-arrow-left -->
+
+				<div class='sec-two-arrow sec-two-arrow-right'>
+				
+					<?php echo file_get_contents( get_template_directory() . '/images/arrow-right.svg' ); ?>
+				
+				</div><!-- sec-two-arrow sec-two-arrow-right -->
+
+				<div style="clear:both"></div>
+
+			</div><!-- sec-two-slide-wrapper -->
+
 		</div><!-- sec-two-right -->
 	
 	</div><!-- sec-two-inner -->

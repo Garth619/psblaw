@@ -195,162 +195,43 @@ jQuery(document).ready(function ($) {
   //   }
   // });
 
-  // $("#sec_one_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 2,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 4,
-  //         slidesToScroll: 4,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1170,
-  //       settings: "unslick",
-  //     },
-  //   ],
-  // });
 
-  // $("#sec_two_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1169,
-  //       settings: "unslick",
-  //     },
-  //   ],
-  // });
+  $("#sec-two-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    adaptiveHeight:true,
+    dots: false,
+    prevArrow:".sec-two-arrow-left",
+    nextArrow:".sec-two-arrow-right",
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          adaptiveHeight:false,
+        },
+        
+      },
+      {
+        breakpoint: 1170,
+        settings: {
+          slidesToShow: 4,
+          slidesToScroll: 4,
+          vertical:true,
+        },
+        
+      },
 
-  // $("#sec_four_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   adaptiveHeight: true,
-  //   arrows: true,
-  //   dots: false,
-  //   prevArrow: "#sec_four_left_arrow",
-  //   nextArrow: "#sec_four_right_arrow",
-  // });
+      
+    ],
+  });
 
-  // $("#logos_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   arrows: true,
-  //   dots: false,
-  //   prevArrow: "#logos_left_arrow",
-  //   nextArrow: "#logos_right_arrow",
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 3,
-  //         slidesToScroll: 3,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1380,
-  //       settings: {
-  //         slidesToShow: 4,
-  //         slidesToScroll: 4,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1695,
-  //       settings: {
-  //         slidesToShow: 5,
-  //         slidesToScroll: 5,
-  //       },
-  //     },
-  //   ],
-  // });
 
-  // $("#lp_sec_one_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 2,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   dots: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 4,
-  //         slidesToScroll: 4,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1170,
-  //       settings: "unslick",
-  //     },
-  //   ],
-  // });
-
-  // $("#lp_sec_two_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   adaptiveHeight: true,
-  //   arrows: false,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     // {
-  //     //   breakpoint: 1170,
-  //     //   settings: "unslick",
-  //     // },
-  //   ],
-  // });
-
-  // $("#lp_sec_four_slider").slick({
-  //   infinite: true,
-  //   slidesToShow: 1,
-  //   slidesToScroll: 1,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   dots: true,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: {
-  //         slidesToShow: 2,
-  //         slidesToScroll: 2,
-  //       },
-  //     },
-  //     {
-  //       breakpoint: 1170,
-  //       settings: "unslick",
-  //     },
-  //   ],
-  // });
+  
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
