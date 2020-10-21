@@ -208,23 +208,23 @@ jQuery(document).ready(function ($) {
     nextArrow:".sec-two-arrow-right",
     responsive: [
       {
-        breakpoint: 767,
+        breakpoint: 1170,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           adaptiveHeight:false,
         },
         
       },
-      {
-        breakpoint: 1170,
-        settings: {
-          slidesToShow: 4,
-          slidesToScroll: 4,
-          vertical:true,
-        },
+      // {
+      //   breakpoint: 1170,
+      //   settings: {
+      //     slidesToShow: 4,
+      //     slidesToScroll: 4,
+      //     vertical:true,
+      //   },
         
-      },
+      // },
 
       
     ],

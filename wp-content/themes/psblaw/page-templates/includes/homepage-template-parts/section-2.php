@@ -3,14 +3,18 @@
 	<div id='sec-two-inner' class="">
 
 		<div id='sec-two-left'>
-		
-			<img id='psb-playbook' src='<?php bloginfo('template_directory');?>/images/psb-playbook.png' alt=''/>
+
+			<div id='psb-playbook-wrapper'>
 			
-			<span id='sec-two-left-title'>Webinar Wednesday:</span><!-- sec-two-left-title -->
+				<img id='psb-playbook' src='<?php bloginfo('template_directory');?>/images/psb-playbook.png' alt=''/>
+			
+				<span id='sec-two-left-title'>Webinar Wednesday:</span><!-- sec-two-left-title -->
 
-			<span id='sec-two-descrip'>At 1pm (PDT) join Attorney Pete Kaufman & Shareholder Virginia Buchanan this Wednesday…</span><!-- sec-two-descrip -->
+				<span id='sec-two-descrip'>At 1pm (PDT) join Attorney Pete Kaufman & Shareholder Virginia Buchanan this Wednesday as they take us inside the multi-district litigation involving Allergan BIOCELL® textured breast implants...</span><!-- sec-two-descrip -->
 
-			<a class='button sec-two-button' href=''>Register Now</a><!-- class -->
+				<a class='button sec-two-button' href=''>Register Now</a><!-- class -->
+
+			</div><!-- psb-playbook-wrapper -->
 		
 		</div><!-- sec-two-left -->
 

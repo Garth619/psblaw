@@ -1,13 +1,36 @@
 #section-two {
   background: $color-light-two;
   padding: 29px 33px;
+  @include mq(small-tablet) {
+    padding: 43px 45px 50px;
+  }
+}
+
+#sec-two-inner {
+  max-width: 375px;
+  margin: 0 auto;
+  @include mq(small-tablet) {
+    max-width: 100%;
+    @include flex(space-between);
+  }
 }
 
 #sec-two-left {
+  @include mq(small-tablet) {
+    width: 50%;
+    padding-right: 36px;
+    margin-top: 13px;
+  }
+}
+
+#psb-playbook-wrapper {
   background: $color-light-one;
   box-shadow: 0px 1px 20px #00000040;
   text-align: center;
   padding: 30px;
+  @include mq(small-tablet) {
+    padding: 35px 30px;
+  }
   span {
     display: block;
   }
@@ -24,6 +47,9 @@ span#sec-two-left-title {
       weight: 800,
     )
   );
+  @include mq(small-tablet) {
+    margin-top: 23px;
+  }
 }
 
 span#sec-two-descrip {
@@ -37,6 +63,10 @@ span#sec-two-descrip {
       weight: 600,
     )
   );
+  @include mq(small-tablet) {
+    margin: 16px auto 0;
+    max-width: 214px;
+  }
 }
 
 img#psb-playbook {
@@ -47,6 +77,11 @@ img#psb-playbook {
 
 #sec-two-right {
   margin-top: 35px;
+  @include mq(small-tablet) {
+    width: 50%;
+    margin-top: 0;
+    padding-left: 36px;
+  }
   span {
     display: block;
   }
@@ -80,13 +115,23 @@ span#sec-two-title {
 }
 #sec-two-slider {
   margin-top: 15px;
+  @include mq(small-tablet) {
+    margin-top: 19px;
+  }
 }
 
 .sec-two-slide {
   padding: 0 0 18px 0;
+  @include mq(small-tablet) {
+    padding-bottom: 35px;
+  }
   .sec-two-image-wrapper {
     display: none;
+    @include mq(small-tablet) {
+      display: block;
+    }
     img {
+      @include image();
     }
   }
   span {
@@ -102,6 +147,9 @@ span#sec-two-title {
           transform: uppercase,
         )
       );
+      @include mq(small-tablet) {
+        margin-top: 22px;
+      }
       &:after {
         border-bottom: 1px solid #c6ced8;
         margin-top: 10px;
@@ -120,6 +168,9 @@ span#sec-two-title {
           weight: 800,
         )
       );
+      @include mq(small-tablet) {
+        margin-top: 16px;
+      }
     }
     &.sec-two-slide-date {
       margin-top: 10px;
