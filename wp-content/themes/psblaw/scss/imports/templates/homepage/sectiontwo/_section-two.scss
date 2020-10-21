@@ -1,0 +1,46 @@
+#section-two {
+  background: $color-light-two;
+  padding: 29px 33px;
+}
+
+#sec-two-left {
+  background: $color-light-one;
+  box-shadow: 0px 1px 20px #00000040;
+  text-align: center;
+  padding: 30px;
+  span {
+    display: block;
+  }
+}
+
+span#sec-two-left-title {
+  margin-top: 12px;
+  @include type(
+    (
+      size: 18px,
+      height: 20px,
+      family: $primaryfont,
+      color: $color-dark-five,
+      weight: 800,
+    )
+  );
+}
+
+span#sec-two-descrip {
+  margin-top: 13px;
+  @include type(
+    (
+      size: 13px,
+      height: 20px,
+      family: $primaryfont,
+      color: #62676d,
+      weight: 600,
+    )
+  );
+}
+
+img#psb-playbook {
+  width: 107px;
+  margin: 0 auto;
+  @include image();
+}
