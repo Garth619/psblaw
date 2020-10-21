@@ -4,6 +4,9 @@
   @include mq(small-tablet) {
     padding: 43px 45px 50px;
   }
+  @include mq(small-laptop) {
+    padding: 30px 0 40px 45px;
+  }
 }
 
 #sec-two-inner {
@@ -21,6 +24,11 @@
     padding-right: 36px;
     margin-top: 13px;
   }
+  @include mq(small-laptop) {
+    width: 30%;
+    flex-shrink: 0;
+    padding: 0;
+  }
 }
 
 #psb-playbook-wrapper {
@@ -29,7 +37,10 @@
   text-align: center;
   padding: 30px;
   @include mq(small-tablet) {
-    padding: 35px 30px;
+    padding: 35px 45px;
+  }
+  @include mq(small-laptop) {
+    padding: 38px 25px 44px;
   }
   span {
     display: block;
@@ -65,7 +76,11 @@ span#sec-two-descrip {
   );
   @include mq(small-tablet) {
     margin: 16px auto 0;
-    max-width: 214px;
+    //max-width: 214px;
+  }
+  @include mq(small-laptop) {
+    margin: 23px auto 0;
+    @include quick_type(15px, 25px, null);
   }
 }
 
@@ -73,6 +88,9 @@ img#psb-playbook {
   width: 107px;
   margin: 0 auto;
   @include image();
+  @include mq(small-laptop) {
+    @include box(141px, 90px);
+  }
 }
 
 #sec-two-right {
@@ -81,6 +99,11 @@ img#psb-playbook {
     width: 50%;
     margin-top: 0;
     padding-left: 36px;
+  }
+  @include mq(small-laptop) {
+    width: 70%;
+    padding: 0 28px;
+    margin-top: 36px;
   }
   span {
     display: block;
@@ -98,9 +121,16 @@ span#sec-two-title {
       transform: uppercase,
     )
   );
+  @include mq(small-laptop) {
+    font-size: 20px;
+    margin-left: 70px;
+  }
 }
 
 #sec-two-slide-wrapper {
+  @include mq(small-laptop) {
+    @include flex(null, center);
+  }
   &:after {
     background: #91979f;
     margin: -36px auto 0;
@@ -108,15 +138,23 @@ span#sec-two-title {
     @include box(1px, 36px);
     position: relative;
     z-index: 1;
-    @include mq(small-tablet) {
-      display: none;
-    }
   }
 }
 #sec-two-slider {
   margin-top: 15px;
   @include mq(small-tablet) {
     margin-top: 19px;
+    order: 2;
+  }
+  @include mq(small-laptop) {
+    width: calc(100% - 74px);
+    padding: 0 35px;
+  }
+  .slick-slide {
+    margin: 0 18px;
+  }
+  .slick-list {
+    margin: 0 -18px;
   }
 }
 
@@ -132,6 +170,7 @@ span#sec-two-title {
     }
     img {
       @include image();
+      width: 100%;
     }
   }
   span {
@@ -150,11 +189,17 @@ span#sec-two-title {
       @include mq(small-tablet) {
         margin-top: 22px;
       }
+      @include mq(small-laptop) {
+        margin-top: 25px;
+      }
       &:after {
         border-bottom: 1px solid #c6ced8;
         margin-top: 10px;
         @include box(100%, 1px);
         @include contentdisplay();
+        @include mq(small-laptop) {
+          margin-top: 17px;
+        }
       }
     }
     &.sec-two-slide-title {
@@ -171,6 +216,10 @@ span#sec-two-title {
       @include mq(small-tablet) {
         margin-top: 16px;
       }
+      @include mq(small-laptop) {
+        margin-top: 11px;
+        @include quick_type(18px, 25px, null);
+      }
     }
     &.sec-two-slide-date {
       margin-top: 10px;
@@ -183,6 +232,9 @@ span#sec-two-title {
           weight: 600,
         )
       );
+      @include mq(small-laptop) {
+        margin-top: 35px;
+      }
     }
   }
 }
@@ -193,7 +245,33 @@ span#sec-two-title {
   background: #62676d;
   padding: 10px 0px;
   @include flex(center, center);
+  @include mq(small-laptop) {
+    border-radius: 50%;
+    float: none;
+    flex-shrink: 0;
+    padding: 0;
+    margin-top: -90px;
+    transition: 200ms all ease-in-out;
+    @include box(37px);
+  }
+  &:hover {
+    background: $color-dark-one;
+  }
   svg {
     @include box(7px, 16px);
+  }
+}
+
+.sec-two-arrow-left {
+  order: 1;
+  svg {
+    margin-left: -5px;
+  }
+}
+
+.sec-two-arrow-right {
+  order: 3;
+  svg {
+    margin-right: -3px;
   }
 }

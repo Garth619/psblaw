@@ -46,13 +46,13 @@
 					
 						<div class='sec-two-image-wrapper'>
 						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
 						
 						</div><!-- sec-two-image-wrapper -->
 
 						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
 
-						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+						<span class='sec-two-slide-title'>Rahul Ravipudi Appointed Public Entity Co-Lead Counsel in JUUL Labs Product Cases</span><!-- sec-two-slide-title -->
 
 						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
 					
@@ -62,7 +62,7 @@
 					
 						<div class='sec-two-image-wrapper'>
 						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
+							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
 						
 						</div><!-- sec-two-image-wrapper -->
 

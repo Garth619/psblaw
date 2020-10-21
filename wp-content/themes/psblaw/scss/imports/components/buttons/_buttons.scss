@@ -51,5 +51,8 @@
     margin-top: 17px;
     padding: 9px 27px;
     font-size: 18px;
+    @include mq(small-laptop) {
+      margin-top: 25px;
+    }
   }
 }
