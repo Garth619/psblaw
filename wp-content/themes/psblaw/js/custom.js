@@ -234,9 +234,16 @@ jQuery(document).ready(function ($) {
     adaptiveHeight:true,
     arrows: true,
     dots: false,
+    mobileFirst:true,
     fade:true,
     prevArrow:".sec-three-arrow-left",
     nextArrow:".sec-three-arrow-right",
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: "unslick",
+      },
+    ],
   });
 
 

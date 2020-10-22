@@ -10,9 +10,9 @@
 		
 		</div><!-- sec-three-header-wrapper -->
 
-		<div id='sec-three-content' class="content">
+		<div id='sec-three-content'>
 		
-			<div class='sec-three-col'>
+			<div class='sec-three-col content'>
 			
 				<div id='sec-three-video-wrapper'>
 				
@@ -52,26 +52,59 @@
 				
 					<div class='sec-three-slide'>
 					
-						<img class='desktop-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
+						<img class='sec-three-desktop-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
 
 						<span class='sec-three-slide-title'>Award Winning Law Firm</span><!-- sec-three-slide-title -->
 
 						<span class='sec-three-descrip'>Ranked by U.S. News & World Report and Best Lawyers<span>®</span> as a “Tier 1” Firm for Plaintiffs Personal Injury Litigation</span><!-- sec-three-descrip -->
 
-						<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
-					
+						<div class='sec-three-extended-descrip'>
+						
+							<div class="sec-three-mobile-img-wrapper">
+							
+								<img class='sec-three-mobile-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
+						
+							</div><!-- sec-three-mobile-img-wrapper -->
+
+							<div class='sec-three-extended-content'>
+							
+								<p>Our attorneys have been repeatedly recognized for excellence by other trial attorneys, legal organizations and publications nationwide. The firm has been ranked by U.S. News & World Report and Best Lawyers® as a “Tier 1” Firm for Plaintiffs Personal Injury Litigation – the highest ranking a firm can receive– and among the top 12 best Plaintiff’s law firms in the country by the National Law Journal.</p>
+
+								<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
+							
+							</div><!-- sec-three-extended-content -->
+						
+						</div><!-- sec-three-extended-descrip -->
+
 					</div><!-- sec-three-slide -->
 
 					<div class='sec-three-slide'>
 					
-						<img class='desktop-img' src='<?php bloginfo('template_directory');?>/images/award-clay.jpg' alt=''/>
+						<img class='sec-three-desktop-img' src='<?php bloginfo('template_directory');?>/images/award-clay.jpg' alt=''/>
 
 						<span class='sec-three-slide-title'>Award Winning Attorneys</span><!-- sec-three-slide-title -->
 
 						<span class='sec-three-descrip'>Brian J. Panish and Deborah S. Chang named 2019 California Lawyer Attorneys of the Year</span><!-- sec-three-descrip -->
 
-						<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
-					
+						<div class='sec-three-extended-descrip'>
+
+							<div class="sec-three-mobile-img-wrapper">
+							
+								<img class='sec-three-mobile-img' src='<?php bloginfo('template_directory');?>/images/award-clay.jpg' alt=''/>
+							
+							</div><!-- sec-three-mobile-img-wrapper -->
+
+
+							<div class='sec-three-extended-content'>
+							
+								<p>The 23rd Annual CLAY awards publication recognizes attorneys in 20 areas of legal practice whose work made a significant impact during the previous year; Mr. Panish, Ms. Chang and veteran appellate specialist Alan Charles Dell’Ario were selected in the area of Personal Injury for a case resolving the standard of care a school owes its students.</p>
+
+								<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
+							
+							</div><!-- sec-three-extended-content -->
+
+						</div><!-- sec-three-extended-descrip -->
+
 					</div><!-- sec-three-slide -->
 				
 				</div><!-- sec-three-slider -->
