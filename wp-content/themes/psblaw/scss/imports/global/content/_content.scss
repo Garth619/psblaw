@@ -1,0 +1,32 @@
+.content {
+  @include type(
+    (
+      size: 15px,
+      height: 25px,
+      family: $primaryfont,
+      color: #000,
+      weight: 600,
+    )
+  );
+  p {
+    margin-bottom: 25px;
+  }
+  h2 {
+    @include type(
+      (
+        size: 17px,
+        height: 25px,
+        family: $primaryfont,
+        color: $color-dark-three,
+        weight: 800,
+      )
+    );
+    span {
+      display: inline-block;
+      font-size: 9px;
+      vertical-align: top;
+      position: relative;
+      top: -2px;
+    }
+  }
+}

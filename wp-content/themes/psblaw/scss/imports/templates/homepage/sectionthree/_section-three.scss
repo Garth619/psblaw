@@ -1,0 +1,131 @@
+#section_three {
+  padding: 47px 25px;
+}
+
+#sec-three-header-wrapper {
+  text-align: center;
+}
+
+span#sec-three-subtitle {
+  display: block;
+  margin-bottom: 20px;
+  @include type(
+    (
+      size: 14px,
+      height: 16px,
+      spacing: 1.4px,
+      family: $primaryfont,
+      color: $color-bright-two,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+  span {
+    display: inline-block;
+    font-size: 9px;
+    vertical-align: top;
+    position: relative;
+    top: -2px;
+  }
+}
+
+h1#sec-three-header {
+  @include type(
+    (
+      size: 50px,
+      height: 50px,
+      family: $secondaryfont,
+      color: $color-dark-five,
+      weight: 500,
+    )
+  );
+}
+
+#sec-three-video-wrapper {
+  width: calc(100% - 25px);
+  margin-left: 25px;
+  margin-top: 60px;
+  background: $color-dark-three;
+  padding-top: 1px;
+  box-shadow: 0px 1px 40px #00000066;
+  #sec-three-video-thumbnail {
+    width: 100%;
+    margin-top: -60px;
+    margin-left: -25px;
+    position: relative;
+    img {
+      @include image();
+      width: 100%;
+    }
+    #sec-three-video-overlay {
+      @include box(100%);
+      @include abs(0, null, null, 0);
+      @include flex(center, center);
+      .play-button {
+        background: rgba(255, 255, 255, 0.3);
+        //box-shadow: 0px 1px 20px #cdd0d4;
+        border-radius: 50%;
+        position: relative;
+        @include flex(center, center);
+        @include box(72px);
+        &:before,
+        &:after {
+          @include contentdisplay();
+        }
+        &:before {
+          border-radius: 50%;
+          //box-shadow: 0px 1px 20px #8b8c8f;
+          background: $color-light-one;
+          @include box(51px);
+        }
+        &:after {
+          @include abs(28px, null, null, 31px);
+          @include tri(right, 8px, 12px, $color-bright-two);
+        }
+      }
+    }
+  }
+  span#sec-three-video-descrip {
+    display: block;
+    padding: 14px 33px 20px 23px;
+    @include type(
+      (
+        size: 15px,
+        height: 22px,
+        family: $primaryfont,
+        color: $color-light-one,
+        weight: 700,
+      )
+    );
+  }
+}
+
+#sec-three-content {
+  padding: 37px 0 0 0;
+}
+
+#sec-three-intro {
+  margin-top: 37px;
+  @include type(
+    (
+      size: 18px,
+      height: 28px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+    )
+  );
+  p {
+    margin-bottom: 20px;
+    &:first-of-type {
+      &:before {
+        background: $color-bright-two;
+        vertical-align: top;
+        margin-top: 13px;
+        margin-right: 6px;
+        @include box(40px, 4px);
+        @include contentdisplay(inline-block);
+      }
+    }
+  }
+}

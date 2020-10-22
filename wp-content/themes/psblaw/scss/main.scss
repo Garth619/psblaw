@@ -53,8 +53,7 @@
 
 // global
 
-@import //"imports/global/content/content",
-  "imports/global/misc/global";
+@import "imports/global/content/content", "imports/global/misc/global";
 
 // components
 
@@ -72,8 +71,8 @@
 // page templates
 
 @import "imports/templates/homepage/sectionone/section-one",
-  "imports/templates/homepage/sectiontwo/section-two";
-// "imports/templates/homepage/sectionthree/section-three",
+  "imports/templates/homepage/sectiontwo/section-two",
+  "imports/templates/homepage/sectionthree/section-three";
 // "imports/templates/homepage/sectionfour/section-four",
 // "imports/templates/homepage/sectionfive/section-five",
 // "imports/templates/homepage/sectionsix/section-six",
