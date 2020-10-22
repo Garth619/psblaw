@@ -216,17 +216,13 @@ jQuery(document).ready(function ($) {
         },
         
       },
-      // {
-      //   breakpoint: 1170,
-      //   settings: {
-      //     slidesToShow: 4,
-      //     slidesToScroll: 4,
-      //     vertical:true,
-      //   },
-        
-      // },
-
-      
+      {
+        breakpoint: 1695,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
     ],
   });
 
