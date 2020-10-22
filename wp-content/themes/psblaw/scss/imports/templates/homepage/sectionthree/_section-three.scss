@@ -3,6 +3,9 @@
   @include mq(small-tablet) {
     padding: 65px 100px 100px;
   }
+  @include mq(small-laptop) {
+    padding: 94px 85px 100px 100px;
+  }
 }
 
 #sec-three-header-wrapper {
@@ -26,6 +29,9 @@ span#sec-three-subtitle {
   @include mq(small-tablet) {
     font-size: 16px;
   }
+  @include mq(small-laptop) {
+    font-size: 18px;
+  }
   span {
     display: inline-block;
     font-size: 9px;
@@ -48,6 +54,11 @@ h1#sec-three-header {
   @include mq(small-tablet) {
     @include quick_type(75px, 75px, null);
   }
+  @include mq(small-laptop) {
+    max-width: 710px;
+    @include margin_lr;
+    @include quick_type(90px, 95px, null);
+  }
 }
 
 #sec-three-video-wrapper {
@@ -68,6 +79,7 @@ h1#sec-three-header {
     position: relative;
     @include mq(small-tablet) {
       width: calc(100% - 45px);
+      margin-top: -30px;
     }
     img {
       @include image();
@@ -130,10 +142,6 @@ h1#sec-three-header {
   }
 }
 
-#sec-three-content {
-  padding: 37px 0 0 0;
-}
-
 #sec-three-intro {
   margin-top: 37px;
   @include type(
@@ -150,6 +158,10 @@ h1#sec-three-header {
     padding-bottom: 8px;
     @include quick_type(20px, 33px, null);
   }
+  @include mq(small-laptop) {
+    margin-top: 43px;
+    @include quick_type(23px, 37px, null);
+  }
   p {
     margin-bottom: 20px;
     &:first-of-type {
@@ -162,6 +174,9 @@ h1#sec-three-header {
         @include contentdisplay(inline-block);
         @include mq(small-tablet) {
           margin-top: 15px;
+        }
+        @include mq(small-laptop) {
+          margin-top: 17px;
         }
       }
     }
@@ -182,6 +197,9 @@ h1#sec-three-header {
   }
   &:first-of-type {
     margin-bottom: 65px;
+    @include mq(small-laptop) {
+      margin-bottom: 72px;
+    }
   }
   span {
     display: block;
@@ -232,6 +250,9 @@ h1#sec-three-header {
       padding-bottom: 30px;
       border-bottom: 1px solid #c6ced8;
     }
+    @include mq(small-laptop) {
+      margin-top: 23px;
+    }
     span {
       font-size: 10px;
       vertical-align: top;
@@ -251,6 +272,10 @@ h1#sec-three-header {
           color: #62676d,
         )
       );
+      @include mq(small-laptop) {
+        padding-top: 29px;
+        @include quick_type(15px, 25px, null);
+      }
     }
     .sec-three-mobile-img-wrapper {
       flex-basis: 215px;
@@ -259,8 +284,14 @@ h1#sec-three-header {
       @include mq(small-tablet) {
         display: block;
       }
+      @include mq(small-laptop) {
+        flex-basis: 190px;
+      }
       img {
         margin-top: 10px;
+        @include mq(small-laptop) {
+          margin: 47px 0 0;
+        }
       }
     }
     .sec-three-extended-content {
@@ -297,12 +328,25 @@ h1#sec-three-header {
   border-right: 1px solid #91979f;
 }
 
+#sec-three-content {
+  padding: 37px 0 0 0;
+  @include mq(small-tablet) {
+    padding: 14px 0 0 0;
+  }
+  @include mq(small-laptop) {
+    padding: 40px 0 0 0;
+    @include flex(space-between);
+  }
+}
+
 .sec-three-col {
+  flex-basis: 46%;
   &:last-of-type {
     max-width: 300px;
     @include margin_lr;
     @include mq(small-tablet) {
       max-width: 100%;
+      margin: 0;
     }
   }
 }

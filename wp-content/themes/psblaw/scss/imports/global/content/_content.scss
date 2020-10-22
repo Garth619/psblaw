@@ -11,6 +11,9 @@
   @include mq(small-tablet) {
     @include quick_type(16px, 30px, null);
   }
+  @include mq(small-laptop) {
+    @include quick_type(17px, 30px, null);
+  }
   p {
     margin-bottom: 25px;
   }
