@@ -9,6 +9,14 @@
   @include mq(large-laptop) {
     padding: 122px 85px 100px 100px;
   }
+  @include mq(small-monitor) {
+    padding: 135px 85px 220px 100px;
+  }
+}
+
+#sec_three_inner {
+  max-width: 1495px;
+  @include margin_lr;
 }
 
 #sec-three-header-wrapper {
@@ -73,7 +81,7 @@ h1#sec-three-header {
 
 #sec-three-video-wrapper {
   width: calc(100% - 25px);
-  margin-left: 25px;
+  margin-left: 23px;
   margin-top: 60px;
   background: $color-dark-three;
   padding-top: 1px;
@@ -81,6 +89,12 @@ h1#sec-three-header {
   @include mq(small-tablet) {
     max-width: 432px;
     @include margin_lr;
+  }
+  @include mq(small-monitor) {
+    margin-left: 30px;
+    margin-right: 0;
+    max-width: 600px;
+    @include flex();
   }
   #sec-three-video-thumbnail {
     width: 100%;
@@ -90,6 +104,11 @@ h1#sec-three-header {
     @include mq(small-tablet) {
       width: calc(100% - 45px);
       margin-top: -30px;
+    }
+    @include mq(small-monitor) {
+      flex-basis: 388px;
+      flex-shrink: 0;
+      height: 240px;
     }
     img {
       @include image();
@@ -149,6 +168,9 @@ h1#sec-three-header {
     @include mq(small-tablet) {
       padding: 14px 33px 20px 37px;
     }
+    @include mq(small-monitor) {
+      padding: 115px 33px 45px 37px;
+    }
   }
 }
 
@@ -174,6 +196,10 @@ h1#sec-three-header {
   }
   @include mq(large-laptop) {
     margin-top: 46px;
+  }
+  @include mq(small-monitor) {
+    margin-top: 63px;
+    padding-bottom: 19px;
   }
   p {
     margin-bottom: 20px;
@@ -308,6 +334,9 @@ h1#sec-three-header {
         padding-top: 29px;
         @include quick_type(15px, 25px, null);
       }
+      @include mq(small-monitor) {
+        padding-top: 20px;
+      }
     }
     .sec-three-mobile-img-wrapper {
       flex-basis: 215px;
@@ -321,6 +350,10 @@ h1#sec-three-header {
       }
       @include mq(large-laptop) {
         flex-basis: 235px;
+      }
+      @include mq(small-monitor) {
+        flex-basis: 220px;
+        margin-right: 20px;
       }
       img {
         margin-top: 10px;
@@ -388,6 +421,9 @@ h1#sec-three-header {
     }
     @include mq(small-laptop) {
       margin-top: 6px;
+    }
+    @include mq(small-monitor) {
+      margin-top: 17px;
     }
   }
 }
