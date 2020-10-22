@@ -56,10 +56,13 @@
     padding: 35px 45px;
   }
   @include mq(small-laptop) {
-    padding: 38px 25px 44px;
+    padding: 38px 29px 44px;
   }
   @include mq(large-laptop) {
-    padding: 47px 61px 44px;
+    padding: 47px 44px 44px;
+  }
+  @include mq(small-monitor) {
+    padding: 47px 55px 44px;
   }
   span {
     display: block;
@@ -158,8 +161,19 @@ span#sec-two-title {
 }
 
 #sec-two-slide-wrapper {
+  min-height: 176px;
+  @include mq(small-tablet) {
+    min-height: 383px;
+  }
   @include mq(small-laptop) {
+    min-height: 383px;
     @include flex(space-between, center);
+  }
+  @include mq(large-laptop) {
+    min-height: 401px;
+  }
+  @include mq(small-monitor) {
+    min-height: 405px;
   }
   &:after {
     background: #91979f;

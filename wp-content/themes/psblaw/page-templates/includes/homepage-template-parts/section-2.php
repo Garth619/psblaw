@@ -22,9 +22,9 @@
 		
 			<span id='sec-two-title'>Breaking News And Current Cases</span><!-- sec-two-title -->
 
-			<div id='sec-two-slide-wrapper'>
+			<div id='sec-two-slide-wrapper' class="preload-section">
 			
-				<div id='sec-two-slider'>
+				<div id='sec-two-slider' class="preload-slider">
 			
 					<div class='sec-two-slide'>
 
