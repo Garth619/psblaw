@@ -129,3 +129,74 @@ h1#sec-three-header {
     }
   }
 }
+
+#sec-three-slider {
+  margin-top: 40px;
+}
+
+.sec-three-slide {
+  text-align: center;
+  span {
+    display: block;
+  }
+  img {
+    @include margin_lr;
+    @include image();
+    width: 165px;
+  }
+  img.desktop-img {
+  }
+  span.sec-three-slide-title {
+    margin-top: 20px;
+    border-bottom: 1px solid #c6ced8;
+    padding-bottom: 20px;
+    max-width: 260px;
+    @include margin_lr;
+    @include type(
+      (
+        size: 15px,
+        height: 18px,
+        family: $primaryfont,
+        color: $color-dark-three,
+        weight: 800,
+      )
+    );
+  }
+  span.sec-three-descrip {
+    margin-top: 14px;
+    @include type(
+      (
+        size: 18px,
+        height: 25px,
+        family: $primaryfont,
+        color: $color-dark-five,
+        weight: 800,
+      )
+    );
+    span {
+      font-size: 10px;
+      vertical-align: top;
+      display: inline-block;
+      margin-top: -2px;
+    }
+  }
+}
+
+#sec-three-arrow-wrapper {
+  margin-top: 28px;
+  @include flex();
+}
+
+.sec-arrow-three {
+  flex-basis: 50%;
+  background: #62676d;
+  padding: 10px 5px;
+  @include flex(center, center);
+  svg {
+    @include box(7px, 16px);
+  }
+}
+
+.sec-three-arrow-left {
+  border-right: 1px solid #91979f;
+}

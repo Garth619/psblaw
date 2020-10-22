@@ -227,6 +227,19 @@ jQuery(document).ready(function ($) {
   });
 
 
+  $("#sec-three-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    adaptiveHeight:true,
+    arrows: true,
+    dots: false,
+    fade:true,
+    prevArrow:".sec-three-arrow-left",
+    nextArrow:".sec-three-arrow-right",
+  });
+
+
   
 
   /* Remove "#" from menu anchor items to avoid jump to the top of the page
