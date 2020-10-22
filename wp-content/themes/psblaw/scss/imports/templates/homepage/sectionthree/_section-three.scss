@@ -6,6 +6,9 @@
   @include mq(small-laptop) {
     padding: 94px 85px 100px 100px;
   }
+  @include mq(large-laptop) {
+    padding: 122px 85px 100px 100px;
+  }
 }
 
 #sec-three-header-wrapper {
@@ -31,6 +34,9 @@ span#sec-three-subtitle {
   }
   @include mq(small-laptop) {
     font-size: 18px;
+  }
+  @include mq(large-laptop) {
+    margin-bottom: 30px;
   }
   span {
     display: inline-block;
@@ -58,6 +64,10 @@ h1#sec-three-header {
     max-width: 710px;
     @include margin_lr;
     @include quick_type(90px, 95px, null);
+  }
+  @include mq(large-laptop) {
+    max-width: 750px;
+    @include quick_type(100px, 100px, null);
   }
 }
 
@@ -162,6 +172,9 @@ h1#sec-three-header {
     margin-top: 43px;
     @include quick_type(23px, 37px, null);
   }
+  @include mq(large-laptop) {
+    margin-top: 46px;
+  }
   p {
     margin-bottom: 20px;
     &:first-of-type {
@@ -200,6 +213,16 @@ h1#sec-three-header {
     @include mq(small-laptop) {
       margin-bottom: 72px;
     }
+    @include mq(large-laptop) {
+      margin-bottom: 110px;
+    }
+  }
+  &:last-of-type {
+    img {
+      @include mq(large-laptop) {
+        width: 154px;
+      }
+    }
   }
   span {
     display: block;
@@ -208,6 +231,9 @@ h1#sec-three-header {
     @include margin_lr;
     @include image();
     width: 165px;
+    @include mq(small-laptop) {
+      width: 190px;
+    }
   }
   img.sec-three-desktop-img {
     @include mq(small-tablet) {
@@ -234,6 +260,9 @@ h1#sec-three-header {
       padding-bottom: 0;
       border: none;
     }
+    @include mq(large-laptop) {
+      @include quick_type(17px, 22px, null);
+    }
   }
   span.sec-three-descrip {
     margin-top: 14px;
@@ -252,6 +281,9 @@ h1#sec-three-header {
     }
     @include mq(small-laptop) {
       margin-top: 23px;
+    }
+    @include mq(large-laptop) {
+      @include quick_type(22px, 30px, null);
     }
     span {
       font-size: 10px;
@@ -287,10 +319,16 @@ h1#sec-three-header {
       @include mq(small-laptop) {
         flex-basis: 190px;
       }
+      @include mq(large-laptop) {
+        flex-basis: 235px;
+      }
       img {
         margin-top: 10px;
         @include mq(small-laptop) {
           margin: 47px 0 0;
+        }
+        @include mq(large-laptop) {
+          margin: 28px auto 0;
         }
       }
     }
@@ -347,6 +385,9 @@ h1#sec-three-header {
     @include mq(small-tablet) {
       max-width: 100%;
       margin: 0;
+    }
+    @include mq(small-laptop) {
+      margin-top: 6px;
     }
   }
 }
