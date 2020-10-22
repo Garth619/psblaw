@@ -411,7 +411,9 @@ h1#sec-three-header {
 }
 
 .sec-three-col {
-  flex-basis: 46%;
+  @include mq(small-laptop) {
+    flex-basis: 46%;
+  }
   &:last-of-type {
     max-width: 300px;
     @include margin_lr;
