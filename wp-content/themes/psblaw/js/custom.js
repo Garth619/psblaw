@@ -246,6 +246,36 @@ jQuery(document).ready(function ($) {
     ],
   });
 
+  $("#sec-four-slider").slick({
+    infinite: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    mobileFirst: true,
+    arrows: true,
+    adaptiveHeight:true,
+    dots: true,
+    prevArrow:".sec-four-arrow-left",
+    nextArrow:".sec-four-arrow-right",
+    responsive: [
+      {
+        breakpoint: 1170,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          adaptiveHeight:false,
+        },
+        
+      },
+      {
+        breakpoint: 1695,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+    ],
+  });
+
 
   
 
