@@ -26,6 +26,8 @@
 		
 					<div class='sec-four-slide-reg'>
 
+						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
+
 						<div class='sec-four-slide-title-wrapper'>
 						
 							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
@@ -36,7 +38,21 @@
 					
 					</div><!-- sec-four-slide-reg -->
 
-					<div class='sec-four-slide-hover'></div><!-- sec-four-slide-hover -->
+					<div class='sec-four-slide-hover'>
+
+						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+						
+						</div><!-- sec-four-content -->
+
+				</div><!-- sec-four-slide-hover -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -44,6 +60,8 @@
 		
 					<div class='sec-four-slide-reg'>
 
+						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
+
 						<div class='sec-four-slide-title-wrapper'>
 						
 							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
@@ -54,7 +72,21 @@
 					
 					</div><!-- sec-four-slide-reg -->
 
-					<div class='sec-four-slide-hover'></div><!-- sec-four-slide-hover -->
+					<div class='sec-four-slide-hover'>
+
+						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+						
+						</div><!-- sec-four-content -->
+
+				</div><!-- sec-four-slide-hover -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -62,6 +94,8 @@
 		
 					<div class='sec-four-slide-reg'>
 
+						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
+
 						<div class='sec-four-slide-title-wrapper'>
 						
 							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
@@ -72,7 +106,21 @@
 					
 					</div><!-- sec-four-slide-reg -->
 
-					<div class='sec-four-slide-hover'></div><!-- sec-four-slide-hover -->
+					<div class='sec-four-slide-hover'>
+
+						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+						
+						</div><!-- sec-four-content -->
+
+				</div><!-- sec-four-slide-hover -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -80,6 +128,8 @@
 		
 					<div class='sec-four-slide-reg'>
 
+						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
+
 						<div class='sec-four-slide-title-wrapper'>
 						
 							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
@@ -90,7 +140,21 @@
 					
 					</div><!-- sec-four-slide-reg -->
 
-					<div class='sec-four-slide-hover'></div><!-- sec-four-slide-hover -->
+					<div class='sec-four-slide-hover'>
+
+						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+						
+						</div><!-- sec-four-content -->
+
+				</div><!-- sec-four-slide-hover -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -98,8 +162,10 @@
 		
 					<div class='sec-four-slide-reg'>
 
+						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
+
 						<div class='sec-four-slide-title-wrapper'>
-						
+
 							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
 						
 						</div><!-- sec-four-slide-title-wrapper -->
@@ -108,7 +174,21 @@
 					
 					</div><!-- sec-four-slide-reg -->
 
-					<div class='sec-four-slide-hover'></div><!-- sec-four-slide-hover -->
+					<div class='sec-four-slide-hover'>
+
+						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+						
+						</div><!-- sec-four-content -->
+
+				</div><!-- sec-four-slide-hover -->
 		
 				</div><!-- sec-four-slide -->
 	
@@ -122,8 +202,19 @@
 		
 		</div><!-- sec-four-slider-wrapper -->
 
+		<div id='sec-four-hover-overlay'>
+
+			<div id='sec-four-overlay-close'></div><!-- sec-four-overlay-close -->
+
+			<div id='sec-four-hover-overlay-inner'>
+			
+			
+			</div><!-- sec-four-hover-overlay-inner -->
 	
+		</div><!-- sec-four-hover-overlay -->
 	
 	</div><!-- sec-four-inner -->
+
+
 
 </section><!-- section-four -->
