@@ -151,26 +151,93 @@ span#sec-four-title {
   }
 }
 
-.sec-four-slide-hover {
+.sec-four-hover-data {
   display: none;
 }
 
-#sec-four-hover-overlay {
+.sec-four-hover-clone {
+  .sec-four-hover-data {
+    display: block;
+  }
+}
+
+.sec-four-hover-overlay {
   width: 90%;
-  height: 542px;
   background: $color-light-one;
   transform: translateX(-50%);
+  -webkit-overflow-scrolling: touch;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
   @include abs(190px, null, null, 50%);
+  &.open {
+    opacity: 1;
+    visibility: visible;
+  }
 }
 
-#sec-four-hover-overlay-inner {
-  //position: relative;
+.sec-four-hover-overlay-inner {
+  text-align: left;
+  padding: 50px 25px 20px;
+  position: relative;
+  height: 542px;
+  overflow-y: scroll;
+  span {
+    display: block;
+    &.sec-four-hover-subtitle {
+      margin-bottom: 18px;
+      @include type(
+        (
+          size: 14px,
+          height: 16px,
+          family: $primaryfont,
+          color: $color-dark-three,
+          weight: 800,
+        )
+      );
+    }
+    &.sec-four-hover-title {
+      @include type(
+        (
+          size: 22px,
+          height: 25px,
+          family: $secondaryfont,
+          color: $color-dark-one,
+          weight: 500,
+        )
+      );
+    }
+  }
+  .sec-four-content {
+    margin-top: 18px;
+    @include type(
+      (
+        size: 13px,
+        height: 20px,
+        color: #707070,
+        family: $primaryfont,
+        weight: 600,
+      )
+    );
+    p {
+      margin-bottom: 20px;
+    }
+  }
 }
 
-#sec-four-overlay-close {
+.sec-four-overlay-close {
   background: $color-bright-one;
-  @include abs(0, 0, null, null);
+  @include fixed(0, 0, null, null);
   @include box(45px);
+  @include flex(center, center);
+  @include type(
+    (
+      size: 20px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+    )
+  );
 }
 
 .sec-four-arrow {
