@@ -1,6 +1,6 @@
-<section id='section_three'>
+<section id='section-three'>
 
-	<div id='sec_three_inner'>
+	<div id='sec-three-inner'>
 
 		<div id='sec-three-header-wrapper'>
 		
@@ -129,6 +129,6 @@
 		
 		</div><!-- sec-three-content -->
 
-	</div><!-- sec_three_inner -->
+	</div><!-- sec-three-inner -->
 
-</section><!-- section_three -->
+</section><!-- section-three -->

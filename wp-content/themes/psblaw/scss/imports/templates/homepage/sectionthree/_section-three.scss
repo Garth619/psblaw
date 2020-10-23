@@ -1,4 +1,4 @@
-#section_three {
+#section-three {
   padding: 47px 25px;
   @include mq(small-tablet) {
     padding: 65px 100px 100px;
@@ -14,7 +14,7 @@
   }
 }
 
-#sec_three_inner {
+#sec-three-inner {
   max-width: 1495px;
   @include margin_lr;
 }
@@ -61,7 +61,7 @@ h1#sec-three-header {
       size: 50px,
       height: 50px,
       family: $secondaryfont,
-      color: $color-dark-five,
+      color: $color-dark-one,
       weight: 500,
     )
   );
@@ -297,7 +297,7 @@ h1#sec-three-header {
         size: 18px,
         height: 25px,
         family: $primaryfont,
-        color: $color-dark-five,
+        color: $color-dark-one,
         weight: 800,
       )
     );
