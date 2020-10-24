@@ -258,11 +258,14 @@ jQuery(document).ready(function ($) {
     nextArrow:".sec-four-arrow-right",
     responsive: [
       {
-        breakpoint: 1170,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          dots:false,
           adaptiveHeight:false,
+          prevArrow:".sec-four-tablet-arrow-left",
+          nextArrow:".sec-four-tablet-arrow-right",
         },
         
       },
