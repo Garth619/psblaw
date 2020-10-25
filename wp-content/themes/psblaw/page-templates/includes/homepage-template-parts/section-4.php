@@ -40,7 +40,9 @@
 
 					<div class='sec-four-hover-data'>
 
-						<span class='sec-four-hover-subtitle'>Record<br/> Jury Verdicts</span><!-- sec-four-hover-title -->
+					<div class='sec-four-hover-data-inner'>
+
+						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
 
 						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
 						
@@ -58,7 +60,11 @@
 						
 						</div><!-- sec-four-content -->
 
+						</div><!-- sec-four-data-inner -->
+
 				</div><!-- sec-four-hover-data -->
+
+				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -80,6 +86,8 @@
 
 					<div class='sec-four-hover-data'>
 
+					<div class='sec-four-hover-data-inner'>
+
 						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
 
 						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
@@ -98,7 +106,11 @@
 						
 						</div><!-- sec-four-content -->
 
+						</div><!-- sec-four-data-inner -->
+
 				</div><!-- sec-four-hover-data -->
+
+				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -120,6 +132,8 @@
 
 					<div class='sec-four-hover-data'>
 
+						<div class='sec-four-hover-data-inner'>
+
 						<span class='sec-four-hover-subtitle'>Dealing with Insurance Companies</span><!-- sec-four-hover-title -->
 
 						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
@@ -138,7 +152,11 @@
 						
 						</div><!-- sec-four-content -->
 
+						</div><!-- sec-four-data-inner -->
+
 				</div><!-- sec-four-hover-data -->
+
+				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -160,7 +178,9 @@
 
 					<div class='sec-four-hover-data'>
 
-						<span class='sec-four-hover-subtitle'>Record<br/> Jury Verdicts</span><!-- sec-four-hover-title -->
+						<div class='sec-four-hover-data-inner'>
+
+						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
 
 						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
 						
@@ -178,7 +198,11 @@
 						
 						</div><!-- sec-four-content -->
 
+						</div><!-- sec-four-hover-data-inner -->
+
 				</div><!-- sec-four-hover-data -->
+
+				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
 		
 				</div><!-- sec-four-slide -->
 
@@ -190,7 +214,7 @@
 
 						<div class='sec-four-slide-title-wrapper'>
 
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
+							<span class='sec-four-slide-title'>Record Jury Verdicts</span><!-- sec-four-slide-title -->
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
@@ -200,7 +224,9 @@
 
 					<div class='sec-four-hover-data'>
 
-						<span class='sec-four-hover-subtitle'>Record<br/> Jury Verdicts</span><!-- sec-four-hover-title -->
+						<div class='sec-four-hover-data-inner'>
+						
+						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
 
 						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
 						
@@ -218,7 +244,11 @@
 						
 						</div><!-- sec-four-content -->
 
+						</div><!-- sec-four-hover-data-inner -->
+
 				</div><!-- sec-four-hover-data -->
+
+				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
 		
 				</div><!-- sec-four-slide -->
 	

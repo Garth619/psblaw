@@ -282,7 +282,7 @@ jQuery(document).ready(function ($) {
 
 $('.sec-four-slide').on('click', function(e) {
   $(".sec-four-hover-clone").empty();
-  $(this).find('.sec-four-hover-data').clone().appendTo('.sec-four-hover-clone');
+  $(this).find('.sec-four-hover-data-inner').clone().appendTo('.sec-four-hover-clone');
   $('.sec-four-hover-overlay').addClass('open');
 });
 
