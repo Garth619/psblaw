@@ -1,6 +1,9 @@
 #section-five {
   background: $color-light-two;
   padding: 48px 25px 55px;
+  @include mq(small-tablet) {
+    padding: 79px 95px 75px;
+  }
 }
 
 #sec-five-inner {
@@ -24,8 +27,13 @@ span#sec-five-subtitle {
       transform: uppercase,
     )
   );
+  @include mq(small-tablet) {
+    font-size: 16px;
+  }
   span {
     display: inline-block;
+    vertical-align: top;
+    font-size: 15px;
   }
 }
 
@@ -33,6 +41,8 @@ span#sec-five-title {
   display: block;
   text-align: center;
   margin-top: 24px;
+  max-width: 350px;
+  @include margin_lr;
   @include type(
     (
       size: 35px,
@@ -42,6 +52,16 @@ span#sec-five-title {
       weight: 500,
     )
   );
+  @include mq(small-tablet) {
+    max-width: 100%;
+    @include quick_type(50px, 55px, null);
+  }
+  br {
+    display: none;
+    @include mq(small-tablet) {
+      display: inline-block;
+    }
+  }
 }
 
 #sec-five-intro {
@@ -55,6 +75,11 @@ span#sec-five-title {
       weight: 800,
     )
   );
+  @include mq(small-tablet) {
+    margin-top: 37px;
+    padding-bottom: 6px;
+    @include quick_type(20px, 33px, null);
+  }
   p {
     margin-bottom: 20px;
     &:first-of-type {
@@ -73,6 +98,11 @@ span#sec-five-title {
 .sec-five-image-wrapper {
   text-align: center;
   padding-top: 15px;
+  @include mq(small-tablet) {
+    max-width: 399px;
+    padding-top: 30px;
+    @include margin_lr;
+  }
   &.desktop {
     display: none;
   }
@@ -89,6 +119,10 @@ span#sec-five-title {
         weight: 800,
       )
     );
+    @include mq(small-tablet) {
+      margin-bottom: 35px;
+      @include quick_type(20px, 25px, null);
+    }
   }
   img {
     @include image();

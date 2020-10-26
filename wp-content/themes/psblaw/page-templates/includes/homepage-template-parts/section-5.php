@@ -6,7 +6,7 @@
 
 			<span id='sec-five-subtitle'>HERe TO HELP – ONCE AND FOR ALL<span>™</span></span><!-- sec-five-subtitle -->
 
-			<span id='sec-five-title'>The Attorneys at Panish Shea & Boyle, LLP</span><!-- sec-five-title -->
+			<span id='sec-five-title'>The Attorneys at<br/> Panish Shea & Boyle, LLP</span><!-- sec-five-title -->
 
 			<div class='sec-five-col-inner content'>
 

@@ -48,5 +48,9 @@
         weight: 800,
       )
     );
+    @include mq(small-tablet) {
+      font-size: 20px;
+      padding-bottom: 5px;
+    }
   }
 }
