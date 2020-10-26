@@ -296,6 +296,18 @@ $('.sec-four-overlay-close').on('click', function(e) {
 
 
 
+$("#sec-six-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  dots: true,
+  fade:true,
+  adaptiveHeight:true,
+});
+
+
+
 
   
 

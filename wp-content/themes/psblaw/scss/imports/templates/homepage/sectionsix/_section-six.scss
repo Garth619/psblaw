@@ -1,0 +1,131 @@
+#section-six {
+  position: relative;
+  padding: 63px 40px;
+}
+
+#sec-six-slider-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+#sec-six-slider-outer {
+  text-align: center;
+  span#sec-six-slide-title {
+    @include type(
+      (
+        size: 16px,
+        height: 18px,
+        spacing: 1.84px,
+        family: $primaryfont,
+        color: $color-light-one,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+  img#stars {
+    width: 108px;
+    margin-top: 25px;
+    @include margin_lr;
+    @include image();
+  }
+}
+
+.sec-six-arrow {
+  display: none;
+}
+
+#sec-six-slider {
+  .slick-dots {
+    position: static;
+    margin-top: 23px;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: $color-light-one;
+          font-size: 25px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.sec-six-slide {
+  text-align: center;
+  span {
+    display: block;
+    &.sec-six-slide-intro {
+      margin-top: 25px;
+      @include type(
+        (
+          size: 25px,
+          height: 35px,
+          family: $secondaryfont,
+          color: $color-light-one,
+          weight: 300,
+        )
+      );
+      &:after {
+        background: $color-bright-one;
+        margin: 25px auto 23px;
+        @include box(212px, 1px);
+        @include contentdisplay();
+      }
+    }
+    &.sec-six-slide-title {
+      @include type(
+        (
+          size: 14px,
+          height: 16px,
+          family: $primaryfont,
+          color: $color-bright-one,
+          weight: 800,
+        )
+      );
+    }
+    &.sec-six-slide-descrip {
+      margin-top: 15px;
+      @include type(
+        (
+          size: 11px,
+          height: 15px,
+          family: $primaryfont,
+          color: $color-light-one,
+          weight: 600,
+        )
+      );
+    }
+  }
+}
+
+.sec-six-arrow-left {
+}
+
+.sec-six-arrow-right {
+}
+
+img#sec-six-hero {
+  object-fit: cover;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+}
