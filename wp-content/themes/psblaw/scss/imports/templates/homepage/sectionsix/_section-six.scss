@@ -23,6 +23,9 @@
   @include mq(large-laptop) {
     max-width: 1185px;
   }
+  @include mq(small-monitor) {
+    max-width: 1375px;
+  }
 }
 
 #sec-six-slider-outer {

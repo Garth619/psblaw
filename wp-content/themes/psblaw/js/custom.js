@@ -317,18 +317,7 @@ $("#sec-six-slider").slick({
         nextArrow:".sec-six-arrow-right",
       },
       
-    },
-    {
-      breakpoint: 1695,
-      settings: {
-        slidesToShow: 5,
-        slidesToScroll: 5,
-        arrows:true,
-        prevArrow:".sec-four-tablet-arrow-left",
-        nextArrow:".sec-four-tablet-arrow-right",
-        dots:false
-      },
-    },
+    }
   ],
 });
 
