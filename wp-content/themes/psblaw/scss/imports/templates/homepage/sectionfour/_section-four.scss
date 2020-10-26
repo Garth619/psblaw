@@ -20,6 +20,12 @@
   @include mq(small-tablet) {
     max-width: 100%;
   }
+  @include mq(large-laptop) {
+    max-width: 1190px;
+    overflow: hidden;
+    padding: 0 70px;
+    @include margin_lr;
+  }
 }
 
 span#sec-four-subtitle {
@@ -282,6 +288,10 @@ span#sec-four-title {
     -webkit-overflow-scrolling: touch;
     @include box(133%, 595px);
     @include abs(-100px, null, null, -16.5%, 2);
+  }
+  @include mq(large-laptop) {
+    left: -23.5%;
+    width: 147%;
   }
 }
 
