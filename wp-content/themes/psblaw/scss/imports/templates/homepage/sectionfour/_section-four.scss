@@ -5,7 +5,7 @@
     padding: 85px 40px 105px;
   }
   @include mq(small-laptop) {
-    padding: 105px 40px 105px;
+    padding: 105px 65px 105px;
   }
 }
 
@@ -122,24 +122,38 @@ span#sec-four-title {
   }
   @include mq(small-laptop) {
     margin-top: 35px;
-    background: pink;
   }
   .slick-slide {
     @include mq(small-tablet) {
       margin: 0 9px;
     }
-  }
-  .slick-track {
+    .slick-track {
+      @include mq(small-laptop) {
+        padding: 100px 0;
+      }
+    }
     @include mq(small-laptop) {
-      padding: 100px 0;
+      margin: 0 45px;
     }
   }
+
   .slick-list {
-    margin: 0 -9px;
-    overflow: inherit;
-    // overflow-y: inherit;
-    // overflow-x: hidden;
+    @include mq(small-tablet) {
+      margin: 0 -9px;
+    }
     @include mq(small-laptop) {
+      overflow: inherit;
+      margin: 0 -45px;
+    }
+  }
+  .slick-active {
+    &:hover {
+      .sec-four-hover-data {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms ease-in-out,
+          transform 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      }
     }
   }
   .slick-dots {
@@ -178,13 +192,8 @@ span#sec-four-title {
 
 .sec-four-slide {
   position: relative;
-  &:hover {
-    .sec-four-hover-data {
-      opacity: 1;
-    }
-    .sec-four-data-bg {
-      opacity: 1;
-    }
+
+  &:before {
   }
 }
 
@@ -217,6 +226,9 @@ span#sec-four-title {
           align: left,
         )
       );
+      @include mq(small-laptop) {
+        @include quick_type(37px, 38px, null);
+      }
     }
   }
   span.sec-four-slide-number {
@@ -242,10 +254,11 @@ span#sec-four-title {
     display: block;
     overflow-y: scroll;
     opacity: 0;
+    transform: translateY(-20px);
     background: $color-light-one;
     padding: 0 34px;
-    @include box(120%, 595px);
-    @include abs(-100px, null, null, -9.5%, 2);
+    @include box(133%, 595px);
+    @include abs(-100px, null, null, -16.5%, 2);
   }
 }
 
@@ -258,15 +271,6 @@ span#sec-four-title {
       display: none;
     }
   }
-}
-
-.sec-four-data-bg {
-  display: none;
-  background: $color-light-one;
-  opacity: 0;
-  transform: scale(1.15, 1);
-  @include box(100%, 595px);
-  @include abs(-100px, null, null, 0, 1);
 }
 
 .sec-four-hover-data-inner {
@@ -344,6 +348,9 @@ span#sec-four-title {
   transition: all 200ms ease-in-out;
   -webkit-overflow-scrolling: touch;
   @include abs(null, null, -10px, 50%);
+  @include mq(small-tablet) {
+    bottom: 65px;
+  }
   &.open {
     opacity: 1;
     visibility: visible;
@@ -355,18 +362,16 @@ span#sec-four-title {
 
 .sec-four-hover-overlay-inner {
   text-align: left;
-  padding: 50px 25px 20px;
+  padding: 00px 25px 20px;
+  margin-top: 50px;
   position: relative;
-  height: 542px;
+  height: 505px;
   overflow-y: scroll;
-}
-
-.sec-four-hover-data-inner {
 }
 
 .sec-four-overlay-close {
   background: $color-bright-one;
-  @include fixed(0, 0, null, null);
+  @include fixed(0, 0, null, null, 1);
   @include box(45px);
   @include flex(center, center);
   @include type(
@@ -414,11 +419,16 @@ span#sec-four-title {
 
 .sec-four-tablet-arrow {
   padding: 8px 20px;
+  background: transparent;
   border: 2px solid $color-bright-one;
   border-radius: 50px;
   flex-shrink: 0;
+  transition: all 200ms ease-in-out;
   @include flex(space-between, center);
   display: flex !important;
+  &:hover {
+    background: #242938;
+  }
   span {
     @include type(
       (

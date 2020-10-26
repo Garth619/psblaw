@@ -64,7 +64,7 @@
 
 				</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
+				
 		
 				</div><!-- sec-four-slide -->
 
@@ -76,7 +76,7 @@
 
 						<div class='sec-four-slide-title-wrapper'>
 						
-							<span class='sec-four-slide-title'>Skilled with Settlements</span><!-- sec-four-slide-title -->
+							<span class='sec-four-slide-title'>Skilled with<br/> Settlements</span><!-- sec-four-slide-title -->
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
@@ -110,7 +110,7 @@
 
 				</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
+				
 		
 				</div><!-- sec-four-slide -->
 
@@ -122,7 +122,7 @@
 
 						<div class='sec-four-slide-title-wrapper'>
 						
-							<span class='sec-four-slide-title'>Dealing with Insurance Companies</span><!-- sec-four-slide-title -->
+							<span class='sec-four-slide-title'>Dealing with<br/> Insurance<br/> Companies</span><!-- sec-four-slide-title -->
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
@@ -156,7 +156,7 @@
 
 				</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
+				
 		
 				</div><!-- sec-four-slide -->
 
@@ -202,7 +202,7 @@
 
 				</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
+				
 		
 				</div><!-- sec-four-slide -->
 
@@ -214,7 +214,7 @@
 
 						<div class='sec-four-slide-title-wrapper'>
 
-							<span class='sec-four-slide-title'>Record Jury Verdicts</span><!-- sec-four-slide-title -->
+							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
@@ -248,7 +248,7 @@
 
 				</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-data-bg'></div><!-- sec-four-data-bg -->
+				
 		
 				</div><!-- sec-four-slide -->
 	
