@@ -22,7 +22,7 @@
 
 					<span class='sec-six-slide-title'>Freeman V. Doe Realty Company</span><!-- sec-six-slide-title -->
 
-					<span class='sec-six-slide-descrip'>Mike Freeman, whose son, Patrick, suffered a severe brain injury when he was struck by a car while legally crossing the street in a marked crosswalk. Panish Shea & Boyle LLP obtained a $48.5 million settlement for Patrick. Mike Freeman, whose son, Patrick, suffered a severe brain injury when he was struck by a car while legally crossing the street in a marked crosswalk. Panish Shea & Boyle LLP obtained a $48.5 million settlement for Patrick.</span><!-- sec-six-slide-descrip -->
+					<span class='sec-six-slide-descrip'>Mike Freeman, whose son, Patrick, suffered a severe brain injury when he was struck by a car while legally crossing the street in a marked crosswalk. Panish Shea & Boyle LLP obtained a $48.5 million settlement for Patrick.</span><!-- sec-six-slide-descrip -->
 
 				</div><!-- sec-six-slide -->
 

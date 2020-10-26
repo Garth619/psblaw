@@ -301,8 +301,35 @@ $("#sec-six-slider").slick({
   slidesToShow: 1,
   slidesToScroll: 1,
   arrows: false,
+  mobileFirst:true,
   dots: true,
   adaptiveHeight:true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:false,
+        arrows:true,
+        adaptiveHeight:true,
+        prevArrow:".sec-six-arrow-left",
+        nextArrow:".sec-six-arrow-right",
+      },
+      
+    },
+    {
+      breakpoint: 1695,
+      settings: {
+        slidesToShow: 5,
+        slidesToScroll: 5,
+        arrows:true,
+        prevArrow:".sec-four-tablet-arrow-left",
+        nextArrow:".sec-four-tablet-arrow-right",
+        dots:false
+      },
+    },
+  ],
 });
 
 
