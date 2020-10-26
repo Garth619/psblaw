@@ -38,4 +38,15 @@
       top: -2px;
     }
   }
+  h3 {
+    @include type(
+      (
+        size: 18px,
+        height: 22px,
+        family: $primaryfont,
+        color: $color-bright-two,
+        weight: 800,
+      )
+    );
+  }
 }

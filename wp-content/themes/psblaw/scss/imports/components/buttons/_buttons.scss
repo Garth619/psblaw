@@ -63,4 +63,10 @@
       margin-top: 8px;
     }
   }
+  &.sec-five-img-button {
+    margin-top: 30px;
+    padding: 15px 38px;
+    @include margin_lr;
+    font-size: 18px;
+  }
 }

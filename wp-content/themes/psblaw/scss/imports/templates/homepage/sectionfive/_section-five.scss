@@ -1,3 +1,93 @@
 #section-five {
-  height: 3000px;
+  background: $color-light-two;
+  padding: 48px 25px 55px;
+}
+
+#sec-five-inner {
+}
+.sec-five-col {
+  .sec-five-col-inner {
+    padding: 0 5px;
+  }
+}
+
+span#sec-five-subtitle {
+  display: block;
+  text-align: center;
+  @include type(
+    (
+      size: 14px,
+      spacing: 1.4px,
+      family: $primaryfont,
+      color: $color-bright-two,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+  span {
+    display: inline-block;
+  }
+}
+
+span#sec-five-title {
+  display: block;
+  text-align: center;
+  margin-top: 24px;
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+    )
+  );
+}
+
+#sec-five-intro {
+  margin-top: 18px;
+  @include type(
+    (
+      size: 18px,
+      height: 28px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+    )
+  );
+  p {
+    margin-bottom: 20px;
+    &:first-of-type {
+      &:before {
+        vertical-align: top;
+        margin-top: 13px;
+        margin-right: 8px;
+        background: $color-bright-two;
+        @include box(40px, 4px);
+        @include contentdisplay(inline-block);
+      }
+    }
+  }
+}
+
+.sec-five-image-wrapper {
+  text-align: center;
+  padding-top: 15px;
+  span.sec-five-image-title {
+    display: block;
+    margin-bottom: 30px;
+    @include type(
+      (
+        size: 18px,
+        height: 25px,
+        spacing: 0.45px,
+        family: $primaryfont,
+        color: $color-dark-one,
+        weight: 800,
+      )
+    );
+  }
+  img {
+    @include image();
+  }
 }
