@@ -52,5 +52,9 @@
       font-size: 20px;
       padding-bottom: 5px;
     }
+    @include mq(small-laptop) {
+      padding-top: 14px;
+      font-size: 22px;
+    }
   }
 }

@@ -4,11 +4,30 @@
   @include mq(small-tablet) {
     padding: 79px 95px 75px;
   }
+  @include mq(small-laptop) {
+    padding: 101px 95px 75px;
+  }
+  @include mq(large-laptop) {
+    padding: 129px 95px 75px;
+  }
 }
 
 #sec-five-inner {
+  @include mq(small-laptop) {
+    @include flex(space-between);
+  }
 }
 .sec-five-col {
+  @include mq(small-laptop) {
+    flex-basis: 46%;
+  }
+  &:last-of-type {
+    .sec-five-col-inner {
+      @include mq(small-laptop) {
+        @include flex(null, null, column);
+      }
+    }
+  }
   .sec-five-col-inner {
     padding: 0 5px;
   }
@@ -29,6 +48,12 @@ span#sec-five-subtitle {
   );
   @include mq(small-tablet) {
     font-size: 16px;
+  }
+  @include mq(small-laptop) {
+    text-align: left;
+  }
+  @include mq(large-laptop) {
+    font-size: 18px;
   }
   span {
     display: inline-block;
@@ -56,6 +81,19 @@ span#sec-five-title {
     max-width: 100%;
     @include quick_type(50px, 55px, null);
   }
+  @include mq(small-laptop) {
+    text-align: left;
+    max-width: 430px;
+    margin-top: 11px;
+    margin-left: 0;
+    margin-right: 0;
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large-laptop) {
+    max-width: 460px;
+    margin-top: 23px;
+    @include quick_type(75px, 80px, null);
+  }
   br {
     display: none;
     @include mq(small-tablet) {
@@ -80,6 +118,15 @@ span#sec-five-title {
     padding-bottom: 6px;
     @include quick_type(20px, 33px, null);
   }
+  @include mq(small-laptop) {
+    margin-top: 29px;
+    padding-bottom: 15px;
+    @include quick_type(22px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    margin-top: 38px;
+    max-width: 515px;
+  }
   p {
     margin-bottom: 20px;
     &:first-of-type {
@@ -95,6 +142,10 @@ span#sec-five-title {
   }
 }
 
+.sec-five-col-inner-two {
+  order: 2;
+}
+
 .sec-five-image-wrapper {
   text-align: center;
   padding-top: 15px;
@@ -103,8 +154,14 @@ span#sec-five-title {
     padding-top: 30px;
     @include margin_lr;
   }
-  &.desktop {
-    display: none;
+  @include mq(small-laptop) {
+    order: 1;
+    padding-top: 0;
+    margin-bottom: 48px;
+    @include flex(null, null, column);
+  }
+  @include mq(large-laptop) {
+    max-width: 100%;
   }
   span.sec-five-image-title {
     display: block;
@@ -123,8 +180,24 @@ span#sec-five-title {
       margin-bottom: 35px;
       @include quick_type(20px, 25px, null);
     }
+    @include mq(small-laptop) {
+      margin-top: 17px;
+      margin-bottom: 0;
+      order: 2;
+    }
+    @include mq(large-laptop) {
+      margin-top: 45px;
+    }
   }
-  img {
-    @include image();
+  .sec-five-image {
+    order: 1;
+    max-width: 506px;
+    @include margin_lr;
+    img {
+      @include image();
+    }
+  }
+  a {
+    order: 3;
   }
 }

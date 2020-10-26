@@ -34,29 +34,19 @@
 
 			<div class='sec-five-col-inner content'>
 
-				<div class='sec-five-image-wrapper desktop'>
-
-					<span class='sec-five-image-title'>What to learn more about our accident attorneys?</span><!-- sec-five-image-title -->
-
-					<div class='sec-five-image'>
-
-						<img src='<?php bloginfo('template_directory');?>/images/partners-pic.jpg' alt=''/>
-
-					</div><!-- sec-five-image -->
-
-					<a class='button sec-five-img-button' href=''>Meet our Attorneys</a><!-- button sec-five-img-button -->
-
-				</div><!-- sec-five-image-wrapper -->
-
-				<h3>Kevin Boyle</h3> 
+				<div class='sec-five-col-inner-two'>
+				
+					<h3>Kevin Boyle</h3> 
 			
-				<p>Kevin Boyle specializes in cases involving high-profile plaintiffs for things like wrongful death, catastrophic injuries, and fraud. Kevin recently represented two U.S. soldiers who suffered severe injuries while on deployment in Iraq due to a defective helicopter. The manufacturer faced the largest settlement of its kind thanks to Kevin’s representation. </p[>
-			
-				<h3>Rahul Ravipudi</h3>
-			
-				<p>Rahul Ravipudi recently won the award for 2017 Trial Lawyer of the Year by the Consumer Attorneys Association of Los Angeles thanks to his representation in a traumatic brain injury lawsuit. Mr. Ravipudi helped his client secure a $160 million jury verdict in April 2017 after his client sustained a severe beating at the hands of several security personnel.</p>
+					<p>Kevin Boyle specializes in cases involving high-profile plaintiffs for things like wrongful death, catastrophic injuries, and fraud. Kevin recently represented two U.S. soldiers who suffered severe injuries while on deployment in Iraq due to a defective helicopter. The manufacturer faced the largest settlement of its kind thanks to Kevin’s representation. </p[>
+		
+					<h3>Rahul Ravipudi</h3>
+		
+					<p>Rahul Ravipudi recently won the award for 2017 Trial Lawyer of the Year by the Consumer Attorneys Association of Los Angeles thanks to his representation in a traumatic brain injury lawsuit. Mr. Ravipudi helped his client secure a $160 million jury verdict in April 2017 after his client sustained a severe beating at the hands of several security personnel.</p>
+				
+				</div><!-- sec-five-col-inner-two -->
 
-				<div class='sec-five-image-wrapper mobile'>
+				<div class='sec-five-image-wrapper'>
 
 					<span class='sec-five-image-title'>What to learn more about our accident attorneys?</span><!-- sec-five-image-title -->
 				
