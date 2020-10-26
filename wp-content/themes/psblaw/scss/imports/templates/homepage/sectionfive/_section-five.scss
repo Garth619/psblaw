@@ -10,11 +10,18 @@
   @include mq(large-laptop) {
     padding: 129px 95px 75px;
   }
+  @include mq(small-monitor) {
+    padding: 153px 95px 100px;
+  }
 }
 
 #sec-five-inner {
   @include mq(small-laptop) {
     @include flex(space-between);
+  }
+  @include mq(large-laptop) {
+    max-width: 1420px;
+    @include margin_lr;
   }
 }
 .sec-five-col {
@@ -94,6 +101,9 @@ span#sec-five-title {
     margin-top: 23px;
     @include quick_type(75px, 80px, null);
   }
+  @include mq(small-monitor) {
+    max-width: 670px;
+  }
   br {
     display: none;
     @include mq(small-tablet) {
@@ -126,6 +136,10 @@ span#sec-five-title {
   @include mq(large-laptop) {
     margin-top: 38px;
     max-width: 515px;
+  }
+  @include mq(small-monitor) {
+    margin-top: 31px;
+    max-width: 580px;
   }
   p {
     margin-bottom: 20px;
@@ -163,6 +177,9 @@ span#sec-five-title {
   @include mq(large-laptop) {
     max-width: 100%;
   }
+  @include mq(small-monitor) {
+    margin-bottom: 67px;
+  }
   span.sec-five-image-title {
     display: block;
     margin-bottom: 30px;
@@ -188,11 +205,17 @@ span#sec-five-title {
     @include mq(large-laptop) {
       margin-top: 45px;
     }
+    @include mq(small-monitor) {
+      margin-top: 31px;
+    }
   }
   .sec-five-image {
     order: 1;
     max-width: 506px;
     @include margin_lr;
+    @include mq(small-monitor) {
+      max-width: 586px;
+    }
     img {
       @include image();
     }
