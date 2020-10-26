@@ -73,6 +73,9 @@ span#sec-five-title {
 .sec-five-image-wrapper {
   text-align: center;
   padding-top: 15px;
+  &.desktop {
+    display: none;
+  }
   span.sec-five-image-title {
     display: block;
     margin-bottom: 30px;
