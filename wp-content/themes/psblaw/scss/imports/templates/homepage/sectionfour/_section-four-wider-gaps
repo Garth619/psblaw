@@ -15,7 +15,7 @@
 #sec-four-inner {
   text-align: center;
   position: relative;
-  max-width: 375px;
+  max-width: 515px;
   @include margin_lr;
   @include mq(small-tablet) {
     max-width: 100%;

@@ -302,7 +302,6 @@ $("#sec-six-slider").slick({
   slidesToScroll: 1,
   arrows: false,
   dots: true,
-  fade:true,
   adaptiveHeight:true,
 });
 

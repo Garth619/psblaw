@@ -258,7 +258,7 @@ h1#sec-three-header {
     @include image();
     width: 165px;
     @include mq(small-laptop) {
-      width: 190px;
+      width: 165px;
     }
   }
   img.sec-three-desktop-img {

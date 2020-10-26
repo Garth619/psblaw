@@ -18,7 +18,7 @@
 #sec-four-inner {
   text-align: center;
   position: relative;
-  max-width: 375px;
+  max-width: 515px;
   @include margin_lr;
   @include mq(small-tablet) {
     max-width: 1160px;
@@ -93,7 +93,7 @@ span#sec-four-title {
 #sec-four-descrip {
   margin: 12px auto 0;
   padding-top: 20px;
-  max-width: 266px;
+  max-width: 395px;
   @include type(
     (
       size: 14px,
@@ -138,9 +138,12 @@ span#sec-four-title {
 
 #sec-four-slider-wrapper {
   margin-top: 35px;
+  max-width: 425px;
+  @include margin_lr;
   @include flex(space-between, center);
   @include mq(small-tablet) {
     margin-top: 45px;
+    max-width: 100%;
   }
 }
 
