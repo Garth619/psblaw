@@ -251,6 +251,52 @@
 				
 		
 				</div><!-- sec-four-slide -->
+
+				<div class='sec-four-slide'>
+		
+					<div class='sec-four-slide-reg'>
+
+						<span class='sec-four-slide-number'>05</span><!-- sec-four-slide-number -->
+
+						<div class='sec-four-slide-title-wrapper'>
+
+							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
+						
+						</div><!-- sec-four-slide-title-wrapper -->
+
+						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
+					
+					</div><!-- sec-four-slide-reg -->
+
+					<div class='sec-four-hover-data'>
+
+						<div class='sec-four-hover-data-inner'>
+						
+						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
+
+						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
+						
+						<div class='sec-four-content'>
+						
+							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+							
+							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						
+						</div><!-- sec-four-content -->
+
+						</div><!-- sec-four-hover-data-inner -->
+
+				</div><!-- sec-four-hover-data -->
+
+				
+		
+				</div><!-- sec-four-slide -->
 	
 		</div><!-- sec-four-slider -->
 
