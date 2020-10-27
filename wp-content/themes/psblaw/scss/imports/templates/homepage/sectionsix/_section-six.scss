@@ -64,10 +64,6 @@
   }
 }
 
-.sec-six-arrow {
-  display: none;
-}
-
 #sec-six-slider {
   max-width: 500px;
   @include margin_lr;
@@ -194,10 +190,11 @@
   display: none;
   background: transparent;
   transition: all 200ms ease-in-out;
-  @include flex(center, center);
+  display: none;
   @include box(50px);
   @include mq(small-tablet) {
     flex-shrink: 0;
+    @include flex(center, center);
   }
   @include mq(small-laptop) {
     @include box(67px);
