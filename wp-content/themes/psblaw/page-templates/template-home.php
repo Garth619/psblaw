@@ -12,6 +12,7 @@
 	get_template_part( 'page-templates/includes/homepage-template-parts/section', '6' );
 	get_template_part( 'page-templates/includes/homepage-template-parts/section', '7' );
 	get_template_part( 'page-templates/includes/homepage-template-parts/section', '8' );
+	get_template_part( 'page-templates/includes/homepage-template-parts/section', '9' );
 	
 	get_footer(); ?>
 

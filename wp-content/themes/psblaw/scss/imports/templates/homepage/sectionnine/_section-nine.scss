@@ -1,0 +1,99 @@
+#section-nine {
+  padding: 37px;
+}
+
+#sec-nine-inner {
+}
+
+#sec-nine-top {
+}
+
+#sec-nine-img-wrapper {
+  img {
+    @include image();
+  }
+}
+
+#sec-nine-quote-wrapper {
+  span {
+    display: block;
+    &#sec-nine-quote {
+      margin-top: 20px;
+      @include type(
+        (
+          size: 25px,
+          height: 35px,
+          family: $primaryfont,
+          color: $color-dark-one,
+          weight: 800,
+          align: center,
+        )
+      );
+      &:after {
+        background: $color-dark-three;
+        margin-top: 30px;
+        @include margin_lr;
+        @include box(42px, 4px);
+        @include contentdisplay();
+      }
+    }
+    &#sec-nine-name {
+      margin-top: 32px;
+      @include type(
+        (
+          size: 16px,
+          height: 19px,
+          spacing: 1.2px,
+          family: $primaryfont,
+          color: #62676d,
+          weight: 800,
+          align: center,
+          transform: uppercase,
+        )
+      );
+    }
+    &#sec-nine-firm {
+      margin-top: 8px;
+      @include type(
+        (
+          size: 16px,
+          height: 19px,
+          family: $primaryfont,
+          color: #62676d,
+          weight: 600,
+          align: center,
+        )
+      );
+    }
+  }
+}
+
+#sec-nine-bottom {
+  margin-top: 60px;
+}
+
+#sec-nine-content {
+  &.content {
+    color: #62676d;
+  }
+}
+
+span#sec-nine-title {
+  display: block;
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+      align: center,
+    )
+  );
+  &:after {
+    margin: 20px 0;
+    background: $color-bright-two;
+    @include box(100%, 1px);
+    @include contentdisplay();
+  }
+}
