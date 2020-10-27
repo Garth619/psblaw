@@ -1,5 +1,5 @@
 #section-nine {
-  padding: 37px;
+  padding: 37px 30px 45px;
 }
 
 #sec-nine-inner {
@@ -69,7 +69,7 @@
 }
 
 #sec-nine-bottom {
-  margin-top: 60px;
+  margin-top: 53px;
 }
 
 #sec-nine-content {
@@ -80,6 +80,9 @@
 
 span#sec-nine-title {
   display: block;
+  padding: 0 20px 21px;
+  margin-bottom: 22px;
+  border-bottom: 1px solid $color-bright-two;
   @include type(
     (
       size: 35px,
@@ -90,10 +93,55 @@ span#sec-nine-title {
       align: center,
     )
   );
-  &:after {
-    margin: 20px 0;
-    background: $color-bright-two;
-    @include box(100%, 1px);
-    @include contentdisplay();
+}
+
+#sec-nine-amount-wrapper {
+  padding-top: 9px;
+}
+
+span#sec-nine-amounts-title {
+  display: block;
+  @include type(
+    (
+      size: 16px,
+      height: 24px,
+      spacing: 1.84px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+      align: center,
+      transform: uppercase,
+    )
+  );
+}
+
+#sec-nine-amounts {
+  padding-top: 8px;
+  @include flex(space-between, null, null, wrap);
+}
+
+span.sec-nine-amount {
+  flex-basis: 44%;
+  border-bottom: 1px solid #c6ced8;
+  padding: 27px 5px 23px;
+  display: none;
+  @include type(
+    (
+      size: 22px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+      transform: uppercase,
+    )
+  );
+  &:nth-of-type(-n + 6) {
+    display: block;
+  }
+  &:nth-of-type(5),
+  &:nth-of-type(6) {
+    border-bottom: none;
+  }
+  &:nth-last-of-type(-n + 2) {
+    // border-bottom:none;
   }
 }

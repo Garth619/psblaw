@@ -40,15 +40,15 @@
         
           <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
 
-          <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
+          <span class='sec-nine-amount'>$2.05 Million</span><!-- sec-nine-amount -->
 
-          <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
+          <span class='sec-nine-amount'>$4 Million</span><!-- sec-nine-amount -->
 
-          <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
+          <span class='sec-nine-amount'>$1.8 Million</span><!-- sec-nine-amount -->
 
-          <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
+          <span class='sec-nine-amount'>$3.5 Million</span><!-- sec-nine-amount -->
 
-          <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
+          <span class='sec-nine-amount'>$1.7 Million</span><!-- sec-nine-amount -->
 
           <span class='sec-nine-amount'>$7 Million</span><!-- sec-nine-amount -->
 
