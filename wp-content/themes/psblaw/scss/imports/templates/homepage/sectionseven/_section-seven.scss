@@ -7,6 +7,9 @@
   @include mq(small-laptop) {
     padding: 103px 116px 110px;
   }
+  @include mq(large-laptop) {
+    padding: 103px 116px 125px;
+  }
 }
 
 #sec-seven-inner {
@@ -70,6 +73,9 @@ span#sec-seven-title {
 .sec-seven-faq-col {
   @include mq(small-laptop) {
     flex-basis: 45%;
+    @include mq(large-laptop) {
+      flex-basis: 47.5%;
+    }
   }
 }
 
