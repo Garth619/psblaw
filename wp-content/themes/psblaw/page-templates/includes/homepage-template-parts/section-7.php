@@ -79,6 +79,8 @@
         </div><!-- sec-seven-answer -->
       
       </div><!-- sec-seven-faq -->
+
+      <a class='button sec-seven-button' href=''>View all FAQs</a><!-- button sec-seven-button -->
     
     </div><!-- sec-seven-faq-col -->
 

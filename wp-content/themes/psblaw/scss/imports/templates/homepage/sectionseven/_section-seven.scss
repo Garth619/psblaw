@@ -1,6 +1,6 @@
 #section-seven {
   background: $color-light-two;
-  padding: 45px 38px;
+  padding: 45px 38px 65px;
 }
 
 #sec-seven-inner {
@@ -18,7 +18,8 @@
 }
 
 span#sec-seven-title {
-  margin-bottom: 30px;
+  display: block;
+  margin-bottom: 27px;
   @include type(
     (
       size: 35px,
@@ -43,6 +44,7 @@ span#sec-seven-title {
     position: relative;
     width: 100%;
     padding-right: 40px;
+    transition: all 200ms ease-in-out;
     @include flex(space-between, center);
     @include type(
       (
@@ -54,6 +56,12 @@ span#sec-seven-title {
         weight: 800,
       )
     );
+    &.open {
+      color: $color-dark-three;
+      &:after {
+        @include contentdisplay(inline-block, "-");
+      }
+    }
     &:after {
       color: $color-bright-two;
       position: relative;
@@ -62,7 +70,7 @@ span#sec-seven-title {
     }
   }
   .sec-seven-answer {
-    //display: none;
+    display: none;
     padding: 20px 0 0 0;
     &.content {
       color: #62676d;

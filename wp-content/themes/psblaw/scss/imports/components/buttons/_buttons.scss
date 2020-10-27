@@ -75,4 +75,13 @@
       margin-top: 27px;
     }
   }
+  &.sec-seven-button {
+    margin-top: 30px;
+    font-size: 18px;
+    display: block;
+    width: max-content;
+    padding: 16px 65px;
+    text-transform: none;
+    @include margin_lr;
+  }
 }

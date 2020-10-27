@@ -321,12 +321,15 @@ $("#sec-six-slider").slick({
   ],
 });
 
+/* FAQs
+--------------------------------------------------------------------------------------- */
 
+$('span.sec-seven-question').on('click', function(e) {
+  $(this).toggleClass('open');
+  $(this).next('.sec-seven-answer').slideToggle(300);
+});
 
-
-  
-
-  /* Remove "#" from menu anchor items to avoid jump to the top of the page
+/* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */
 
   $("ul > li.menu-item-has-children > a[href='#']").removeAttr("href");
