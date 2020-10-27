@@ -22,7 +22,7 @@
     
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case? What is a personal injury case? What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -36,7 +36,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>How much does a personal injury attorney in Los Angeles charge?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -48,7 +48,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>How do I know if I have a claim?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -60,7 +60,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>Who can file an injury claim?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -72,7 +72,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>What are California personal injury laws?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
