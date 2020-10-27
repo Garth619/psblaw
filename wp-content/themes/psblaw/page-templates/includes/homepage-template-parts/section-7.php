@@ -88,7 +88,7 @@
     
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case? What is a personal injury case? What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>Is there a time limit on filing a claim?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -100,7 +100,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>How much is my case worth?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -112,7 +112,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>How long will my case take?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         
@@ -124,19 +124,7 @@
 
       <div class='sec-seven-faq'>
       
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
+        <span class='sec-seven-question'>Do I need a personal injury lawyer?</span><!-- sec-seven-question -->
 
         <div class='sec-seven-answer content'>
         

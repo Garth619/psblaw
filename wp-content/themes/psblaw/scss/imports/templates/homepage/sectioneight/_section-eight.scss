@@ -170,11 +170,14 @@ span#sec-eight-title {
     text-align: center;
     background: $color-light-two;
     padding: 28px 20px;
+
     @include mq(small-tablet) {
       padding: 40px 20px;
     }
     span {
       display: block;
+      max-width: 220px;
+      @include margin_lr;
       @include type(
         (
           size: 17px,
@@ -184,6 +187,9 @@ span#sec-eight-title {
           weight: 800,
         )
       );
+      @include mq(mobile) {
+        max-width: 100%;
+      }
     }
   }
   .sec-eight-slide-inner {
@@ -209,9 +215,12 @@ span#sec-eight-title {
         @include mq(small-tablet) {
           padding: 25px 16px;
         }
+        @include mq(small-laptop) {
+          height: 69px;
+        }
         svg {
           margin-right: 15px;
-          //@include box(33px, 13px);
+          @include box(35px);
           @include mq(small-tablet) {
             margin-right: 28px;
           }
@@ -232,7 +241,7 @@ span#sec-eight-title {
             )
           );
           @include mq(small-tablet) {
-            @include quick_type(17px, 19px, null);
+            @include quick_type(17px, 20px, null);
           }
         }
         &:hover {

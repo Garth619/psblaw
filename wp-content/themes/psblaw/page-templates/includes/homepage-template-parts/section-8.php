@@ -98,7 +98,7 @@
         
           <div class='sec-eight-slide-title'>
           
-            <span>Transportation Accidents</span>
+            <span>Product Liability/ Product Recalls</span>
           
           </div><!-- sec-eight-slide-title -->
 
@@ -108,9 +108,9 @@
 
               <a href="">
           
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-autoproduct.svg' ); ?>
 
-                <span>Auto & Car Accidents</span>
+                <span>Auto Product Liability/Defects</span>
 
               </a>
           
@@ -120,21 +120,9 @@
             
               <a href="">
           
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-food.svg' ); ?>
 
-                <span>Aviation Disasters</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-                <span>Truck Accidents</span>
+                <span>Food Poisoning</span>
 
               </a>
             
@@ -144,9 +132,9 @@
             
               <a href="">
           
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-productdefect.svg' ); ?>
 
-                <span>Wrongful Death</span>
+                <span>Product Defects</span>
 
               </a>
             
@@ -156,9 +144,21 @@
             
               <a href="">
           
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-pharma.svg' ); ?>
 
-                <span>Bus Accidents</span>
+                <span>Pharmaceutical Litigation</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-defective.svg' ); ?>
+
+                <span>Defective Medical Devices</span>
 
               </a>
             
@@ -172,7 +172,7 @@
         
         <div class='sec-eight-slide-title'>
         
-          <span>Transportation Accidents</span>
+          <span>Other Areas of Practice</span>
         
         </div><!-- sec-eight-slide-title -->
 
@@ -182,9 +182,9 @@
 
             <a href="">
         
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-brain.svg' ); ?>
 
-              <span>Auto & Car Accidents</span>
+              <span>Brain Injury</span>
 
             </a>
         
@@ -194,21 +194,9 @@
           
             <a href="">
         
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-burn.svg' ); ?>
 
-              <span>Aviation Disasters</span>
-
-            </a>
-          
-          </div><!-- sec-eight-slide-item -->
-
-          <div class='sec-eight-slide-item'>
-          
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-              <span>Truck Accidents</span>
+              <span>Burn Injury</span>
 
             </a>
           
@@ -218,9 +206,9 @@
           
             <a href="">
         
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-cast.svg' ); ?>
 
-              <span>Wrongful Death</span>
+              <span>Catastrophic Injury</span>
 
             </a>
           
@@ -230,9 +218,21 @@
           
             <a href="">
         
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-toxic.svg' ); ?>
 
-              <span>Bus Accidents</span>
+              <span>Toxic Torts</span>
+
+            </a>
+          
+          </div><!-- sec-eight-slide-item -->
+
+          <div class='sec-eight-slide-item'>
+          
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-spinal.svg' ); ?>
+
+              <span>Spinal Cord Injury</span>
 
             </a>
           
