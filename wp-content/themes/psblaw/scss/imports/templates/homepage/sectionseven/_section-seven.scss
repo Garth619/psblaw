@@ -25,11 +25,9 @@
 #sec-seven-top {
   padding-bottom: 13px;
   border-bottom: 1px solid $color-bright-two;
-  @include mq(small-tablet) {
-    @include flex(space-between);
-  }
   @include mq(small-laptop) {
     padding-bottom: 26px;
+    @include flex(space-between);
   }
   @include mq(small-monitor) {
     padding-bottom: 50px;
@@ -80,9 +78,9 @@ span#sec-seven-title {
 
 #sec-seven-bottom {
   padding-top: 30px;
-  @include flex(space-between);
   @include mq(small-laptop) {
     padding-top: 67px;
+    @include flex(space-between);
   }
 }
 

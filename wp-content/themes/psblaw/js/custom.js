@@ -321,6 +321,32 @@ $("#sec-six-slider").slick({
   ],
 });
 
+$("#sec-eight-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  mobileFirst:true,
+  dots: true,
+  adaptiveHeight:true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:false,
+        arrows:true,
+        adaptiveHeight:true,
+        prevArrow:".sec-eight-arrow-left",
+        nextArrow:".sec-eight-arrow-right",
+      },
+      
+    }
+  ],
+});
+
+
 /* FAQs
 --------------------------------------------------------------------------------------- */
 

@@ -1,0 +1,214 @@
+#section-eight {
+  background: $color-dark-one;
+  padding: 49px 30px 80px;
+  @include mq(small-tablet) {
+    padding: 77px 75px 80px;
+  }
+}
+
+#sec-eight-inner {
+  max-width: 500px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 690px;
+  }
+}
+
+span#sec-eight-title {
+  display: block;
+  width: max-content;
+  text-align: center;
+  @include margin_lr;
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+    )
+  );
+  @include mq(small-tablet) {
+    @include quick_type(50px, 55px, null);
+  }
+  &:after {
+    margin-top: 24px;
+    margin-bottom: 21px;
+    background: $color-bright-one;
+    @include box(100%, 1px);
+    @include contentdisplay();
+    @include mq(small-tablet) {
+      margin-top: 30px;
+      margin-bottom: 37px;
+    }
+  }
+}
+
+#sec-eight-descrip {
+  padding: 0 8px;
+  @include type(
+    (
+      size: 14px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-light-one,
+      align: center,
+      weight: 600,
+    )
+  );
+  @include mq(small-tablet) {
+    @include quick_type(16px, 30px, null);
+  }
+}
+
+#sec-eight-slide-wrapper {
+  @include mq(small-tablet) {
+    max-width: 585px;
+    @include margin_lr;
+    @include flex(space-between, center);
+  }
+}
+
+#sec-eight-slider {
+  margin-top: 35px;
+  @include mq(small-tablet) {
+    width: calc(100% - 100px);
+    padding: 0 30px;
+    background: pink;
+  }
+  .slick-track {
+    //@include flex(); makes slides the same height when side by side
+  }
+  .slick-slide {
+    //@include flex(center); makes slides the same height when side by side
+    margin: 0 12;
+  }
+  .slick-list {
+    margin: 0 -12;
+  }
+  .slick-dots {
+    margin-top: 14px;
+    position: static;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color-light-one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color-light-one;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          widows: 20px;
+          opacity: 1;
+          color: $color-bright-one;
+          font-size: 25px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.sec-eight-slide {
+  background: $color-light-one;
+  .sec-eight-slide-title {
+    text-align: center;
+    background: $color-light-two;
+    padding: 28px 20px;
+    span {
+      display: block;
+      @include type(
+        (
+          size: 17px,
+          height: 20px,
+          family: $primaryfont,
+          color: $color-dark-three,
+          weight: 800,
+        )
+      );
+    }
+  }
+  .sec-eight-slide-inner {
+    padding: 8px 15px 0;
+    .sec-eight-slide-item {
+      a {
+        display: block;
+        padding: 25px 23px;
+        text-decoration: none;
+        border-bottom: 1px solid #e3e6e8;
+        @include flex(null, center);
+        svg {
+          margin-right: 15px;
+          @include box(33px, 13px);
+          path {
+            fill: $color-dark-one;
+            transition: all 200ms ease-in-out;
+          }
+        }
+        span {
+          transition: all 200ms ease-in-out;
+          @include type(
+            (
+              size: 15px,
+              height: 17px,
+              family: $primaryfont,
+              color: $color-dark-one,
+              weight: 600,
+            )
+          );
+        }
+        &:hover {
+          svg {
+            path {
+              fill: $color-bright-two;
+            }
+          }
+          span {
+            color: $color-bright-two;
+          }
+        }
+      }
+    }
+  }
+}
+
+.sec-eight-arrow {
+  display: none;
+  @include mq(small-tablet) {
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: transparent;
+    border: 2px solid $color-bright-one;
+    transition: all 200ms ease-in-out;
+    @include box(50px);
+    @include flex(center, center);
+    display: flex !important;
+  }
+  &:hover {
+    @include mq(small-tablet) {
+      background: #242938;
+    }
+  }
+  svg {
+    @include mq(small-tablet) {
+      @include box(9px, 20px);
+    }
+  }
+}
+
+.sec-eight-arrow-left {
+  svg {
+    margin-left: -3px;
+  }
+}
