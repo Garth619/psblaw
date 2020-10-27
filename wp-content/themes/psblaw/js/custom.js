@@ -339,9 +339,20 @@ $("#sec-eight-slider").slick({
         arrows:true,
         adaptiveHeight:true,
         prevArrow:".sec-eight-arrow-left",
-        nextArrow:".sec-eight-arrow-right",
-      },
-      
+        nextArrow:".sec-eight-arrow-right"
+      }
+    },
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots:true,
+        arrows:false,
+        adaptiveHeight:false,
+        prevArrow:".sec-eight-arrow-left",
+        nextArrow:".sec-eight-arrow-right"
+      }
     }
   ],
 });

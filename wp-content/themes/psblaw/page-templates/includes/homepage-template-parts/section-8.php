@@ -19,228 +19,228 @@
       </div><!-- sec-eight-arrow sec-eight-arrow-left -->
 
       <div id='sec-eight-slider'>
+
+        <div class='sec-eight-slide'>
+        
+          <div class='sec-eight-slide-title'>
+          
+            <span>Transportation Accidents</span>
+          
+          </div><!-- sec-eight-slide-title -->
+
+          <div class='sec-eight-slide-inner'>
+          
+            <div class='sec-eight-slide-item'>
+
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+
+                <span>Auto & Car Accidents</span>
+
+              </a>
+          
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+
+                <span>Aviation Disasters</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
+
+                <span>Truck Accidents</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
+
+                <span>Wrongful Death</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
+
+                <span>Bus Accidents</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            </div><!-- sec-eight-slide-inner -->
+        
+        </div><!-- sec-eight-slide -->
+
+        <div class='sec-eight-slide'>
+        
+          <div class='sec-eight-slide-title'>
+          
+            <span>Transportation Accidents</span>
+          
+          </div><!-- sec-eight-slide-title -->
+
+          <div class='sec-eight-slide-inner'>
+          
+            <div class='sec-eight-slide-item'>
+
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+
+                <span>Auto & Car Accidents</span>
+
+              </a>
+          
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+
+                <span>Aviation Disasters</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
+
+                <span>Truck Accidents</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
+
+                <span>Wrongful Death</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+            <div class='sec-eight-slide-item'>
+            
+              <a href="">
+          
+                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
+
+                <span>Bus Accidents</span>
+
+              </a>
+            
+            </div><!-- sec-eight-slide-item -->
+
+          </div><!-- sec-eight-slide-inner -->
+        
+        </div><!-- sec-eight-slide -->
+
+        <div class='sec-eight-slide'>
+        
+        <div class='sec-eight-slide-title'>
+        
+          <span>Transportation Accidents</span>
+        
+        </div><!-- sec-eight-slide-title -->
+
+        <div class='sec-eight-slide-inner'>
+        
+          <div class='sec-eight-slide-item'>
+
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+
+              <span>Auto & Car Accidents</span>
+
+            </a>
+        
+          </div><!-- sec-eight-slide-item -->
+
+          <div class='sec-eight-slide-item'>
+          
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+
+              <span>Aviation Disasters</span>
+
+            </a>
+          
+          </div><!-- sec-eight-slide-item -->
+
+          <div class='sec-eight-slide-item'>
+          
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
+
+              <span>Truck Accidents</span>
+
+            </a>
+          
+          </div><!-- sec-eight-slide-item -->
+
+          <div class='sec-eight-slide-item'>
+          
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
+
+              <span>Wrongful Death</span>
+
+            </a>
+          
+          </div><!-- sec-eight-slide-item -->
+
+          <div class='sec-eight-slide-item'>
+          
+            <a href="">
+        
+              <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
+
+              <span>Bus Accidents</span>
+
+            </a>
+          
+          </div><!-- sec-eight-slide-item -->
+
+        </div><!-- sec-eight-slide-inner -->
       
-        <div class='sec-eight-slide'>
-        
-          <div class='sec-eight-slide-title'>
-          
-            <span>Transportation Accidents</span>
-          
-          </div><!-- sec-eight-slide-title -->
-
-          <div class='sec-eight-slide-inner'>
-          
-            <div class='sec-eight-slide-item'>
-
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
-
-                <span>Auto & Car Accidents</span>
-
-              </a>
-          
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
-
-                <span>Aviation Disasters</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-                <span>Truck Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
-
-                <span>Wrongful Death</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
-
-                <span>Bus Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            </div><!-- sec-eight-slide-inner -->
-        
-        </div><!-- sec-eight-slide -->
-
-        <div class='sec-eight-slide'>
-        
-          <div class='sec-eight-slide-title'>
-          
-            <span>Transportation Accidents</span>
-          
-          </div><!-- sec-eight-slide-title -->
-
-          <div class='sec-eight-slide-inner'>
-          
-            <div class='sec-eight-slide-item'>
-
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
-
-                <span>Auto & Car Accidents</span>
-
-              </a>
-          
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
-
-                <span>Aviation Disasters</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-                <span>Truck Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
-
-                <span>Wrongful Death</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
-
-                <span>Bus Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            </div><!-- sec-eight-slide-inner -->
-        
-        </div><!-- sec-eight-slide -->
-
-        <div class='sec-eight-slide'>
-        
-          <div class='sec-eight-slide-title'>
-          
-            <span>Transportation Accidents</span>
-          
-          </div><!-- sec-eight-slide-title -->
-
-          <div class='sec-eight-slide-inner'>
-          
-            <div class='sec-eight-slide-item'>
-
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
-
-                <span>Auto & Car Accidents</span>
-
-              </a>
-          
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
-
-                <span>Aviation Disasters</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-                <span>Truck Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
-
-                <span>Wrongful Death</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <!-- <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php // echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
-
-                <span>Bus Accidents</span>
-
-              </a>
-            
-            </div> -->
-
-            </div><!-- sec-eight-slide-inner -->
-        
-        </div><!-- sec-eight-slide -->
+      </div><!-- sec-eight-slide -->
       
       </div><!-- sec-eight-slider -->
 
