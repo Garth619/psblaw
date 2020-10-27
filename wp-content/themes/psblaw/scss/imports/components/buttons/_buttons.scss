@@ -80,8 +80,11 @@
     font-size: 18px;
     display: block;
     width: max-content;
-    padding: 16px 65px;
+    padding: 16px 45px;
     text-transform: none;
     @include margin_lr;
+    @include mq(small-laptop) {
+      display: none;
+    }
   }
 }

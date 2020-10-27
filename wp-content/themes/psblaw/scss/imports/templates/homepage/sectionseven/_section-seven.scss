@@ -1,6 +1,12 @@
 #section-seven {
   background: $color-light-two;
   padding: 45px 38px 65px;
+  @include mq(small-tablet) {
+    padding: 65px 98px 85px;
+  }
+  @include mq(small-laptop) {
+    padding: 103px 116px 110px;
+  }
 }
 
 #sec-seven-inner {
@@ -9,11 +15,11 @@
 #sec-seven-top {
   padding-bottom: 13px;
   border-bottom: 1px solid $color-bright-two;
-}
-
-#sec-seven-content {
-  &.content {
-    color: #62676d;
+  @include mq(small-tablet) {
+    @include flex(space-between);
+  }
+  @include mq(small-laptop) {
+    padding-bottom: 26px;
   }
 }
 
@@ -29,17 +35,50 @@ span#sec-seven-title {
       weight: 500,
     )
   );
+  @include mq(small-tablet) {
+    @include quick_type(50px, 55px, null);
+  }
+  @include mq(small-laptop) {
+    flex-basis: 417px;
+    flex-shrink: 0;
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large-laptop) {
+    flex-basis: 595px;
+    @include quick_type(75px, 75px, null);
+  }
+}
+
+#sec-seven-content {
+  @include mq(small-laptop) {
+    flex-grow: 1;
+    padding-left: 45px;
+  }
+  &.content {
+    color: #62676d;
+  }
 }
 
 #sec-seven-bottom {
+  padding-top: 30px;
+  @include flex(space-between);
+  @include mq(small-laptop) {
+    padding-top: 67px;
+  }
 }
 
 .sec-seven-faq-col {
+  @include mq(small-laptop) {
+    flex-basis: 45%;
+  }
 }
 
 .sec-seven-faq {
   padding: 25px 0;
   border-bottom: 1px solid #c6ced8;
+  @include mq(small-tablet) {
+    padding: 29px 0;
+  }
   span.sec-seven-question {
     position: relative;
     width: 100%;
@@ -56,6 +95,12 @@ span#sec-seven-title {
         weight: 800,
       )
     );
+    @include mq(small-laptop) {
+      @include quick_type(18px, 25px, null);
+    }
+    @include mq(large-laptop) {
+      @include quick_type(20px, 30px, null);
+    }
     &.open {
       color: $color-dark-three;
       &:after {
@@ -72,6 +117,15 @@ span#sec-seven-title {
   .sec-seven-answer {
     display: none;
     padding: 20px 0 0 0;
+    @include mq(small-tablet) {
+      padding-right: 50px;
+    }
+    @include mq(small-laptop) {
+      padding-right: 30px;
+    }
+    @include mq(large-laptop) {
+      padding: 25px 0 0 0;
+    }
     &.content {
       color: #62676d;
       p {
