@@ -1,4 +1,18 @@
+<footer id="consultaton">
 
+  <div id='footer-top'>
+  
+    
+  
+  </div><!-- footer-top -->
+
+  <div id='footer-bottom'>
+  
+    
+  
+  </div><!-- footer-bottom -->
+
+</footer>
 
 <?php wp_footer();?>
 

@@ -13,7 +13,9 @@
 }
 
 #sec-ten-inner {
-  @include flex();
+  @include mq(small-laptop) {
+    @include flex();
+  }
   @include mq(small-monitor) {
     max-width: 1650px;
     @include margin_lr;
@@ -217,6 +219,9 @@ span#sec-ten-title {
 
 .sec-ten-arrow-right {
   svg {
-    @include abs(9px, null, null, 14px);
+    @include abs(11px, null, null, 16px);
+    @include mq(small-laptop) {
+      @include abs(9px, null, null, 14px);
+    }
   }
 }
