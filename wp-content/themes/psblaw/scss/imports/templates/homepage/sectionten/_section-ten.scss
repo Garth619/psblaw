@@ -4,6 +4,9 @@
   @include mq(small-laptop) {
     padding: 62px 95px;
   }
+  @include mq(large-laptop) {
+    padding: 89px 75px 89px 95px;
+  }
 }
 
 #sec-ten-inner {
@@ -17,6 +20,9 @@
     flex-shrink: 0;
     text-align: left;
     margin-right: 65px;
+  }
+  @include mq(large-laptop) {
+    flex-basis: 335px;
   }
 }
 
@@ -37,6 +43,9 @@ span#sec-ten-title {
   @include mq(small-tablet) {
     max-width: 100%;
   }
+  @include mq(small-laptop) {
+    margin-bottom: 30px;
+  }
 }
 
 #sec-ten-content {
@@ -53,6 +62,9 @@ span#sec-ten-title {
     @include mq(small-laptop) {
       @include quick_type(17px, 30px, null);
     }
+    @include mq(large-laptop) {
+      @include quick_type(17px, 25px, null);
+    }
   }
   p {
   }
@@ -62,6 +74,9 @@ span#sec-ten-title {
   @include mq(small-laptop) {
     width: calc(100% - 365px);
     margin-top: 65px;
+  }
+  @include mq(large-laptop) {
+    width: calc(100% - 400px);
   }
 }
 
@@ -81,6 +96,12 @@ span#sec-ten-title {
   @include mq(small-tablet) {
     width: calc(100% - 145px);
     @include margin_lr;
+  }
+  .slick-slide {
+    margin: 0 10px;
+  }
+  .slick-list {
+    margin: 0 -10px;
   }
   .slick-dots {
     position: static;

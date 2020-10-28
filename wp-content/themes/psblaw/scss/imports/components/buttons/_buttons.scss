@@ -119,6 +119,9 @@
       margin-left: 0;
       margin-right: 0;
     }
+    @include mq(large-laptop) {
+      margin-top: 32px;
+    }
   }
   &.mobile {
     @include mq(small-laptop) {
