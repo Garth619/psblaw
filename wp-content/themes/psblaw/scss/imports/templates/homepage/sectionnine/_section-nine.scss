@@ -3,14 +3,26 @@
   @include mq(small-tablet) {
     padding: 54px 94px 65px;
   }
+  @include mq(small-laptop) {
+    padding: 129px 128px 95px;
+  }
+  @include mq(large-laptop) {
+    padding: 146px 128px 130px;
+  }
 }
 
 #sec-nine-inner {
+  @include mq(small-laptop) {
+    @include flex();
+  }
 }
 
 #sec-nine-top {
   @include mq(small-tablet) {
-    @include flex(space-between);
+    @include flex();
+  }
+  @include mq(small-laptop) {
+    display: block;
   }
 }
 
@@ -20,6 +32,14 @@
   @include mq(small-tablet) {
     flex-basis: 276px;
     flex-shrink: 0;
+    margin: 0;
+    max-width: 100%;
+  }
+  @include mq(small-laptop) {
+    width: 358px;
+  }
+  @include mq(large-laptop) {
+    width: 423px;
   }
   img {
     @include image();
@@ -33,7 +53,15 @@
   @include mq(small-tablet) {
     text-align: left;
     margin-top: 6px;
+    margin-left: 0;
+    margin-right: 0;
     padding-left: 48px;
+    flex-grow: 1;
+    max-width: 100%;
+  }
+  @include mq(small-laptop) {
+    padding-left: 0px;
+    margin-top: 40px;
   }
   span {
     display: block;
@@ -48,6 +76,14 @@
           weight: 800,
         )
       );
+      @include mq(small-tablet) {
+        max-width: 485px;
+      }
+      @include mq(small-laptop) {
+        margin-top: 0;
+        max-width: 375px;
+        @include quick_type(28px, 38px, null);
+      }
       &:after {
         background: $color-dark-three;
         margin-top: 30px;
@@ -96,9 +132,21 @@
 
 #sec-nine-bottom {
   margin-top: 53px;
+  @include mq(small-laptop) {
+    margin-top: -13px;
+    padding-left: 81px;
+  }
+  @include mq(large-laptop) {
+    padding-left: 106px;
+  }
 }
 
 #sec-nine-content {
+  #sec-nine-content-inner {
+    @include mq(large-laptop) {
+      padding-right: 45px;
+    }
+  }
   &.content {
     color: #62676d;
   }
@@ -125,13 +173,28 @@ span#sec-nine-title {
     max-width: 100%;
     padding: 8px 0 17px 0;
     text-align: left;
+    width: 100%;
     margin-bottom: 29px;
+    margin-left: 0;
+    margin-right: 0;
     @include quick_type(50px, 55px, null);
+  }
+  @include mq(small-laptop) {
+    padding: 8px 0 29px 0;
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large-laptop) {
+    padding-right: 40px;
+    margin-bottom: 29px;
+    @include quick_type(75px, 75px, null);
   }
 }
 
 #sec-nine-amount-wrapper {
   padding-top: 9px;
+  @include mq(large-laptop) {
+    padding-top: 45px;
+  }
 }
 
 span#sec-nine-amounts-title {
@@ -154,6 +217,9 @@ span#sec-nine-amounts-title {
     max-width: 100%;
     text-align: left;
   }
+  @include mq(large-laptop) {
+    font-size: 18px;
+  }
 }
 
 #sec-nine-amounts {
@@ -161,6 +227,9 @@ span#sec-nine-amounts-title {
   @include flex(space-between, null, null, wrap);
   @include mq(small-tablet) {
     padding-top: 15px;
+  }
+  @include mq(small-laptop) {
+    padding-top: 6px;
   }
 }
 
@@ -183,6 +252,9 @@ span.sec-nine-amount {
   );
   @include mq(small-tablet) {
     flex-basis: 30%;
+  }
+  @include mq(small-laptop) {
+    font-size: 25px;
   }
   &:nth-of-type(-n + 6) {
     display: block;

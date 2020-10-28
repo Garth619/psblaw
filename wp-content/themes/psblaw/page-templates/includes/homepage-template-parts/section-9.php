@@ -28,7 +28,11 @@
       
         <span id='sec-nine-title'>Attorney Referrals and Joint Ventures</span><!-- sec-nine-title -->
 
-        <p>Panish Shea & Boyle LLP is considered one of the top plaintiff’s law firms in the country and receives case referrals from all types of lawyers and law firms. We also joint venture on cases with attorneys who want to stay more actively involved in the litigation. The majority of Panish Shea & Boyle's cases are referrals from other lawyers. Over $70 million referral fees in the last five years.</p>
+        <div id='sec-nine-content-inner'>
+        
+          <p>Panish Shea & Boyle LLP is considered one of the top plaintiff’s law firms in the country and receives case referrals from all types of lawyers and law firms. We also joint venture on cases with attorneys who want to stay more actively involved in the litigation. The majority of Panish Shea & Boyle's cases are referrals from other lawyers. Over $70 million referral fees in the last five years.</p>
+
+        </div><!-- sec-nine-content-inner -->
       
       </div><!-- sec-nine-content -->
 
