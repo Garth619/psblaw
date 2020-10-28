@@ -358,6 +358,41 @@ $("#sec-eight-slider").slick({
 });
 
 
+
+$("#sec-ten-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  mobileFirst:true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots:false,
+        arrows:true,
+        prevArrow:".sec-ten-arrow-left",
+        nextArrow:".sec-ten-arrow-right"
+      }
+    },
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots:true,
+        arrows:false,
+        prevArrow:".sec-ten-arrow-left",
+        nextArrow:".sec-ten-arrow-right"
+      }
+    }
+  ],
+});
+
+
 /* FAQs
 --------------------------------------------------------------------------------------- */
 

@@ -9,11 +9,19 @@
   @include mq(large-laptop) {
     padding: 146px 128px 130px;
   }
+  @include mq(small-monitor) {
+    padding: 130x 128px 130px;
+  }
 }
 
 #sec-nine-inner {
   @include mq(small-laptop) {
     @include flex();
+  }
+  @include mq(small-monitor) {
+    max-width: 1300px;
+    justify-content: space-between;
+    @include margin_lr;
   }
 }
 
@@ -62,6 +70,9 @@
   @include mq(small-laptop) {
     padding-left: 0px;
     margin-top: 40px;
+  }
+  @include mq(small-monitor) {
+    margin-left: 20px;
   }
   span {
     display: block;
@@ -139,6 +150,10 @@
   @include mq(large-laptop) {
     padding-left: 106px;
   }
+  @include mq(small-monitor) {
+    width: 594px;
+    padding: 0;
+  }
 }
 
 #sec-nine-content {
@@ -194,6 +209,9 @@ span#sec-nine-title {
   padding-top: 9px;
   @include mq(large-laptop) {
     padding-top: 45px;
+  }
+  @include mq(small-monitor) {
+    padding-top: 37px;
   }
 }
 

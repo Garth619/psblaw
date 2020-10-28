@@ -1,0 +1,152 @@
+#section-ten {
+  background: $color-light-two;
+  padding: 50px 45px;
+}
+
+#sec-ten-inner {
+}
+
+#sec-ten-top {
+}
+
+span#sec-ten-title {
+  display: block;
+  text-align: center;
+  max-width: 225px;
+  margin-bottom: 13px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 35px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-dark-three,
+      weight: 500,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 100%;
+  }
+}
+
+#sec-ten-content {
+  text-align: center;
+  max-width: 350px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 480px;
+  }
+  &.content {
+    color: #62676d;
+    @include mq(small-tablet) {
+      @include quick_type(14px, 25px, null);
+    }
+  }
+  p {
+  }
+}
+
+#sec-ten-bottom {
+}
+
+#sec-ten-slide-wrapper {
+  @include mq(small-tablet) {
+    @include flex(space-between, center);
+  }
+}
+
+#sec-ten-slider {
+  @include mq(small-tablet) {
+    width: calc(100% - 145px);
+    @include margin_lr;
+  }
+  .slick-dots {
+    position: static;
+    margin-top: 25px;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: #62676d;
+          font-size: 28px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.sec-ten-slide {
+  height: 90px;
+  .sec-ten-slide-inner {
+    @include flex(center, center);
+    height: 100%;
+    svg,
+    img {
+      @include image();
+      margin: auto;
+      max-height: 90px;
+    }
+  }
+}
+
+.sec-ten-arrow {
+  display: none;
+  @include mq(small-tablet) {
+    flex-shrink: 0;
+    .sec-ten-arrow-inner {
+      border-radius: 50%;
+      position: relative;
+      background: #d6d9dd;
+
+      @include box(36px);
+      @include flex(center, center);
+      &:before {
+        border-radius: 50%;
+        @include contentdisplay();
+      }
+      &:before {
+        background: #62676d;
+        transition: all 200ms ease-in-out;
+        @include box(30px);
+      }
+    }
+  }
+  &:hover {
+    @include mq(small-tablet) {
+      .sec-ten-arrow-inner {
+        &:before {
+          background: #8c949d;
+        }
+      }
+    }
+  }
+  svg {
+    @include abs(11px, null, null, 13px);
+    @include box(6px, 13px);
+  }
+}
+
+.sec-ten-arrow-right {
+  svg {
+    @include abs(11px, null, null, 16px);
+  }
+}
