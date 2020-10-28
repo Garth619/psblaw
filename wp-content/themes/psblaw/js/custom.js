@@ -379,12 +379,12 @@ $("#sec-ten-slider").slick({
       }
     },
     {
-      breakpoint: 1170,
+      breakpoint: 1380,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
-        dots:true,
-        arrows:false,
+        dots:false,
+        arrows:true,
         prevArrow:".sec-ten-arrow-left",
         nextArrow:".sec-ten-arrow-right"
       }

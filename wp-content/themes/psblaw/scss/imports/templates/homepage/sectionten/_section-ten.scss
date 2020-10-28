@@ -1,17 +1,27 @@
 #section-ten {
   background: $color-light-two;
   padding: 50px 45px;
+  @include mq(small-laptop) {
+    padding: 62px 95px;
+  }
 }
 
 #sec-ten-inner {
+  @include flex();
 }
 
 #sec-ten-top {
+  text-align: center;
+  @include mq(small-laptop) {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    text-align: left;
+    margin-right: 65px;
+  }
 }
 
 span#sec-ten-title {
   display: block;
-  text-align: center;
   max-width: 225px;
   margin-bottom: 13px;
   @include margin_lr;
@@ -30,7 +40,6 @@ span#sec-ten-title {
 }
 
 #sec-ten-content {
-  text-align: center;
   max-width: 350px;
   @include margin_lr;
   @include mq(small-tablet) {
@@ -41,17 +50,30 @@ span#sec-ten-title {
     @include mq(small-tablet) {
       @include quick_type(14px, 25px, null);
     }
+    @include mq(small-laptop) {
+      @include quick_type(17px, 30px, null);
+    }
   }
   p {
   }
 }
 
 #sec-ten-bottom {
+  @include mq(small-laptop) {
+    width: calc(100% - 365px);
+    margin-top: 65px;
+  }
 }
 
 #sec-ten-slide-wrapper {
   @include mq(small-tablet) {
+    padding-top: 10px;
+    max-width: 685px;
+    @include margin_lr;
     @include flex(space-between, center);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
   }
 }
 
@@ -112,21 +134,24 @@ span#sec-ten-title {
   display: none;
   @include mq(small-tablet) {
     flex-shrink: 0;
-    .sec-ten-arrow-inner {
+  }
+  .sec-ten-arrow-inner {
+    border-radius: 50%;
+    position: relative;
+    background: #d6d9dd;
+    @include box(36px);
+    @include flex(center, center);
+    @include mq(small-laptop) {
+      background: transparent;
+    }
+    &:before {
+      background: #62676d;
+      transition: all 200ms ease-in-out;
       border-radius: 50%;
-      position: relative;
-      background: #d6d9dd;
-
-      @include box(36px);
-      @include flex(center, center);
-      &:before {
-        border-radius: 50%;
-        @include contentdisplay();
-      }
-      &:before {
-        background: #62676d;
-        transition: all 200ms ease-in-out;
-        @include box(30px);
+      @include contentdisplay();
+      @include box(30px);
+      @include mq(small-laptop) {
+        @include box(36px);
       }
     }
   }
@@ -142,11 +167,15 @@ span#sec-ten-title {
   svg {
     @include abs(11px, null, null, 13px);
     @include box(6px, 13px);
+    @include mq(small-laptop) {
+      @include box(10px, 16px);
+      @include abs(9px, null, null, 11px);
+    }
   }
 }
 
 .sec-ten-arrow-right {
   svg {
-    @include abs(11px, null, null, 16px);
+    @include abs(9px, null, null, 14px);
   }
 }

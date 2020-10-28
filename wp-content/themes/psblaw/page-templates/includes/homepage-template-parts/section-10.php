@@ -11,6 +11,8 @@
         <p>Panish Shea & Boyle LLP is proud to support the following schools and other organizations that make a difference in our community.</p>
       
       </div><!-- sec-ten-content -->
+
+      <a class='button sec-ten-button desktop' href=''>View All</a><!-- button sec-ten-button -->
     
     </div><!-- sec-ten-top -->
 
@@ -104,7 +106,7 @@
       
       </div><!-- sec-ten-slide-wrapper -->
 
-      <a class='button sec-ten-button' href=''>View All</a><!-- button sec-ten-button -->
+      <a class='button sec-ten-button mobile' href=''>View All</a><!-- button sec-ten-button -->
     
     </div><!-- sec-ten-bottom -->
   

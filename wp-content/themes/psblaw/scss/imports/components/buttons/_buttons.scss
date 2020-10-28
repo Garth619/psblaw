@@ -107,5 +107,22 @@
     margin-top: 20px;
     font-size: 18px;
     padding: 8px 35px;
+    @include mq(small-tablet) {
+      margin-top: 40px;
+    }
+  }
+  &.desktop {
+    display: none;
+    @include mq(small-laptop) {
+      margin-top: -10px;
+      display: block;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+  &.mobile {
+    @include mq(small-laptop) {
+      display: none;
+    }
   }
 }
