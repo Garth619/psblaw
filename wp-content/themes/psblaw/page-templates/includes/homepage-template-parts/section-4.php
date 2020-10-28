@@ -172,7 +172,7 @@
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
+						<img src='<?php bloginfo('template_directory');?>/images/sp-4-stellar.jpg' alt=''/>
 					
 					</div><!-- sec-four-slide-reg -->
 
@@ -218,7 +218,7 @@
 						
 						</div><!-- sec-four-slide-title-wrapper -->
 
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
+						<img src='<?php bloginfo('template_directory');?>/images/sp-5-prompt.jpg' alt=''/>
 					
 					</div><!-- sec-four-slide-reg -->
 

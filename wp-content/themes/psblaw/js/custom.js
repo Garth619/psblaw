@@ -381,8 +381,8 @@ $("#sec-ten-slider").slick({
     {
       breakpoint: 1380,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 4,
+        slidesToScroll: 4,
         dots:false,
         arrows:true,
         prevArrow:".sec-ten-arrow-left",

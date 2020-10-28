@@ -7,10 +7,17 @@
   @include mq(large-laptop) {
     padding: 89px 75px 89px 95px;
   }
+  @include mq(small-monitor) {
+    padding: 105px 75px;
+  }
 }
 
 #sec-ten-inner {
   @include flex();
+  @include mq(small-monitor) {
+    max-width: 1650px;
+    @include margin_lr;
+  }
 }
 
 #sec-ten-top {
@@ -23,6 +30,10 @@
   }
   @include mq(large-laptop) {
     flex-basis: 335px;
+  }
+  @include mq(small-monitor) {
+    flex-basis: 380px;
+    margin-right: 45px;
   }
 }
 
@@ -46,6 +57,9 @@ span#sec-ten-title {
   @include mq(small-laptop) {
     margin-bottom: 30px;
   }
+  @include mq(small-monitor) {
+    margin-bottom: 15px;
+  }
 }
 
 #sec-ten-content {
@@ -65,6 +79,9 @@ span#sec-ten-title {
     @include mq(large-laptop) {
       @include quick_type(17px, 25px, null);
     }
+    @include mq(small-monitor) {
+      @include quick_type(17px, 30px, null);
+    }
   }
   p {
   }
@@ -77,6 +94,9 @@ span#sec-ten-title {
   }
   @include mq(large-laptop) {
     width: calc(100% - 400px);
+  }
+  @include mq(small-monitor) {
+    width: calc(100% - 425px);
   }
 }
 
