@@ -99,7 +99,7 @@
       <div id='copyright-inner'>
       
         <ul>
-          <li>Copyright &copy; <?php $pfx_date = get_the_date(); echo $pfx_date; ?> Panish Shea & Boyle</li>
+          <li>Copyright &copy; <?php echo date("Y"); ?> Panish Shea & Boyle</li>
           <li>All rights reserved.</li>
           <li><a href="">DISCLAIMER</a></li>
           <li><a href="" target="_blank" rel="noopener">SITEMAP</a></li>

@@ -182,6 +182,9 @@ footer {
     @include mq(small-tablet) {
       margin-top: 38px;
     }
+    @include mq(small-laptop) {
+      margin-top: 30px;
+    }
     input[type="submit"] {
       font-size: 22px;
     }
