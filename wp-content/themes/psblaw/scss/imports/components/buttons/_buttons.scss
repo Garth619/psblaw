@@ -179,6 +179,9 @@ footer {
   .gform_footer {
     margin-top: 75px;
     padding: 22px 35px;
+    @include mq(small-tablet) {
+      margin-top: 38px;
+    }
     input[type="submit"] {
       font-size: 22px;
     }
