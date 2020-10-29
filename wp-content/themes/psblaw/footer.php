@@ -92,6 +92,30 @@
     
   </div><!-- footer-bottom -->
 
+  <div id='copyright'>
+  
+    <div id='copyright-inner'>
+    
+      <ul>
+        <li>Copyright &copy; <?php $pfx_date = get_the_date(); echo $pfx_date; ?> Panish Shea & Boyle</li>
+        <li>All rights reserved.</li>
+        <li><a href="">DISCLAIMER</a></li>
+        <li><a href="" target="_blank" rel="noopener">SITEMAP</a></li>
+        <li><a href="" target="_blank" rel="noopener">Google Maps</a></li>
+      </ul>
+
+      <a id="ilawyer" href="//ilawyermarketing.com" target="_blank" rel="noopener">
+  
+        <img src='<?php bloginfo('template_directory');?>/images/ilawyerlogo.svg' alt=''/>
+  
+      </a>
+    
+    </div><!-- copyright-inner -->
+  
+  </div><!-- copyright -->
+
+  
+
 </footer>
 
 <?php wp_footer();?>
