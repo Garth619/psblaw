@@ -7,6 +7,9 @@ footer {
   @include mq(small-laptop) {
     padding: 0 0px 50px;
   }
+  @include mq(small-monitor) {
+    padding-bottom: 35px;
+  }
 }
 
 #footer-inner {
@@ -225,6 +228,9 @@ span#footer-form-descrip {
     max-width: 1400px;
     padding: 56px 105px 0 126px;
   }
+  @include mq(small-monitor) {
+    max-width: 1830px;
+  }
   span#footer-bottom-title {
     display: block;
     border-bottom: 1px solid $color-bright-two;
@@ -268,6 +274,9 @@ span#footer-form-descrip {
   @include mq(large-laptop) {
     padding-left: 90px;
   }
+  @include mq(small-monitor) {
+    padding-left: 150px;
+  }
 }
 
 .footer-bottom-col {
@@ -304,6 +313,13 @@ span#footer-form-descrip {
     @include margin_lr;
     @include mq(small-tablet) {
       margin: 0;
+    }
+    &.footer-phone {
+      color: $color-light-one;
+      transition: 200ms all ease-in-out;
+      &:hover {
+        color: $color-bright-one;
+      }
     }
   }
 }
@@ -371,6 +387,9 @@ a.get-directions-button {
   @include mq(small-tablet) {
     margin-top: 25px;
   }
+  @include mq(small-monitor) {
+    margin-top: 34px;
+  }
   &:hover {
     background: #242938;
   }
@@ -378,6 +397,9 @@ a.get-directions-button {
 
 #social-media-wrapper {
   padding-top: 35px;
+  @include mq(small-monitor) {
+    padding-top: 47px;
+  }
   a {
     position: relative;
     z-index: 1;
@@ -390,6 +412,7 @@ a.get-directions-button {
     @include mq(large-laptop) {
       @include box(48px);
     }
+
     &:after {
       background: transparent;
       border-radius: 50%;
@@ -420,6 +443,9 @@ a.get-directions-button {
   @include mq(small-laptop) {
     margin-top: 64px;
   }
+  @include mq(small-monitor) {
+    margin-top: 102px;
+  }
 }
 
 #copyright-inner {
@@ -436,6 +462,9 @@ a.get-directions-button {
   }
   @include mq(large-laptop) {
     max-width: 1320px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1800px;
   }
   ul {
     list-style: none;
