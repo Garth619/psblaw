@@ -1,9 +1,10 @@
 footer {
   background: $color-dark-one;
+  padding: 0 28px;
 }
 
 #footer-top {
-  padding: 55px 28px 150px;
+  padding: 55px 0px 150px;
 }
 
 span#footer-form-title {
@@ -116,6 +117,113 @@ span#footer-form-descrip {
     );
     span {
       color: $color-bright-two;
+    }
+  }
+}
+
+#footer-bottom {
+  padding: 30px 0 0;
+  span#footer-bottom-title {
+    display: block;
+    border-bottom: 1px solid $color-bright-two;
+    padding-bottom: 28px;
+    @include type(
+      (
+        size: 25px,
+        height: 40px,
+        family: $primaryfont,
+        color: $color-light-one,
+        weight: 800,
+      )
+    );
+  }
+}
+
+#footer-bottom-col-wrapper {
+  margin: 35px 0 0;
+}
+
+.footer-bottom-col {
+  text-align: center;
+  &:first-of-type {
+    padding-bottom: 45px;
+  }
+  &:last-of-type {
+    padding-top: 35px;
+    @include flex(center, null, null, wrap);
+  }
+  span,
+  a {
+    display: block;
+  }
+  a {
+    width: max-content;
+    @include margin_lr;
+  }
+}
+
+.footer-bottom-sub-col {
+  flex-basis: 50%;
+  &:last-of-type {
+  }
+}
+
+span.footer-bottom-col-title {
+  margin-bottom: 20px;
+  @include type(
+    (
+      size: 16px,
+      height: 18px,
+      spacing: 1.84px,
+      family: $primaryfont,
+      color: $color-bright-two,
+      weight: 800,
+    )
+  );
+}
+
+.footer-bottom-content {
+  margin-bottom: 15px;
+  @include type(
+    (
+      size: 16px,
+      height: 25px,
+      spacing: 0.4px,
+      family: $primaryfont,
+      color: $color-light-one,
+      weight: 600,
+    )
+  );
+}
+
+a.get-directions-button {
+  border-radius: 50px;
+  margin-top: 30px;
+  padding: 8px 23px;
+  background: transparent;
+  border: 2px solid $color-bright-two;
+  transition: 200ms all ease-in-out;
+  @include type(
+    (
+      size: 15px,
+      height: 17px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+      transform: lowercase,
+    )
+  );
+  &:hover {
+    background: #242938;
+  }
+}
+
+#social-media-wrapper {
+  padding-top: 35px;
+  @include flex(center);
+  a {
+    svg {
+      @include box(40px);
     }
   }
 }
