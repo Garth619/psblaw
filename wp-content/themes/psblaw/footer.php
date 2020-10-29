@@ -2,7 +2,13 @@
 
   <div id='footer-top'>
   
-    
+    <span id='footer-form-title'>How can we help you?</span><!-- footer-form-title -->
+
+    <span id='footer-form-descrip'>Fill out the form below for a<br/> no-obligation review of your case</span><!-- footer-form-descrip -->
+
+    <?php gravity_form(3, false, false, false, '', true, 1345); ?>
+
+    <span id='required'><span>*</span>Required Fields</span><!-- required -->
   
   </div><!-- footer-top -->
 
