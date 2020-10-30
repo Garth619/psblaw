@@ -88,7 +88,7 @@
 
 <body <?php body_class(); ?>>
 
-<header>
+<header class="<?php $header = is_front_page() ? 'front-page' : 'internal-page'; echo $header; ?>">
 
 	<div id='header-desktop-wrapper'>
 

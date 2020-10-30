@@ -49,6 +49,158 @@ header {
   }
 }
 
+header.internal-page {
+  width: 100%;
+  background: $color-light-one;
+  box-shadow: 0px 3px 6px #00000029;
+  @include fixed(0, null, null, 0, 5);
+  &:after {
+    display: none;
+  }
+  #header-desktop-wrapper {
+    border-bottom: 1px solid #d4d5d6;
+  }
+  #header-left {
+    align-items: flex-start;
+    @include mq(small-laptop) {
+      padding: 39px 70px 25px 7px;
+    }
+  }
+  #logo_mobile {
+    @include mq(small-laptop) {
+      display: none;
+    }
+    svg {
+      path {
+        fill: $color-dark-three;
+      }
+    }
+  }
+  #logo_desktop {
+    @include mq(small-laptop) {
+      display: block;
+    }
+    svg {
+      path {
+        fill: $color-dark-three;
+      }
+    }
+  }
+  #menu-wrapper {
+    background: $color-dark-three;
+    span {
+      &.menu-bar {
+        background: $color-light-one;
+      }
+      &#menu-title {
+        color: $color-light-one;
+      }
+    }
+  }
+  .translate-wrapper {
+    max-width: 80px;
+    margin-top: -4px;
+    margin-right: -5px;
+    margin-left: 0;
+    @include mq(small-tablet) {
+      margin-top: 3px;
+    }
+    a {
+      color: $color-dark-one;
+      font-size: 10px;
+      @include mq(small-tablet) {
+        font-size: 12px;
+      }
+    }
+  }
+  #header-right {
+    display: block;
+    padding: 0;
+    @include abs(30px, 61px, null, null);
+    @include mq(small-tablet) {
+      @include flex();
+      @include abs(27px, 61px, null, null);
+    }
+    @include mq(small-laptop) {
+      @include abs(27px, 36px, null, null);
+    }
+  }
+  a#header-phone {
+    font-size: 20px;
+    margin-top: 3px;
+    color: $color-bright-two;
+    @include mq(small-tablet) {
+      font-size: 24px;
+      margin-top: 16px;
+    }
+    @include mq(small-laptop) {
+      font-size: 30px;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  #free-consult-wrapper {
+    @media screen and (min-width: 370px) {
+      margin-right: 0;
+    }
+    @include mq(small-tablet) {
+      padding-top: 0;
+      margin-right: 10px;
+      position: relative;
+      top: 10px;
+    }
+    span {
+      color: $color-dark-one;
+      font-size: 11px;
+      @media screen and (min-width: 370px) {
+        margin-right: 0;
+      }
+      @media screen and (min-width: 428px) {
+        margin: 0;
+      }
+      @include mq(small-tablet) {
+        font-size: 16px;
+      }
+      @include mq(small-laptop) {
+        font-size: 22px;
+      }
+      &:first-of-type {
+        &:after {
+          background: $color-bright-two;
+          border-radius: 50%;
+          vertical-align: top;
+          margin: 6px 0 0 4px;
+          @include box(3px);
+          @include contentdisplay(inline-block);
+          @media screen and (min-width: 428px) {
+            margin: -3px 5px 0 6px;
+          }
+          @include mq(small-laptop) {
+            margin: -3px 9px 0 10px;
+            @include box(6px);
+          }
+        }
+      }
+      &:last-of-type {
+        padding-right: 3px;
+      }
+    }
+  }
+  nav {
+    ul {
+      li {
+        font-size: 14px;
+        a {
+          @include mq(small-laptop) {
+            color: $color-dark-one;
+          }
+        }
+      }
+    }
+  }
+}
+
 #header-desktop-wrapper {
   @include mq(small-tablet) {
     width: 100%;
