@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="internal_main">
+<div id="internal-main">
 
 <div id='two_col_template_with_banner'>
 

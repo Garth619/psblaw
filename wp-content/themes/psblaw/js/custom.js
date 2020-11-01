@@ -103,19 +103,35 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  // createWaypoint("section-three", "#section-three", "visible", 550, null, true);
-  // createWaypoint("section-four", "#section-four", "visible", 600, null, true);
-  // createWaypoint("section-five", "#section-five", "visible", 400, null, true);
-  // createWaypoint("section-six", "#section-six", "visible", 400, null, true);
-  // createWaypoint("consultation", "footer", "visible", 300, null, true);
-  // createWaypoint(
-  //   "about-bottom-wrapper",
-  //   "#about-bottom-wrapper",
-  //   "visible",
-  //   300,
-  //   null,
-  //   true
-  // );
+  //createWaypoint("internal-main", "#header", "sticky", 0, null, true);
+  
+/* Sticky Header
+--------------------------------------------------------------------------------------- */
+
+$(function() {
+  //caches a jQuery object containing the header element
+  var header = $("#header");
+  $(window).scroll(function() {
+      var scroll = $(window).scrollTop();
+      if (scroll >= 180) {
+        header.addClass("header-layout-three");
+      } 
+      if (scroll >= 265) {
+          header.addClass("sticky");
+      } 
+      if (scroll < 265) {
+        header.removeClass("sticky");
+        
+      }
+      if (scroll < 180) {
+        header.removeClass("header-layout-three");
+      }
+      
+      // else {
+      //     header.removeClass("sticky").addClass('static');
+      // }
+  });
+});
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
@@ -482,11 +498,11 @@ $('span.sec-seven-question').on('click', function(e) {
 
   // nav
 // can i make this a function? so there isnt redundant code below with the wondo resizes?
-  if ($(window).width() >= 1066) {
+  if ($(window).width() >= 1170) {
     navDesktop();
   }
 
-  if ($(window).width() < 1066) {
+  if ($(window).width() < 1170) {
     navTablet();
 
     $("header nav li.menu-item-has-children > a")
@@ -498,7 +514,7 @@ $('span.sec-seven-question').on('click', function(e) {
 
   $(window).resize(
     _.debounce(function () {
-      if ($(window).width() >= 1066) {
+      if ($(window).width() >= 1170) {
         navDesktop();
 
         // off
@@ -506,7 +522,7 @@ $('span.sec-seven-question').on('click', function(e) {
         $("header nav li.menu-item-has-children > a").off("click", tabletClick);
       }
 
-      if ($(window).width() < 1066) {
+      if ($(window).width() < 1170) {
         navTablet();
 
         // off

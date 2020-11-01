@@ -88,7 +88,7 @@
 
 <body <?php body_class(); ?>>
 
-<header class="<?php $header = is_front_page() ? 'front-page' : 'internal-page'; echo $header; ?>">
+<header id="header" class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>" class="static">
 
 	<div id='header-desktop-wrapper'>
 
@@ -96,17 +96,23 @@
 
 			<a id='logo' href="<?php bloginfo('url');?>">
 		
-				<div id="logo_mobile">
+				<div id="logo-mobile">
 					
 					<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
 
-				</div><!-- logo_mobile -->
+				</div><!-- logo-mobile -->
 
-				<div id="logo_desktop">
+				<div id="logo-desktop">
 					
 					<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-main.svg' ); ?>
 
-				</div><!-- logo_desktop -->
+				</div><!-- logo-desktop -->
+
+				<div id="logo-sticky">
+					
+					<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-three.svg' ); ?>
+
+				</div><!-- logo-sticky -->
 		
 			</a><!-- logo -->
 
