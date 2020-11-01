@@ -126,10 +126,6 @@ $(function() {
       if (scroll < 180) {
         header.removeClass("header-layout-three");
       }
-      
-      // else {
-      //     header.removeClass("sticky").addClass('static');
-      // }
   });
 });
 
