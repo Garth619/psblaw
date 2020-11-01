@@ -88,7 +88,13 @@
 
 <body <?php body_class(); ?>>
 
-<header id="header" class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>" class="static">
+<header id="header" class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>">
+
+	<div id='header-inner'>
+	
+		
+	
+	
 
 	<div id='header-desktop-wrapper'>
 
@@ -158,6 +164,8 @@
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
 	
 	</nav>
+
+	</div><!-- header-inner -->
 
 </header>
 

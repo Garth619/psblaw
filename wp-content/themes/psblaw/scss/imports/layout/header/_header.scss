@@ -49,6 +49,12 @@ header {
   }
 }
 
+#header-inner {
+  width: 100%;
+  max-width: 1452px;
+  position: relative;
+}
+
 #header-desktop-wrapper {
   @include mq(small-tablet) {
     width: 100%;
@@ -105,7 +111,7 @@ header {
     @include abs(15px, 73px, null, null);
   }
   @include mq(small-laptop) {
-    right: 46px;
+    right: 10px;
   }
   @include mq(large-laptop) {
     top: 52px;
@@ -114,7 +120,7 @@ header {
   @include mq(small-monitor) {
     width: 137px;
     top: 108px;
-    right: 42px;
+    right: 0px;
   }
   a {
     transition: all 200ms ease-in-out;
@@ -286,6 +292,12 @@ header.header-layout-two {
   &:after {
     display: none;
   }
+  #header-inner {
+    @include mq(small-monitor) {
+      max-width: 1850px;
+      @include margin_lr;
+    }
+  }
   #header-desktop-wrapper {
     border-bottom: 1px solid #d4d5d6;
   }
@@ -447,7 +459,9 @@ header.header-layout-two {
     }
     ul {
       li {
-        font-size: 14px;
+        @include mq(small-laptop) {
+          font-size: 14px;
+        }
         a {
           @include mq(small-laptop) {
             color: $color-dark-one;
@@ -553,14 +567,26 @@ header.header-layout-three {
     @include mq(small-laptop) {
       margin-right: 0;
     }
+    @include mq(large-laptop) {
+      padding-top: 4px;
+    }
+    @include mq(small-monitor) {
+      padding-top: 6px;
+    }
     span {
       @include mq(small-laptop) {
         font-size: 14px;
+      }
+      @include mq(small-monitor) {
+        font-size: 22px;
       }
       &:first-of-type {
         &:after {
           @include mq(small-laptop) {
             margin: -3px 4px 0 4px;
+          }
+          @include mq(small-monitor) {
+            margin: -3px 12px 0 12px;
           }
         }
       }
@@ -578,22 +604,45 @@ header.header-layout-three {
       top: 0;
       right: 22px;
     }
+    @include mq(small-monitor) {
+      @include flex();
+      right: 35px;
+      top: 9px;
+    }
     a#header-phone {
       @include mq(small-laptop) {
         font-size: 22px;
+      }
+      @include mq(small-monitor) {
+        font-size: 30px;
+        margin-left: 30px;
       }
     }
   }
   nav {
     @include mq(small-laptop) {
       max-width: 778px;
-      @include abs(7px, null, null, 179px);
+      @include abs(7px, null, null, 186px);
+    }
+    @include mq(large-laptop) {
+      max-width: 935px;
+    }
+    @include mq(small-monitor) {
+      max-width: 1085px;
     }
     ul {
       li {
         @include mq(small-laptop) {
           font-size: 12px;
         }
+        @include mq(large-laptop) {
+          font-size: 14px;
+        }
+      }
+    }
+    ul.menu {
+      > li {
+        margin-right: 55px;
       }
     }
   }
