@@ -4,7 +4,7 @@
 	
 	get_header(); ?>
 	
-	<div id="internal_main">
+	<div id="internal-main">
 	
 	<div class="page_container">
 
@@ -26,6 +26,6 @@
 	
 	<div id='contact_bottom'></div><!-- contact_bottom -->
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 
 	<?php get_footer(); ?>

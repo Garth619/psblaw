@@ -4,7 +4,7 @@
 
 get_header(); ?>
 
-<div id="internal_main">
+<div id="internal-main">
 
 	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
 	
@@ -42,6 +42,6 @@ get_header(); ?>
 		
 	</div><!-- page_container -->
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 
 <?php get_footer(); ?>

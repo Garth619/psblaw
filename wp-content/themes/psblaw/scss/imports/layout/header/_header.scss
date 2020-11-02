@@ -288,6 +288,7 @@ header.header-layout-two {
   @include fixed(0, null, null, 0, 5);
   @include mq(small-laptop) {
     position: relative;
+    padding: 0 35px;
   }
   &:after {
     display: none;
@@ -301,6 +302,9 @@ header.header-layout-two {
   }
   .header-desktop-wrapper {
     border-bottom: none;
+    @include mq(small-laptop) {
+      border-bottom: 1px solid #d4d5d6;
+    }
   }
   .header-left {
     align-items: flex-start;
@@ -379,7 +383,7 @@ header.header-layout-two {
       @include abs(27px, 71px, null, null);
     }
     @include mq(small-laptop) {
-      @include abs(27px, 36px, null, null);
+      @include abs(27px, 4px, null, null);
     }
     @include mq(large-laptop) {
       top: 20px;
@@ -452,11 +456,11 @@ header.header-layout-two {
   }
   nav {
     @include mq(small-laptop) {
-      max-width: 890px;
+      max-width: 999px;
       padding: 0 10px 14px;
     }
     @include mq(small-monitor) {
-      max-width: 1060px;
+      max-width: 1100px;
     }
     ul {
       li {
@@ -471,7 +475,10 @@ header.header-layout-two {
       }
     }
     ul.menu {
-      li {
+      > li {
+        @include mq(small-monitor) {
+          margin-right: 56px;
+        }
         &:hover {
           > a {
             color: $color-bright-two;

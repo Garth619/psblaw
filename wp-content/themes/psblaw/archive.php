@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 
-<div id="internal_main">
+<div id="internal-main">
 
 <?php if(!get_field('disable_banner_blog_redo','option')) { ?>
 
@@ -70,7 +70,7 @@
 		
 	</div><!-- page_container -->
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 
 
 <?php get_footer(); ?>

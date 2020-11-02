@@ -4,7 +4,7 @@
 
 get_header(); ?>
 
-<div id="internal_main">
+<div id="internal-main">
 
 	<div id='about_banner'>
 	
@@ -130,6 +130,6 @@ get_header(); ?>
 	
 	</div><!-- about_bottom_wrapper -->
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 		
 <?php get_footer(); ?>

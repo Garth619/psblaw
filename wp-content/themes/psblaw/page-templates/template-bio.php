@@ -4,7 +4,7 @@
 
 get_header(); ?>
 
-<div id="internal_main">
+<div id="internal-main">
 
 <div id='att_banner'>
 
@@ -45,7 +45,7 @@ get_header(); ?>
 	</div><!-- page_container -->
 	
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 					 
 					 	
 <?php get_footer(); ?>

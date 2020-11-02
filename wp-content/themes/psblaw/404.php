@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div id="internal_main">
+<div id="internal-main">
 	
 	<div class="page_container one_col">
 
@@ -22,6 +22,6 @@
 		
 	</div><!-- page_container -->
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 			
 <?php get_footer(); ?>
