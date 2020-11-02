@@ -103,31 +103,56 @@ jQuery(document).ready(function ($) {
     }
   }
 
-  //createWaypoint("internal-main", "#header", "sticky", 0, null, true);
+  createWaypoint("section-one", "#sticky-header", "sticky", -200, null, true);
+
+  createWaypoint("internal-main", "#sticky-header", "sticky", -200, null, true);
   
 /* Sticky Header
 --------------------------------------------------------------------------------------- */
 
-$(function() {
-  //caches a jQuery object containing the header element
-  var header = $("#header");
-  $(window).scroll(function() {
-      var scroll = $(window).scrollTop();
-      if (scroll >= 180) {
-        header.addClass("header-layout-three");
-      } 
-      if (scroll >= 265) {
-          header.addClass("sticky");
-      } 
-      if (scroll < 265) {
-        header.removeClass("sticky");
-        
-      }
-      if (scroll < 180) {
-        header.removeClass("header-layout-three");
-      }
-  });
-});
+// $(function() {
+
+//   var header = $("#header");
+
+//   $(window).on('scroll',_.debounce(function () {
+
+//   var scroll = $(window).scrollTop();
+//     if (scroll >= 170) {
+//       header.hide();
+//     }
+//     if (scroll >= 180) {
+//       // internal pages
+//       header.addClass("header-layout-three sticky");
+//       // homepage
+//       if ($('body').hasClass('page-template-template-home')){
+//         header.addClass("header-layout-two header-layout-three sticky");
+//       }
+//     } 
+//     if (scroll >= 265) {
+//         header.show();
+//     } 
+//     if (scroll < 265) {
+//       header.hide();
+//     }
+//     if (scroll < 180) {
+//       // internal pages
+//       header.removeClass("header-layout-three sticky");
+//       // homepage
+//       if ($('body').hasClass('page-template-template-home')){
+//         header.removeClass("header-layout-two header-layout-three sticky");
+//       }
+//     }
+//     if (scroll < 170) {
+//       header.show();
+//     }
+//   },50));
+
+// });
+
+
+$('header').clone().addClass('header-layout-two header-layout-three').removeClass('header-layout-one').appendTo("#sticky-header");
+
+
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
@@ -458,11 +483,11 @@ $('span.sec-seven-question').on('click', function(e) {
 
   //$('nav ul.menu > li.current-menu-ancestor > a').addClass('active');
 
-  $("#menu-wrapper").on("click", function (e) {
+  $(".menu-wrapper").on("click", function (e) {
     $("nav").addClass('nav-open');
   });
 
-  $("nav #close").on("click", function (e) {
+  $("nav .close").on("click", function (e) {
     $("nav").removeClass('nav-open');
   });
 

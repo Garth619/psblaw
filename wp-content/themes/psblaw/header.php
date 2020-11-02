@@ -88,86 +88,84 @@
 
 <body <?php body_class(); ?>>
 
-<header id="header" class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>">
+<header class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>">
 
-	<div id='header-inner'>
+	<div class='header-inner'>
 	
-		
-	
-	
+		<div class='header-desktop-wrapper'>
 
-	<div id='header-desktop-wrapper'>
+			<div class='header-left'>
 
-		<div id='header-left'>
-
-			<a id='logo' href="<?php bloginfo('url');?>">
-		
-				<div id="logo-mobile">
-					
-					<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
-
-				</div><!-- logo-mobile -->
-
-				<div id="logo-desktop">
-					
-					<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-main.svg' ); ?>
-
-				</div><!-- logo-desktop -->
-
-				<div id="logo-sticky">
-					
-					<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-three.svg' ); ?>
-
-				</div><!-- logo-sticky -->
-		
-			</a><!-- logo -->
-
-			<div class='translate-wrapper'>
+				<a class='logo' href="<?php bloginfo('url');?>">
 			
-				<a href=''>Es</a>
-				<a href=''>Cn</a>
-				<a href=''>Kr</a>
+					<div class="logo-mobile">
+						
+						<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
+
+					</div><!-- logo-mobile -->
+
+					<div class="logo-desktop">
+						
+						<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-main.svg' ); ?>
+
+					</div><!-- logo-desktop -->
+
+					<div class="logo-sticky">
+						
+						<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-three.svg' ); ?>
+
+					</div><!-- logo-sticky -->
 			
-			</div><!-- translate-wrapper -->
+				</a><!-- logo -->
 
-		</div><!-- header-left -->
+				<div class='translate-wrapper'>
+				
+					<a href=''>Es</a>
+					<a href=''>Cn</a>
+					<a href=''>Kr</a>
+				
+				</div><!-- translate-wrapper -->
 
-		<div id='header-right'>
-		
-			<div id='free-consult-wrapper'>
+			</div><!-- header-left -->
+
+			<div class='header-right'>
 			
-				<span>Free Consultation</span>
-				<span>Available 24/7</span>
+				<div class='free-consult-wrapper'>
+				
+					<span>Free Consultation</span>
+					<span>Available 24/7</span>
+				
+				</div><!-- free-consult-wrapper -->
+
+				<a class="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
 			
-			</div><!-- free-consult-wrapper -->
+			</div><!-- header-right -->
 
-			<a id="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
+		</div><!-- header-desktop-wrapper -->
+
+		<div class='menu-wrapper'>
 		
-		</div><!-- header-right -->
+			<span class='menu-bar'></span><!-- menu-bar -->
+			<span class='menu-bar'></span><!-- menu-bar -->
+			<span class='menu-bar'></span><!-- menu-bar -->
 
-	</div><!-- header-desktop-wrapper -->
-
-	<div id='menu-wrapper'>
-	
-		<span class='menu-bar'></span><!-- menu-bar -->
-		<span class='menu-bar'></span><!-- menu-bar -->
-		<span class='menu-bar'></span><!-- menu-bar -->
-
-		<span id='menu-title'>Menu</span><!-- menu-title -->
-	
-	</div><!-- menu-wrapper -->
-
-	<nav>
+			<span class='menu-title'>Menu</span><!-- menu-title -->
 		
-		<div id='close'></div><!-- close -->
+		</div><!-- menu-wrapper -->
+
+		<nav>
+			
+			<div class='close'></div><!-- close -->
+			
+			<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
 		
-		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'main_menu' ) ); ?>
-	
-	</nav>
+		</nav>
 
 	</div><!-- header-inner -->
 
 </header>
+
+<div id='sticky-header'></div><!-- sticky-header -->
 
 		 
 	 

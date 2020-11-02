@@ -49,13 +49,13 @@ header {
   }
 }
 
-#header-inner {
+.header-inner {
   width: 100%;
   max-width: 1452px;
   position: relative;
 }
 
-#header-desktop-wrapper {
+.header-desktop-wrapper {
   @include mq(small-tablet) {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.15);
@@ -63,7 +63,7 @@ header {
   }
 }
 
-#header-left {
+.header-left {
   padding: 15px 70px 15px 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   @include box(100%, 93px);
@@ -83,21 +83,21 @@ header {
   }
 }
 
-#logo-mobile {
+.logo-mobile {
   display: block;
   @include mq(large-laptop) {
     display: none;
   }
 }
 
-#logo-desktop {
+.logo-desktop {
   display: none;
   @include mq(large-laptop) {
     display: block;
   }
 }
 
-#logo-sticky {
+.logo-sticky {
   display: none;
 }
 
@@ -123,7 +123,6 @@ header {
     right: 0px;
   }
   a {
-    transition: all 200ms ease-in-out;
     @include type(
       (
         size: 12px,
@@ -136,6 +135,7 @@ header {
     );
     @include mq(small-laptop) {
       font-size: 13px;
+      transition: color 200ms ease-in-out;
     }
     @include mq(small-monitor) {
       font-size: 15px;
@@ -146,7 +146,7 @@ header {
   }
 }
 
-#header-right {
+.header-right {
   padding: 11px 20px 10px;
   @include flex(space-between, center);
   @include mq(small-tablet) {
@@ -166,7 +166,7 @@ header {
   }
 }
 
-#free-consult-wrapper {
+.free-consult-wrapper {
   padding-top: 1px;
   @media screen and (min-width: 370px) {
     margin-right: 20px;
@@ -223,7 +223,7 @@ header {
   }
 }
 
-a#header-phone {
+a.header-phone {
   flex-shrink: 0;
   @include flex(center, center);
   @include type(
@@ -253,7 +253,7 @@ a#header-phone {
   }
 }
 
-#menu-wrapper {
+.menu-wrapper {
   background: $color-light-one;
   @include flex(center, center, column);
   @include box(53px, 93px);
@@ -267,7 +267,7 @@ a#header-phone {
     margin-bottom: 5px;
     @include box(26px, 2px);
   }
-  span#menu-title {
+  span.menu-title {
     padding-top: 1px;
     @include type(
       (
@@ -292,23 +292,23 @@ header.header-layout-two {
   &:after {
     display: none;
   }
-  #header-inner {
+  .header-inner {
     max-width: 100%;
     @include mq(small-monitor) {
       max-width: 1850px;
       @include margin_lr;
     }
   }
-  #header-desktop-wrapper {
-    border-bottom: 1px solid #d4d5d6;
+  .header-desktop-wrapper {
+    border-bottom: none;
   }
-  #header-left {
+  .header-left {
     align-items: flex-start;
     @include mq(small-laptop) {
       padding: 39px 70px 25px 7px;
     }
   }
-  #logo-mobile {
+  .logo-mobile {
     @include mq(small-laptop) {
       display: none;
     }
@@ -318,7 +318,7 @@ header.header-layout-two {
       }
     }
   }
-  #logo-desktop {
+  .logo-desktop {
     @include mq(small-laptop) {
       display: block;
     }
@@ -328,13 +328,13 @@ header.header-layout-two {
       }
     }
   }
-  #menu-wrapper {
+  .menu-wrapper {
     background: $color-dark-three;
     span {
       &.menu-bar {
         background: $color-light-one;
       }
-      &#menu-title {
+      &.menu-title {
         color: $color-light-one;
       }
     }
@@ -370,7 +370,7 @@ header.header-layout-two {
       }
     }
   }
-  #header-right {
+  .header-right {
     display: block;
     padding: 0;
     @include abs(30px, 61px, null, null);
@@ -385,7 +385,7 @@ header.header-layout-two {
       top: 20px;
     }
   }
-  a#header-phone {
+  a.header-phone {
     font-size: 20px;
     margin-top: 3px;
     color: $color-bright-two;
@@ -400,7 +400,7 @@ header.header-layout-two {
       display: none;
     }
   }
-  #free-consult-wrapper {
+  .free-consult-wrapper {
     @media screen and (min-width: 370px) {
       margin-right: 0;
     }
@@ -534,27 +534,25 @@ header.header-layout-two {
 
 header.header-layout-three {
   @include mq(small-laptop) {
-    opacity: 0;
-    transition: opacity 4000ms ease-in-out;
     padding-right: 25px;
   }
 
-  #header-desktop-wrapper {
+  .header-desktop-wrapper {
     @include mq(small-laptop) {
       border: none;
     }
   }
-  #logo-desktop {
+  .logo-desktop {
     @include mq(small-laptop) {
       display: none;
     }
   }
-  #logo-sticky {
+  .logo-sticky {
     @include mq(small-laptop) {
       display: block;
     }
   }
-  #header-left {
+  .header-left {
     @include mq(small-laptop) {
       padding: 22px 70px 22px 7px;
     }
@@ -564,7 +562,7 @@ header.header-layout-three {
       display: none;
     }
   }
-  #free-consult-wrapper {
+  .free-consult-wrapper {
     @include mq(small-laptop) {
       margin-right: 0;
     }
@@ -593,13 +591,13 @@ header.header-layout-three {
       }
     }
   }
-  a#header-phone {
+  a.header-phone {
     @include mq(small-laptop) {
       justify-content: flex-end;
       margin-top: 10px;
     }
   }
-  #header-right {
+  .header-right {
     @include mq(small-laptop) {
       display: block;
       top: 0;
@@ -610,7 +608,7 @@ header.header-layout-three {
       right: 7px;
       top: 9px;
     }
-    a#header-phone {
+    a.header-phone {
       @include mq(small-laptop) {
         font-size: 22px;
       }
@@ -658,9 +656,14 @@ header.header-layout-three {
   }
 }
 
-header.header-layout-three.sticky {
-  @include mq(small-laptop) {
-    position: fixed;
-    opacity: 1;
-  }
+#sticky-header {
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+  width: 100%;
+  @include abs(0, null, null, 0);
+}
+
+#sticky-header.sticky {
+  opacity: 1;
+  @include fixed(0, null, null, 0, 10);
 }

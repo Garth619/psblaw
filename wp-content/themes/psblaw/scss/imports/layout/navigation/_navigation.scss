@@ -13,6 +13,7 @@ nav {
   @include fixed(0, null, null, 0);
   @include mq(small-tablet) {
     transform: translate(100%, 0px);
+    box-shadow: 0px 3px 6px #00000029;
     @include fixed(0, 0, null, auto);
     @include box(360px, 100vh);
   }
@@ -22,6 +23,7 @@ nav {
     visibility: visible;
     transform: translateY(0px);
     position: static;
+    box-shadow: none;
     background: transparent;
     margin-top: 18px;
     @include box(100%, auto);
@@ -37,7 +39,7 @@ nav {
     visibility: visible;
     transform: translateY(0px);
   }
-  #close {
+  .close {
     @include box(28px);
     @include abs(22px, 30px, null, null);
     @include mq(small-laptop) {
