@@ -293,6 +293,7 @@ header.header-layout-two {
     display: none;
   }
   #header-inner {
+    max-width: 100%;
     @include mq(small-monitor) {
       max-width: 1850px;
       @include margin_lr;
@@ -602,11 +603,11 @@ header.header-layout-three {
     @include mq(small-laptop) {
       display: block;
       top: 0;
-      right: 22px;
+      right: 0px;
     }
     @include mq(small-monitor) {
       @include flex();
-      right: 35px;
+      right: 7px;
       top: 9px;
     }
     a#header-phone {
@@ -622,13 +623,17 @@ header.header-layout-three {
   nav {
     @include mq(small-laptop) {
       max-width: 778px;
-      @include abs(7px, null, null, 186px);
+      @include abs(7px, null, null, 133px);
     }
     @include mq(large-laptop) {
       max-width: 935px;
     }
     @include mq(small-monitor) {
       max-width: 1085px;
+      @include abs(7px, null, null, 135px);
+    }
+    @media screen and (min-width: 1835px) {
+      @include abs(7px, null, null, 158px);
     }
     ul {
       li {
@@ -642,7 +647,12 @@ header.header-layout-three {
     }
     ul.menu {
       > li {
-        margin-right: 55px;
+        @include mq(small-monitor) {
+          margin-right: 40px;
+        }
+        @media screen and (min-width: 1835px) {
+          margin-right: 55px;
+        }
       }
     }
   }
