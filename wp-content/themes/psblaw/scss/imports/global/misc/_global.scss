@@ -43,6 +43,23 @@
   @include mq(small-laptop) {
     max-width: 100%;
   }
+  &:after {
+    background: $color-bright-two;
+    margin: 30px 0 0 0;
+    @include box(100%, 1px);
+    @include contentdisplay();
+  }
+}
+
+#page-container {
+  padding: 47px 45px;
+  @include mq(small-tablet) {
+    padding: 66px 95px;
+  }
+}
+
+.page-content-inner {
+  padding-top: 40px;
 }
 
 .alignleft,

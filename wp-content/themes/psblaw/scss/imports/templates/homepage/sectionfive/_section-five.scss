@@ -37,6 +37,11 @@
   }
   .sec-five-col-inner {
     padding: 0 5px;
+    &.content {
+      h2 {
+        color: $color-bright-two;
+      }
+    }
   }
 }
 

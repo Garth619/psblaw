@@ -17,11 +17,22 @@
   p {
     margin-bottom: 25px;
   }
+  a:not(.button) {
+    color: $color-bright-two;
+    font-weight: 800;
+    text-decoration: underline;
+    transition: all 200ms ease-in-out;
+    &:hover {
+      color: $color-dark-three;
+      text-decoration: none;
+    }
+  }
   h2 {
+    padding-bottom: 20px;
     @include type(
       (
-        size: 17px,
-        height: 25px,
+        size: 20px,
+        height: 26px,
         family: $primaryfont,
         color: $color-dark-three,
         weight: 800,
@@ -29,6 +40,9 @@
     );
     @include mq(small-tablet) {
       padding-top: 9px;
+    }
+    @include mq(small-laptop) {
+      @include quick_type(22px, 30px, null);
     }
     span {
       display: inline-block;
@@ -39,6 +53,7 @@
     }
   }
   h3 {
+    padding-bottom: 20px;
     @include type(
       (
         size: 18px,
@@ -48,13 +63,57 @@
         weight: 800,
       )
     );
-    @include mq(small-tablet) {
-      font-size: 20px;
-      padding-bottom: 5px;
+  }
+  h4 {
+    padding-bottom: 25px;
+    @include type(
+      (
+        size: 17px,
+        height: 30px,
+        family: $primaryfont,
+        color: $color-dark-three,
+        weight: 800,
+      )
+    );
+  }
+  ul {
+    list-style: none;
+    li {
+      position: relative;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      @include mq(small-laptop) {
+        padding-left: 40px;
+      }
+      &:before {
+        background: $color-bright-two;
+        border-radius: 50%;
+        @include abs(10px, null, null, 0);
+        @include box(6px);
+        @include contentdisplay();
+        @include mq(small-tablet) {
+          @include abs(13px, null, null, 0);
+        }
+      }
     }
-    @include mq(small-laptop) {
-      padding-top: 14px;
-      font-size: 22px;
+  }
+  ol {
+    list-style: none;
+    counter-reset: item;
+    > li {
+      counter-increment: item;
+      position: relative;
+      padding-left: 20px;
+      padding-bottom: 20px;
+      @include mq(small-laptop) {
+        padding-left: 40px;
+      }
+    }
+    > li:before {
+      content: counter(item) ".";
+      font-weight: 800;
+      color: $color-bright-two;
+      @include abs(0, null, null, 0);
     }
   }
 }

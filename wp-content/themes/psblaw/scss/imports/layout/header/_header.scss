@@ -373,7 +373,10 @@ header.header-layout-two {
         font-size: 15px;
       }
       &:hover {
-        color: $color-bright-one;
+        color: $color-bright-two;
+        @include mq(small-laptop) {
+          color: $color-bright-one;
+        }
       }
     }
   }
@@ -490,7 +493,7 @@ header.header-layout-two {
             color: $color-bright-two;
           }
         }
-        a {
+        > a {
           &:before {
             background: $color-bright-two;
           }
@@ -505,7 +508,7 @@ header.header-layout-two {
         &.active {
           > a {
             &.active {
-              color: $color-bright-two;
+              color: $color-dark-one;
             }
           }
         }
@@ -554,12 +557,89 @@ header.default-banner-layout {
   .logo-desktop {
     svg {
       path {
-        fill: $color-light-one;
+        @include mq(small-laptop) {
+          fill: $color-light-one;
+        }
       }
     }
   }
   .header-desktop-wrapper {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    @include mq(small-laptop) {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    }
+  }
+  a.header-phone {
+    @include mq(small-laptop) {
+      color: $color-bright-one;
+    }
+  }
+  .free-consult-wrapper {
+    span {
+      @include mq(small-laptop) {
+        color: $color-light-one;
+      }
+      &:first-of-type {
+        &:after {
+          @include mq(small-laptop) {
+            background: $color-bright-one;
+          }
+        }
+      }
+    }
+  }
+  .translate-wrapper {
+    a {
+      @include mq(small-laptop) {
+        color: $color-light-one;
+      }
+    }
+  }
+  nav {
+    ul {
+      li {
+        a {
+          @include mq(small-laptop) {
+            color: $color-light-one;
+          }
+        }
+      }
+    }
+    ul.menu {
+      > li {
+        &:hover {
+          > a {
+            @include mq(small-laptop) {
+              color: $color-bright-one;
+            }
+          }
+        }
+        > a {
+          &:before {
+            @include mq(small-laptop) {
+              background: $color-bright-one;
+            }
+          }
+        }
+      }
+      > li.menu-item-has-children {
+        &.active {
+          > a {
+            &.active {
+              @include mq(small-laptop) {
+                color: $color-light-one;
+              }
+            }
+          }
+        }
+      }
+      > li.current-menu-ancestor {
+        > a {
+          @include mq(small-laptop) {
+            color: $color-bright-one;
+          }
+        }
+      }
+    }
   }
 }
 

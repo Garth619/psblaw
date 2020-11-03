@@ -1,8 +1,12 @@
 #internal-banner {
+  display: none;
   padding: 47px 45px;
   @include mq(small-tablet) {
-    padding: 63px 45px;
+    padding: 66px 95px;
     position: relative;
+  }
+  @include mq(small-laptop) {
+    display: block;
   }
 }
 
@@ -27,11 +31,14 @@
       font-weight: 300;
     }
   }
+  &:after {
+    display: none;
+  }
 }
 
 #banner-descrip {
   margin-top: 20px;
-  max-width: 490px;
+  max-width: 425px;
   @include margin_lr;
   @include type(
     (
@@ -44,10 +51,13 @@
     )
   );
   @include mq(small-tablet) {
-    max-width: 565px;
+    max-width: 385px;
     @include quick_type(17px, 30px, null);
   }
   @include mq(small-laptop) {
+    color: $color-bright-one;
+    max-width: 900px;
+    margin-top: 12px;
     @include quick_type(20px, 30px, null);
   }
   &:after {
