@@ -1,16 +1,21 @@
-.sidebar_wrapper {
+.sidebar-wrapper {
   padding-top: 20px;
+  max-width: 400px;
+  @include margin_lr;
 }
 
-.sidebar_form {
+.sidebar-form {
   display: none;
 }
 
 .widget {
   background: $color-light-one;
   box-shadow: 0px 1px 20px #00000040;
-  padding: 30px 25px;
+  padding: 30px 25px 20px;
   position: relative;
+  @include mq(small-tablet) {
+    padding: 34px 25px 18px;
+  }
   h3 {
     display: block;
     margin-bottom: 15px;
@@ -23,10 +28,18 @@
         align: center,
       )
     );
+    @include mq(small-tablet) {
+      margin-bottom: 30px;
+      @include quick_type(45px, 50px, null);
+    }
     &:before {
       @include abs(45px, 20px, null, null);
       @include tri(down, 5px, 9px, $color-bright-two);
       @include contentdisplay();
+      @include mq(small-tablet) {
+        top: 60px;
+        right: 40px;
+      }
     }
     &:after {
       margin-top: 10px;
@@ -34,6 +47,10 @@
       @include margin_lr;
       @include box(160px, 1px);
       @include contentdisplay();
+      @include mq(small-tablet) {
+        margin-top: 15px;
+        width: 185px;
+      }
     }
     &.active {
       &:before {
@@ -41,7 +58,7 @@
       }
     }
   }
-  ul.menu {
+  ul {
     display: none;
     list-style: none;
     li {
@@ -53,16 +70,16 @@
           family: $primaryfont,
         )
       );
-      &:last-of-type {
-        a {
-          border-bottom: 0;
-          padding-bottom: 0;
+      &.current-menu-item {
+        > a {
+          color: $color-bright-two;
         }
       }
       a {
         color: $color-dark-one;
         text-decoration: none;
         display: block;
+        cursor: pointer;
         padding: 10px 15px;
         border-bottom: 1px solid #dde0e2;
         transition: 200ms all ease-in-out;
@@ -70,6 +87,45 @@
           color: $color-bright-two;
         }
       }
+      ul {
+        display: block;
+      }
     }
+  }
+  ul.menu {
+    > li {
+      &.current-menu-ancestor {
+        > a {
+          color: $color-bright-two;
+        }
+      }
+      &.menu-item-has-children {
+        > a {
+          position: relative;
+          &:before {
+            @include abs(20px, 12px, null, null);
+            @include tri(down, 5px, 9px, $color-bright-two);
+            @include contentdisplay();
+          }
+        }
+      }
+      &.active {
+        > a {
+          color: $color-bright-two;
+          &:before {
+            @include tri(up, 5px, 9px, $color-bright-two);
+          }
+        }
+      }
+      &:last-of-type {
+        > a {
+          padding-bottom: 0;
+          border-bottom: 0;
+        }
+      }
+    }
+  }
+  ul.sub-menu {
+    display: none;
   }
 }

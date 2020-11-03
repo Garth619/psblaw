@@ -492,6 +492,7 @@ $('span.sec-seven-question').on('click', function(e) {
     $(this).toggleClass('active');
   });
 
+  
   /* Resize Nav Functions
 --------------------------------------------------------------------------------------- */
 

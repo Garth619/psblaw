@@ -1,7 +1,7 @@
 
-<div class="sidebar_wrapper">
+<div class="sidebar-wrapper">
 
-	<div class='sidebar_form'>
+	<div class='sidebar-form'>
 
 		<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
 
@@ -11,13 +11,13 @@
 
 		<span class='required'>Required Field</span><!-- sidebar_required -->
 	
-	</div><!-- sidebar_form -->
+	</div><!-- sidebar-form -->
 			
-	<div class="sidebar_box sidebar_pa">
+	<div class="sidebar-box sidebar-pa">
 				
 		<?php bulk_sidebar(); ?>
 				
-		</div><!-- sidebar_box -->
+		</div><!-- sidebar-box -->
 		
 	</div><!-- sidebar_wrapper -->
 

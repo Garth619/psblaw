@@ -91,12 +91,13 @@
 #internal-banner-slider {
 }
 
-#internal-banner-slide {
+.internal-banner-slide {
   //position: relative;
   img {
     // object-fit:cover;
 
     @include image();
+    @include box(100%, 490px);
     // @include abs(0,null,null,0);
   }
 }
