@@ -126,6 +126,8 @@
 
 .blockquote {
   padding: 25px 0 35px;
+  max-width: 850px;
+  @include margin_lr;
   @include type(
     (
       size: 23px,
@@ -135,6 +137,18 @@
       weight: 500,
     )
   );
+  @include mq(small-tablet) {
+    text-align: center;
+    padding: 45px 40px 55px;
+    @include quick_type(27px, 33px, null);
+  }
+  @include mq(small-laptop) {
+    @include quick_type(30px, 38px, null);
+  }
+  @include mq(large-laptop) {
+    padding: 65px 40px 70px;
+    @include quick_type(33px, 40px, null);
+  }
   > p {
     margin-bottom: 0;
   }
@@ -152,5 +166,8 @@
         transform: uppercase,
       )
     );
+    @include mq(small-laptop) {
+      padding-top: 20px;
+    }
   }
 }

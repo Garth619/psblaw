@@ -64,10 +64,23 @@
   @include mq(small-laptop) {
     padding: 100px 60px 97px;
   }
+  @include mq(large-laptop) {
+    padding: 100px 105px 115px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1760px;
+    @include margin_lr;
+  }
   .page-content {
     order: 2;
     @include mq(small-laptop) {
       padding: 0 0 0 50px;
+    }
+    @include mq(large-laptop) {
+      padding: 0 0 0 90px;
+    }
+    @include mq(small-monitor) {
+      padding: 0 0 0 116px;
     }
   }
   &.two-col {
