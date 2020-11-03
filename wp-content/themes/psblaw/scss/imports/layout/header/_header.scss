@@ -372,6 +372,9 @@ header.header-layout-two {
       @include mq(small-laptop) {
         font-size: 15px;
       }
+      &:hover {
+        color: $color-bright-one;
+      }
     }
   }
   .header-right {
@@ -456,8 +459,11 @@ header.header-layout-two {
   }
   nav {
     @include mq(small-laptop) {
-      max-width: 999px;
+      max-width: 909px;
       padding: 0 10px 14px;
+    }
+    @include mq(large-laptop) {
+      max-width: 999px;
     }
     @include mq(small-monitor) {
       max-width: 1100px;
@@ -536,6 +542,24 @@ header.header-layout-two {
         }
       }
     }
+  }
+}
+
+header.default-banner-layout {
+  @include mq(small-laptop) {
+    background: transparent;
+    box-shadow: none;
+    @include abs(0, null, null, 0);
+  }
+  .logo-desktop {
+    svg {
+      path {
+        fill: $color-light-one;
+      }
+    }
+  }
+  .header-desktop-wrapper {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   }
 }
 

@@ -2,35 +2,33 @@
 
 <div id="internal-main">
 
-<div id='two_col_template_with_banner'>
+<div id='two-col-template-with-banner'>
 
 	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
 
-</div><!-- two_col_template_with_banner -->
+</div><!-- two-col-template-with-banner -->
 
-<div class="page_container two_col">
+<div class="page-container two-col">
 		
-		<div class="page_content">
+		<div class="page-content">
 			
 			<?php if(get_field('banner_h1') == "Yes") : ?>
 			
-				<h2 class="page_header"><?php the_title();?></h2>
+				<h2 class="page-header"><?php the_title();?></h2>
 			
 			<?php else:?>
 			
-				<h1 class="page_header"><?php the_title();?></h1>
+				<h1 class="page-header"><?php the_title();?></h1>
 			
 			<?php endif;?>
 
-			<span class='double_line'></span><!-- double_line -->
-
-			<div class='page_content_inner content'>
+			<div class='page-content-inner content'>
 			
 			<?php get_template_part( 'loop', 'page' ); ?>
 			
-			</div><!-- page_content_inner -->
+			</div><!-- page-content-inner -->
 			
-		</div><!-- page_content -->
+		</div><!-- page-content -->
 
 		<?php if(!get_field('disable_sidebar')) {
 
@@ -38,10 +36,10 @@
 
 		} ?>
 		
-	</div><!-- page_container -->
+	</div><!-- page-container -->
 	
 	
-</div><!-- internal_main -->
+</div><!-- internal-main -->
 		
 
 <?php get_footer(); ?>

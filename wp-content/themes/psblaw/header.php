@@ -88,7 +88,23 @@
 
 <body <?php body_class(); ?>>
 
-<header class="<?php $header = is_front_page() ? 'header-layout-one' : 'header-layout-two'; echo $header; ?>">
+<?php if(is_front_page()) {
+	// homepage/internal header layouts
+		$header = 'header-layout-one';
+	} else {
+		$header = 'header-layout-two';
+	} 
+	// banner/no banner on internal pages
+	if(basename(get_page_template()) === 'page.php') {
+		if(get_field('disable_banner_new') == 'Yes') {
+			$banner = ' no-banner-layout';
+		} else {
+			$banner = ' default-banner-layout';
+		}
+	}
+?>
+
+<header class="<?php echo $header;echo $banner; ?>">
 
 	<div class='header-inner'>
 	

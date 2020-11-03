@@ -15,8 +15,34 @@
   display: block;
 }
 
-#internal_main {
+#internal-main {
   background: $color-light-two;
+  margin-top: 93px;
+  @include mq(small-laptop) {
+    margin-top: 0;
+  }
+}
+
+.page-title {
+  display: block;
+  @include type(
+    (
+      size: 35px,
+      height: 40px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 650px;
+    @include margin_lr;
+    @include quick_type(55px, 60px, null);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
 }
 
 .alignleft,
