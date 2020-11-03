@@ -63,6 +63,12 @@
         weight: 800,
       )
     );
+    span {
+      font-size: 10px;
+      vertical-align: top;
+      position: relative;
+      top: -3px;
+    }
   }
   h4 {
     padding-bottom: 25px;
@@ -115,5 +121,36 @@
       color: $color-bright-two;
       @include abs(0, null, null, 0);
     }
+  }
+}
+
+.blockquote {
+  padding: 25px 0 35px;
+  @include type(
+    (
+      size: 23px,
+      height: 30px,
+      family: $secondaryfont,
+      color: $color-dark-one,
+      weight: 500,
+    )
+  );
+  > p {
+    margin-bottom: 0;
+  }
+  span {
+    display: block;
+    padding-top: 15px;
+    @include type(
+      (
+        size: 14px,
+        height: 16px,
+        spacing: 1.4,
+        family: $primaryfont,
+        color: $color-bright-two,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
   }
 }

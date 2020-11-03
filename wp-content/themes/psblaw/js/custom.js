@@ -487,6 +487,11 @@ $('span.sec-seven-question').on('click', function(e) {
     }
   );
 
+  $('.widget h3').on('click', function(e) {
+    $(this).next('ul').slideToggle(300);
+    $(this).toggleClass('active');
+  });
+
   /* Resize Nav Functions
 --------------------------------------------------------------------------------------- */
 

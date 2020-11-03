@@ -1,0 +1,71 @@
+.sidebar_wrapper {
+  padding-top: 20px;
+}
+
+.sidebar_form {
+  display: none;
+}
+
+.widget {
+  background: $color-light-one;
+  box-shadow: 0px 1px 20px #00000040;
+  padding: 30px 25px;
+  position: relative;
+  h3 {
+    display: block;
+    margin-bottom: 15px;
+    @include type(
+      (
+        size: 35px,
+        family: $secondaryfont,
+        color: $color-dark-three,
+        weight: 500,
+        align: center,
+      )
+    );
+    &:before {
+      @include abs(45px, 20px, null, null);
+      @include tri(down, 5px, 9px, $color-bright-two);
+      @include contentdisplay();
+    }
+    &:after {
+      margin-top: 10px;
+      background: $color-bright-two;
+      @include margin_lr;
+      @include box(160px, 1px);
+      @include contentdisplay();
+    }
+    &.active {
+      &:before {
+        @include tri(up, 5px, 9px, $color-bright-two);
+      }
+    }
+  }
+  ul.menu {
+    display: none;
+    list-style: none;
+    li {
+      @include type(
+        (
+          size: 16px,
+          height: 25px,
+          weight: 600,
+          family: $primaryfont,
+        )
+      );
+      &:last-of-type {
+        a {
+          border-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+      a {
+        color: $color-dark-one;
+        text-decoration: none;
+        display: block;
+        padding: 10px 15px;
+        border-bottom: 1px solid #dde0e2;
+      }
+    }
+  }
+}

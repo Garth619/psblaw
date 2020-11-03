@@ -32,7 +32,7 @@
 <span>Brian Panish</span>
 </div><!-- blockquote -->
 
-<h3>H3 STYLE STRENGTH BY YOUR SIDET<span>TM</span></h3>
+<h3>H3 STYLE STRENGTH BY YOUR SIDE<span>TM</span></h3>
 
 <p>Etiam a tincidunt leo. Maecenas mattis tortor fermentum lacinia placerat. Morbi nibh massa, maximus nec eros et, varius lobortis nisi. Ut a nisl nec elit vestibulum varius et quis nunc. Praesent in dapibus ante. Nullam non diam eget ex fringilla varius eu ac risus. Morbi eleifend varius facilisis. Sed vitae augue lacus. Curabitur tincidunt diam augue, a placerat erat auctor vitae. Sed laoreet leo convallis, posuere nunc quis, blandit mauris. Curabitur vehicula, est vel tempor venenatis, nibh sem fringilla nisl, sodales eleifend dui nibh id ipsum. Sed cursus nisl id lorem aliquet tempus. Nullam aliquam, sem vel faucibus finibus, est turpis vestibulum ligula, in laoreet nibh sem ut nisi. </p>
 
