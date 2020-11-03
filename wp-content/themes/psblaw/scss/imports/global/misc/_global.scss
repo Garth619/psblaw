@@ -25,6 +25,8 @@
 
 .page-title {
   display: block;
+  width: max-content;
+  @include margin_lr;
   @include type(
     (
       size: 35px,
@@ -38,10 +40,13 @@
   @include mq(small-tablet) {
     max-width: 650px;
     @include margin_lr;
-    @include quick_type(55px, 60px, null);
+    @include quick_type(50px, 55px, null);
   }
   @include mq(small-laptop) {
     max-width: 100%;
+    text-align: left;
+    width: 100%;
+    margin: 0;
   }
   &:after {
     background: $color-bright-two;
@@ -56,12 +61,26 @@
   @include mq(small-tablet) {
     padding: 66px 95px 97px;
   }
+  @include mq(small-laptop) {
+    padding: 100px 60px 97px;
+  }
+  .page-content {
+    order: 2;
+    @include mq(small-laptop) {
+      padding: 0 0 0 50px;
+    }
+  }
+  &.two-col {
+    @include mq(small-laptop) {
+      @include flex();
+    }
+  }
 }
 
 .page-content-inner {
   padding-top: 40px;
-  @include mq(small-tablet) {
-    padding-top: 60px;
+  @include mq(small-laptop) {
+    padding-top: 25px;
   }
 }
 

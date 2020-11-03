@@ -7,6 +7,7 @@
   }
   @include mq(small-laptop) {
     display: block;
+    height: 490px;
   }
 }
 

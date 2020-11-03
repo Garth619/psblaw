@@ -2,6 +2,12 @@
   padding-top: 20px;
   max-width: 400px;
   @include margin_lr;
+  @include mq(small-laptop) {
+    order: 1;
+    flex-basis: 347px;
+    flex-shrink: 0;
+    padding-top: 0;
+  }
 }
 
 .sidebar-form {
@@ -15,6 +21,9 @@
   position: relative;
   @include mq(small-tablet) {
     padding: 34px 25px 18px;
+  }
+  @include mq(small-laptop) {
+    padding: 36px 25px 45px;
   }
   h3 {
     display: block;
@@ -32,6 +41,12 @@
       margin-bottom: 30px;
       @include quick_type(45px, 50px, null);
     }
+    @include mq(small-laptop) {
+      width: max-content;
+      margin-bottom: 35px;
+      @include margin_lr;
+      @include quick_type(50px, 50px, null);
+    }
     &:before {
       @include abs(45px, 20px, null, null);
       @include tri(down, 5px, 9px, $color-bright-two);
@@ -39,6 +54,9 @@
       @include mq(small-tablet) {
         top: 60px;
         right: 40px;
+      }
+      @include mq(small-laptop) {
+        display: none;
       }
     }
     &:after {
@@ -51,6 +69,10 @@
         margin-top: 15px;
         width: 185px;
       }
+      @include mq(small-laptop) {
+        margin-top: 5px;
+        width: 100%;
+      }
     }
     &.active {
       &:before {
@@ -61,6 +83,9 @@
   ul {
     display: none;
     list-style: none;
+    @include mq(small-laptop) {
+      display: block;
+    }
     li {
       @include type(
         (
@@ -80,9 +105,12 @@
         text-decoration: none;
         display: block;
         cursor: pointer;
-        padding: 10px 15px;
+        padding: 10px 31px 10px 15px;
         border-bottom: 1px solid #dde0e2;
         transition: 200ms all ease-in-out;
+        @include mq(small-laptop) {
+          padding: 13px 31px 13px 15px;
+        }
         &:hover {
           color: $color-bright-two;
         }
@@ -106,6 +134,12 @@
             @include abs(20px, 12px, null, null);
             @include tri(down, 5px, 9px, $color-bright-two);
             @include contentdisplay();
+            @include mq(small-tablet) {
+              @include abs(20px, 20px, null, null);
+            }
+            @include mq(small-laptop) {
+              top: 23px;
+            }
           }
         }
       }
