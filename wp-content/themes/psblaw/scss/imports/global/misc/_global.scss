@@ -25,7 +25,7 @@
 
 .page-title {
   display: block;
-  width: max-content;
+  //width: max-content;
   @include margin_lr;
   @include type(
     (
@@ -38,7 +38,7 @@
     )
   );
   @include mq(small-tablet) {
-    max-width: 650px;
+    //max-width: 650px;
     @include margin_lr;
     @include quick_type(50px, 55px, null);
   }
@@ -50,9 +50,46 @@
   }
   &:after {
     background: $color-bright-two;
-    margin: 30px 0 0 0;
+    max-width: 508px;
+    margin: 30px auto 0;
     @include box(100%, 1px);
     @include contentdisplay();
+    @include mq(small-laptop) {
+      max-width: 100%;
+      margin: 30px 0 0l;
+    }
+  }
+}
+
+.page-large-content-title {
+  padding: 47px 45px 0;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    padding: 66px 95px 0;
+  }
+  @include mq(small-laptop) {
+    margin-bottom: 20px;
+    padding: 66px 60px 0;
+    text-align: center;
+    border-bottom: none;
+  }
+  @include mq(large-laptop) {
+    padding: 66px 105px 0;
+    @include quick_type(55px, 60px, null);
+  }
+  @include mq(small-monitor) {
+    max-width: 1760px;
+    padding: 105px 105px 10px;
+    @include quick_type(70px, 75px, null);
+  }
+  &:after {
+    @include mq(small-laptop) {
+      max-width: 508px;
+      @include margin_lr;
+    }
+    @include mq(small-monitor) {
+      margin-top: 53px;
+    }
   }
 }
 
@@ -71,22 +108,29 @@
     max-width: 1760px;
     @include margin_lr;
   }
-  .page-content {
-    order: 2;
+  &.no-banner-layout {
+    padding-top: 0px;
     @include mq(small-laptop) {
-      padding: 0 0 0 50px;
+      padding-top: 50px;
     }
-    @include mq(large-laptop) {
-      padding: 0 0 0 90px;
-    }
-    @include mq(small-monitor) {
-      padding: 0 0 0 116px;
+    .page-content-inner {
+      @include mq(small-laptop) {
+        padding-top: 0;
+        margin-top: -15px;
+      }
     }
   }
   &.two-col {
     @include mq(small-laptop) {
       @include flex();
     }
+  }
+}
+
+.page-content {
+  order: 2;
+  @include mq(small-laptop) {
+    flex-grow: 1;
   }
 }
 

@@ -3,20 +3,39 @@
 <div id="internal-main">
 
 	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
+
+	<?php if(get_field('disable_banner_new')) { ?>
+
+		<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 	
-	<div id="page-container" class="two-col">
+	<?php } ?>
+
+	<?php // banner/no banner on internal pages
+	if(basename(get_page_template()) === 'page.php') {
+		if(get_field('disable_banner_new') == 'Yes') {
+			$banner = ' no-banner-layout';
+		} else {
+			$banner = ' default-banner-layout';
+		}
+	} ?>
+	
+	<div id="page-container" class="two-col <?php echo $banner;?>">
 		
 		<div class="page-content">
+
+			<?php if(!get_field('disable_banner_new')) : ?>
 			
-			<?php if(get_field('banner_h1') == "Yes") : ?>
+				<?php if(get_field('banner_h1') == "Yes") : ?>
 			
-				<h2 class="page-title page-content-title"><?php the_title();?></h2>
-			
-			<?php else:?>
-			
-				<h1 class="page-title page-content-title"><?php the_title();?></h1>
-			
-			<?php endif;?>
+					<h2 class="page-title"><?php the_title();?></h2>
+	
+					<?php else:?>
+	
+					<h1 class="page-title"><?php the_title();?></h1>
+	
+				<?php endif;?>
+
+			<?php endif; ?>
 
 			<div class='page-content-inner content'>
 
