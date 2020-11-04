@@ -213,6 +213,22 @@ span#footer-form-descrip {
   }
 }
 
+footer {
+  .gform_footer {
+    margin-top: 75px;
+    padding: 22px 35px;
+    @include mq(small-tablet) {
+      margin-top: 38px;
+    }
+    @include mq(small-laptop) {
+      margin-top: 30px;
+    }
+    input[type="submit"] {
+      font-size: 22px;
+    }
+  }
+}
+
 #footer-bottom {
   padding: 30px 0 0;
   @include mq(small-tablet) {

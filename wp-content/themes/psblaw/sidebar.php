@@ -1,15 +1,19 @@
 
-<div class="sidebar-wrapper">
+<div id="sidebar-wrapper">
 
-	<div class='sidebar-form'>
+	<div id='sidebar-form'>
 
-		<span class='sidebar_form_title'>Request a free consultation</span><!-- sidebar_form_title -->
+		<h3 id='sidebar-form-title'>How Can We Help You?</h3><!-- sidebar-form-title -->
 
-		<span class='double_line'></span><!-- double_line -->
+		<div id='sidebar-form-descrip'>
+
+			<p>If you have a legal matter you would like to discuss with an attorney from our firm, please call us at <a href="tel:+13104771700">(310) 477-1700</a> or complete and submit the e-mail form below, and we will get back to you.</p>
+		
+		</div><!-- sidebar-form-descrip -->
 	
 		<?php gravity_form(4, false, false, false, '', true, 1233); ?>
 
-		<span class='required'>Required Field</span><!-- sidebar_required -->
+		<span id='sidebar-required'><span>*</span>Required Fields</span><!-- sidebar-required -->
 	
 	</div><!-- sidebar-form -->
 			
