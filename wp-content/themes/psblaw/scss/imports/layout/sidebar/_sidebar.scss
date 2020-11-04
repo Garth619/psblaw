@@ -164,11 +164,20 @@ span#sidebar-required {
   }
 }
 
+.sidebar-box {
+  .widget {
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+}
+
 .widget {
   background: $color-light-one;
   box-shadow: 0px 1px 20px #00000040;
   padding: 30px 25px 20px;
   position: relative;
+  margin-bottom: 30px;
   @include mq(small-tablet) {
     padding: 34px 25px 18px;
   }
@@ -314,5 +323,20 @@ span#sidebar-required {
   }
   ul.sub-menu {
     display: none;
+  }
+}
+
+.sidebar-blog {
+  .widget {
+    ul {
+      li {
+        &:last-of-type {
+          > a {
+            padding-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+      }
+    }
   }
 }

@@ -21,25 +21,13 @@
 
 	<div class="blog-post">
 
-		<?php if(get_field('banner_h1_blog','option') == "Yes") : ?>
-			
-			<h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
-		
-		<?php else:?>
-		
-			<h1 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h1>
-		
-		<?php endif;?>
-
-		
-		
 		<div class="blog-meta">
 		
-			<span class="date"><?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
-			
-			<?php echo get_the_category_list();?>
-		
+			<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
+	
 		</div><!-- blog-meta -->
+
+		<h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
 		
 		<div class="blog-content content">
 			
@@ -47,7 +35,7 @@
 		
 		</div><!-- blog-content -->
 		
-		<a class="button-two read-more" href="<?php the_permalink();?>">Read More</a>
+		<a class="button-two read-more" href="<?php the_permalink();?>">Read Article</a>
 			
 		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
 	

@@ -174,3 +174,26 @@
     border: none;
   }
 }
+
+.button-two {
+  display: block;
+  width: max-content;
+  border-radius: 50px;
+  border: 2px solid $color-bright-two;
+  color: $color-bright-two;
+  text-decoration: none;
+  padding: 7px 27px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 15px,
+      family: $secondaryfont,
+      color: $color-bright-two,
+      weight: 500,
+      align: center,
+    )
+  );
+  &:hover {
+    background: $color-bright-two;
+  }
+}

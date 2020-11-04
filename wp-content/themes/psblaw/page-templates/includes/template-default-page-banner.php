@@ -4,6 +4,26 @@
 		
 		<div id="internal-banner-content">
 
+		<?php if(is_home()) { ?>
+
+			<h1 class="banner-title page-title"><?php the_field( 'internal_banner_blog_title','option'); ?></h1><!-- banner_title -->
+
+			<?php if(get_field('blog_banner_description', 'option')) { ?>
+			
+			<div id='banner-descrip'>
+			
+				<?php the_field('blog_banner_description','option'); ?>
+			
+			</div><!-- banner-descrip -->
+
+			<?php } ?>
+
+		<?php } ?>
+
+		<?php if(!is_home() && basename(get_page_template()) === 'page.php') { ?>
+
+			ppaagge
+
 		<?php if(get_field('banner_title')) : ?>
 			
 			<?php if(get_field('banner_h1') == "Yes") : ?>
@@ -37,6 +57,8 @@
 				<?php the_field('global_internal_banner_description','option'); ?>
 			
 			</div><!-- banner-descrip -->
+
+			<?php } ?>
 
 			<?php } ?>
 
