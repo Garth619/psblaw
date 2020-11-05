@@ -460,19 +460,30 @@ $("#more-news-slider").slick({
         slidesToScroll: 2,
         dots:false,
         arrows:true,
-        prevArrow:".sec-ten-arrow-left",
-        nextArrow:".sec-ten-arrow-right"
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
       }
     },
     {
-      breakpoint: 1380,
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
+    },
+    {
+      breakpoint: 1695,
       settings: {
         slidesToShow: 4,
         slidesToScroll: 4,
         dots:false,
         arrows:true,
-        prevArrow:".sec-ten-arrow-left",
-        nextArrow:".sec-ten-arrow-right"
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
       }
     }
   ],

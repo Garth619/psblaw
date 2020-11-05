@@ -284,7 +284,24 @@ body.single {
 #more-news-wrapper {
   text-align: center;
   background: $color-light-one;
-  padding: 40px 40px;
+  padding: 40px;
+  @include mq(small-tablet) {
+    padding: 60px 40px;
+  }
+  @include mq(small-laptop) {
+    padding: 60px;
+    margin-top: -50px;
+  }
+  @include mq(large-laptop) {
+    padding: 60px 60px;
+  }
+}
+
+#more-news-inner {
+  @include mq(small-monitor) {
+    max-width: 1700px;
+    @include margin_lr;
+  }
 }
 
 span#more-news-title {
@@ -298,9 +315,39 @@ span#more-news-title {
       weight: 500,
     )
   );
+  @include mq(small-tablet) {
+    @include quick_type(45px, 45px, null);
+  }
+  @include mq(small-laptop) {
+    @include quick_type(50px, 50px, null);
+  }
+  @include mq(large-laptop) {
+    text-align: left;
+  }
+}
+
+#more-news-slider-wrapper {
+  margin-top: 25px;
+  max-width: 400px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 845px;
+    @include flex(space-between, center);
+  }
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
+  @include mq(large-laptop) {
+    margin-top: 34px;
+  }
 }
 
 #more-news-slider {
+  @include mq(small-tablet) {
+    width: calc(100% - 150px);
+    background: pink;
+    @include margin_lr;
+  }
   .slick-dots {
     position: static;
     margin-top: 25px;
@@ -336,6 +383,14 @@ span#more-news-title {
 }
 
 .more-news-slide {
+  @include mq(small-tablet) {
+    padding: 25px 35px;
+    border-right: 1px solid #dedede;
+  }
+  @include mq(large-laptop) {
+    text-align: left;
+    padding: 33px 35px;
+  }
   a {
     text-decoration: none;
   }
@@ -367,23 +422,36 @@ span#more-news-title {
       a {
         color: $color-dark-three;
         transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color-bright-two;
+        }
       }
     }
   }
   .more-news-content-wrapper {
     a {
+      @include mq(large-laptop) {
+        @include flex();
+      }
       .more-news-img {
         @include image();
         @include margin_lr;
         margin-top: 16px;
         max-width: 131px;
+        @include mq(large-laptop) {
+          margin-right: 32px;
+        }
       }
       .more-news-content {
         margin-top: 15px;
+        flex-grow: 1;
+        @include mq(large-laptop) {
+          margin-top: 20px;
+        }
         span {
           &.more-news-title {
             display: block;
-            margin-bottom: 20px;
+            margin-bottom: 13px;
             @include type(
               (
                 size: 15px,
@@ -393,10 +461,19 @@ span#more-news-title {
                 weight: 600,
               )
             );
+            @include mq(large-laptop) {
+              @include quick_type(17px, 22px, null);
+            }
           }
         }
         .more-news-read-more {
+          padding-left: 15px;
+          padding-right: 15px;
           @include margin_lr;
+          @include mq(large-laptop) {
+            margin-left: 0;
+            margin-right: 0;
+          }
         }
       }
     }
@@ -405,4 +482,37 @@ span#more-news-title {
 
 .more-news-arrow {
   display: none;
+  @include mq(small-tablet) {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #d6d9dd;
+    position: relative;
+    @include box(44px);
+  }
+  &:hover {
+    &:after {
+      background: #8c949d;
+    }
+  }
+  &.slick-arrow {
+    display: none;
+  }
+  &:after {
+    border-radius: 50%;
+    background: #62676d;
+    transition: all 200ms ease-in-out;
+    margin: 4px 0 0 4px;
+    @include box(36px);
+    @include contentdisplay();
+  }
+  svg {
+    @include abs(13px, null, null, 14px);
+    @include box(10px, 17px);
+  }
+}
+
+.more-news-right-arrow {
+  svg {
+    left: 18px;
+  }
 }
