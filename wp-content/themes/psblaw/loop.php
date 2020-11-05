@@ -21,24 +21,38 @@
 
 	<div class="blog-post">
 
-		<div class="blog-meta">
-		
-			<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
-	
-		</div><!-- blog-meta -->
+		<?php if(has_post_thumbnail()) { ?>
 
-		<h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+			<div class='blog-post-featured-image'>
+
+				<?php the_post_thumbnail( 'medium' ); ?>
+
+			</div><!-- blog-post-featured-image -->
+
+		<?php } ?>
+
+		<div class='blog-post-content-wrapper'>
 		
-		<div class="blog-content content">
-			
-			<?php echo wp_trim_words( get_the_content(), 54, '...' );?>
+			<div class="blog-meta">
 		
-		</div><!-- blog-content -->
+				<span class="date">Posted on <?php $pfx_date = get_the_date(); echo $pfx_date ?></span>
+
+			</div><!-- blog-meta -->
+
+			<h2 class="blog-header"><a href="<?php the_permalink();?>"><?php the_title();?></a></h2>
+
+			<div class="blog-content content">
 		
-		<a class="button-two read-more" href="<?php the_permalink();?>">Read Article</a>
-			
-		<?php edit_post_link( __( 'Edit'), '', '' ); ?>
+				<?php echo wp_trim_words( get_the_content(), 54, '...' );?>
 	
+			</div><!-- blog-content -->
+	
+			<a class="button-two read-more" href="<?php the_permalink();?>">Read Article</a>
+		
+			<?php edit_post_link( __( 'Edit'), '', '' ); ?>
+		
+		</div><!-- blog-post-content-wrapper -->
+
 	</div><!-- blog_post -->
 			
 <?php endwhile; // end of loop ?>

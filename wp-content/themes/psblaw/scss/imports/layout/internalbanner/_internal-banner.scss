@@ -59,7 +59,7 @@
   }
   @include mq(small-laptop) {
     color: $color-bright-one;
-    max-width: 900px;
+    max-width: 675px;
     margin-top: 12px;
     @include quick_type(20px, 30px, null);
   }

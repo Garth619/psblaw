@@ -330,6 +330,11 @@ span#sidebar-required {
   .widget {
     ul {
       li {
+        &.blog-active {
+          a {
+            color: $color-bright-two;
+          }
+        }
         &:last-of-type {
           > a {
             padding-bottom: 0;

@@ -322,11 +322,12 @@ function wpbeginner_numeric_posts_nav() {
         $links[] = $paged + 1;
     }
  
-    echo '<div class="paged_wrapper"><div class="navigation"><ul>' . "\n";
+    echo '<div class="navigation"><ul>' . "\n";
  
     /** Previous Post Link */
-    //if ( get_previous_posts_link() )
-        //printf( '<li class="myprev">%s</li>' . "\n", get_previous_posts_link('prev') );
+    if ( get_previous_posts_link() )
+   
+    echo "<li class='myprev'><img src='" . get_bloginfo('template_directory') . "/images/arrow-left.svg'/>" . get_previous_posts_link('') . "</li>";
  
     /** Link to first page, plus ellipses if necessary */
     if ( ! in_array( 1, $links ) ) {
@@ -355,15 +356,12 @@ function wpbeginner_numeric_posts_nav() {
     }
  
     /** Next Post Link */
-    //if ( get_next_posts_link() )
-        //printf( '<li class="mynext">%s</li>' . "\n", get_next_posts_link('next') );
+    if ( get_next_posts_link() )
+    echo "<li class='mynext'><img src='" . get_bloginfo('template_directory') . "/images/arrow-right.svg'/>" . get_next_posts_link('') . "</li>";
  
-    echo '</ul></div></div>' . "\n";
+    echo '</ul></div>' . "\n";
  
 }
-
-
-
 
 
 function smartwp_remove_wp_block_library_css(){

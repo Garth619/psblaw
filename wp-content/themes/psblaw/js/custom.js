@@ -443,6 +443,42 @@ $("#internal-banner-slider").slick({
 });
 
 
+
+$("#more-news-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  mobileFirst:true,
+  adaptiveHeight:true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots:false,
+        arrows:true,
+        prevArrow:".sec-ten-arrow-left",
+        nextArrow:".sec-ten-arrow-right"
+      }
+    },
+    {
+      breakpoint: 1380,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots:false,
+        arrows:true,
+        prevArrow:".sec-ten-arrow-left",
+        nextArrow:".sec-ten-arrow-right"
+      }
+    }
+  ],
+});
+
+
 /* FAQs
 --------------------------------------------------------------------------------------- */
 
