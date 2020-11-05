@@ -3,7 +3,7 @@
 !.gitignore
 !.htaccess
 !readme.md
-!pbslawstarter.sql.zip
+!psblaw.sql.zip
 !wp-content/
 
 # ignore everything in the "wp-content" directory, except:
