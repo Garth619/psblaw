@@ -25,7 +25,6 @@
 
 .page-title {
   display: block;
-  //width: max-content;
   @include margin_lr;
   @include type(
     (
@@ -38,7 +37,6 @@
     )
   );
   @include mq(small-tablet) {
-    //max-width: 650px;
     @include margin_lr;
     @include quick_type(50px, 55px, null);
   }
@@ -138,6 +136,35 @@
   padding-top: 40px;
   @include mq(small-laptop) {
     padding-top: 25px;
+  }
+}
+
+#page-descrip-wrapper {
+  padding: 30px 45px 0;
+  max-width: 890px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 15px,
+      height: 20px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    padding: 30px 100px 0;
+  }
+  @include mq(small-laptop) {
+    padding: 30px 0px 0;
+  }
+  @include mq(large-laptop) {
+    padding: 0px 0px 0;
+    @include quick_type(17px, 35px, null);
+  }
+  p {
+    margin-bottom: 20px;
   }
 }
 
