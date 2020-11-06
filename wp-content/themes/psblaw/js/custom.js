@@ -493,10 +493,21 @@ $("#more-news-slider").slick({
 /* FAQs
 --------------------------------------------------------------------------------------- */
 
+// hompepage
+
 $('span.sec-seven-question').on('click', function(e) {
   $(this).toggleClass('open');
-  $(this).next('.sec-seven-answer').slideToggle(300);
+  $(this).next('.sec-seven-answer').slideToggle(400);
 });
+
+// faq page template
+
+$('.single-faq .question').on('click', function(e) {
+  $(this).toggleClass('open');
+  $(this).next('.answer').slideToggle(400);
+});
+
+
 
 /* Remove "#" from menu anchor items to avoid jump to the top of the page
 --------------------------------------------------------------------------------------- */

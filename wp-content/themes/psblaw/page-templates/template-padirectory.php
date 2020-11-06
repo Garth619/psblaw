@@ -8,17 +8,25 @@ get_header(); ?>
 
 <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
+<?php if(get_field('practice_area_description')) { ?>
+
 <div id='page-descrip-wrapper'>
 
 	<div id='page-descrip'>
 	
-		<p>The lawyers at Panish Shea & Boyle, LLP handle many types of cases, and are always searching for new areas in which we can offer our legal expertise. If you don’t see the category for your type of case, please call us in Los Angeles at (310) 477-1700 or toll-free at (888) 498-6487 to discuss your legal matter and whether we can help you. If we can’t, we can help refer you to someone who can.</p>
+		<?php the_field( 'practice_area_description' ); ?>
 	
 	</div><!-- page-descrip -->
 
-	<span id='pa-subtitle'>The following is the list of the practice areas we assist in:</span><!-- pa-subtitle -->
+	<?php if(get_field('practice_area_description')) { ?>
+
+		<span id='pa-subtitle'><?php the_field( 'practice_area_subtitle' ); ?></span><!-- pa-subtitle -->
+
+	<?php } ?>
 
 </div><!-- page-descrip-wrapper -->
+
+<?php } ?>
 
 	<div id="page-container">
 			

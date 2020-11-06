@@ -1,0 +1,92 @@
+body.page-template-template-faq {
+  #page-descrip-wrapper {
+    max-width: 640px;
+  }
+}
+
+#faq-directory {
+  margin-top: -47px;
+  max-width: 1000px;
+  @include margin_lr;
+  @include mq(large-laptop) {
+    margin-top: 0;
+  }
+  @include mq(small-monitor) {
+    padding-bottom: 80px;
+  }
+}
+
+.single-faq {
+  &:first-of-type {
+    span.question {
+      &.open {
+        &:after {
+          @include mq(small-laptop) {
+            @include contentdisplay(inline-block, "+");
+          }
+        }
+      }
+      &:after {
+        @include mq(small-laptop) {
+          @include contentdisplay(inline-block, "-");
+        }
+      }
+    }
+    .answer {
+      @include mq(small-laptop) {
+        display: block;
+      }
+    }
+  }
+  &:last-of-type {
+    .answer {
+      padding-bottom: 0px;
+    }
+  }
+  span.question {
+    display: block;
+    padding: 15px 35px 15px 0;
+    position: relative;
+    border-bottom: 1px solid #c6ced8;
+    @include type(
+      (
+        size: 18px,
+        height: 22px,
+        family: $primaryfont,
+        color: $color-dark-three,
+        weight: 800,
+      )
+    );
+    @include mq(large-laptop) {
+      padding: 30px 35px 30px 0;
+      @include quick_type(22px, 24px, null);
+    }
+    &.open {
+      &:after {
+        @include contentdisplay(inline-block, "-");
+      }
+    }
+    &:after {
+      color: $color-bright-two;
+      @include abs(17px, 0, null, null);
+      @include contentdisplay(inline-block, "+");
+      @include mq(large-laptop) {
+        @include abs(33px, 0, null, null);
+      }
+    }
+  }
+  .answer {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    display: none;
+    @include mq(small-laptop) {
+      padding-top: 25px;
+      padding-bottom: 47px;
+    }
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
