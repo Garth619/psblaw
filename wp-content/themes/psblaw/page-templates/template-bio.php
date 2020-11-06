@@ -65,12 +65,18 @@ get_header(); ?>
 							</div><!-- single-video -->
 
 							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+
+							<div id='att-intro'>
+							
+								<?php the_field( 'attorney_intro' ); ?>
+							
+							</div><!-- att-intro -->
 					
 						</div><!-- att-intro-wrapper -->
 					
 					</div><!-- att-top -->
 
-				<?php the_field( 'attorney_intro' ); ?>
+			
 
 				<?php get_template_part( 'loop', 'page' ); ?>
 			
@@ -80,7 +86,7 @@ get_header(); ?>
 
 		<?php if(!get_field('disable_sidebar')) {
 
-			get_sidebar();
+			get_sidebar('bio');
 
 		} ?>
 		

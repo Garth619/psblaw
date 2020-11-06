@@ -50,11 +50,46 @@
   margin-top: 30px;
   .single-video {
     // inherits most video styles from the videocenter
+    margin-bottom: 18px;
     .video-thumb {
       border: 14px solid #fff;
     }
     .mywisita {
       height: 155px;
+    }
+  }
+}
+
+#att-intro {
+  @include type(
+    (
+      size: 16px,
+      height: 28px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+    )
+  );
+}
+
+.sidebar-bio {
+  .widget {
+    h3 {
+      padding: 0 20px;
+      &:before {
+        top: 45%;
+        transform: translateY(-50%);
+      }
+    }
+    ul {
+      li {
+        &:last-of-type {
+          a {
+            padding-bottom: 0;
+            border-bottom: none;
+          }
+        }
+      }
     }
   }
 }
