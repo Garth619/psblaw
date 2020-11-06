@@ -20,7 +20,7 @@ get_header(); ?>
 
 	<?php if(get_field('practice_area_description')) { ?>
 
-		<span id='pa-subtitle'><?php the_field( 'practice_area_subtitle' ); ?></span><!-- pa-subtitle -->
+		<span id='page-subtitle'><?php the_field( 'practice_area_subtitle' ); ?></span><!-- page-subtitle -->
 
 	<?php } ?>
 

@@ -8,26 +8,26 @@ get_header(); ?>
 
 <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-<?php // if(get_field('practice_area_description')) { ?>
+<?php if(get_field('faqs_page_description')) { ?>
 
-<div id='page-descrip-wrapper'>
+  <div id='page-descrip-wrapper'>
 
-  <p>Below are some of the most asked questions about personal injury cases in Los Angeles and throughout California. Our team at Panish Shea & Boyle, LLP have included answers for each of them.</p>
+    <?php the_field( 'faqs_page_description' ); ?>
 	
-</div><!-- page-descrip-wrapper -->
+  </div><!-- page-descrip-wrapper -->
 
-<?php // } ?>
+<?php  } ?>
 
 	<div id="page-container">
 			
-		<div id='faq-directory' class="content">
+		<div id='faq-wrapper' class="content">
 
-    <?php if ( have_rows( 'faqs' ) ) : $count = 0;?>
+    <?php if ( have_rows( 'faqs' ) ) :?>
 	    <?php while ( have_rows( 'faqs' ) ) : the_row(); ?>
 
         <div class='single-faq'>
       
-          <span class='question <?php //if (!$count) {echo ' open';};?>'><?php the_sub_field( 'question' ); ?></span><!-- question -->
+          <span class='question'><?php the_sub_field( 'question' ); ?></span><!-- question -->
       
           <div class='answer'>
       
@@ -37,11 +37,11 @@ get_header(); ?>
 
       </div><!-- single-faq -->
 		
-	    <?php  $count++; endwhile; ?>
+	    <?php endwhile; ?>
 
     <?php endif; ?>
 
-		</div><!-- pa-directory -->
+		</div><!-- faq-wrapper -->
 
 	</div><!-- page-container -->
 	
