@@ -32,7 +32,7 @@ get_header(); ?>
 
 					<div class='video_title_wrapper'>
 		
-						<span class='video_title'>Los Angeles Personal Injury Attorneys</span><!-- video_title -->
+						<span class='video_title'><?php the_sub_field( 'video_title' ); ?></span><!-- video_title -->
 	
 					</div><!-- video_title_wrapper -->
 

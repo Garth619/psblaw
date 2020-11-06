@@ -17,7 +17,7 @@
   p {
     margin-bottom: 25px;
   }
-  a:not(.button) {
+  a:not(.button):not(.att-email) {
     color: $color-bright-two;
     font-weight: 800;
     text-decoration: underline;
@@ -28,9 +28,6 @@
     }
   }
   img {
-    border: 16px solid $color-light-one;
-    box-shadow: 0px 1px 20px #00000040;
-    @include image();
   }
   h2 {
     padding-bottom: 20px;
@@ -175,4 +172,41 @@
       padding-top: 20px;
     }
   }
+}
+
+.alignleft,
+img.alignleft {
+  @include mq(mobile) {
+    float: left;
+    margin-right: 24px;
+    margin-top: 7px;
+  }
+}
+.alignright,
+img.alignright {
+  @include mq(mobile) {
+    float: right;
+    margin-left: 24px;
+    margin-top: 7px;
+  }
+}
+.aligncenter,
+img.aligncenter {
+  @include margin_lr;
+}
+.alignleft,
+img.alignleft,
+.alignright,
+img.alignright,
+.aligncenter,
+img.aligncenter {
+  @include image();
+  margin-bottom: 12px;
+}
+
+img.alignleft,
+img.aligncenter,
+img.alignright {
+  border: 16px solid $color-light-one;
+  box-shadow: 0px 1px 20px #00000040;
 }

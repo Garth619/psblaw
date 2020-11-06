@@ -52,7 +52,7 @@
     border-radius: 50%;
     position: relative;
     @include flex(center, center);
-    @include box(72px);
+    @include box(80px);
     @include mq(small-tablet) {
       @include box(93px);
     }
@@ -63,13 +63,13 @@
     &:before {
       border-radius: 50%;
       background: $color-light-one;
-      @include box(51px);
+      @include box(57px);
       @include mq(small-tablet) {
         @include box(66px);
       }
     }
     &:after {
-      @include abs(28px, null, null, 31px);
+      @include abs(32px, null, null, 36px);
       @include tri(right, 8px, 12px, $color-bright-two);
       @include mq(small-tablet) {
         top: 37px;
