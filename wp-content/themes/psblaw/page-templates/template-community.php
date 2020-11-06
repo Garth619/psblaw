@@ -28,117 +28,35 @@ get_header(); ?>
 			
 		<div id='community-wrapper'>
 
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
+    <?php if ( have_rows( 'community_logos' ) ) : ?>
+	    
+      <?php while ( have_rows( 'community_logos' ) ) : the_row(); ?>
 
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
+        <div class='single-community'>
+      
+          <a <?php if(get_sub_field( 'website_url' )) {?>href="<?php the_sub_field( 'website_url' ); ?>" <?php };?> target="_blank" rel="noopener">
+      
+            <div class='single-community-box'>
         
+              <?php $logo = get_sub_field( 'logo' ); ?>
+              
+              <?php if ( $logo ) { ?>
+                
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+              
+              <?php } ?>
+        
+            </div><!-- single-community-box -->
+
+          <span class='single-community-title'><?php the_sub_field( 'title' ); ?></span><!-- single-community-title -->
+      
         </a>
-      
+    
       </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
-
-      <div class='single-community'>
-      
-        <a href="" target="_blank" rel="noopener">
-        
-          <div class='single-community-box'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/comm-childrens.jpg' alt=''/>
-          
-          </div><!-- single-community-box -->
-
-          <span class='single-community-title'>Children’s Hospital Los Angeles</span><!-- single-community-title -->
-        
-        </a>
-      
-      </div><!-- single-community -->
+		
+	    <?php endwhile; ?>
+   
+    <?php endif; ?>
 
 		</div><!-- community-wrapper -->
 
