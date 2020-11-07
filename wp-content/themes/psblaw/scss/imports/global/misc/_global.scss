@@ -38,7 +38,7 @@
   );
   @include mq(small-tablet) {
     @include margin_lr;
-    @include quick_type(50px, 55px, null);
+    @include quick_type(55px, 60px, null);
   }
   @include mq(small-laptop) {
     max-width: 100%;

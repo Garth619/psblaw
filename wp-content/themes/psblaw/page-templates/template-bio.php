@@ -10,19 +10,23 @@ get_header(); ?>
 		
 		<div class="page-content">
 
-			<?php if(!get_field('disable_banner_new')) : ?>
+			<div id='bio-title-wrapper'>
 			
-				<?php if(get_field('banner_h1') == "Yes") : ?>
+				<?php if(!get_field('disable_banner_new')) : ?>
 			
-					<h2 class="page-title"><?php the_title();?></h2>
-	
-					<?php else:?>
-	
-					<h1 class="page-title"><?php the_title();?></h1>
-	
-				<?php endif;?>
+					<?php if(get_field('banner_h1') == "Yes") : ?>
+		
+						<h2 class="page-title"><?php the_title();?></h2>
 
-			<?php endif; ?>
+						<?php else:?>
+
+						<h1 class="page-title"><?php the_title();?></h1>
+
+					<?php endif;?>
+
+				<?php endif; ?>
+			
+			</div><!-- bio-title-wrapper -->
 
 			<div class='page-content-inner content'>
 
@@ -76,8 +80,6 @@ get_header(); ?>
 					
 					</div><!-- att-top -->
 
-			
-
 				<?php get_template_part( 'loop', 'page' ); ?>
 			
 			</div><!-- page-content-inner -->
@@ -92,6 +94,7 @@ get_header(); ?>
 		
 	</div><!-- page-container -->
 	
+	<?php get_template_part('page-templates/includes/template','morenews-slider'); ?>
 	
 </div><!-- internal-main -->
 					 

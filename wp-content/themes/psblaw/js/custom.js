@@ -456,8 +456,8 @@ $("#more-news-slider").slick({
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToShow: 1,
+        slidesToScroll: 1,
         dots:false,
         arrows:true,
         prevArrow:".more-news-left-arrow",
@@ -487,6 +487,19 @@ $("#more-news-slider").slick({
       }
     }
   ],
+});
+
+
+$("#bio-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  mobileFirst: true,
+  arrows: true,
+  adaptiveHeight:true,
+  dots: false,
+  prevArrow:".bio-arrow-left",
+  nextArrow:".bio-arrow-right",
 });
 
 
@@ -547,6 +560,7 @@ $('.single-faq .question').on('click', function(e) {
 
   $('.widget h3').on('click', function(e) {
     $(this).next('ul').slideToggle(300);
+    $(this).next('#bio-slider-wrapper').toggleClass('open');
     $(this).toggleClass('active');
   });
 
