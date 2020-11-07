@@ -4,13 +4,15 @@
   @include margin_lr;
   @include mq(small-laptop) {
     order: 1;
-    flex-basis: 347px;
+    width: 347px;
     flex-shrink: 0;
     padding-top: 0;
+    margin-left: 0;
     margin-right: 50px;
+    max-width: 100%;
   }
   @include mq(large-laptop) {
-    flex-basis: 400px;
+    width: 400px;
     margin-right: 90px;
   }
   @include mq(small-monitor) {

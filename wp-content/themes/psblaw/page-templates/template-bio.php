@@ -29,55 +29,43 @@ get_header(); ?>
 			</div><!-- bio-title-wrapper -->
 
 			<div class='page-content-inner content'>
-
-					<div id='att-top'>
+				
+			<div id='att-top'>
 					
-						<div class='att-profile-wrapper'>
-						
-							<div class='att-profile-img'>
-						
-								<img src='<?php bloginfo('template_directory');?>/images/att-brian-panish.jpg' alt=''/>
-						
-							</div><!-- att-profile-img -->
-
-							<div class='att-email-wrapper'>
-							
-								<span>Email</span><a class='att-email' href="mailto:panish@psblaw.com">panish@psblaw.com</a>
-						
-							</div><!-- att-email -->
-
-							<a class='button vcard' href=''>Download VCARD</a><!-- button vcard -->
-					
-						</div><!-- att-profile-wrapper -->
-
-						<div id='att-intro-wrapper'>
-					
-							<div class='single-video'>
-
-								<div class='video-thumb'>
-
-									<div class='mywisita wistia_embed wistia_async_7y9zdxmy0q popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
+					<div id='bio-mobile'>
+										
+						<?php get_template_part('page-templates/includes/template','att-profile-box'); ?>
+				
+					</div><!-- bio-mobile -->
+				
+					<div id='att-intro-wrapper'>
+									
+						<div class='single-video'>
+				
+							<div class='video-thumb'>
+				
+								<div class='mywisita wistia_embed wistia_async_7y9zdxmy0q popover=true popoverContent=thumbnail'></div><!-- wistia -->
+				
 									<div class='video-overlay'>
-
+				
 										<div class='play-button'></div><!-- play-button -->
-
+				
 									</div><!-- video-overlay -->
-
+				
 								</div><!-- video-thumb -->
-
+				
 							</div><!-- single-video -->
-
+				
 							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-
+				
 							<div id='att-intro'>
-							
+											
 								<?php the_field( 'attorney_intro' ); ?>
-							
+											
 							</div><!-- att-intro -->
-					
+									
 						</div><!-- att-intro-wrapper -->
-					
+									
 					</div><!-- att-top -->
 
 				<?php get_template_part( 'loop', 'page' ); ?>
@@ -93,7 +81,7 @@ get_header(); ?>
 		} ?>
 		
 	</div><!-- page-container -->
-	
+
 	<?php get_template_part('page-templates/includes/template','morenews-slider'); ?>
 	
 </div><!-- internal-main -->

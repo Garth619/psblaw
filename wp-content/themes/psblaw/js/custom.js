@@ -465,7 +465,7 @@ $("#more-news-slider").slick({
       }
     },
     {
-      breakpoint: 1170,
+      breakpoint: 1380,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,

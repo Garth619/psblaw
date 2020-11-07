@@ -1,12 +1,18 @@
 
 
 <div id="sidebar-wrapper">
+
+<div id='bio-desktop'>
+										
+	<?php get_template_part('page-templates/includes/template','att-profile-box'); ?>
+				
+	</div><!-- bio-mobile -->
 		
 <div class="sidebar-box sidebar-bio">
 			
 <div class='widget'>
 
-	<h3>Verdicts & Settlements</h3>
+	<h3>Verdicts &<br/> Settlements</h3>
 
 	<ul>
 		<li><a>test</a></li>

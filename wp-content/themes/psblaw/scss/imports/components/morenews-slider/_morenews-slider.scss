@@ -46,7 +46,7 @@ span#more-news-title {
   max-width: 400px;
   @include margin_lr;
   @include mq(small-tablet) {
-    max-width: 845px;
+    max-width: 695px;
     margin-top: 33px;
     @include flex(space-between, center);
   }

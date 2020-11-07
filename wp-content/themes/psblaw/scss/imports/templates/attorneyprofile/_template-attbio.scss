@@ -10,19 +10,42 @@ body.page-template-template-bio {
       @include mq(small-tablet) {
         margin: 20px auto 0;
       }
+      @include mq(small-laptop) {
+        max-width: 100%;
+      }
     }
   }
   #page-container {
     @include mq(small-tablet) {
       padding: 66px 80px 97px;
     }
+    @include mq(small-laptop) {
+      padding: 109px 100px 97px;
+    }
   }
 }
 
 #att-top {
-  padding-top: 25px;
+  //padding-top: 25px;
   @include mq(small-tablet) {
+    padding-top: 25px;
     @include flex();
+  }
+  @include mq(small-laptop) {
+    padding-top: 9px;
+  }
+}
+
+#bio-mobile {
+  @include mq(small-laptop) {
+    display: none;
+  }
+}
+
+#bio-desktop {
+  display: none;
+  @include mq(small-laptop) {
+    display: block;
   }
 }
 
@@ -37,12 +60,16 @@ body.page-template-template-bio {
     flex-shrink: 0;
     margin-bottom: 35px;
   }
+  @include mq(small-laptop) {
+    max-width: 100%;
+  }
 }
 
 .att-profile-img {
   overflow: hidden;
   img {
     @include image();
+    width: 100%;
   }
 }
 
@@ -87,16 +114,36 @@ body.page-template-template-bio {
     padding-left: 53px;
     margin-top: 0;
   }
+  @include mq(small-laptop) {
+    padding-left: 0;
+  }
   .single-video {
     // inherits most video styles from the videocenter
     margin-bottom: 18px;
     max-width: 280px;
+    border-bottom: none;
+    width: 100%;
     @include margin_lr;
     @include mq(small-tablet) {
       max-width: 254px;
       margin-left: 0;
       margin-right: 0;
       margin-bottom: 30px;
+    }
+    @include mq(small-laptop) {
+      margin-bottom: 0px;
+      margin-right: 28px;
+      float: left;
+    }
+    .play-button {
+      @include box(80px);
+      &:before {
+        @include box(57px);
+      }
+      &:after {
+        top: 30px;
+        left: 36px;
+      }
     }
     .video-thumb {
       border: 14px solid #fff;
@@ -105,6 +152,9 @@ body.page-template-template-bio {
       height: 155px;
       @include mq(small-tablet) {
         height: 165px;
+      }
+      @include mq(small-laptop) {
+        height: 137px;
       }
     }
   }
@@ -122,6 +172,9 @@ body.page-template-template-bio {
   );
   @include mq(small-tablet) {
     @include quick_type(17px, 33px, null);
+  }
+  @include mq(small-laptop) {
+    @include quick_type(22px, 35px, null);
   }
 }
 
