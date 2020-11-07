@@ -17,7 +17,7 @@
   p {
     margin-bottom: 25px;
   }
-  a:not(.button):not(.att-email) {
+  a:not(.button):not(.att-email):not(.bio-links) {
     color: $color-bright-two;
     font-weight: 800;
     text-decoration: underline;

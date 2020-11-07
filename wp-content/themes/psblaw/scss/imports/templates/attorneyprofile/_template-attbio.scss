@@ -76,6 +76,7 @@
   .widget {
     h3 {
       padding: 0 20px;
+      position: relative;
       &:before {
         top: 45%;
         transform: translateY(-50%);
@@ -83,13 +84,75 @@
     }
     ul {
       li {
+        position: relative;
+
         &:last-of-type {
           a {
             padding-bottom: 0;
             border-bottom: none;
           }
         }
+        a {
+          padding-left: 25px;
+          &:before {
+            background: $color-bright-two;
+            border-radius: 50%;
+            @include box(5px);
+            @include contentdisplay();
+            @include abs(21px, null, null, 0);
+          }
+        }
       }
     }
+    &.articles {
+      padding-bottom: 0;
+    }
+  }
+}
+
+#bio-slider {
+  margin-top: 30px;
+  margin-bottom: 40px;
+}
+
+.bio-slide {
+  text-align: center;
+  span.bio-slide-title {
+    display: block;
+    max-width: 185px;
+    @include margin_lr;
+    @include type(
+      (
+        size: 15px,
+        height: 22px,
+        spacing: 0.45px,
+        family: $primaryfont,
+        color: $color-bright-two,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+  .bio-slide-content {
+    margin-top: 17px;
+    p {
+      a {
+        transition: all 200ms ease-in-out;
+        color: $color-dark-three !important;
+        &:hover {
+          color: $color-bright-two !important;
+        }
+      }
+    }
+  }
+}
+
+.bio-slider-arrow-wrapper {
+  width: calc(100% + 50px);
+  margin-left: -25px;
+  @include flex();
+  .bio-arrow {
+    flex-basis: 50%;
+    background: #62676d;
   }
 }
