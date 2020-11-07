@@ -465,10 +465,10 @@ $("#more-news-slider").slick({
       }
     },
     {
-      breakpoint: 1380,
+      breakpoint: 1170,
       settings: {
-        slidesToShow: 3,
-        slidesToScroll: 3,
+        slidesToShow: 2,
+        slidesToScroll: 2,
         dots:false,
         arrows:true,
         prevArrow:".more-news-left-arrow",

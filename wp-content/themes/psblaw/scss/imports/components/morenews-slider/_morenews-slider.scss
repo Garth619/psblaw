@@ -35,9 +35,9 @@ span#more-news-title {
   @include mq(small-tablet) {
     @include quick_type(50px, 50px, null);
   }
-
-  @include mq(large-laptop) {
+  @include mq(small-laptop) {
     text-align: left;
+    margin-left: 60px;
   }
 }
 
@@ -51,7 +51,7 @@ span#more-news-title {
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
-    max-width: 100%;
+    max-width: 1030px;
   }
   @include mq(large-laptop) {
     margin-top: 34px;
@@ -63,6 +63,9 @@ span#more-news-title {
     width: calc(100% - 150px);
     background: pink;
     @include margin_lr;
+  }
+  @include mq(small-laptop) {
+    width: calc(100% - 256px);
   }
   .slick-dots {
     position: static;
@@ -102,7 +105,9 @@ span#more-news-title {
   @include mq(small-tablet) {
     padding: 25px 35px;
     text-align: left;
-    //border-right: 1px solid #dedede;
+  }
+  @include mq(small-laptop) {
+    border-right: 1px solid #dedede;
   }
   @include mq(large-laptop) {
     //text-align: left;
