@@ -17,9 +17,9 @@
 
 <div id='bio-list'>
 
-<span id='bio-list-title'>The following is a list of just some of the landmark cases that Brian Panish has been involved in:</span><!-- bio-list-title -->
+	<span id='bio-list-decrip'>The following is a list of just some of the landmark cases that Brian Panish has been involved in:</span><!-- bio-list-decrip -->
 
-<ul>
+	<ul>
 		<li><a>test</a></li>
 		<li><a>test</a></li>
 		<li><a>test</a></li>

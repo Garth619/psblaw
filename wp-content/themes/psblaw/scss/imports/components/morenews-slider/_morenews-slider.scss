@@ -11,6 +11,7 @@
   }
   @include mq(large-laptop) {
     padding: 60px 60px;
+    margin-top: -30px;
   }
 }
 
@@ -55,6 +56,7 @@ span#more-news-title {
   }
   @include mq(large-laptop) {
     margin-top: 34px;
+    max-width: 1280px;
   }
 }
 
@@ -66,6 +68,9 @@ span#more-news-title {
   }
   @include mq(small-laptop) {
     width: calc(100% - 256px);
+  }
+  @include mq(large-laptop) {
+    width: calc(100% - 106px);
   }
   .slick-dots {
     position: static;
