@@ -6,12 +6,16 @@ body.page-template-template-bio {
     //display: inline-block;
     &:after {
       max-width: 429px;
-      // margin: 9px auto 0;
       @include mq(small-tablet) {
         margin: 20px auto 0;
       }
       @include mq(small-laptop) {
         max-width: 100%;
+      }
+    }
+    &.bio-title {
+      @include mq(small-laptop) {
+        @include quick_type(70px, 75px, null);
       }
     }
   }
@@ -62,6 +66,7 @@ body.page-template-template-bio {
   }
   @include mq(small-laptop) {
     max-width: 100%;
+    margin-bottom: 47px;
   }
 }
 
@@ -105,6 +110,9 @@ body.page-template-template-bio {
         align: center,
       )
     );
+    @include mq(small-laptop) {
+      font-size: 18px;
+    }
   }
 }
 
@@ -188,24 +196,47 @@ body.page-template-template-bio {
         transform: translateY(-50%);
       }
     }
-    ul {
-      li {
-        position: relative;
-
-        &:last-of-type {
-          a {
-            padding-bottom: 0;
-            border-bottom: none;
-          }
+    #bio-list {
+      display: none;
+      span#bio-list-title {
+        display: block;
+        margin-bottom: 20px;
+        @include type(
+          (
+            size: 15px,
+            height: 20px,
+            spacing: 0.42px,
+            family: $primaryfont,
+            color: $color-dark-one,
+            weight: 800,
+            align: center,
+          )
+        );
+        @include mq(small-laptop) {
+          margin-bottom: 9px;
+          @include quick_type(17px, 25px, null);
         }
-        a {
-          padding-left: 25px;
-          &:before {
-            background: $color-bright-two;
-            border-radius: 50%;
-            @include box(5px);
-            @include contentdisplay();
-            @include abs(21px, null, null, 0);
+      }
+      ul {
+        display: block;
+        li {
+          position: relative;
+
+          &:last-of-type {
+            a {
+              padding-bottom: 0;
+              border-bottom: none;
+            }
+          }
+          a {
+            padding-left: 25px;
+            &:before {
+              background: $color-bright-two;
+              border-radius: 50%;
+              @include box(5px);
+              @include contentdisplay();
+              @include abs(21px, null, null, 0);
+            }
           }
         }
       }
@@ -251,9 +282,17 @@ body.page-template-template-bio {
         transform: uppercase,
       )
     );
+    @include mq(small-laptop) {
+      max-width: 240px;
+      @include quick_type(18px, 25px, null);
+    }
   }
   .bio-slide-content {
     margin-top: 17px;
+    @include mq(small-laptop) {
+      max-width: 250px;
+      @include margin_lr;
+    }
     p {
       a {
         transition: all 200ms ease-in-out;

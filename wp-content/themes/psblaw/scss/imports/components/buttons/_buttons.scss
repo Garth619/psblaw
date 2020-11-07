@@ -133,6 +133,11 @@
     font-size: 16px;
     padding: 9px 24px;
     text-transform: none;
+    @include mq(small-laptop) {
+      margin-top: 33px;
+      font-size: 18px;
+      padding: 15px 34px;
+    }
   }
 }
 

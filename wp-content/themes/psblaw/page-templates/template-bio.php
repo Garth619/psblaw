@@ -12,20 +12,8 @@ get_header(); ?>
 
 			<div id='bio-title-wrapper'>
 			
-				<?php if(!get_field('disable_banner_new')) : ?>
-			
-					<?php if(get_field('banner_h1') == "Yes") : ?>
-		
-						<h2 class="page-title"><?php the_title();?></h2>
+				<h1 class="page-title bio-title"><?php the_title();?></h1>
 
-						<?php else:?>
-
-						<h1 class="page-title"><?php the_title();?></h1>
-
-					<?php endif;?>
-
-				<?php endif; ?>
-			
 			</div><!-- bio-title-wrapper -->
 
 			<div class='page-content-inner content'>

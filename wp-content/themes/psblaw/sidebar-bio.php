@@ -14,13 +14,21 @@
 
 	<h3>Verdicts &<br/> Settlements</h3>
 
-	<ul>
+
+<div id='bio-list'>
+
+<span id='bio-list-title'>The following is a list of just some of the landmark cases that Brian Panish has been involved in:</span><!-- bio-list-title -->
+
+<ul>
 		<li><a>test</a></li>
 		<li><a>test</a></li>
 		<li><a>test</a></li>
 		<li><a>test</a></li>
 		<li><a>test</a></li>
 	<ul>
+
+</div><!-- bio-list -->
+
 
 </div><!-- widget -->
 

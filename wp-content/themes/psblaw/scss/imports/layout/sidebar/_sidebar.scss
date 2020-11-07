@@ -27,7 +27,7 @@
     background: $color-light-one;
     box-shadow: 0px 1px 20px #00000040;
     padding: 35px 38px 110px;
-    margin-bottom: 34px;
+    margin-bottom: 47px;
   }
   ul {
     list-style: none;
@@ -185,6 +185,7 @@ span#sidebar-required {
   }
   @include mq(small-laptop) {
     padding: 36px 25px 45px;
+    margin-bottom: 47px;
   }
   h3 {
     display: block;
@@ -209,7 +210,7 @@ span#sidebar-required {
       @include quick_type(50px, 50px, null);
     }
     &:before {
-      @include abs(45px, 20px, null, null);
+      @include abs(45px, 15px, null, null);
       @include tri(down, 5px, 9px, $color-bright-two);
       @include contentdisplay();
       @include mq(small-tablet) {
@@ -231,7 +232,7 @@ span#sidebar-required {
         width: 185px;
       }
       @include mq(small-laptop) {
-        margin-top: 5px;
+        margin-top: 13px;
         width: 100%;
       }
       @include mq(large-laptop) {

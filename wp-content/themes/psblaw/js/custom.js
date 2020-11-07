@@ -560,6 +560,7 @@ $('.single-faq .question').on('click', function(e) {
 
   $('.widget h3').on('click', function(e) {
     $(this).next('ul').slideToggle(300);
+    $(this).next('#bio-list').slideToggle(300);
     $(this).next('#bio-slider-wrapper').toggleClass('open');
     $(this).toggleClass('active');
   });
