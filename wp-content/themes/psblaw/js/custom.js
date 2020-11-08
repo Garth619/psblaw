@@ -485,6 +485,17 @@ $("#more-news-slider").slick({
         prevArrow:".more-news-left-arrow",
         nextArrow:".more-news-right-arrow"
       }
+    },
+    {
+      breakpoint: 1695,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
     }
   ],
 });

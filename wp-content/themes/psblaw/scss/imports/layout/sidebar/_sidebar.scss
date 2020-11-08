@@ -187,6 +187,9 @@ span#sidebar-required {
     padding: 36px 25px 45px;
     margin-bottom: 47px;
   }
+  @include mq(large-laptop) {
+    padding: 47px 25px 45px;
+  }
   h3 {
     display: block;
     margin-bottom: 15px;

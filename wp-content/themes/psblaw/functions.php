@@ -282,6 +282,7 @@ if( function_exists('acf_add_options_page') ) {
     $existing_mimes['woff2'] = 'application/x-font-woff2';
     $existing_mimes['webp'] = 'image/webp';
     $existing_mimes['svg'] = 'image/svg+xml';
+    $existing_mimes['vcf'] = 'text/vcard';
 
      return $existing_mimes;
  }

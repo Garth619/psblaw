@@ -17,6 +17,9 @@ body.page-template-template-bio {
       @include mq(small-laptop) {
         @include quick_type(70px, 75px, null);
       }
+      @include mq(small-monitor) {
+        @include quick_type(80px, 85px, null);
+      }
     }
   }
   #page-container {
@@ -76,6 +79,7 @@ body.page-template-template-bio {
 
 .att-profile-img {
   overflow: hidden;
+  position: relative;
   img {
     @include image();
     width: 100%;
@@ -132,6 +136,7 @@ body.page-template-template-bio {
   @include mq(small-laptop) {
     padding-left: 0;
   }
+
   .single-video {
     // inherits most video styles from the videocenter
     margin-bottom: 18px;
@@ -146,7 +151,7 @@ body.page-template-template-bio {
       margin-bottom: 30px;
     }
     @include mq(small-laptop) {
-      margin-bottom: 0px;
+      //margin-bottom: 0px;
       margin-right: 28px;
       float: left;
     }
@@ -206,6 +211,9 @@ body.page-template-template-bio {
   }
   @include mq(small-laptop) {
     @include quick_type(22px, 35px, null);
+  }
+  @include mq(small-monitor) {
+    margin-top: 20px;
   }
 }
 
@@ -369,5 +377,26 @@ body.page-template-template-bio {
   }
   .bio-arrow-left {
     border-right: 1px solid #91979f;
+  }
+}
+
+.placeholder-wrapper {
+  background: #62676d;
+  @include box(100%);
+  @include abs(0, null, null, 0);
+  @include flex(center, center);
+  @include type(
+    (
+      size: 16px,
+      height: 19px,
+      family: $primaryfont,
+      color: $color-light-one,
+      weight: 600,
+      align: center,
+      transform: uppercase,
+    )
+  );
+  &:after {
+    @include contentdisplay(block, "Profile Coming Soon");
   }
 }

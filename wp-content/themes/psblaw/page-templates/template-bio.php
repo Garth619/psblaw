@@ -27,12 +27,14 @@ get_header(); ?>
 					</div><!-- bio-mobile -->
 				
 					<div id='att-intro-wrapper'>
+
+						<?php if(get_field('attorney_wistia_id')) { ?>
 									
 						<div class='single-video'>
 				
 							<div class='video-thumb'>
 				
-								<div class='mywisita wistia_embed wistia_async_7y9zdxmy0q popover=true popoverContent=thumbnail'></div><!-- wistia -->
+								<div class='mywisita wistia_embed wistia_async_<?php the_field( 'attorney_wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
 				
 									<div class='video-overlay'>
 				
@@ -43,6 +45,8 @@ get_header(); ?>
 								</div><!-- video-thumb -->
 				
 							</div><!-- single-video -->
+
+						<?php } ?>
 				
 							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 				

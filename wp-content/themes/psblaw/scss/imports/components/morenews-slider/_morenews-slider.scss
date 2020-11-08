@@ -40,6 +40,9 @@ span#more-news-title {
     text-align: left;
     margin-left: 60px;
   }
+  @include mq(small-monitor) {
+    margin-left: 25px;
+  }
 }
 
 #more-news-slider-wrapper {
@@ -57,6 +60,9 @@ span#more-news-title {
   @include mq(large-laptop) {
     margin-top: 34px;
     max-width: 1280px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1670px;
   }
 }
 
@@ -174,6 +180,7 @@ span#more-news-title {
         flex-grow: 1;
         @include mq(small-tablet) {
           margin-top: 20px;
+          position: relative;
         }
         span {
           &.more-news-title {
@@ -200,6 +207,7 @@ span#more-news-title {
           @include mq(small-tablet) {
             margin-left: 0;
             margin-right: 0;
+            @include abs(null, null, -33px, 0);
           }
         }
       }

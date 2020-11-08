@@ -12,20 +12,24 @@
 			
 <div class='widget'>
 
-	<h3>Verdicts &<br/> Settlements</h3>
+	<h3><?php the_field( 'verdicts_and_settlements_title' ); ?></h3>
 
 
 <div id='bio-list'>
 
-	<span id='bio-list-decrip'>The following is a list of just some of the landmark cases that Brian Panish has been involved in:</span><!-- bio-list-decrip -->
+	<?php if(get_field('sidebar_list_intro')) { ?>
 
-	<ul>
-		<li><a>test</a></li>
-		<li><a>test</a></li>
-		<li><a>test</a></li>
-		<li><a>test</a></li>
-		<li><a>test</a></li>
-	<ul>
+		<span id='bio-list-decrip'><?php the_field( 'sidebar_list_intro' ); ?></span><!-- bio-list-decrip -->
+
+	<?php } ?>
+
+	<?php if ( have_rows( 'attorney_accolades' ) ) : ?>
+		<ul>
+		<?php while ( have_rows( 'attorney_accolades' ) ) : the_row(); ?>
+			<li><a><?php the_sub_field( 'list_item' ); ?></a></li>
+		<?php endwhile; ?>
+	</ul>
+<?php endif; ?>
 
 </div><!-- bio-list -->
 
@@ -34,49 +38,31 @@
 
 <div class='widget articles'>
 
-	<h3>Articles by<br/> Brian Panish</h3>
+	<h3><?php the_field( 'articles_by' ); ?> <?php the_title();?></h3>
 
 	<div id='bio-slider-wrapper'>
 
+	<?php if ( have_rows( 'attorney_accolades_slider' ) ) : ?>
 		<div id='bio-slider'>
+		<?php while ( have_rows( 'attorney_accolades_slider' ) ) : the_row(); ?>
+			
+			<div class='bio-slide'>
+			
+				<span class='bio-slide-title'><?php the_sub_field( 'title' ); ?></span><!-- bio-slide-title -->
+
+				<div class='bio-slide-content content'>
+				
+				<?php the_sub_field( 'content' ); ?>
+				
+			</div><!-- bio-slide-content content -->
+			
+		</div><!-- bio-slide -->
+
+		<?php endwhile; ?>
+	</div><!-- bio-slider -->
+<?php endif; ?>
+
 		
-			<div class='bio-slide'>
-			
-				<span class='bio-slide-title'>Experimenting with the Consumer</span><!-- bio-slide-title -->
-
-				<div class='bio-slide-content content'>
-				
-					<p><a href="">Trial Magazine</a> – Brian Panish gives his review of Marshall S. Shapo’s book, “Experimenting with the Consumer.”</p>
-				
-				</div><!-- bio-slide-content content -->
-			
-			</div><!-- bio-slide -->
-
-			<div class='bio-slide'>
-			
-				<span class='bio-slide-title'>Experimenting with the Consumer</span><!-- bio-slide-title -->
-
-				<div class='bio-slide-content content'>
-				
-					<p><a href="">Trial Magazine</a> – Brian Panish gives his review of Marshall S. Shapo’s book, “Experimenting with the Consumer.”</p>
-				
-				</div><!-- bio-slide-content content -->
-			
-			</div><!-- bio-slide -->
-
-			<div class='bio-slide'>
-			
-				<span class='bio-slide-title'>Experimenting with the Consumer</span><!-- bio-slide-title -->
-
-				<div class='bio-slide-content content'>
-				
-					<p><a href="">Trial Magazine</a> – Brian Panish gives his review of Marshall S. Shapo’s book, “Experimenting with the Consumer.”</p>
-				
-				</div><!-- bio-slide-content content -->
-			
-			</div><!-- bio-slide -->
-		
-		</div><!-- bio-slider -->
 
 		<div class='bio-slider-arrow-wrapper'>
 		

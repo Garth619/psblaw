@@ -71,7 +71,7 @@
 
 								<div class='more-news-content'>
 								
-									<span class='more-news-title'>Orange Unified School District Sued for Wrongful Death of Student Killed in Campus Golf Cart Crash</span><!-- more-news-title -->
+									<span class='more-news-title'>Orange Unified </span><!-- more-news-title -->
 
 									<span class='button-two more-news-read-more' href=''>Read article</span><!-- button-two -->
 								
