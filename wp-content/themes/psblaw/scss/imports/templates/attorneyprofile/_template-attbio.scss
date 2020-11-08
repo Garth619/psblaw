@@ -117,6 +117,7 @@ body.page-template-template-bio {
         family: $primaryfont,
         color: $color-dark-three,
         weight: 600,
+        transform: lowercase,
         decoration: underline,
         align: center,
       )

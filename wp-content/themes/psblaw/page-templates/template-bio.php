@@ -49,12 +49,16 @@ get_header(); ?>
 						<?php } ?>
 				
 							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-				
-							<div id='att-intro'>
+							
+							<?php if(get_field('attorney_intro')) { ?>
+
+								<div id='att-intro'>
 											
-								<?php the_field( 'attorney_intro' ); ?>
+									<?php the_field( 'attorney_intro' ); ?>
 											
-							</div><!-- att-intro -->
+								</div><!-- att-intro -->
+
+							<?php } ?>
 									
 						</div><!-- att-intro-wrapper -->
 									

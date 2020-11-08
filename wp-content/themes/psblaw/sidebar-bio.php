@@ -7,13 +7,14 @@
 	<?php get_template_part('page-templates/includes/template','att-profile-box'); ?>
 				
 	</div><!-- bio-mobile -->
+
+	<?php if(get_field('attorney_accolades')) { ?>
 		
 <div class="sidebar-box sidebar-bio">
 			
 <div class='widget'>
 
 	<h3><?php the_field( 'verdicts_and_settlements_title' ); ?></h3>
-
 
 <div id='bio-list'>
 
@@ -31,10 +32,15 @@
 	</ul>
 <?php endif; ?>
 
+
 </div><!-- bio-list -->
 
 
 </div><!-- widget -->
+
+<?php } ?>
+
+<?php if(get_field('attorney_accolades_slider')) { ?>
 
 <div class='widget articles'>
 
@@ -83,6 +89,8 @@
 	</div><!-- bio-slider-wrapper -->
 
 </div><!-- widget -->
+
+<?php } ?>
 			
 	</div><!-- sidebar-box -->
 	
