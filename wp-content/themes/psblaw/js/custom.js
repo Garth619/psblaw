@@ -531,6 +531,18 @@ $('.single-faq .question').on('click', function(e) {
   $(this).next('.answer').slideToggle(400);
 });
 
+/* About Page
+--------------------------------------------------------------------------------------- */
+
+$('.about-read-more').on('click', function(e) {
+  $(this).addClass('fade-out');
+  $(this).prev('.about-middle-att-content').find('.additional-content').addClass('fade-in');
+});
+
+
+// need to wrap list titmes in span tags so bullets wrap around the floated image
+
+$('.about-middle-att ul li').wrapInner("<span></span>");
 
 
 /* Remove "#" from menu anchor items to avoid jump to the top of the page
@@ -621,7 +633,7 @@ $('.single-faq .question').on('click', function(e) {
   }
 
   // nav
-// can i make this a function? so there isnt redundant code below with the wondo resizes?
+// can i make this a function? so there isnt redundant code below with the windo resizes?
   if ($(window).width() >= 1170) {
     navDesktop();
   }

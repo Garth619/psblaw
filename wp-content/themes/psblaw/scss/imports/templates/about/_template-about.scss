@@ -112,3 +112,146 @@ body.page-template-template-about {
     }
   }
 }
+
+#about-middle {
+  background: $color-dark-one;
+  padding: 70px 45px;
+  @include mq(small-tablet) {
+    padding: 94px 70px;
+  }
+}
+
+span#about-middle-title {
+  display: block;
+  @include type(
+    (
+      size: 35px,
+      height: 35px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    @include quick_type(55px, 55px, null);
+  }
+  &:after {
+    background: $color-bright-one;
+    max-width: 243px;
+    margin-top: 25px;
+    @include margin_lr;
+    @include box(100%, 1px);
+    @include contentdisplay();
+  }
+}
+
+#about-middle-col-wrapper {
+  margin-top: 50px;
+  @include mq(small-tablet) {
+    margin-top: 70px;
+  }
+}
+
+.about-middle-col {
+  &:last-of-type {
+    .about-middle-att {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+.about-middle-att {
+  margin-bottom: 50px;
+  @include mq(small-tablet) {
+    margin-bottom: 85px;
+  }
+  img {
+    @include image();
+    @include margin_lr;
+    @include mq(small-tablet) {
+      float: left;
+      margin-right: 48px;
+      max-width: 42%;
+    }
+  }
+  span.about-middle-att-title {
+    display: block;
+    margin-top: 25px;
+    @include type(
+      (
+        size: 18px,
+        height: 21px,
+        spacing: 1.8px,
+        family: $primaryfont,
+        color: $color-bright-two,
+        weight: 800,
+        transform: uppercase,
+      )
+    );
+  }
+}
+
+.about-middle-att-content.content {
+  color: $color-light-one;
+  margin-top: 25px;
+  h3 {
+    text-transform: none;
+  }
+  ul {
+    list-style: disc;
+    li {
+      color: $color-bright-two;
+      padding-left: 0;
+      margin-left: 15px;
+      @include mq(small-tablet) {
+        list-style-position: inside;
+      }
+
+      &:before {
+        display: none;
+      }
+      span {
+        color: $color-light-one;
+      }
+    }
+  }
+  a:not(.button):not(.att-email):not(.bio-links):not(.about-read-more) {
+    color: #1856f5;
+    &:hover {
+      color: $color-bright-one;
+    }
+  }
+  .additional-content {
+    visibility: hidden;
+    opacity: 0;
+    max-height: 0px;
+    transition: opacity 300ms ease-in-out, visibility 300ms ease-in-out,
+      max-height 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+    @include mq(small-tablet) {
+      transition: none;
+      opacity: 1;
+      visibility: visible;
+      max-height: 3000px;
+    }
+    &.fade-in {
+      opacity: 1;
+      visibility: visible;
+      max-height: 3000px;
+      transition-delay: 300ms;
+    }
+  }
+}
+
+a.about-read-more {
+  opacity: 1;
+  transition: all 400ms ease-in-out;
+  @include mq(small-tablet) {
+    display: none;
+  }
+  &.fade-out {
+    opacity: 0;
+  }
+}

@@ -209,3 +209,30 @@
     color: $color-light-one;
   }
 }
+
+.button-three {
+  display: block;
+  width: max-content;
+  border-radius: 50px;
+  border: 2px solid $color-bright-one;
+  color: $color-light-one;
+  text-decoration: none;
+  padding: 11px 27px;
+  transition: all 200ms ease-in-out;
+  @include type(
+    (
+      size: 16px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+      align: center,
+    )
+  );
+  &.about-read-more {
+    @include margin_lr;
+  }
+  &:hover {
+    background: $color-bright-two;
+    color: $color-light-one;
+  }
+}

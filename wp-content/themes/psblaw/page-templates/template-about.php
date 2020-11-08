@@ -73,7 +73,235 @@ get_header(); ?>
 
 		<div id='about-middle'>
 
-		
+			<span id='about-middle-title'>Our Partners</span><!-- about-middle-title -->
+
+			<div id='about-middle-col-wrapper'>
+			
+				<div class='about-middle-col'>
+				
+					<div class='about-middle-att'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/att-brian-panish.jpg' alt=''/>
+
+						<span class='about-middle-att-title'>Brian Panish</span><!-- about-middle-att-title -->
+
+						<div class='about-middle-att-content content'>
+						
+							<p>Brian Panish is a Los Angeles personal injury lawyer and one of the leading trial attorneys in the United States. He has obtained six (6) verdicts over $50 million in personal injury cases, more than 100 verdicts and settlements over $10 million, and 250 verdicts of over $1 million. Since 2011 he has won over $500 million for plaintiffs in personal injury, car accident, wrongful death, and business litigation.</p>
+
+							<div class='additional-content'>
+							
+								<h3>Mr. Panish’s recent awards include:</h3>
+
+								<ul>
+
+								<li>2019 Top 100 Lawyers in California by Daily Journal</li>
+
+								<li>2019 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+								<li>2019 Plaintiffs Lawyer Trailblazer by National Law Journal</li>
+
+								<li>2019 California Lawyer Attorney of the Year Award in the area of Personal Injury</li>
+
+								<li>2019 Best Lawyers® Lawyer of the Year in Personal Injury Litigation – Plaintiffs</li>
+
+								<li>2019 Titan of the Plaintiffs Bar by Law360</li>
+
+								<li>2018 Top 100 Lawyers in California by Daily Journal</li>
+
+								<li>2018 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+								<li>2018 Daniel O’Connell Award – by Irish American Bar Association-Los Angeles</li>
+
+								<li>2018 Lawyer of the Year in Aviation Law by Best Lawyers© in Los Angeles</li>
+
+								<li>2017 Top 100 Lawyers in California by the Daily Journal</li>
+
+								<li>2017 Top Plaintiff Lawyers in California by the Daily Journal</li>
+
+								<li>2017 Civil Advocate Award by the Association of Southern California Defense Council</li>
+
+								</ul>
+
+							<p>You can read more about Brian Panish on his main bio page <a href="">here.</a></p>
+							
+							</div><!-- additional-content -->
+						
+						</div><!-- about-middle-att-content -->
+
+						<a class='button-three about-read-more'>Read More</a><!-- button-two -->
+					
+					</div><!-- about-middle-att -->
+
+					<div class='about-middle-att'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/att-brian-panish.jpg' alt=''/>
+
+						<span class='about-middle-att-title'>Brian Panish</span><!-- about-middle-att-title -->
+
+						<div class='about-middle-att-content content'>
+						
+							<p>Brian Panish is a Los Angeles personal injury lawyer and one of the leading trial attorneys in the United States. He has obtained six (6) verdicts over $50 million in personal injury cases, more than 100 verdicts and settlements over $10 million, and 250 verdicts of over $1 million. Since 2011 he has won over $500 million for plaintiffs in personal injury, car accident, wrongful death, and business litigation.</p>
+
+							<div class='additional-content'>
+							
+								<h3>Mr. Panish’s recent awards include:</h3>
+
+								<ul>
+
+								<li>2019 Top 100 Lawyers in California by Daily Journal</li>
+
+								<li>2019 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+								<li>2019 Plaintiffs Lawyer Trailblazer by National Law Journal</li>
+
+								<li>2019 California Lawyer Attorney of the Year Award in the area of Personal Injury</li>
+
+								<li>2019 Best Lawyers® Lawyer of the Year in Personal Injury Litigation – Plaintiffs</li>
+
+								<li>2019 Titan of the Plaintiffs Bar by Law360</li>
+
+								<li>2018 Top 100 Lawyers in California by Daily Journal</li>
+
+								<li>2018 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+								<li>2018 Daniel O’Connell Award – by Irish American Bar Association-Los Angeles</li>
+
+								<li>2018 Lawyer of the Year in Aviation Law by Best Lawyers© in Los Angeles</li>
+
+								<li>2017 Top 100 Lawyers in California by the Daily Journal</li>
+
+								<li>2017 Top Plaintiff Lawyers in California by the Daily Journal</li>
+
+								<li>2017 Civil Advocate Award by the Association of Southern California Defense Council</li>
+
+								</ul>
+
+							<p>You can read more about Brian Panish on his main bio page <a href="">here.</a></p>
+							
+							</div><!-- additional-content -->
+						
+						</div><!-- about-middle-att-content -->
+
+						<a class='button-three about-read-more'>Read More</a><!-- button-two -->
+					
+					</div><!-- about-middle-att -->
+				
+				</div><!-- about-middle-col -->
+
+				<div class='about-middle-col'>
+				
+				<div class='about-middle-att'>
+					
+					<img src='<?php bloginfo('template_directory');?>/images/att-brian-panish.jpg' alt=''/>
+
+					<span class='about-middle-att-title'>Brian Panish</span><!-- about-middle-att-title -->
+
+					<div class='about-middle-att-content content'>
+					
+						<p>Brian Panish is a Los Angeles personal injury lawyer and one of the leading trial attorneys in the United States. He has obtained six (6) verdicts over $50 million in personal injury cases, more than 100 verdicts and settlements over $10 million, and 250 verdicts of over $1 million. Since 2011 he has won over $500 million for plaintiffs in personal injury, car accident, wrongful death, and business litigation.</p>
+
+						<div class='additional-content'>
+						
+							<h3>Mr. Panish’s recent awards include:</h3>
+
+							<ul>
+
+							<li>2019 Top 100 Lawyers in California by Daily Journal</li>
+
+							<li>2019 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+							<li>2019 Plaintiffs Lawyer Trailblazer by National Law Journal</li>
+
+							<li>2019 California Lawyer Attorney of the Year Award in the area of Personal Injury</li>
+
+							<li>2019 Best Lawyers® Lawyer of the Year in Personal Injury Litigation – Plaintiffs</li>
+
+							<li>2019 Titan of the Plaintiffs Bar by Law360</li>
+
+							<li>2018 Top 100 Lawyers in California by Daily Journal</li>
+
+							<li>2018 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+							<li>2018 Daniel O’Connell Award – by Irish American Bar Association-Los Angeles</li>
+
+							<li>2018 Lawyer of the Year in Aviation Law by Best Lawyers© in Los Angeles</li>
+
+							<li>2017 Top 100 Lawyers in California by the Daily Journal</li>
+
+							<li>2017 Top Plaintiff Lawyers in California by the Daily Journal</li>
+
+							<li>2017 Civil Advocate Award by the Association of Southern California Defense Council</li>
+
+							</ul>
+
+						<p>You can read more about Brian Panish on his main bio page <a href="">here.</a></p>
+						
+						</div><!-- additional-content -->
+					
+					</div><!-- about-middle-att-content -->
+
+					<a class='button-three about-read-more'>Read More</a><!-- button-two -->
+				
+				</div><!-- about-middle-att -->
+
+				<div class='about-middle-att'>
+				
+					<img src='<?php bloginfo('template_directory');?>/images/att-brian-panish.jpg' alt=''/>
+
+					<span class='about-middle-att-title'>Brian Panish</span><!-- about-middle-att-title -->
+
+					<div class='about-middle-att-content content'>
+					
+						<p>Brian Panish is a Los Angeles personal injury lawyer and one of the leading trial attorneys in the United States. He has obtained six (6) verdicts over $50 million in personal injury cases, more than 100 verdicts and settlements over $10 million, and 250 verdicts of over $1 million. Since 2011 he has won over $500 million for plaintiffs in personal injury, car accident, wrongful death, and business litigation.</p>
+
+						<div class='additional-content'>
+						
+							<h3>Mr. Panish’s recent awards include:</h3>
+
+							<ul>
+
+							<li>2019 Top 100 Lawyers in California by Daily Journal</li>
+
+							<li>2019 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+							<li>2019 Plaintiffs Lawyer Trailblazer by National Law Journal</li>
+
+							<li>2019 California Lawyer Attorney of the Year Award in the area of Personal Injury</li>
+
+							<li>2019 Best Lawyers® Lawyer of the Year in Personal Injury Litigation – Plaintiffs</li>
+
+							<li>2019 Titan of the Plaintiffs Bar by Law360</li>
+
+							<li>2018 Top 100 Lawyers in California by Daily Journal</li>
+
+							<li>2018 Top Plaintiff Lawyers in California by Daily Journal</li>
+
+							<li>2018 Daniel O’Connell Award – by Irish American Bar Association-Los Angeles</li>
+
+							<li>2018 Lawyer of the Year in Aviation Law by Best Lawyers© in Los Angeles</li>
+
+							<li>2017 Top 100 Lawyers in California by the Daily Journal</li>
+
+							<li>2017 Top Plaintiff Lawyers in California by the Daily Journal</li>
+
+							<li>2017 Civil Advocate Award by the Association of Southern California Defense Council</li>
+
+							</ul>
+
+						<p>You can read more about Brian Panish on his main bio page <a href="">here.</a></p>
+						
+						</div><!-- additional-content -->
+					
+					</div><!-- about-middle-att-content -->
+
+					<a class='button-three about-read-more'>Read More</a><!-- button-two -->
+				
+				</div><!-- about-middle-att -->
+				
+				</div><!-- about-middle-col -->
+			
+			</div><!-- about-middle-col-wrapper -->
 		
 		</div><!-- about-middle -->
 
