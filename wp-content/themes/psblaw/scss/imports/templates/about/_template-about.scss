@@ -119,6 +119,12 @@ body.page-template-template-about {
   @include mq(small-tablet) {
     padding: 94px 70px;
   }
+  @include mq(small-laptop) {
+    padding: 115px 153px 87px;
+  }
+  @include mq(small-monitor) {
+    padding: 115px 200px 28px;
+  }
 }
 
 span#about-middle-title {
@@ -136,6 +142,9 @@ span#about-middle-title {
   @include mq(small-tablet) {
     @include quick_type(55px, 55px, null);
   }
+  @include mq(small-laptop) {
+    @include quick_type(70px, 70px, null);
+  }
   &:after {
     background: $color-bright-one;
     max-width: 243px;
@@ -143,6 +152,9 @@ span#about-middle-title {
     @include margin_lr;
     @include box(100%, 1px);
     @include contentdisplay();
+    @include mq(small-laptop) {
+      margin-top: 43px;
+    }
   }
 }
 
@@ -151,9 +163,20 @@ span#about-middle-title {
   @include mq(small-tablet) {
     margin-top: 70px;
   }
+  @include mq(large-laptop) {
+    margin-top: 115px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1485px;
+    @include margin_lr;
+    @include flex(space-between);
+  }
 }
 
 .about-middle-col {
+  @include mq(small-monitor) {
+    width: calc(50% - 40px);
+  }
   &:last-of-type {
     .about-middle-att {
       &:last-of-type {
@@ -168,13 +191,26 @@ span#about-middle-title {
   @include mq(small-tablet) {
     margin-bottom: 85px;
   }
+  @include mq(large-laptop) {
+    margin-bottom: 95px;
+  }
+  @include mq(small-monitor) {
+    margin-bottom: 129px;
+  }
   img {
     @include image();
     @include margin_lr;
     @include mq(small-tablet) {
       float: left;
+      margin-left: 0;
       margin-right: 48px;
+      margin-bottom: 45px;
       max-width: 42%;
+    }
+    @include mq(small-monitor) {
+      max-width: 258px;
+      margin-bottom: 20px;
+      margin-right: 24px;
     }
   }
   span.about-middle-att-title {
@@ -209,7 +245,9 @@ span#about-middle-title {
       @include mq(small-tablet) {
         list-style-position: inside;
       }
-
+      @include mq(small-laptop) {
+        margin-left: 0px;
+      }
       &:before {
         display: none;
       }

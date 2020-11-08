@@ -540,7 +540,7 @@ $('.about-read-more').on('click', function(e) {
 });
 
 
-// need to wrap list titmes in span tags so bullets wrap around the floated image
+// need to wrap list items in span tags so bullets wrap around the floated image
 
 $('.about-middle-att ul li').wrapInner("<span></span>");
 
