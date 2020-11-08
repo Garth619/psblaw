@@ -139,14 +139,32 @@
   }
 }
 
+span#page-subtitle {
+  display: block;
+  margin-top: 20px;
+  @include type(
+    (
+      size: 16px,
+      height: 25px,
+      family: $primaryfont,
+      color: $color-bright-two,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+  @include mq(large-laptop) {
+    @include quick_type(18px, 40px, null);
+  }
+}
+
 #page-descrip-wrapper {
   padding: 30px 45px 0;
   max-width: 890px;
   @include margin_lr;
   @include type(
     (
-      size: 15px,
-      height: 20px,
+      size: 16px,
+      height: 28px,
       family: $primaryfont,
       color: $color-dark-three,
       weight: 800,
@@ -155,9 +173,12 @@
   );
   @include mq(small-tablet) {
     padding: 30px 100px 0;
+    max-width: 910px;
+    @include quick_type(17px, 33px, null);
   }
   @include mq(small-laptop) {
     padding: 30px 0px 0;
+    @include quick_type(17px, 35px, null);
   }
   @include mq(large-laptop) {
     padding: 0px 0px 0;

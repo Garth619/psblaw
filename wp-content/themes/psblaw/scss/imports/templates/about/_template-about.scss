@@ -1,5 +1,24 @@
+body.page-template-template-about {
+  #page-descrip-wrapper {
+    padding-top: 0;
+  }
+  span#page-subtitle {
+    margin-bottom: 20px;
+    max-width: 230px;
+    @include margin_lr;
+  }
+}
+
 .page-about-title {
   &:after {
     max-width: 245px;
   }
+}
+
+#about-content {
+  padding: 5px 37px 0;
+}
+
+#about-top {
+  padding: 0 0 40px 0;
 }

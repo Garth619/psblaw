@@ -3,24 +3,6 @@
   margin-bottom: 40px;
 }
 
-span#page-subtitle {
-  display: block;
-  margin-top: 20px;
-  @include type(
-    (
-      size: 15px,
-      height: 20px,
-      family: $primaryfont,
-      color: $color-bright-two,
-      weight: 800,
-      transform: uppercase,
-    )
-  );
-  @include mq(large-laptop) {
-    @include quick_type(18px, 35px, null);
-  }
-}
-
 #pa-directory {
   @include mq(small-monitor) {
     max-width: 1350px;
