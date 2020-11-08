@@ -33,21 +33,39 @@ get_header(); ?>
 
 <div id='about-content' class="content">
 
-<p>Panish Shea & Boyle LLP has extensive experience with the often complicated lawsuits that arise after an injury or death caused by another’s negligence or misconduct. Our attorneys have been repeatedly recognized for excellence by other trial attorneys, legal organizations and publications nationwide. The firm has been ranked by U.S. News & World Report and Best Lawyers® as a “Tier 1” Firm in the areas of Plaintiffs Personal Injury Litigation, Plaintiffs Product Liability Litigation and Plaintiffs Mass Tort Litigation/Class Actions – the highest ranking a firm can receive – and is recognized as being among the top Plaintiff’s law firms in the country by the National Law Journal. </p>
+	<div class='about-col'>
 
-<p>Once we accept a case, we commit to you and your cause and take the steps necessary to get you the compensation you deserve. Because we limit the number of cases we accept, our attorneys and staff are able to focus their efforts on you and your case and put in the time and resources it takes to achieve the best possible result. We understand that dealing with a life-altering injury, the death or injury of a family member or other challenges caused by the wrongful act of another is difficult emotionally and financially. Your case will be handled with compassion and integrity, and we provide you with personal attention and support throughout the process.</p> 
+		<p>Panish Shea & Boyle LLP has extensive experience with the often complicated lawsuits that arise after an injury or death caused by another’s negligence or misconduct. Our attorneys have been repeatedly recognized for excellence by other trial attorneys, legal organizations and publications nationwide. The firm has been ranked by U.S. News & World Report and Best Lawyers® as a “Tier 1” Firm in the areas of Plaintiffs Personal Injury Litigation, Plaintiffs Product Liability Litigation and Plaintiffs Mass Tort Litigation/Class Actions – the highest ranking a firm can receive – and is recognized as being among the top Plaintiff’s law firms in the country by the National Law Journal. </p>
 
-<h3>We handle cases nationwide, as well as statewide in both California & Nevada.</h3>
+		<p>Once we accept a case, we commit to you and your cause and take the steps necessary to get you the compensation you deserve. Because we limit the number of cases we accept, our attorneys and staff are able to focus their efforts on you and your case and put in the time and resources it takes to achieve the best possible result. We understand that dealing with a life-altering injury, the death or injury of a family member or other challenges caused by the wrongful act of another is difficult emotionally and financially. Your case will be handled with compassion and integrity, and we provide you with personal attention and support throughout the process.</p> 
 
-<p>Our Southern California personal injury attorneys have their home base in our main office in Los Angeles, CA. We also serve the communities of Orange County, San Bernardino, and Riverside, California. We handle Nevada cases from our office in Las Vegas, Nevada.</p>
+		<h3>We handle cases nationwide, as well as statewide in both California & Nevada.</h3>
 
-<h4>The History of Our Firm</h4>
+		<p>Our Southern California personal injury attorneys have their home base in our main office in Los Angeles, CA. We also serve the communities of Orange County, San Bernardino, and Riverside, California. We handle Nevada cases from our office in Las Vegas, Nevada.</p>
 
-<p>In 2005, three lawyers with extensive track records of litigation against negligent corporate giants formed Panish Shea & Boyle LLP. </p>
+	</div><!-- about-col -->
 
-<p>Partners Brian Panish, Adam Shea and Kevin Boyle vowed to fight corporate greed and protect consumers from corporations that strive for profits over the safety of their customers. The three founding partners worked together previously and found their shared advocacy for the consumer a driving force behind founding a new firm dedicated to working for you. Since then, Panish Shea & Boyle LLP has added Partner Rahul Ravipudi, an attorney with a similar focus on providing consumers with class action recourse against large corporations engaging in unfair practices.</p>
+	<div class='about-col'>
 
-</div><!-- about-content  class="content"-->
+		<div id='about-img-wrapper'>
+		
+			<div id='about-img'>
+			
+				<img src='<?php bloginfo('template_directory');?>/images/about-image.jpg' alt=''/>
+			
+			</div><!-- about-img -->
+		
+		</div><!-- about-img-wrapper -->
+
+		<h4>The History of Our Firm</h4>
+
+		<p>In 2005, three lawyers with extensive track records of litigation against negligent corporate giants formed Panish Shea & Boyle LLP. </p>
+
+		<p>Partners Brian Panish, Adam Shea and Kevin Boyle vowed to fight corporate greed and protect consumers from corporations that strive for profits over the safety of their customers. The three founding partners worked together previously and found their shared advocacy for the consumer a driving force behind founding a new firm dedicated to working for you. Since then, Panish Shea & Boyle LLP has added Partner Rahul Ravipudi, an attorney with a similar focus on providing consumers with class action recourse against large corporations engaging in unfair practices.</p>
+
+	</div><!-- about-col -->
+
+</div><!-- about-content -->
 
 <?php // } ?>
 		

@@ -84,6 +84,9 @@
         weight: 800,
       )
     );
+    @include mq(small-laptop) {
+      font-size: 22px;
+    }
   }
   ul {
     list-style: none;

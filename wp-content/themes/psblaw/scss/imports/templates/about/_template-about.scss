@@ -1,24 +1,114 @@
 body.page-template-template-about {
   #page-descrip-wrapper {
     padding-top: 0;
+    @include mq(small-laptop) {
+      padding-top: 12px;
+      max-width: 883px;
+    }
   }
   span#page-subtitle {
     margin-bottom: 20px;
-    max-width: 230px;
-    @include margin_lr;
+    padding: 0 20px;
+    @include mq(small-tablet) {
+      margin-bottom: 35px;
+      max-width: 100%;
+      @include margin_lr;
+    }
   }
 }
 
 .page-about-title {
+  @include mq(small-laptop) {
+    @include quick_type(70px, 70px, null);
+  }
+  @include mq(large-laptop) {
+    padding: 88px 105px 0;
+  }
+  @include mq(small-monitor) {
+    padding: 113px 105px 0;
+    @include quick_type(80px, 80px, null);
+  }
   &:after {
     max-width: 245px;
+    @include mq(small-laptop) {
+      margin: 51px auto 0;
+      max-width: 676px;
+    }
   }
 }
 
 #about-content {
   padding: 5px 37px 0;
+  @include mq(small-tablet) {
+    padding: 20px 100px 40px;
+  }
+  @include mq(small-laptop) {
+    padding: 20px 155px 40px;
+  }
+  @include mq(large-laptop) {
+    padding: 20px 255px 0;
+  }
+  @include mq(small-monitor) {
+    padding: 20px 205px 0;
+    margin-top: 50px;
+    max-width: 1922px;
+    @include margin_lr;
+    @include flex(space-between);
+  }
 }
 
 #about-top {
   padding: 0 0 40px 0;
+  @include mq(large-laptop) {
+    padding: 0 0 100px 0;
+  }
+  @include mq(small-monitor) {
+    padding: 0 0 132px 0;
+  }
+}
+
+.about-col {
+  @include mq(small-monitor) {
+    flex-basis: calc(50% - 60px);
+  }
+}
+
+#about-img-wrapper {
+  display: none;
+  @include mq(small-tablet) {
+    display: block;
+    position: relative;
+    z-index: 1;
+    margin-top: 65px;
+    margin-bottom: 100px;
+  }
+  @include mq(small-laptop) {
+    max-width: 635px;
+    margin-top: 133px;
+    margin-bottom: 149px;
+    @include margin_lr;
+  }
+  @include mq(large-laptop) {
+    margin-top: 80px;
+    margin-bottom: 110px;
+  }
+  @include mq(small-monitor) {
+    margin-top: 10px;
+    margin-bottom: 126px;
+    max-width: 685px;
+  }
+  &:after {
+    background: $color-dark-three;
+    width: calc(100% - 36px);
+    height: 100%;
+    box-shadow: 0px 1px 40px rgba(0, 0, 0, 0.4);
+    @include abs(36px, null, null, 36px, -1);
+    @include contentdisplay();
+  }
+  img {
+    @include mq(small-tablet) {
+      @include image();
+      width: calc(100% - 36px);
+    }
+  }
 }
