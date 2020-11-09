@@ -26,6 +26,8 @@ body.page-template-template-contact {
 }
 
 #contact-top {
+  max-width: 400px;
+  @include margin_lr;
   @include type(
     (
       size: 18px,
@@ -35,6 +37,9 @@ body.page-template-template-contact {
       weight: 600,
     )
   );
+  @include mq(small-tablet) {
+    max-width: 490px;
+  }
   a {
     margin-left: 5px;
     font-weight: 800;
@@ -48,12 +53,20 @@ body.page-template-template-contact {
 }
 
 #contact-phone-wrapper {
-  padding-bottom: 20px;
+  padding-bottom: 13px;
   margin-bottom: 20px;
   border-bottom: 1px solid $color-bright-two;
+  @include mq(small-tablet) {
+    padding-left: 35px;
+    padding-right: 35px;
+    @include flex(space-between);
+  }
 }
 
 .contact-top-phone {
+  display: block;
+  padding: 0 10px;
+
   &:first-of-type {
     margin-bottom: 10px;
   }
@@ -74,16 +87,31 @@ body.page-template-template-contact {
 
 #contact-map-wrapper {
   margin-top: 40px;
+  max-width: 350px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 100%;
+    margin-top: 57px;
+  }
 }
 
 .contact-map {
   background: $color-light-one;
   box-shadow: 0px 1px 20px #00000040;
   padding: 30px 20px;
+  @include mq(small-tablet) {
+    padding: 30px;
+    @include flex(space-between);
+  }
   &:first-of-type {
     margin-bottom: 40px;
   }
   .contact-map-left {
+    @include mq(small-tablet) {
+      text-align: left;
+      flex-basis: 250px;
+      flex-shrink: 0;
+    }
     span {
       display: block;
       &.contact-map-title {
@@ -130,6 +158,10 @@ body.page-template-template-contact {
         color: $color-dark-one;
         padding: 8px 23px;
         @include margin_lr;
+        @include mq(small-tablet) {
+          margin-left: 0;
+          margin-right: 0;
+        }
         &:hover {
           color: $color-light-one;
         }
@@ -138,6 +170,11 @@ body.page-template-template-contact {
   }
   .contact-map-right {
     margin-top: 30px;
+    @include mq(small-tablet) {
+      margin-top: 0;
+      flex-grow: 1;
+      padding-left: 10px;
+    }
     iframe {
       width: 100% !important;
       height: 200px !important;

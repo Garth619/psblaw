@@ -46,7 +46,7 @@
 					
 						<span class='contact-map-title'>Los Angeles</span><!-- contact-map-title -->
 
-						<span class='contact-map-address'>11111 Santa Monica Blvd #700, Los Angeles, CA 90025</span><!-- contact-map-address -->
+						<span class='contact-map-address'>11111 Santa Monica Blvd #700,<br/> Los Angeles, CA 90025</span><!-- contact-map-address -->
 
 						<a class='contact-map-phone' href="tel:+13104771700">(310) 477-1700</a><!-- contact-map-phone -->
 
@@ -68,7 +68,7 @@
 					
 						<span class='contact-map-title'>Newport Beach</span><!-- contact-map-title -->
 
-						<span class='contact-map-address'>5160 Birch St #210 Newport Beach, CA 92660</span><!-- contact-map-address -->
+						<span class='contact-map-address'>5160 Birch St #210<br/> Newport Beach, CA 92660</span><!-- contact-map-address -->
 
 						<a class='contact-map-phone' href="tel:+9494685777">(949) 468-5777</a><!-- contact-map-phone -->
 
