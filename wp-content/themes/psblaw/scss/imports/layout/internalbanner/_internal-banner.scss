@@ -20,7 +20,6 @@
 }
 
 .banner-title {
-  // display: inline-block;
   @include mq(small-laptop) {
     @include type(
       (

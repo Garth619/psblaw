@@ -63,6 +63,8 @@
           </div><!-- footer-bottom-sub-col -->
 
           <div class='footer-bottom-sub-col'>
+
+            <?php if(!is_page_template('page-templates/template-contact.php')) { ?>
           
             <div id='social-media-wrapper'>
             
@@ -85,6 +87,8 @@
             </a>
             
             </div><!-- social-media-wrapper -->
+
+            <?php } ?>
           
           </div><!-- footer-bottom-sub-col -->
         
