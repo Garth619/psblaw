@@ -107,6 +107,9 @@
 			$banner = ' default-banner-layout';
 		}
 	}
+	if(is_page_template('page-templates/template-contact.php')) {
+		$banner = ' default-banner-layout';
+	}
 	// single blog post
 ?>
 

@@ -11,25 +11,25 @@ get_header(); ?>
 <div id='about-top'>
 
 		
-		<?php //if(get_field('practice_area_description')) { ?>
+		<?php if(get_field('top_description')) { ?>
 
 			<div id='page-descrip-wrapper'>
 
-			<span id='page-subtitle'><?php the_field( 'top_subtitle' ); ?></span><!-- about-top-subtitle -->
+				<span id='page-subtitle'><?php the_field( 'top_subtitle' ); ?></span><!-- about-top-subtitle -->
 
-				<div id='page-descrip'>
+				<?php if(get_field('top_description')) { ?>
+				
+					<div id='page-descrip'>
 
-					<?php the_field( 'top_description' ); ?>
+						<?php the_field( 'top_description' ); ?>
 	
-					<?php //the_field( 'practice_area_description' ); ?>
-	
-				</div><!-- page-descrip -->
+					</div><!-- page-descrip -->
 
-	<?php //if(get_field('practice_area_description')) { ?>
+				<?php } ?>
 
-	<?php // } ?>
+			</div><!-- page-descrip-wrapper -->
 
-</div><!-- page-descrip-wrapper -->
+		<?php } ?>
 
 <div id='about-content' class="content">
 
@@ -41,21 +41,21 @@ get_header(); ?>
 
 	<div class='about-col'>
 
-		<div id='about-img-wrapper'>
+		<?php $top_image = get_field( 'top_image' ); ?>
+				
+		<?php if ( $top_image ) { ?>
+
+			<div id='about-img-wrapper'>
 		
-			<div id='about-img'>
+				<div id='about-img'>
 			
-				<?php $top_image = get_field( 'top_image' ); ?>
-				
-				<?php if ( $top_image ) { ?>
-				
 					<img src="<?php echo $top_image['url']; ?>" alt="<?php echo $top_image['alt']; ?>" />
 				
-				<?php } ?>
-			
-			</div><!-- about-img -->
+				</div><!-- about-img -->
 		
-		</div><!-- about-img-wrapper -->
+			</div><!-- about-img-wrapper -->
+
+		<?php } ?>
 
 		<?php the_field( 'top_content_two' ); ?>
 
@@ -63,13 +63,11 @@ get_header(); ?>
 
 </div><!-- about-content -->
 
-<?php // } ?>
-		
-		</div><!-- about-top -->
+</div><!-- about-top -->
 
-		<div id='about-middle'>
+<div id='about-middle'>
 
-			<span id='about-middle-title'><?php the_field( 'middle_title' ); ?></span><!-- about-middle-title -->
+		<span id='about-middle-title'><?php the_field( 'middle_title' ); ?></span><!-- about-middle-title -->
 
 			<div id='about-middle-col-wrapper'>
 			
@@ -122,9 +120,9 @@ get_header(); ?>
 
 		<?php endif; ?>
 				
-			</div><!-- about-middle-col -->
+		</div><!-- about-middle-col -->
 
-				<div class='about-middle-col'>
+		<div class='about-middle-col'>
 				
 				<?php if ( have_rows( 'about_attorneys_two' ) ) : ?>
 					
@@ -183,35 +181,28 @@ get_header(); ?>
 
 			<span class="page-title page-large-content-title page-about-title"><?php the_field( 'bottom_title' ); ?></span>
 
-			<?php //if(get_field('practice_area_description')) { ?>
+			<?php if(get_field('bottom_description')) { ?>
 
-<div id='page-descrip-wrapper'>
+			<div id='page-descrip-wrapper'>
 
-	<div id='page-descrip'>
+				<div id='page-descrip'>
 
-		<?php the_field( 'bottom_description' ); ?>
+					<?php the_field( 'bottom_description' ); ?>
 
-		<?php //the_field( 'practice_area_description' ); ?>
+				</div><!-- page-descrip -->
 
-	</div><!-- page-descrip -->
+		</div><!-- page-descrip-wrapper -->
 
-<?php //if(get_field('practice_area_description')) { ?>
+	<?php } ?>
 
-<?php // } ?>
+		<div id='about-bottom-content' class="content">
 
-</div><!-- page-descrip-wrapper -->
+			<?php the_field( 'bottom_content' ); ?>	
 
-<div id='about-bottom-content' class="content">
+		</div><!-- about-bottom-content  class="content"-->
 
-	<?php the_field( 'bottom_content' ); ?>	
-
-</div><!-- about-bottom-content  class="content"-->
-
-		</div><!-- about-bottom -->
+	</div><!-- about-bottom -->
 		
-
-
-	
 </div><!-- internal-main -->
 		
 <?php get_footer(); ?>
