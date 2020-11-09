@@ -4,20 +4,49 @@ body.page-template-template-contact {
   }
   #page-container {
     padding-top: 0;
+    @include mq(small-laptop) {
+      padding-top: 60px;
+    }
   }
   #social-media-wrapper {
     padding-top: 0;
+    @include mq(small-laptop) {
+      padding-top: 10px;
+    }
     a {
+      @include mq(small-tablet) {
+        margin: 0 5px;
+      }
+      @include mq(small-laptop) {
+        @include box(48px);
+      }
+      @include mq(large-laptop) {
+        margin: 0 13px;
+      }
       &:after {
         background: $color-bright-two;
         @include mq(small-laptop) {
           background: transparent;
+          @include box(48px);
         }
+      }
+      &:hover {
+        &:after {
+          @include mq(small-laptop) {
+            background: $color-bright-two;
+          }
+        }
+      }
+      svg {
+        @include box(48px);
       }
     }
   }
   #banner-descrip {
     max-width: 320px;
+    @include mq(small-laptop) {
+      max-width: 100%;
+    }
   }
 }
 
@@ -81,6 +110,7 @@ body.page-template-template-contact {
 
 #contact-call-us {
   a {
+    margin-left: 0;
     text-decoration: underline;
   }
 }
@@ -90,8 +120,11 @@ body.page-template-template-contact {
   max-width: 350px;
   @include margin_lr;
   @include mq(small-tablet) {
-    max-width: 100%;
+    max-width: 845px;
     margin-top: 57px;
+  }
+  @include mq(large-laptop) {
+    max-width: 999px;
   }
 }
 
@@ -101,16 +134,22 @@ body.page-template-template-contact {
   padding: 30px 20px;
   @include mq(small-tablet) {
     padding: 30px;
+    height: 303px;
     @include flex(space-between);
   }
   &:first-of-type {
     margin-bottom: 40px;
+    @include mq(large-laptop) {
+      margin-bottom: 47px;
+    }
   }
   .contact-map-left {
     @include mq(small-tablet) {
       text-align: left;
       flex-basis: 250px;
       flex-shrink: 0;
+      margin-right: 10px;
+      padding-top: 20px;
     }
     span {
       display: block;
@@ -170,14 +209,15 @@ body.page-template-template-contact {
   }
   .contact-map-right {
     margin-top: 30px;
+    position: relative;
     @include mq(small-tablet) {
       margin-top: 0;
       flex-grow: 1;
-      padding-left: 10px;
     }
     iframe {
       width: 100% !important;
-      height: 200px !important;
+      height: 100% !important;
+      @include abs(0, null, null, 0);
     }
   }
 }
