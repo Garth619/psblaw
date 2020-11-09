@@ -79,10 +79,65 @@ body.page-template-template-contact {
 .contact-map {
   background: $color-light-one;
   box-shadow: 0px 1px 20px #00000040;
-  padding: 30px 30px;
+  padding: 30px 20px;
+  &:first-of-type {
+    margin-bottom: 40px;
+  }
   .contact-map-left {
+    span {
+      display: block;
+      &.contact-map-title {
+        @include type(
+          (
+            size: 14px,
+            family: $primaryfont,
+            color: $color-bright-two,
+            weight: 800,
+            transform: uppercase,
+          )
+        );
+      }
+      &.contact-map-address {
+        margin-top: 10px;
+        @include type(
+          (
+            size: 16px,
+            height: 25px,
+            family: $primaryfont,
+            color: $color-dark-one,
+            weight: 600,
+          )
+        );
+      }
+    }
+    a {
+      &.contact-map-phone {
+        margin-top: 15px;
+        display: block;
+        @include type(
+          (
+            size: 16px,
+            height: 25px,
+            family: $primaryfont,
+            color: $color-dark-one,
+            weight: 600,
+          )
+        );
+      }
+      &.contact-get-directions {
+        margin-top: 30px;
+        border: 2px solid $color-bright-two;
+        color: $color-dark-one;
+        padding: 8px 23px;
+        @include margin_lr;
+        &:hover {
+          color: $color-light-one;
+        }
+      }
+    }
   }
   .contact-map-right {
+    margin-top: 30px;
     iframe {
       width: 100% !important;
       height: 200px !important;

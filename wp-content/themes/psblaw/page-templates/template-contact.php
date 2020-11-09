@@ -50,7 +50,7 @@
 
 						<a class='contact-map-phone' href="tel:+13104771700">(310) 477-1700</a><!-- contact-map-phone -->
 
-						<a class='button-three contact-get-directions'>directions</a><!-- button-three contact-get-directions -->
+						<a class='button-three contact-get-directions' href="https://www.google.com/maps/place/11111+Santa+Monica+Blvd+%23700,+Los+Angeles,+CA+90025/@33.8334069,-118.3453654,11z/data=!4m13!1m7!3m6!1s0x80c2bb77512ee2f7:0xe3c37c4d687a647a!2s11111+Santa+Monica+Blvd+%23700,+Los+Angeles,+CA+90025!3b1!8m2!3d34.0484137!4d-118.4454251!3m4!1s0x80c2bb77512ee2f7:0xe3c37c4d687a647a!8m2!3d34.0484137!4d-118.4454251" target="_blank">directions</a><!-- button-three contact-get-directions -->
 					
 					</div><!-- contact-map-left -->
 
@@ -66,13 +66,13 @@
 				
 					<div class='contact-map-left'>
 					
-						<span class='contact-map-title'>Los Angeles</span><!-- contact-map-title -->
+						<span class='contact-map-title'>Newport Beach</span><!-- contact-map-title -->
 
-						<span class='contact-map-address'>11111 Santa Monica Blvd #700, Los Angeles, CA 90025</span><!-- contact-map-address -->
+						<span class='contact-map-address'>5160 Birch St #210 Newport Beach, CA 92660</span><!-- contact-map-address -->
 
-						<a class='contact-map-phone' href="tel:+13104771700">(310) 477-1700</a><!-- contact-map-phone -->
+						<a class='contact-map-phone' href="tel:+9494685777">(949) 468-5777</a><!-- contact-map-phone -->
 
-						<a class='button-three contact-get-directions'>directions</a><!-- button-three contact-get-directions -->
+						<a class='button-three contact-get-directions' href="https://www.google.com/maps/place/5160+Birch+St+%23210,+Newport+Beach,+CA+92660/@33.6646834,-117.8593852,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcde5dd5f3fa9d:0xff9dd9da0a4ce9ce!8m2!3d33.6646834!4d-117.8571965" target="_blank">directions</a><!-- button-three contact-get-directions -->
 					
 					</div><!-- contact-map-left -->
 
