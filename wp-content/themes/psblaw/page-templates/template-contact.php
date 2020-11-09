@@ -30,9 +30,9 @@
 				
 				</div><!-- contact-phone-wrapper -->
 
-				<div id='contact-call-us'>
+				<div id='contact-call-us' class="content">
 				
-					<p>Call us today or fill out the form <a href="">below</a></p>
+					<?php the_field( 'contact_content' ); ?>
 				
 				</div><!-- contact-call-us -->
 			

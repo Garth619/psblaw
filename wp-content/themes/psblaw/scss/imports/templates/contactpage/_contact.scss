@@ -38,7 +38,10 @@ body.page-template-template-contact {
         }
       }
       svg {
-        @include box(48px);
+        @include box(40px);
+        @include mq(small-laptop) {
+          @include box(48px);
+        }
       }
     }
   }
@@ -109,6 +112,13 @@ body.page-template-template-contact {
 }
 
 #contact-call-us {
+  &.content {
+    p {
+      &:last-of-type {
+        margin-bottom: 0;
+      }
+    }
+  }
   a {
     margin-left: 0;
     text-decoration: underline;
@@ -210,9 +220,11 @@ body.page-template-template-contact {
   .contact-map-right {
     margin-top: 30px;
     position: relative;
+    height: 200px;
     @include mq(small-tablet) {
       margin-top: 0;
       flex-grow: 1;
+      height: auto;
     }
     iframe {
       width: 100% !important;

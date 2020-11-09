@@ -48,7 +48,7 @@
 
 			<div id='banner-descrip'>
 			
-				<p>Locations in Los Angeles, Orange County, San Diego and San Francisco</p>
+				<p><?php the_field( 'contact_banner_subtitle' ); ?></p>
 
 				<div id='social-media-wrapper'>
             

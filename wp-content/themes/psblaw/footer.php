@@ -1,4 +1,4 @@
-<footer id="consultaton">
+<footer id="consultation">
 
   <div id='footer-inner'>
   
