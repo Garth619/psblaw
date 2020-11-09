@@ -139,7 +139,7 @@ nav {
         &:before {
           @include mq(small-laptop) {
             opacity: 0;
-            background: $color-bright-one;
+            background: $color-bright-two;
             transition: all 200ms ease-in-out;
             @include abs(29px, null, null, 0);
             @include box(100%, 2px);
@@ -170,6 +170,9 @@ nav {
     > li.current-menu-ancestor {
       > a {
         color: $color-bright-two;
+        &:before {
+          opacity: 1;
+        }
       }
     }
     > li.menu-item-has-children {

@@ -23,8 +23,15 @@
   }
 }
 
+.page-title-wrapper {
+  text-align: center;
+  @include mq(small-laptop) {
+    text-align: left;
+  }
+}
+
 .page-title {
-  display: block;
+  display: inline-block;
   @include margin_lr;
   @include type(
     (
@@ -33,7 +40,6 @@
       family: $secondaryfont,
       color: $color-dark-one,
       weight: 500,
-      align: center,
     )
   );
   @include mq(small-tablet) {
@@ -46,10 +52,12 @@
     width: 100%;
     margin: 0;
   }
+  &:before {
+  }
   &:after {
     background: $color-bright-two;
     max-width: 508px;
-    margin: 30px auto 0;
+    margin: 15px auto 0;
     @include box(100%, 1px);
     @include contentdisplay();
     @include mq(small-laptop) {

@@ -23,19 +23,23 @@
 		
 		<div class="page-content">
 
-			<?php if(!get_field('disable_banner_new')) : ?>
-			
-				<?php if(get_field('banner_h1') == "Yes") : ?>
-			
-					<h2 class="page-title"><?php the_title();?></h2>
-	
-					<?php else:?>
-	
-					<h1 class="page-title"><?php the_title();?></h1>
-	
-				<?php endif;?>
+			<div class='page-title-wrapper'>
 
-			<?php endif; ?>
+				<?php if(!get_field('disable_banner_new')) : ?>
+				
+					<?php if(get_field('banner_h1') == "Yes") : ?>
+				
+						<h2 class="page-title"><?php the_title();?></h2>
+		
+						<?php else:?>
+		
+						<h1 class="page-title"><?php the_title();?></h1>
+		
+					<?php endif;?>
+
+				<?php endif; ?>
+
+			</div><!-- page-title-wrapper -->
 
 			<div class='page-content-inner content'>
 

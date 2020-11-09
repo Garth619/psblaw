@@ -10,7 +10,7 @@ get_header(); ?>
 		
 		<div class="page-content">
 
-			<div id='bio-title-wrapper'>
+			<div class='page-title-wrapper'>
 			
 				<h1 class="page-title bio-title"><?php the_title();?></h1>
 

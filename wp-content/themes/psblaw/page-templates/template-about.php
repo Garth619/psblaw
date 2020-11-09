@@ -6,7 +6,11 @@ get_header(); ?>
 
 <div id="internal-main">
 
-<h1 class="page-title page-large-content-title page-about-title"><?php the_field( 'top_title' ); ?></h1>
+<div class='page-title-wrapper'>
+
+	<h1 class="page-title page-large-content-title page-about-title"><?php the_field( 'top_title' ); ?></h1>
+
+</div><!-- page-title-wrapper -->
 	
 <div id='about-top'>
 

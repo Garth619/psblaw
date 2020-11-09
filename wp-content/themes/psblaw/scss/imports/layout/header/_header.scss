@@ -632,6 +632,11 @@ header.default-banner-layout {
           }
         }
       }
+      > li.current-menu-item {
+        > a {
+          color: $color-bright-one;
+        }
+      }
       > li.current-menu-ancestor {
         > a {
           @include mq(small-laptop) {

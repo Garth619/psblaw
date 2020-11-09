@@ -1,9 +1,5 @@
 body.page-template-template-bio {
-  // #bio-title-wrapper {
-  //   text-align: center;
-  // }
   .page-title {
-    //display: inline-block;
     &:after {
       max-width: 429px;
       @include mq(small-tablet) {
@@ -15,6 +11,9 @@ body.page-template-template-bio {
     }
     &.bio-title {
       @include mq(small-laptop) {
+        @include quick_type(60px, 65px, null);
+      }
+      @include mq(large-laptop) {
         @include quick_type(70px, 75px, null);
       }
       @include mq(small-monitor) {
@@ -33,7 +32,6 @@ body.page-template-template-bio {
 }
 
 #att-top {
-  //padding-top: 25px;
   @include mq(small-tablet) {
     padding-top: 25px;
     @include flex();

@@ -6,7 +6,11 @@ get_header(); ?>
 
 <div id="internal-main">
 
-<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+<div class='page-title-wrapper'>
+
+	<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+
+</div><!-- page-title-wrapper -->
 
 <?php if(get_field('practice_area_description')) { ?>
 
