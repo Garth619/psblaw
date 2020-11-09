@@ -307,9 +307,60 @@ get_header(); ?>
 
 		<div id='about-bottom'>
 
-		
-		
-</div><!-- about-bottom -->
+			<span class="page-title page-large-content-title page-about-title">Accomplishments - Verdicts and Settlements</span>
+
+			<?php //if(get_field('practice_area_description')) { ?>
+
+<div id='page-descrip-wrapper'>
+
+	<div id='page-descrip'>
+
+		<p>Firm attorneys together have secured more than $10 billion in verdicts and settlements for clients over the years. Below are just a few examples of the landmark cases won by the attorneys of Panish Shea & Boyle LLP:</p>
+
+		<?php //the_field( 'practice_area_description' ); ?>
+
+	</div><!-- page-descrip -->
+
+<?php //if(get_field('practice_area_description')) { ?>
+
+<?php // } ?>
+
+</div><!-- page-descrip-wrapper -->
+
+<div id='about-bottom-content' class="content">
+
+	<ul>
+	<li>A <strong>$4.9 billion</strong> auto product liability jury verdict against General Motors involving a defective fuel tank.</li>
+
+	<li>A <strong>$58 million</strong> jury verdict for a man burned when his construction vehicle caught on fire</li>
+
+	<li>A <strong>$55.4 million</strong> jury verdict in a tire tread separation case.</li>
+
+	<li>A <strong>$39 million</strong> settlement against a company that maliciously prosecuted a violation of trade secrets case against two men, resulting in the collapse of their business.</li>
+
+	<li>A <strong>36.5 million</strong> jury verdict for a woman who was catastrophically injured in a big-rig truck crash.</li>
+
+	<li>A <strong>$34.5 million</strong> jury verdict for a young man who suffered a lower leg amputation after being hit by a truck.</li>
+
+	<li>A <strong>$27.4 million</strong> jury verdict in the death of a 4-year-old girl and injuries to three pedestrians after a city of San Francisco truck ran a red light, jumped the curb, struck and injured the victims.</li>
+
+	<li>A <strong>$21 million</strong> jury verdict for an Iraq War veteran who suffered a brain injury when the car in which he was a passenger was rear-ended by a commercial vehicle.</li>
+
+	<li>A <strong>$19.8 million</strong> jury verdict for a man who suffered severe burn and traumatic brain injuries when his rental home exploded.</li>
+
+	<li>A <strong>$17.45 millio</strong> bench award for a man whose family was killed when a military jet crashed into his home.</li>
+
+	<li>A <strong>$17 million</strong> jury verdict for a woman whose visually impaired son was killed when he fell between railway cars because of the lack of protective barriers and was crushed when the train moved.</li>
+
+	<li>A <strong>13.55 million</strong> settlement from the makers of the Apache helicopter that crashed in Iraq and injured two soldiers.</li>
+
+<p>View of our verdicts & settlements by practice area <a href="">here.</a></p>
+	
+	</ul>
+
+</div><!-- about-bottom-content  class="content"-->
+
+		</div><!-- about-bottom -->
 		
 
 

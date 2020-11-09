@@ -293,3 +293,81 @@ a.about-read-more {
     opacity: 0;
   }
 }
+
+#about-bottom {
+  padding-bottom: 40px;
+  @include mq(small-laptop) {
+    padding-bottom: 55px;
+  }
+  @include mq(large-laptop) {
+    padding-bottom: 85px;
+  }
+  #page-descrip-wrapper {
+    padding-top: 20px;
+    @include mq(small-tablet) {
+      padding: 30px 118px 0;
+    }
+    @include mq(small-laptop) {
+      padding: 14px 118px 0;
+    }
+    @include mq(large-laptop) {
+      max-width: 922px;
+    }
+    @include mq(small-monitor) {
+      max-width: 1115px;
+    }
+  }
+  .page-about-title {
+    padding: 56px 20px 0;
+    @include mq(small-tablet) {
+      max-width: 555px;
+      padding: 66px 20px 0;
+    }
+    @include mq(small-laptop) {
+      padding: 87px 20px 0;
+      max-width: 705px;
+    }
+    @include mq(large-laptop) {
+      padding: 111px 20px 0;
+    }
+    @include mq(small-monitor) {
+      padding: 123px 20px 0;
+    }
+    @include mq(small-monitor) {
+      max-width: 775px;
+    }
+    &:after {
+      max-width: 100%;
+      @include mq(small-tablet) {
+        margin: 27px auto 0;
+      }
+      @include mq(large-laptop) {
+        margin: 42px auto 0;
+      }
+      @include mq(small-monitor) {
+        margin: 21px auto 0;
+      }
+    }
+  }
+  #about-bottom-content {
+    padding: 0 32px;
+    @include mq(small-tablet) {
+      padding: 10px 118px 0;
+    }
+    @include mq(small-laptop) {
+      padding: 10px 148px 0;
+    }
+    @include mq(large-laptop) {
+      padding: 28px 148px 0;
+    }
+    @include mq(small-monitor) {
+      max-width: 1175px;
+      @include margin_lr;
+    }
+    &.content {
+      a:not(.button):not(.att-email):not(.bio-links) {
+        color: $color-dark-three;
+      }
+    }
+  }
+}
