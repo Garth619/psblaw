@@ -111,6 +111,11 @@
       margin-top: 40px;
     }
   }
+  &.testi-button {
+    margin-top: 35px;
+    font-size: 18px;
+    padding: 15px 35px;
+  }
   &.desktop {
     display: none;
     @include mq(small-laptop) {

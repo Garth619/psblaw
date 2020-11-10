@@ -514,6 +514,64 @@ $("#bio-slider").slick({
 });
 
 
+
+$("#testi-slider").slick({
+  infinite: true,
+  slidesToShow: 1,
+  slidesToScroll: 1,
+  arrows: false,
+  mobileFirst:true,
+  adaptiveHeight:true,
+  dots: true,
+  responsive: [
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
+    },
+    {
+      breakpoint: 1170,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
+    },
+    {
+      breakpoint: 1380,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
+    },
+    {
+      breakpoint: 1695,
+      settings: {
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        dots:false,
+        arrows:true,
+        prevArrow:".more-news-left-arrow",
+        nextArrow:".more-news-right-arrow"
+      }
+    }
+  ],
+});
+
+
 /* FAQs
 --------------------------------------------------------------------------------------- */
 
