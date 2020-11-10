@@ -12,20 +12,17 @@ get_header(); ?>
 
 </div><!-- page-title-wrapper -->
 
-<?php //if(get_field('faqs_page_description')) { ?>
+	<?php if(get_field('testimonials_page_description')) { ?>
 
-  <div id='page-descrip-wrapper'>
+  	<div id='page-descrip-wrapper'>
 
-    <?php //the_field( 'faqs_page_description' ); ?>
+			<?php the_field( 'testimonials_page_description' ); ?>
 
-		<p>If you would like to leave us a review we would love to hear from you. </p>
+		</div><!-- page-descrip-wrapper -->
 
-	
-  </div><!-- page-descrip-wrapper -->
+		<a class='button testi-button' href='<?php bloginfo('bloginfo');?>/href'><?php the_field( 'testimonials_button_verbiage' ); ?></a><!-- button testi-button -->
 
-	<a class='button testi-button' href='<?php bloginfo('bloginfo');?>/href'>Click here to leave a review</a><!-- button testi-button -->
-
-<?php  //} ?>
+	<?php  } ?>
 
 	<div id="page-container">
 			
@@ -37,149 +34,45 @@ get_header(); ?>
 			
 			</div><!-- testi-arrow testi-arrow-left -->
 
-			<div id='testi-slider'>
+			<?php if ( have_rows( 'testimonial_videos' ) ) : ?>
+
+				<div id='testi-slider'>
 			
-				<div class='testi-slide'>
-				
-					<div class='single-video'>
-		
-						<div class='video-thumb'>
+				<?php while ( have_rows( 'testimonial_videos' ) ) : the_row(); ?>
 
-							<div class='mywisita wistia_embed wistia_async_pl66ui8qz5 popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
-							<div class='video-overlay'>
-
-								<div class='play-button'></div><!-- play-button -->
-
-							</div><!-- video-overlay -->
-
-						</div><!-- video-thumb -->
-
-						<div class='video_title_wrapper'>
-
-							<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
-
-							<span class='video_title'>FReEMAN V. DOE REALTY COMPANY</span><!-- video_title -->
-
-						</div><!-- video_title_wrapper -->
-
-					</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
-
-				<div class='testi-slide'>
-				
-					<div class='single-video'>
-		
-						<div class='video-thumb'>
-
-							<div class='mywisita wistia_embed wistia_async_pl66ui8qz5 popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
-							<div class='video-overlay'>
-
-								<div class='play-button'></div><!-- play-button -->
-
-							</div><!-- video-overlay -->
-
-						</div><!-- video-thumb -->
-
-						<div class='video_title_wrapper'>
-
-							<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
-
-							<span class='video_title'>FReEMAN V. DOE REALTY COMPANY</span><!-- video_title -->
-
-						</div><!-- video_title_wrapper -->
-
-					</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
-
-				<div class='testi-slide'>
-				
-					<div class='single-video'>
-		
-						<div class='video-thumb'>
-
-							<div class='mywisita wistia_embed wistia_async_pl66ui8qz5 popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
-							<div class='video-overlay'>
-
-								<div class='play-button'></div><!-- play-button -->
-
-							</div><!-- video-overlay -->
-
-						</div><!-- video-thumb -->
-
-						<div class='video_title_wrapper'>
-
-							<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
-
-							<span class='video_title'>FReEMAN V. DOE REALTY COMPANY</span><!-- video_title -->
-
-						</div><!-- video_title_wrapper -->
-
-					</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
-
-				<div class='testi-slide'>
-				
-					<div class='single-video'>
-		
-						<div class='video-thumb'>
-
-							<div class='mywisita wistia_embed wistia_async_pl66ui8qz5 popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
-							<div class='video-overlay'>
-
-								<div class='play-button'></div><!-- play-button -->
-
-							</div><!-- video-overlay -->
-
-						</div><!-- video-thumb -->
-
-						<div class='video_title_wrapper'>
-
-							<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
-
-							<span class='video_title'>FReEMAN V. DOE REALTY COMPANY</span><!-- video_title -->
-
-						</div><!-- video_title_wrapper -->
-
-					</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
-
-				<div class='testi-slide'>
-				
-					<div class='single-video'>
-		
-						<div class='video-thumb'>
-
-							<div class='mywisita wistia_embed wistia_async_pl66ui8qz5 popover=true popoverContent=thumbnail'></div><!-- wistia -->
-
-							<div class='video-overlay'>
-
-								<div class='play-button'></div><!-- play-button -->
-
-							</div><!-- video-overlay -->
-
-						</div><!-- video-thumb -->
-
-						<div class='video_title_wrapper'>
-
-							<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
-
-							<span class='video_title'>FReEMAN V. DOE REALTY COMPANY</span><!-- video_title -->
-
-						</div><!-- video_title_wrapper -->
-
-					</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
+					<div class='testi-slide'>
+					
+						<div class='single-video'>
 			
-			</div><!-- testi-slider -->
+							<div class='video-thumb'>
+
+								<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
+
+								<div class='video-overlay'>
+
+									<div class='play-button'></div><!-- play-button -->
+
+								</div><!-- video-overlay -->
+
+							</div><!-- video-thumb -->
+
+							<div class='video_title_wrapper'>
+
+								<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
+
+								<span class='video_title'><?php the_sub_field( 'title' ); ?></span><!-- video_title -->
+
+							</div><!-- video_title_wrapper -->
+
+						</div><!-- single-video -->
+				
+				</div><!-- testi-slide -->
+		
+				<?php endwhile; ?>
+
+				</div><!-- testi-slider -->
+		
+			<?php endif; ?>
 
 			<div class='testi-arrow testi-arrow-right'>
 			
@@ -188,6 +81,44 @@ get_header(); ?>
 			</div><!-- testi-arrow testi-arrow-right -->
 
 		</div><!-- testi-slide-wrapper -->
+
+		<?php if ( have_rows( 'testi_page' ) ) : ?>
+			
+			<div id='testi-wrapper'>
+
+			<?php while ( have_rows( 'testi_page' ) ) : the_row(); ?>
+
+				<div class='single-testi'>
+			
+					<img src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
+
+					<span class='single-testi-title'><?php the_sub_field( 'title' ); ?></span><!-- single-testi-title -->
+
+					<div class='single-test-descrip content'>
+			
+						<?php the_sub_field( 'description' ); ?>
+			
+					</div><!-- single-test-descrip  -->
+
+					<span class='single-testi-name'><?php the_sub_field( 'name' ); ?></span><!-- class -->
+
+					<?php if(get_sub_field('description_two')) { ?>
+
+						<div class='single-testi-descrip-two content'>
+				
+							<?php the_sub_field( 'description_two' ); ?>
+
+						</div><!-- single-testi-descrip-two -->
+
+					<?php } ?>
+		
+				</div><!-- single-testi -->
+
+			<?php endwhile; ?>
+
+			</div><!-- testi-wrapper -->
+
+		<?php endif; ?>
 
 	</div><!-- page-container -->
 	

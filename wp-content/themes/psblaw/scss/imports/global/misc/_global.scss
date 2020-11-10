@@ -26,8 +26,13 @@
 .page-title-wrapper {
   text-align: center;
   @include mq(small-laptop) {
-    text-align: left;
+    //text-align: left;
   }
+  // .page-title.page-large-content-title {
+  //   @include mq(small-laptop) {
+  //     text-align: center;
+  //   }
+  // }
 }
 
 .page-title {

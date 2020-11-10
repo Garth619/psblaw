@@ -531,41 +531,30 @@ $("#testi-slider").slick({
         slidesToScroll: 1,
         dots:false,
         arrows:true,
-        prevArrow:".more-news-left-arrow",
-        nextArrow:".more-news-right-arrow"
+        prevArrow:".testi-arrow-left",
+        nextArrow:".testi-arrow-right"
       }
     },
     {
-      breakpoint: 1170,
+      breakpoint: 1066,
       settings: {
         slidesToShow: 2,
         slidesToScroll: 2,
         dots:false,
         arrows:true,
-        prevArrow:".more-news-left-arrow",
-        nextArrow:".more-news-right-arrow"
+        prevArrow:".testi-arrow-left",
+        nextArrow:".testi-arrow-right"
       }
     },
     {
-      breakpoint: 1380,
+      breakpoint: 1170,
       settings: {
         slidesToShow: 3,
         slidesToScroll: 3,
         dots:false,
         arrows:true,
-        prevArrow:".more-news-left-arrow",
-        nextArrow:".more-news-right-arrow"
-      }
-    },
-    {
-      breakpoint: 1695,
-      settings: {
-        slidesToShow: 4,
-        slidesToScroll: 4,
-        dots:false,
-        arrows:true,
-        prevArrow:".more-news-left-arrow",
-        nextArrow:".more-news-right-arrow"
+        prevArrow:".testi-arrow-left",
+        nextArrow:".testi-arrow-right"
       }
     }
   ],

@@ -3,16 +3,24 @@ body.page-template-template-testimonials {
     padding-left: 0;
     padding-right: 0;
   }
+  #page-descrip-wrapper {
+    max-width: 600px;
+    @include mq(small-tablet) {
+      max-width: 100%;
+    }
+  }
   .single-video {
     .video-thumb {
       box-shadow: 0px 1px 12px #00000040;
     }
     .video_title_wrapper {
+      padding-top: 24px;
+      padding-bottom: 25px;
       span.video_title {
         text-transform: uppercase;
+        min-height: auto;
       }
-      img#video-stars {
-        margin-top: 5px;
+      img {
         margin-bottom: 20px;
         @include image();
         @include margin_lr;
@@ -23,10 +31,37 @@ body.page-template-template-testimonials {
 
 #testi-slide-wrapper {
   padding: 0 45px;
+  max-width: 515px;
+  width: 100%;
+  @include margin_lr;
+  @include flex(space-between);
+  @include mq(small-tablet) {
+    max-width: 615px;
+  }
+  @include mq(tablet) {
+    max-width: 1015px;
+  }
+  @include mq(small-laptop) {
+    max-width: 1215px;
+  }
+  @include mq(large-laptop) {
+    max-width: 1365px;
+  }
+  @include mq(small-monitor) {
+    max-width: 1675px;
+  }
 }
 
 #testi-slider {
   padding: 0 0px;
+  width: 100%;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    width: calc(100% - 150px);
+  }
+  @include mq(small-monitor) {
+    width: calc(100% - 230px);
+  }
   .slick-track {
     padding: 20px 0;
   }
@@ -60,7 +95,7 @@ body.page-template-template-testimonials {
         &:before {
           width: 20px;
           opacity: 1;
-          color: grey;
+          color: #62676d;
           font-size: 23px;
           transition: all 200ms ease-in-out;
         }
@@ -71,4 +106,127 @@ body.page-template-template-testimonials {
 
 .testi-arrow {
   display: none;
+  @include mq(small-tablet) {
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: #d6d9dd;
+    position: relative;
+    margin-top: 130px;
+    @include box(44px);
+  }
+  &:hover {
+    &:after {
+      background: #8c949d;
+    }
+  }
+  &.slick-arrow {
+    display: none;
+  }
+  &:after {
+    border-radius: 50%;
+    background: #62676d;
+    transition: all 200ms ease-in-out;
+    margin: 4px 0 0 4px;
+    @include box(36px);
+    @include contentdisplay();
+  }
+  svg {
+    @include abs(13px, null, null, 14px);
+    @include box(10px, 17px);
+  }
+}
+
+.testi-arrow-right {
+  svg {
+    @include abs(13px, null, null, 18px);
+  }
+}
+
+#testi-wrapper {
+  padding: 40px 45px 0;
+  max-width: 1035px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    padding: 33px 100px 0;
+  }
+  @include mq(large-laptop) {
+    max-width: 1215px;
+  }
+}
+
+.single-testi {
+  text-align: center;
+  border-bottom: 1px solid #c6ced8;
+  padding-bottom: 35px;
+  margin-bottom: 35px;
+  @include mq(large-laptop) {
+    padding-bottom: 50px;
+    margin-bottom: 50px;
+  }
+  &:last-of-type {
+    margin-bottom: 0;
+    padding-bottom: 0px;
+    border: none;
+  }
+  img {
+    margin-bottom: 24px;
+    @include margin_lr;
+    @include image();
+    width: 160px;
+  }
+  span {
+    display: block;
+    &.single-testi-title {
+      margin-bottom: 20px;
+      @include type(
+        (
+          size: 18px,
+          height: 21px,
+          family: $primaryfont,
+          color: $color-dark-three,
+          weight: 800,
+        )
+      );
+      @include mq(small-laptop) {
+        @include quick_type(19px, 20px, null);
+      }
+      @include mq(large-laptop) {
+        @include quick_type(22px, 25px, null);
+      }
+    }
+    &.single-testi-name {
+      @include mq(large-laptop) {
+        margin-top: 45px;
+        margin-bottom: 40px;
+      }
+      @include type(
+        (
+          size: 17px,
+          height: 19px,
+          family: $primaryfont,
+          color: $color-bright-two,
+          weight: 800,
+        )
+      );
+    }
+  }
+
+  .single-test-descrip {
+    &.content {
+      @include mq(large-laptop) {
+        @include quick_type(20px, 35px, null);
+      }
+    }
+  }
+  .single-testi-descrip-two {
+    margin-top: 30px;
+    color: #62676d;
+    &.content {
+      @include quick_type(14px, 25px, null);
+
+      @include mq(large-laptop) {
+        @include quick_type(17px, 35px, null);
+      }
+    }
+  }
 }
