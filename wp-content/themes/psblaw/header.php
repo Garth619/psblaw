@@ -110,6 +110,9 @@
 	if(is_page_template('page-templates/template-contact.php')) {
 		$banner = ' default-banner-layout';
 	}
+	if(is_post_type_archive('case_results')) {
+		$banner = ' no-banner-layout';
+	}
 	// single blog post
 ?>
 

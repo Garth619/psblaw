@@ -1,46 +1,7 @@
 // vars/mixins
 
 @import "imports/global/fonts/variables", "imports/global/colors/variables",
-  "imports/global/mediaqueries/variables",
-  //"imports/global/misc/variables",
-  //"imports/global/content/variables",
-  //"imports/components/buttons/variables",
-  // "imports/components/internal-forms/variables",
-  // "imports/components/logo_slider/variables",
-  "imports/layout/header/variables",
-  //"imports/layout/footer/variables",
-  // "imports/layout/internalbanner/variables",
-  // "imports/layout/locations/variables",
-  "imports/layout/navigation/variables",
-  // "imports/layout/sidebar/variables",
-  // "imports/templates/404/variables",
-  // "imports/templates/about/variables",
-  // "imports/templates/attorneyprofile/variables",
-  // "imports/templates/blog/variables",
-  // "imports/templates/caseresults/variables",
-  // "imports/templates/contactpage/variables",
-  "imports/templates/homepage/sectionone/variables",
-  // "imports/templates/homepage/sectiontwo/variables",
-  // "imports/templates/homepage/sectionthree/variables",
-  // "imports/templates/homepage/sectionfour/variables",
-  // "imports/templates/homepage/sectionfive/variables",
-  // "imports/templates/homepage/sectionsix/variables",
-  // "imports/templates/homepage/sectionseven/variables",
-  // "imports/templates/meetteam/variables",
-  // "imports/templates/pa-directory/variables",
-  // "imports/templates/testimonials/variables",
-  // "imports/templates/videocenter/variables",
-  // "imports/templates/landingpage/global/variables",
-  // "imports/templates/landingpage/header/variables",
-  // "imports/templates/landingpage/sectionone/variables",
-  // "imports/templates/landingpage/sectiontwo/variables",
-  // "imports/templates/landingpage/sectionthree/variables",
-  // "imports/templates/landingpage/sectionfour/variables",
-  // "imports/templates/landingpage/sectionfive/variables",
-  // "imports/templates/landingpage/sectionsix/variables",
-  // "imports/templates/landingpage/sidebar/variables",
-  // "imports/templates/landingpage/footer/variables",
-  "imports/utils/variables-do-not-edit",
+  "imports/global/mediaqueries/variables", "imports/utils/variables-do-not-edit",
   "imports/utils/mixins-do-not-edit";
 
 // third party files
@@ -65,9 +26,7 @@
 
 @import "imports/layout/header/header", "imports/layout/navigation/navigation",
   "imports/layout/internalbanner/internal-banner",
-  "imports/layout/sidebar/sidebar",
-  // "imports/layout/locations/locations",
-  "imports/layout/footer/footer";
+  "imports/layout/sidebar/sidebar", "imports/layout/footer/footer";
 
 // page templates
 
@@ -86,7 +45,7 @@
   "imports/templates/testimonials/template-testimonials",
   "imports/templates/about/template-about",
   "imports/templates/attorneyprofile/template-attbio",
-  // "imports/templates/caseresults/template-results",
+  "imports/templates/caseresults/template-results",
   "imports/templates/meetteam/template-meetteam",
   "imports/templates/videocenter/template-video",
   "imports/templates/contactpage/contact",

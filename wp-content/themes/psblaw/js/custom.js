@@ -560,6 +560,45 @@ $("#testi-slider").slick({
   ],
 });
 
+/* Case Results
+--------------------------------------------------------------------------------------- */
+
+$('#case-results-select').on('click', function(e) {
+	  
+  $(this).next('#case-results-dropdown').slideToggle(250);
+
+});
+
+$('#case-results-dropdown ul li').on('click', function(e) {
+		
+  // gets text
+
+  var caseresultstext = $(this).text();
+  
+  // takes the text and climbs back up to the top and replaces the text with the new text, there is probably cleaner ways to do this haha
+  
+  $(this).closest('#case-results-dropdown').prev('#case-results-select').find('span').replaceWith('<span>' +caseresultstext+ '<span>');
+  
+  // then the dropdown slides back up
+
+  $('#case-results-dropdown').slideUp(250);
+
+});
+
+// this mimics the way a select dropdown closes when you decide not to choose an option but just click outside of the select, the dropdown slides back up too
+	
+$(document).click(function (e){
+
+  var container = $("#case-results-select");
+
+  if (!container.is(e.target) && container.has(e.target).length === 0){
+
+    $('#case-results-dropdown').slideUp(250);
+  
+  }
+
+}); 
+
 
 /* FAQs
 --------------------------------------------------------------------------------------- */
