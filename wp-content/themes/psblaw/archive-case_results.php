@@ -96,7 +96,7 @@ if( $posts ):
   $temp = $wp_query; 
   $wp_query = null; 
   $wp_query = new WP_Query($args); // can prolly put args in here and drop the last line below
-  //$wp_query->query('posts_per_page=12&post_type=case_results'.'&paged='.$paged); 
+
 
   while ($wp_query->have_posts()) : $wp_query->the_post(); 
 ?>
@@ -119,9 +119,9 @@ if( $posts ):
 
 <?php endwhile; ?>
 
-<nav>
+<div id="case-results-nav">
 <?php wpbeginner_numeric_posts_nav(); ?>
-</nav>
+</div><!-- case-results-nav -->
 
 <?php 
   $wp_query = null; 

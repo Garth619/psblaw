@@ -1,10 +1,18 @@
 body.post-type-archive-case_results {
   #page-container {
     padding-top: 0;
+    @include mq(small-laptop) {
+      padding-bottom: 150px;
+    }
+    @include mq(large-laptop) {
+      padding-bottom: 200px;
+    }
   }
   #page-descrip-wrapper {
     max-width: 360px;
+
     @include margin_lr;
+
     @include mq(small-tablet) {
       max-width: 100%;
     }
@@ -93,6 +101,7 @@ body.post-type-archive-case_results {
 
 #case-results-wrapper {
   margin-top: 40px;
+  position: relative;
   @include mq(small-tablet) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -217,6 +226,28 @@ body.post-type-archive-case_results {
       }
       @include mq(large-laptop) {
         margin-top: 23px;
+      }
+    }
+  }
+}
+
+#case-results-nav {
+  max-width: 100%;
+  @include box(100%, 100px);
+  @include abs(auto, null, -145px, 0);
+  @include mq(small-tablet) {
+    bottom: -100px;
+  }
+  @include mq(small-monitor) {
+    bottom: -170px;
+  }
+  .navigation {
+    margin-top: 0;
+    margin-bottom: 0;
+    ul {
+      @include mq(small-laptop) {
+        text-align: center;
+        justify-content: center;
       }
     }
   }
