@@ -54,42 +54,42 @@ get_header(); ?>
 
   <?php 
 
-// get posts
+// Need to strip out the $ and the commas in the acf value so they will order properly ih the wp_query below
 $posts = get_posts(array(
 	'post_type'			=> 'case_results',
 	'posts_per_page'	=> -1,
-	// 'meta_key'			=> 'start_date',
-	// 'orderby'			=> 'meta_value',
-	// 'order'				=> 'DESC'
 ));
 
 if( $posts ): 
 
-  $garrett = array();
-		
 	foreach( $posts as $post ): 
 		
-		setup_postdata( $post );
-		
-      $arrayvalue[] = get_field('case_result_amount');
-	
-	  endforeach; 
+    setup_postdata( $post );
+
+      // removes the $ and commas from the acf amount
+      $amount = str_replace(['$', ',', ], '', get_field('case_result_amount'));
+
+      // build an associative array 
+      $amount_int[$post->ID] = $amount;
+
+    endforeach; 
 	
     wp_reset_postdata();
 
-    $unique = array_merge($garrett, $arrayvalue);
+    // sort the associative array in descending order, according to the value(acf amount)
 
-    print_r($unique);
+    arsort($amount_int);
 
- endif; 
+    // pull the post ids out according to the amount into an array (this will be used below as the orderby postid array)
 
-  
+    $amount_order = array_keys($amount_int);
+
+  endif; 
 
   $args = array(
     'post_type' => 'case_results',
-    'meta_key' => 'case_result_amount',
-    'orderby' => 'meta_value',
-    'order' => 'ASC',
+    'post__in' => $amount_order,
+    'orderby' => 'post__in',
     'posts_per_page' => 12,
     'paged' => $paged
   );
