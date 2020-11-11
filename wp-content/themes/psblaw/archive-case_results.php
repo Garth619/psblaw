@@ -38,13 +38,31 @@ get_header(); ?>
 
   <div id='case-results-dropdown'>
 
-   <ul>
+  <?php $terms = get_terms( 'case_results_category' );
+ 
+    echo '<ul>';
+ 
+    foreach ( $terms as $term ) {
+ 
+      $term_link = get_term_link( $term );
+    
+    // If there was an error, continue to the next term.
+    if ( is_wp_error( $term_link ) ) {
+        continue;
+    }
+ 
+    echo '<li><a href="' . esc_url( $term_link ) . '">' . $term->name . '</a></li>';
+}
+ 
+echo '</ul>'; ?>
+
+   <!-- <ul>
       <li><a>Car Accidents</a></li>
       <li><a>Test</a></li>
       <li><a>Test Test</a></li>
       <li><a>Test Test Test</a></li>
       <li><a>Test TestTestTest</a></li>
-    </ul>
+    </ul> -->
 
   </div><!-- case-results-dropdown -->
 
