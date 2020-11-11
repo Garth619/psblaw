@@ -53,10 +53,50 @@ get_header(); ?>
 	<div id='case-results-wrapper'>
 
   <?php 
+
+// get posts
+$posts = get_posts(array(
+	'post_type'			=> 'case_results',
+	'posts_per_page'	=> -1,
+	// 'meta_key'			=> 'start_date',
+	// 'orderby'			=> 'meta_value',
+	// 'order'				=> 'DESC'
+));
+
+if( $posts ): 
+
+  $garrett = array();
+		
+	foreach( $posts as $post ): 
+		
+		setup_postdata( $post );
+		
+      $arrayvalue[] = get_field('case_result_amount');
+	
+	  endforeach; 
+	
+    wp_reset_postdata();
+
+    $unique = array_merge($garrett, $arrayvalue);
+
+    print_r($unique);
+
+ endif; 
+
+  
+
+  $args = array(
+    'post_type' => 'case_results',
+    'meta_key' => 'case_result_amount',
+    'orderby' => 'meta_value',
+    'order' => 'ASC',
+    'posts_per_page' => 12,
+    'paged' => $paged
+  );
   $temp = $wp_query; 
   $wp_query = null; 
-  $wp_query = new WP_Query(); // can prolly put args in here and drop the last line below
-  $wp_query->query('posts_per_page=12&post_type=case_results'.'&paged='.$paged); 
+  $wp_query = new WP_Query($args); // can prolly put args in here and drop the last line below
+  //$wp_query->query('posts_per_page=12&post_type=case_results'.'&paged='.$paged); 
 
   while ($wp_query->have_posts()) : $wp_query->the_post(); 
 ?>
@@ -80,8 +120,7 @@ get_header(); ?>
 <?php endwhile; ?>
 
 <nav>
-    <?php previous_posts_link('&laquo; Newer') ?>
-    <?php next_posts_link('Older &raquo;') ?>
+<?php wpbeginner_numeric_posts_nav(); ?>
 </nav>
 
 <?php 

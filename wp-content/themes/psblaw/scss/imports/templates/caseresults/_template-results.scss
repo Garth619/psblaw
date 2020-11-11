@@ -175,6 +175,10 @@ body.post-type-archive-case_results {
       a {
         color: $color-dark-three;
         text-decoration: none;
+        transition: all 200ms ease-in-out;
+        &:hover {
+          color: $color-bright-two;
+        }
       }
     }
   }

@@ -159,6 +159,7 @@ body.single {
         background: #d6d9dd;
         flex-shrink: 0;
         border-radius: 50%;
+
         @include box(36px);
         @include flex(center, center);
         @include mq(small-tablet) {
@@ -166,8 +167,9 @@ body.single {
         }
         @include mq(small-laptop) {
           border-radius: 0;
-          position: static;
+          position: relative;
           background: transparent;
+          top: 0px;
           @include box(8px, 9px);
         }
         &:before {
@@ -208,15 +210,18 @@ body.single {
           display: block;
           z-index: 1;
           @include box(36px);
+          @include mq(small-laptop) {
+            @include box(7px, 10px);
+          }
         }
       }
       &.myprev {
+        margin-right: 15px;
         @include mq(small-laptop) {
           margin-right: 8px;
         }
         &:before {
           @include mq(small-laptop) {
-            transition: background 200ms ease-in-out;
             @include tri(left, 5px, 7px, $color-dark-one);
           }
         }
@@ -231,6 +236,7 @@ body.single {
       &.mynext {
         left: auto;
         right: 0;
+        margin-left: 15px;
         @include mq(small-laptop) {
           margin-left: 8px;
         }
