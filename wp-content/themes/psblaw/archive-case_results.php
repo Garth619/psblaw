@@ -50,11 +50,47 @@ get_header(); ?>
 
 </div><!-- case-results-filter -->
 			
-	<div id='case-results-wrapper' class="content">
+	<div id='case-results-wrapper'>
 
+  <?php 
+  $temp = $wp_query; 
+  $wp_query = null; 
+  $wp_query = new WP_Query(); // can prolly put args in here and drop the last line below
+  $wp_query->query('posts_per_page=12&post_type=case_results'.'&paged='.$paged); 
+
+  while ($wp_query->have_posts()) : $wp_query->the_post(); 
+?>
+
+  <div class='single-cr'>
     
+    <ul>
+    <li><a href="">Landmark Case</a></li>
+    <li><a href="">Catastrophic Injury</a></li>
+    </ul>
 
-		</div><!-- case-results-wrapper -->
+    <span class='single-cr-amount'><?php the_field( 'case_result_amount' ); ?></span><!-- single-cr-amount -->
+
+    <span class='single-cr-title'><?php the_title();?></span><!-- single-cr-amount -->
+
+    <a class='button-two case-results-read-more' href='<?php the_permalink();?>'>Read More</a><!-- button-two case-results-read-more -->
+
+  </div><!-- single-cr -->
+
+
+<?php endwhile; ?>
+
+<nav>
+    <?php previous_posts_link('&laquo; Newer') ?>
+    <?php next_posts_link('Older &raquo;') ?>
+</nav>
+
+<?php 
+  $wp_query = null; 
+  $wp_query = $temp;  // Reset
+?>
+
+
+	</div><!-- case-results-wrapper -->
 
 	</div><!-- page-container -->
 	
