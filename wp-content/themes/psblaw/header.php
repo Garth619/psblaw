@@ -100,7 +100,7 @@
 		if(get_field('disable_banner_new') == 'Yes') {
 			$banner = ' no-banner-layout';
 		} 
-		elseif(is_single()) {
+		elseif(is_single() || is_tax('case_results_category')) {
 			$banner = ' no-banner-layout';
 		}
 		else {

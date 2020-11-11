@@ -56,13 +56,6 @@ get_header(); ?>
  
 echo '</ul>'; ?>
 
-   <!-- <ul>
-      <li><a>Car Accidents</a></li>
-      <li><a>Test</a></li>
-      <li><a>Test Test</a></li>
-      <li><a>Test Test Test</a></li>
-      <li><a>Test TestTestTest</a></li>
-    </ul> -->
 
   </div><!-- case-results-dropdown -->
 
@@ -116,15 +109,22 @@ if( $posts ):
   $wp_query = new WP_Query($args); // can prolly put args in here and drop the last line below
 
 
-  while ($wp_query->have_posts()) : $wp_query->the_post(); 
-?>
+  while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
   <div class='single-cr'>
+
+  <?php $terms = get_the_terms($post->ID, 'case_results_category');
+
+  if (! empty($terms)) {
+    echo "<ul>";
+    foreach ($terms as $term) {
+      $url = get_term_link($term->slug, 'case_results_category');
+      echo "<li><a href='{$url}'>{$term->name}</a></li>";
+    }
+    echo "</ul>";
+  }
+?>
     
-    <ul>
-    <li><a href="">Landmark Case</a></li>
-    <li><a href="">Catastrophic Injury</a></li>
-    </ul>
 
     <span class='single-cr-amount'><?php the_field( 'case_result_amount' ); ?></span><!-- single-cr-amount -->
 

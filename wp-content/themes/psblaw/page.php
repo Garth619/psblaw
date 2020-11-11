@@ -6,7 +6,11 @@
 
 	<?php if(get_field('disable_banner_new')) { ?>
 
-		<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+		<div id='page-descrip-wrapper'>
+
+			<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+
+		</div>	
 	
 	<?php } ?>
 

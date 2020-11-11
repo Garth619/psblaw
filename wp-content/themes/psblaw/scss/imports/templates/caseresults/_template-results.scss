@@ -1,4 +1,5 @@
-body.post-type-archive-case_results {
+body.post-type-archive-case_results,
+body.tax-case_results_category {
   #page-container {
     padding-top: 0;
     @include mq(small-laptop) {
@@ -171,7 +172,7 @@ body.post-type-archive-case_results {
           background: $color-bright-two;
           border-radius: 50%;
           vertical-align: top;
-          margin: 7px 3px 0 8px;
+          margin: 7px 8px 0;
           @include box(5px);
           @include contentdisplay(inline-block);
         }

@@ -91,6 +91,7 @@
   @include mq(small-monitor) {
     max-width: 1760px;
     padding: 105px 105px 10px;
+    @include margin_lr;
     @include quick_type(70px, 75px, null);
   }
   &:after {
