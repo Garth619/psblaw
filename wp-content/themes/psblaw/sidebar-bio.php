@@ -68,9 +68,7 @@
 	</div><!-- bio-slider -->
 <?php endif; ?>
 
-		
-
-		<div class='bio-slider-arrow-wrapper'>
+	<div class='bio-slider-arrow-wrapper'>
 		
 			<div class='bio-arrow bio-arrow-left'>
 			

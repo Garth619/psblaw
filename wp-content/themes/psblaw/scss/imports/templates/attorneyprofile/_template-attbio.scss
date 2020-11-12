@@ -218,12 +218,34 @@ body.page-template-template-bio {
 
 .sidebar-bio {
   .widget {
+    padding-left: 29px;
+    padding-right: 29px;
     h3 {
       padding: 0 20px;
       position: relative;
+      width: auto;
+      @include mq(mobile) {
+        padding: 0 60px;
+      }
+      @include mq(small-laptop) {
+        padding: 0 20px;
+      }
       &:before {
         top: 45%;
         transform: translateY(-50%);
+        right: 0;
+        @include mq(mobile) {
+          right: 40px;
+        }
+        @include mq(small-tablet) {
+          right: 25px;
+        }
+        @include mq(small-laptop) {
+          right: -5px;
+        }
+        @include mq(large-laptop) {
+          right: 3px;
+        }
       }
     }
     #bio-list {
@@ -361,8 +383,8 @@ body.page-template-template-bio {
 }
 
 .bio-slider-arrow-wrapper {
-  width: calc(100% + 50px);
-  margin-left: -25px;
+  width: calc(100% + 58px);
+  margin-left: -29px;
   @include flex();
   .bio-arrow {
     padding: 12px 10px;

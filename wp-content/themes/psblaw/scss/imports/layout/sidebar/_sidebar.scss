@@ -193,6 +193,7 @@ span#sidebar-required {
   h3 {
     display: block;
     margin-bottom: 15px;
+    word-break: break-all;
     @include type(
       (
         size: 35px,
@@ -213,15 +214,18 @@ span#sidebar-required {
       @include quick_type(50px, 50px, null);
     }
     &:before {
-      @include abs(45px, 15px, null, null);
+      @include abs(45px, 22px, null, null);
       @include tri(down, 5px, 9px, $color-bright-two);
       @include contentdisplay();
+      @include mq(mobile) {
+        @include abs(45px, 50px, null, null);
+      }
       @include mq(small-tablet) {
         top: 60px;
         right: 40px;
       }
       @include mq(small-laptop) {
-        display: none;
+        //display: none;
       }
     }
     &:after {
@@ -332,8 +336,100 @@ span#sidebar-required {
   }
 }
 
+.sidebar-pa {
+  // pa style updates
+  .widget {
+    padding-left: 0;
+    padding-right: 0;
+    @include mq(large-laptop) {
+      padding-top: 56px;
+      padding-bottom: 15px;
+    }
+    h3 {
+      @include mq(large-laptop) {
+        margin-bottom: 12px;
+      }
+      &:before {
+        @include mq(small-laptop) {
+          display: none;
+        }
+      }
+      &:after {
+        @include mq(small-laptop) {
+          display: none;
+        }
+      }
+    }
+    ul.menu {
+      > li {
+        font-weight: 800;
+        @include mq(large-laptop) {
+          @include quick_type(18px, 25px, null);
+        }
+        &.active {
+          > a {
+            border-bottom: 1px solid transparent;
+            &:before {
+              @include tri(down, 4px, 7px, $color-bright-two);
+            }
+          }
+        }
+        a {
+          padding: 16px 31px 16px 15px;
+          width: calc(100% - 50px);
+          @include margin_lr;
+          @include mq(large-laptop) {
+            padding: 33px 31px 33px 15px;
+          }
+          &:before {
+            top: 25px;
+            transition: all 200ms ease-in-out;
+            @include tri(down, 5px, 7px, $color-dark-one);
+            @include mq(large-laptop) {
+              top: 43px;
+            }
+          }
+        }
+      }
+      > li.current-menu-ancestor {
+        > a {
+          &:before {
+            @include tri(down, 4px, 7px, $color-bright-two);
+          }
+        }
+      }
+    }
+    ul.sub-menu {
+      background: #f3f5f6;
+      padding: 15px 0;
+      li {
+        @include mq(large-laptop) {
+          font-size: 17px;
+        }
+        &:last-of-type {
+          a {
+            border-bottom: none;
+          }
+        }
+        a {
+          padding: 14px 15px;
+          border-bottom: 1px solid #dde0e2;
+        }
+      }
+    }
+  }
+}
+
 .sidebar-blog {
   .widget {
+    h3 {
+      &:before {
+        right: 60px;
+        @include mq(small-laptop) {
+          right: 35px;
+        }
+      }
+    }
     ul {
       li {
         &.blog-active {
