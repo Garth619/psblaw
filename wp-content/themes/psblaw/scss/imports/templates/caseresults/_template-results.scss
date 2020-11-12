@@ -255,6 +255,8 @@ body.tax-case_results_category {
 }
 
 .featured-on-wrapper {
+  margin-bottom: 35px;
+  line-height: 18px;
 }
 
 span.featured-one {
@@ -272,18 +274,37 @@ span.featured-one {
       transform: uppercase,
     )
   );
+  @include mq(small-laptop) {
+    text-align: left;
+  }
 }
 
 .featured-on-inner {
+  @include flex();
 }
+
 .featured-on-video {
+  max-width: 331px;
+  width: 100%;
+  @include mq(small-laptop) {
+    flex-shrink: 0;
+    width: 331px;
+  }
   .single-video {
-    max-width: 331px;
+    width: 100%;
+    margin-bottom: 20px;
     @include margin_lr;
+    .mywisita {
+      height: 182px;
+    }
   }
 }
 
 .featured-content {
+  @include mq(small-laptop) {
+    margin-top: -10px;
+    padding-left: 22px;
+  }
 }
 
 .featured-row {
@@ -295,17 +316,21 @@ span.featured-one {
   }
 }
 
-span.featured-row-title {
+h2.featured-row-title {
   display: inline-block;
   margin-right: 5px;
-  @include type(
-    (
-      size: 17px,
-      family: $primaryfont,
-      color: $color-dark-three,
-      weight: 800,
-    )
-  );
+  padding-bottom: 0;
+  padding-top: 0;
+  @include mq(small-laptop) {
+    @include type(
+      (
+        size: 17px,
+        family: $primaryfont,
+        color: $color-dark-three,
+        weight: 800,
+      )
+    );
+  }
 }
 
 .case-articles {
@@ -327,4 +352,8 @@ span.featured-row-title {
   }
   a.case-article-link {
   }
+}
+
+.other-publications {
+  padding-bottom: 30px;
 }

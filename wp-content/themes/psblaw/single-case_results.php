@@ -42,37 +42,37 @@
 				
 				</div><!-- featured-on-video -->
 
-				<div class='featured-content content'>
+				<div class='featured-content'>
 				
 					<div class='featured-row'>
 					
-						<span class='featured-row-title'>Landmark Case:</span><!-- featured-row-title -->
+						<h2 class='featured-row-title'>Landmark Case:</h2><!-- featured-row-title -->
 
-						<p>Anderson vs. GM (General Motors) Anderson vs. GM (General Motors) Anderson vs. GM (General Motors)</p>
+						<p>Anderson vs. GM (General Motors)</p>
 						
 					</div><!-- featured-row -->
 
 					<div class='featured-row'>
 					
-						<span class='featured-row-title'>Landmark Case:</span><!-- featured-row-title -->
+						<h2 class='featured-row-title'>The Verdict:</h2><!-- featured-row-title -->
 
-						<p>Anderson vs. GM (General Motors) Anderson vs. GM (General Motors) Anderson vs. GM (General Motors)</p>
+						<p>$4.9 Billion</p>
 						
 					</div><!-- featured-row -->
 
 					<div class='featured-row'>
 					
-						<span class='featured-row-title'>Landmark Case:</span><!-- featured-row-title -->
+						<h2 class='featured-row-title'>Trial attorney(s):</h2><!-- featured-row-title -->
 
-						<p>Anderson vs. GM (General Motors) Anderson vs. GM (General Motors) Anderson vs. GM (General Motors)</p>
+						<p><a href="">Brian Panish</a></p>
 						
 					</div><!-- featured-row -->
 
 					<div class='featured-row'>
 					
-						<span class='featured-row-title'>Landmark Case:</span><!-- featured-row-title -->
+						<h2 class='featured-row-title'>Practice Areas:</h2><!-- featured-row-title -->
 
-						<p>Anderson vs. GM (General Motors) Anderson vs. GM (General Motors) Anderson vs. GM (General Motors)</p>
+						<p><a href="">Auto Product Liability,</a> <a href="">Catastrophic Injury,</a> <a href="">Product Defects</a></p>
 						
 					</div><!-- featured-row -->
 				
@@ -127,6 +127,24 @@
 				</div><!-- case-article-row -->
 			
 			</div><!-- case-articles -->
+
+			<div class='other-publications'>
+			
+				<h2>Other Publications:</h2>
+
+				<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
+
+					<p>A typical verdict last year was way up, but nothing like this one.</p>
+
+					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
+
+					<p>A typical verdict last year was way up, but nothing like this one.</p>
+
+					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
+
+					<p>A typical verdict last year was way up, but nothing like this one.</p>
+			
+			</div><!-- other-publications -->
 			
 			</div><!-- page-content-inner -->
 			
