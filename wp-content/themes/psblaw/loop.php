@@ -61,6 +61,6 @@
 
 </div><!-- blog_feed -->
 
-<?php wpbeginner_numeric_posts_nav(); ?>
+<?php my_numeric_posts_nav(); ?>
 
 

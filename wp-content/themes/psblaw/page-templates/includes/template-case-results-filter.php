@@ -4,18 +4,15 @@
 
 </div><!-- page-title-wrapper -->
 
-<?php //if(get_field('faqs_page_description')) { ?>
+<?php if(get_field('case_results_archive_and_taxonomy_description','option')) { ?>
 
   <div id='page-descrip-wrapper'>
 
     <?php the_field( 'case_results_archive_and_taxonomy_description','option'); ?>
 
-    <?php // the_field( 'faqs_page_description' ); ?>
-
   </div><!-- page-descrip-wrapper -->
 
-  
-<?php  //} ?>
+<?php  } ?>
 
 
 	<div id="page-container">
@@ -72,7 +69,7 @@
 
   <?php 
 
-    // Need to strip out the $ and the commas in the acf value so they will order properly ih the wp_query below
+    // Need to strip out the $ and the commas in the acf value so they will order properly in the wp_query below
     
     // Archive page
     if(is_post_type_archive('case_results')) {
@@ -122,13 +119,14 @@
 
         arsort($amount_int);
 
-        // pull the post ids out according to the amount into an array (this will be used below as the orderby postid array)
+        // pull the post ids out (according to the amount) into an array (this will be used below as the orderby postid array)
 
         $amount_order = array_keys($amount_int);
 
       endif; 
 
       if(is_tax('case_results_category')) {
+        // setups pagination on taxonomy - not sure why but this prevents 404s (whereas the archive template doesn't need it)
         $paged = (get_query_var( 'page' )) ? get_query_var( 'page' ) : 1;
       }
       
@@ -141,8 +139,7 @@
       );
       $temp = $wp_query; 
       $wp_query = null; 
-      $wp_query = new WP_Query($args); // can prolly put args in here and drop the last line below
-
+      $wp_query = new WP_Query($args);
 
       while ($wp_query->have_posts()) : $wp_query->the_post(); ?>
 
@@ -171,7 +168,7 @@
 
     <div id="case-results-nav">
     
-      <?php wpbeginner_numeric_posts_nav(); ?>
+      <?php my_numeric_posts_nav(); ?>
     
     </div><!-- case-results-nav -->
 

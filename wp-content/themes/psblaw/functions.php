@@ -294,7 +294,7 @@ if( function_exists('acf_add_options_page') ) {
 /* Blog Pagination
 -------------------------------------------------------------- */
 
-function wpbeginner_numeric_posts_nav() {
+function my_numeric_posts_nav() {
  
     if( is_singular() )
         return;
@@ -403,6 +403,8 @@ function ilaw_post_thumbnail_sizes_attr( $attr, $attachment, $size ) {
 add_filter( 'wp_get_attachment_image_attributes', 'ilaw_post_thumbnail_sizes_attr', 10 , 3 );
 
 // https://stackoverflow.com/questions/11104284/wordpress-custom-taxonomy-pagination
+
+// for case results taxonomy pagination
 
 function taxonomy_rewrite_fix($wp_rewrite) {
     $r = array();

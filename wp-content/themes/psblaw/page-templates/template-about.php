@@ -183,7 +183,11 @@ get_header(); ?>
 
 		<div id='about-bottom'>
 
-			<span class="page-title page-large-content-title page-about-title"><?php the_field( 'bottom_title' ); ?></span>
+			<div class='page-title-wrapper'>
+
+				<span class="page-title page-large-content-title page-about-title"><?php the_field( 'bottom_title' ); ?></span>
+
+			</div>
 
 			<?php if(get_field('bottom_description')) { ?>
 
