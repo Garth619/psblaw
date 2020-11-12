@@ -253,3 +253,78 @@ body.tax-case_results_category {
     }
   }
 }
+
+.featured-on-wrapper {
+}
+
+span.featured-one {
+  display: block;
+  margin-bottom: 30px;
+  text-align: center;
+  @include type(
+    (
+      size: 15px,
+      height: 18px,
+      spacing: 1.5px,
+      family: $primaryfont,
+      color: $color-dark-one,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+}
+
+.featured-on-inner {
+}
+.featured-on-video {
+  .single-video {
+    max-width: 331px;
+    @include margin_lr;
+  }
+}
+
+.featured-content {
+}
+
+.featured-row {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dde0e2;
+  p {
+    display: inline;
+  }
+}
+
+span.featured-row-title {
+  display: inline-block;
+  margin-right: 5px;
+  @include type(
+    (
+      size: 17px,
+      family: $primaryfont,
+      color: $color-dark-three,
+      weight: 800,
+    )
+  );
+}
+
+.case-articles {
+}
+
+.case-article-row {
+  padding-bottom: 20px;
+  margin-bottom: 50px;
+  border-bottom: 1px solid #dde0e2;
+  &:first-of-type {
+    margin-top: 15px;
+  }
+  img.case-article-image {
+    box-shadow: 0px 1px 20px #00000029;
+    padding: 35px;
+    background: $color-light-one;
+    margin-bottom: 45px;
+    @include image();
+  }
+  a.case-article-link {
+  }
+}
