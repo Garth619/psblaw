@@ -14,7 +14,37 @@
 
 			<div class='page-content-inner content'>
 
-				<?php get_template_part( 'loop', 'single' ); ?>
+			<div class='fetured-on-wrapper'>
+
+				<span class='featured-one'>Featured On:</span><!-- featured-one -->
+			
+				<div class='featured-on-inner'>
+			
+				<div class='featured-on-video'>
+				
+					<div class='single-video'>
+				
+						<div class='video-thumb'>
+	
+							<div class='mywisita wistia_embed wistia_async_<?php the_field( 'attorney_wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
+	
+							<div class='video-overlay'>
+	
+								<div class='play-button'></div><!-- play-button -->
+	
+							</div><!-- video-overlay -->
+	
+						</div><!-- video-thumb -->
+	
+					</div><!-- single-video -->
+	
+				<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+				
+				</div><!-- featured-on-video -->
+			
+				</div><!-- featured-on-inner -->
+			
+			</div><!-- fetured-on-wrapper -->
 
 				
 			
@@ -29,8 +59,6 @@
 		} ?>
 		
 	</div><!-- page-container -->
-	
-	<?php get_template_part('page-templates/includes/template','morenews-slider'); ?>
 
 </div><!-- internal-main -->
 		

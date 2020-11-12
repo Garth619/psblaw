@@ -29,6 +29,9 @@
     padding: 35px 38px 110px;
     margin-bottom: 47px;
   }
+  @include mq(large-laptop) {
+    padding-top: 56px;
+  }
   ul {
     list-style: none;
     padding-top: 8px;
