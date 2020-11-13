@@ -1,0 +1,179 @@
+#form-overlay {
+  background: $color-dark-one;
+  overflow-y: scroll;
+  padding: 43px 26px;
+  -webkit-overflow-scrolling: touch;
+  @include box(100%);
+  @include fixed(0, null, null, 0, 10);
+  #form-overlay-inner {
+    padding: 72px 32px 170px;
+  }
+}
+
+#form-overlay-close {
+  @include box(29px);
+  @include abs(16px, 16px, null, null);
+  &:before,
+  &:after {
+    background: $color-dark-four;
+    @include abs(13px, null, null, 0);
+    @include box(100%, 2px);
+    @include contentdisplay();
+  }
+  &:before {
+    transform: rotate(45deg);
+  }
+  &:after {
+    transform: rotate(-45deg);
+  }
+}
+
+#form-overlay-inner {
+  background: $color-light-one;
+  position: relative;
+  @include mq(small-laptop) {
+    display: block;
+    background: $color-light-one;
+    box-shadow: 0px 1px 20px #00000040;
+    padding: 35px 38px 110px;
+    margin-bottom: 47px;
+  }
+  @include mq(large-laptop) {
+    padding-top: 56px;
+  }
+  ul {
+    list-style: none;
+    padding-top: 8px;
+    li {
+      margin-bottom: 16px;
+      position: relative;
+      &:after {
+        @include contentdisplay(block, "*");
+        @include abs(20px, 20px, null, null);
+        @include type(
+          (
+            size: 16px,
+            family: $primaryfont,
+            color: $color-bright-two,
+            weight: 800,
+          )
+        );
+      }
+      label {
+        display: none;
+      }
+      input,
+      textarea {
+        width: 100%;
+        border: 1px solid #d4d5d6;
+        background: #f3f5f6;
+        padding: 14px 36px 14px 13px;
+        transition: background 200ms ease-in-out;
+        @include type(
+          (
+            size: 14px,
+            family: $primaryfont,
+            color: #62676d,
+            weight: 600,
+          )
+        );
+        &:focus {
+          background: $color-light-one;
+          color: #9c9e9f;
+        }
+      }
+      textarea {
+        height: 167px;
+      }
+    }
+
+    .gfield_description,
+    .validation_message {
+      margin-top: 4px;
+      @include type(
+        (
+          size: 11px,
+          height: 18px,
+          family: $primaryfont,
+          color: $color-bright-two,
+          weight: 800,
+          spacing: 0.3px,
+          transform: uppercase,
+        )
+      );
+    }
+  }
+  .gform_footer {
+    margin-top: 55px;
+    input[type="submit"] {
+      font-size: 18px;
+      padding: 15px 30px;
+    }
+  }
+}
+
+h3#overlay-form-title {
+  max-width: 226px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 50px,
+      height: 50px,
+      family: $secondaryfont,
+      color: $color-dark-three,
+      weight: 500,
+      align: center,
+    )
+  );
+  &:after {
+    margin: 18px 0 0 0;
+    background: $color-bright-two;
+    @include box(100%, 1px);
+    @include contentdisplay();
+  }
+}
+
+#overlay-form-descrip {
+  margin-top: 23px;
+  max-width: 290px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 14px,
+      height: 22px,
+      family: $primaryfont,
+      color: #62676d,
+      weight: 600,
+      align: center,
+    )
+  );
+  p {
+    margin-bottom: 20px;
+    a {
+      text-decoration: none;
+      color: #62676d;
+      transition: all 200ms ease-in-out;
+      &:hover {
+        color: $color-bright-two;
+      }
+    }
+  }
+}
+
+span#overlay-required {
+  display: block;
+  margin-top: -90px;
+  @include type(
+    (
+      size: 13px,
+      spacing: 0.65px,
+      family: $primaryfont,
+      color: #62676d,
+      weight: 800,
+      transform: lowercase,
+    )
+  );
+  span {
+    color: $color-bright-two;
+  }
+}

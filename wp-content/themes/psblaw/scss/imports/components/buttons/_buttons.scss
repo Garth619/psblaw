@@ -40,7 +40,8 @@
   &.free-consult-button {
     padding: 17px 35px;
     font-size: 18px;
-
+    margin-left: 0;
+    margin-right: 0;
     @include mq(small-laptop) {
       font-size: 22px;
       padding: 21px 35px;
@@ -64,6 +65,8 @@
     padding: 9px 35px;
     @include mq(small-tablet) {
       margin-top: 8px;
+      margin-left: 0;
+      margin-right: 0;
     }
   }
   &.sec-five-img-button {

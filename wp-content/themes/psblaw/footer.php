@@ -124,6 +124,30 @@
 
 </footer>
 
+<div id='form-overlay'>
+
+  <div id='form-overlay-inner'>
+
+    <div id='form-overlay-close'></div><!-- form-overlay-close -->
+
+    <h3 id='sidebar-form-title'><?php the_field( 'sidebar_form_title','option'); ?></h3><!-- sidebar-form-title -->
+
+  <div id='overlay-form-descrip'>
+
+    <?php the_field( 'sidebar_form_description','option'); ?>
+
+  </div><!-- overlay-form-descrip -->
+  
+    <?php $myform = get_field('sidebar_form','option');?>
+	
+    <?php gravity_form($myform, false, false, false, '', true, 1233); ?>
+
+    <span id='overlay-required'><?php the_field( 'sidebar_required_verbiage','option'); ?></span><!-- sidebar-required -->
+  
+  </div><!-- form-overlay-inner -->
+
+</div><!-- form-overlay -->
+
 <?php wp_footer();?>
 
 <?php the_field('footer_scripts','option');?>
