@@ -10,7 +10,7 @@
 
       <span id='sec-one-descrip'>More verdicts & settlements over $10,000,000 than any law firm in California history.</span><!-- sec-one-descrip -->
 
-      <a class='button free-consult-button' href='#consultation'>Request Free Consultation</a><!-- button -->
+      <a class='button free-consult-button'>Request Free Consultation</a><!-- button -->
   
   </div><!-- sec-one-content-inner -->
 

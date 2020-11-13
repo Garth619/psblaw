@@ -171,7 +171,7 @@ header {
   @media screen and (min-width: 370px) {
     margin-right: 20px;
   }
-  @media screen and (min-width: 428px) {
+  @media screen and (min-width: 450px) {
     @include flex(center, center);
   }
   @include mq(small-tablet) {
@@ -194,7 +194,7 @@ header {
         transform: uppercase,
       )
     );
-    @media screen and (min-width: 428px) {
+    @media screen and (min-width: 450px) {
       @include flex(center, center);
     }
     @include mq(small-tablet) {
@@ -211,7 +211,7 @@ header {
         margin-right: 9px;
       }
       &:after {
-        @media screen and (min-width: 428px) {
+        @media screen and (min-width: 450px) {
           border-radius: 50%;
           background: $color-bright-one;
           margin: -3px 2px 0 10px;

@@ -461,6 +461,7 @@ a.get-directions-button {
   }
   @include mq(small-monitor) {
     margin-top: 102px;
+    padding: 0 60px;
   }
 }
 

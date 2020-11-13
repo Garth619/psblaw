@@ -599,6 +599,20 @@ $(document).click(function (e){
 
 }); 
 
+/* Overlay
+--------------------------------------------------------------------------------------- */
+
+$('a.free-consult-button').on('click', function(e) {
+
+  $('#form-overlay').fadeIn();
+  
+});
+
+$('#form-overlay-close').on('click', function(e) {
+
+  $('#form-overlay').fadeOut();
+  
+});
 
 /* FAQs
 --------------------------------------------------------------------------------------- */

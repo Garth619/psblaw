@@ -2,6 +2,7 @@
   background: $color-dark-one;
   overflow-y: scroll;
   padding: 43px 26px;
+  display: none;
   -webkit-overflow-scrolling: touch;
   @include box(100%);
   @include fixed(0, null, null, 0, 10);
@@ -22,6 +23,9 @@
       max-width: 1022px;
       padding: 94px 54px 167px;
     }
+    @include mq(large-laptop) {
+      max-width: 1222px;
+    }
     ul {
       li {
         &:after {
@@ -33,6 +37,7 @@
 }
 
 #form-overlay-close {
+  cursor: pointer;
   @include box(29px);
   @include abs(16px, 16px, null, null);
   @include mq(small-tablet) {
@@ -42,6 +47,7 @@
   &:before,
   &:after {
     background: $color-dark-four;
+    transition: all 200ms ease-in-out;
     @include abs(13px, null, null, 0);
     @include box(100%, 2px);
     @include contentdisplay();
@@ -51,6 +57,12 @@
   }
   &:after {
     transform: rotate(-45deg);
+  }
+  &:hover {
+    &:before,
+    &:after {
+      background: $color-bright-two;
+    }
   }
 }
 
