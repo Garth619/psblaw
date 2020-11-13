@@ -14,137 +14,142 @@
 
 			<div class='page-content-inner content'>
 
-			<div class='featured-on-wrapper'>
+			<?php if(get_field('case_results_featured_video_wistia_id') || get_field('featured_on_info')) { ?>
 
-				<span class='featured-one'>Featured On:</span><!-- featured-one -->
-			
-				<div class='featured-on-inner'>
-			
-				<div class='featured-on-video'>
-				
-					<div class='single-video'>
-				
-						<div class='video-thumb'>
-	
-							<div class='mywisita wistia_embed wistia_async_7y9zdxmy0q popover=true popoverContent=thumbnail'></div><!-- wistia -->
-	
-							<div class='video-overlay'>
-	
-								<div class='play-button'></div><!-- play-button -->
-	
-							</div><!-- video-overlay -->
-	
-						</div><!-- video-thumb -->
-	
-					</div><!-- single-video -->
-	
-				<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-				
-				</div><!-- featured-on-video -->
+				<div class='featured-on-wrapper'>
 
-				<div class='featured-content'>
+					<span class='featured-one'><?php the_field( 'featured_on_title' ); ?></span><!-- featured-one -->
 				
-					<div class='featured-row'>
+					<div class='featured-on-inner'>
+
+					<?php if(get_field('case_results_featured_video_wistia_id')) { ?>
+				
+						<div class='featured-on-video'>
 					
-						<h2 class='featured-row-title'>Landmark Case:</h2><!-- featured-row-title -->
-
-						<p>Anderson vs. GM (General Motors)</p>
-						
-					</div><!-- featured-row -->
-
-					<div class='featured-row'>
+							<div class='single-video'>
 					
-						<h2 class='featured-row-title'>The Verdict:</h2><!-- featured-row-title -->
-
-						<p>$4.9 Billion</p>
-						
-					</div><!-- featured-row -->
-
-					<div class='featured-row'>
+								<div class='video-thumb'>
+		
+									<div class='mywisita wistia_embed wistia_async_<?php the_field( 'case_results_featured_video_wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
+		
+										<div class='video-overlay'>
+		
+											<div class='play-button'></div><!-- play-button -->
+		
+										</div><!-- video-overlay -->
+		
+									</div><!-- video-thumb -->
+		
+								</div><!-- single-video -->
+		
+							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 					
-						<h2 class='featured-row-title'>Trial attorney(s):</h2><!-- featured-row-title -->
+						</div><!-- featured-on-video -->
 
-						<p><a href="">Brian Panish</a></p>
+					<?php } ?>
+
+						<?php if ( have_rows( 'featured_on_info' ) ) : ?>
+
+							<div class='featured-content'>
 						
-					</div><!-- featured-row -->
+							<?php while ( have_rows( 'featured_on_info' ) ) : the_row(); ?>
 
-					<div class='featured-row'>
+								<div class='featured-row'>
+						
+									<h2 class='featured-row-title'><?php the_sub_field( 'title' ); ?></h2><!-- featured-row-title -->
+
+									<?php the_sub_field( 'content' ); ?>
+						
+								</div><!-- featured-row -->
+			
+							<?php endwhile; ?>
+
+							</div><!-- featured-content -->
+
+						<?php endif; ?>
 					
-						<h2 class='featured-row-title'>Practice Areas:</h2><!-- featured-row-title -->
-
-						<p><a href="">Auto Product Liability,</a> <a href="">Catastrophic Injury,</a> <a href="">Product Defects</a></p>
-						
-					</div><!-- featured-row -->
+					</div><!-- featured-on-inner -->
 				
-				</div><!-- featured-content -->
+				</div><!-- featured-on-wrapper -->
+
+			<?php } ?>
+
+			<?php if(get_field('case_synopsis') || get_field('case_synopsis_content')) { ?>
+
+				<div class='case-synopsis-wrapper'>
 			
-				</div><!-- featured-on-inner -->
+					<h2><?php the_field( 'case_synopsis' ); ?></h2>
+
+					<?php the_field( 'case_synopsis_content' ); ?>
 			
-			</div><!-- featured-on-wrapper -->
+				</div><!-- case-synopsis-wrapper -->
 
-			<div class='case-synopsis-wrapper'>
-			
-				<h2>Case Synopsis:</h2>
+			<?php } ?>
 
-				<p>A jury ordered General Motors to pay $4.9 billion to the Anderson family for a defectively designed fuel system that caused their Chevy Malibu to burst into flames after it was rear ended on December 24, 1993. Brian Panish of Panish Shea & Boyle LLP represented the Andersons in their auto product liability suit which resulted in the largest personal injury verdict in history.</p>
-
-				<div class="blockquote">
-
-					<p>“The clients that we represent come to us because they’ve got some wrongs that need to be made right, and there’s no one else that’s going to do it but us.”</p>
-
-					<span>-Brian Panish</span>
-
-			</div>
-			
-			</div><!-- case-synopsis-wrapper -->
+			<?php if ( have_rows( 'case_articles' ) ) : ?>
 
 			<div class='case-articles'>
+
+				<h2><?php the_field( 'case_articles_title' ); ?></h2>
+
 			
-				<h2>Anderson vs GM Case Articles:</h2>
-
-				<div class='case-article-row'>
-				
-					<img class='case-article-image' src='<?php bloginfo('template_directory');?>/images/results-national-law-logo.jpg' alt=''/>
-
-					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
-
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
-
-					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
-
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
-				
-				</div><!-- case-article-row -->
-
-				<div class='case-article-row'>
-
-					<img class='case-article-image' src='<?php bloginfo('template_directory');?>/images/results-national-law-logo.jpg' alt=''/>
-
-					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
-
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
-
-				</div><!-- case-article-row -->
 			
-			</div><!-- case-articles -->
+					<?php while ( have_rows( 'case_articles' ) ) : the_row(); ?>
+
+					<div class='case-article-row'>
+			
+						<?php $image = get_sub_field( 'image' ); ?>
+			
+						<?php if ( $image ) { ?>
+			
+							<img class='case-article-image' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+	
+						<?php } ?>
+
+						<?php if ( have_rows( 'article' ) ) : ?>
+			
+							<?php while ( have_rows( 'article' ) ) : the_row(); ?>
+							
+								<a class='case-article-link' href='<?php the_sub_field( 'link' ); ?>'>	<?php the_sub_field( 'title' ); ?></a><!-- case-article-link -->
+
+								<?php the_sub_field( 'description' ); ?>
+						
+							<?php endwhile; ?>
+				
+					<?php endif; ?>
+
+					</div><!-- case-article-row -->
+				
+				<?php endwhile; ?>
+
+		</div><!-- case-articles -->
+
+		<?php endif; ?>
+
+		<?php if ( have_rows( 'other_publications' ) ) : ?>
 
 			<div class='other-publications'>
 			
-				<h2>Other Publications:</h2>
+				<h2><?php the_field( 'other_publications_title' ); ?></h2>
 
-				<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
+				
+					<?php while ( have_rows( 'other_publications' ) ) : the_row(); ?>
 
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
+					<a class='case-article-link' href='<?php the_sub_field( 'link' ); ?>'><?php the_sub_field( 'title' ); ?></a><!-- case-article-link -->
 
-					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
-
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
-
-					<a class='case-article-link' href=''>The Biggest Jury Verdict of 1999</a><!-- case-article-link -->
-
-					<p>A typical verdict last year was way up, but nothing like this one.</p>
+					<?php the_sub_field( 'description' ); ?>
+					
+					<?php endwhile; ?>
 			
 			</div><!-- other-publications -->
+
+			<?php endif; ?>
+
+			<?php if(get_the_content()) { 
+
+				the_content();
+
+			} ?>
 			
 			</div><!-- page-content-inner -->
 			
