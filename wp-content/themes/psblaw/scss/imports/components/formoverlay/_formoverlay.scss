@@ -5,14 +5,40 @@
   -webkit-overflow-scrolling: touch;
   @include box(100%);
   @include fixed(0, null, null, 0, 10);
+  @include mq(small-tablet) {
+    padding: 135px 72px 170px;
+  }
+  @include mq(small-laptop) {
+    padding: 190px 72px 170px;
+  }
   #form-overlay-inner {
     padding: 72px 32px 170px;
+    @include mq(small-tablet) {
+      padding: 81px 54px 201px;
+      max-width: 825px;
+      @include margin_lr;
+    }
+    @include mq(small-laptop) {
+      max-width: 1022px;
+      padding: 94px 54px 167px;
+    }
+    ul {
+      li {
+        &:after {
+          top: 26px;
+        }
+      }
+    }
   }
 }
 
 #form-overlay-close {
   @include box(29px);
   @include abs(16px, 16px, null, null);
+  @include mq(small-tablet) {
+    @include box(33px);
+    @include abs(20px, 24px, null, null);
+  }
   &:before,
   &:after {
     background: $color-dark-four;
@@ -44,9 +70,20 @@
   ul {
     list-style: none;
     padding-top: 8px;
+    @include mq(small-tablet) {
+      padding-top: 20px;
+      @include flex(space-between, null, null, wrap);
+    }
     li {
       margin-bottom: 16px;
       position: relative;
+      @include mq(small-tablet) {
+        flex-basis: calc(50% - 5px);
+        margin-bottom: 21px;
+      }
+      @include mq(small-laptop) {
+        flex-basis: calc(25% - 6px);
+      }
       &:after {
         @include contentdisplay(block, "*");
         @include abs(20px, 20px, null, null);
@@ -77,6 +114,10 @@
             weight: 600,
           )
         );
+        @include mq(small-tablet) {
+          font-size: 16px;
+          padding: 19px 36px 19px 13px;
+        }
         &:focus {
           background: $color-light-one;
           color: #9c9e9f;
@@ -85,8 +126,10 @@
       textarea {
         height: 167px;
       }
+      &#field_4_6 {
+        flex-basis: 100%;
+      }
     }
-
     .gfield_description,
     .validation_message {
       margin-top: 4px;
@@ -105,9 +148,19 @@
   }
   .gform_footer {
     margin-top: 55px;
+    @include mq(small-tablet) {
+      margin-top: 38px;
+    }
+    @include mq(small-laptop) {
+      margin-top: 24px;
+    }
     input[type="submit"] {
       font-size: 18px;
       padding: 15px 30px;
+      @include mq(small-laptop) {
+        font-size: 24px;
+        padding: 23px 45px;
+      }
     }
   }
 }
@@ -125,11 +178,23 @@ h3#overlay-form-title {
       align: center,
     )
   );
+  @include mq(small-tablet) {
+    max-width: 100%;
+    @include quick_type(65px, 65px, null);
+  }
+  @include mq(small-laptop) {
+    @include quick_type(75px, 75px, null);
+  }
   &:after {
     margin: 18px 0 0 0;
     background: $color-bright-two;
     @include box(100%, 1px);
     @include contentdisplay();
+    @include mq(small-tablet) {
+      max-width: 271px;
+      margin: 38px 0 0 0;
+      @include margin_lr;
+    }
   }
 }
 
@@ -147,6 +212,14 @@ h3#overlay-form-title {
       align: center,
     )
   );
+  @include mq(small-tablet) {
+    max-width: 410px;
+    @include quick_type(15px, 25px, null);
+  }
+  @include mq(small-laptop) {
+    max-width: 875px;
+    @include quick_type(17px, 30px, null);
+  }
   p {
     margin-bottom: 20px;
     a {
@@ -165,10 +238,10 @@ span#overlay-required {
   margin-top: -90px;
   @include type(
     (
-      size: 13px,
+      size: 15px,
       spacing: 0.65px,
       family: $primaryfont,
-      color: #62676d,
+      color: $color-dark-one,
       weight: 800,
       transform: lowercase,
     )

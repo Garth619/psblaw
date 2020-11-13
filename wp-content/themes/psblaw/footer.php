@@ -130,7 +130,7 @@
 
     <div id='form-overlay-close'></div><!-- form-overlay-close -->
 
-    <h3 id='sidebar-form-title'><?php the_field( 'sidebar_form_title','option'); ?></h3><!-- sidebar-form-title -->
+    <h3 id='overlay-form-title'><?php the_field( 'sidebar_form_title','option'); ?></h3><!-- overlay-form-title -->
 
   <div id='overlay-form-descrip'>
 
