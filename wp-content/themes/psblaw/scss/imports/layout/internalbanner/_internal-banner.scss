@@ -98,13 +98,15 @@
 }
 
 .internal-banner-slide {
-  //position: relative;
-  img {
-    // object-fit:cover;
-
-    @include image();
+  position: relative;
+  .internal-banner-slide-inner {
     @include box(100%, 490px);
-    // @include abs(0,null,null,0);
+    img {
+      object-fit: cover;
+      @include image();
+      @include abs(0, null, null, 0);
+      @include box(100%);
+    }
   }
 }
 

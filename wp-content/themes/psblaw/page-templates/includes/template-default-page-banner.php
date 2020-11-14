@@ -127,26 +127,42 @@
 			<div id='internal-banner-slider'>
 			
 				<div class='internal-banner-slide'>
-				
-					<img src='<?php bloginfo('template_directory');?>/images/int-image-la.jpg' alt=''/>
+
+					<div class='internal-banner-slide-inner'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/int-image-la.jpg' alt=''/>
+
+					</div><!-- internal-banner-slide-inner -->
 				
 				</div><!-- internal-banner-slide -->
 
 				<div class='internal-banner-slide'>
-				
-					<img src='<?php bloginfo('template_directory');?>/images/int-image-oc.jpg' alt=''/>
+
+					<div class='internal-banner-slide-inner'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/int-image-sf.jpg' alt=''/>
+
+					</div><!-- internal-banner-slide-inner -->
 				
 				</div><!-- internal-banner-slide -->
 
 				<div class='internal-banner-slide'>
-				
-					<img src='<?php bloginfo('template_directory');?>/images/int-image-sd.jpg' alt=''/>
+
+					<div class='internal-banner-slide-inner'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/int-image-oc.jpg' alt=''/>
+
+					</div><!-- internal-banner-slide-inner -->
 				
 				</div><!-- internal-banner-slide -->
 
 				<div class='internal-banner-slide'>
-				
-					<img src='<?php bloginfo('template_directory');?>/images/int-image-sf.jpg' alt=''/>
+
+					<div class='internal-banner-slide-inner'>
+					
+						<img src='<?php bloginfo('template_directory');?>/images/int-image-sd.jpg' alt=''/>
+
+					</div><!-- internal-banner-slide-inner -->
 				
 				</div><!-- internal-banner-slide -->
 		
