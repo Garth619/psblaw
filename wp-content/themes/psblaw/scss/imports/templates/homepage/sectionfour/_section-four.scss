@@ -91,7 +91,7 @@ span#sec-four-title {
 }
 
 #sec-four-descrip {
-  margin: 12px auto 0;
+  margin: 3px auto 0;
   padding-top: 20px;
   max-width: 395px;
   @include type(
@@ -117,7 +117,7 @@ span#sec-four-title {
   }
   &:before {
     background: $color-bright-two;
-    margin-bottom: 24px;
+    margin-bottom: 16px;
     @include box(100%, 1px);
     @include contentdisplay();
     @include mq(small-tablet) {

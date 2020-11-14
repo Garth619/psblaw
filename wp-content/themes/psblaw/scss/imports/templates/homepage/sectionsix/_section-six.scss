@@ -224,6 +224,7 @@
 
 img#sec-six-hero {
   object-fit: cover;
+  object-position: 60% 0%;
   @include box(100%);
   @include abs(0, null, null, 0);
 }

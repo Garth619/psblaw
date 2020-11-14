@@ -87,9 +87,14 @@ h1#sec-three-header {
   padding-top: 1px;
   max-width: 410px;
   box-shadow: 0px 1px 40px #00000066;
+  position: relative;
+  left: 10px;
   @include margin_lr;
   @include mq(small-tablet) {
     max-width: 432px;
+  }
+  @include mq(small-laptop) {
+    left: 0px;
   }
   @include mq(small-monitor) {
     margin-left: 30px;
@@ -223,7 +228,7 @@ h1#sec-three-header {
 }
 
 #sec-three-slider {
-  margin-top: 40px;
+  margin-top: 20px;
   @include mq(small-tablet) {
     margin-top: 65px;
   }
@@ -235,7 +240,9 @@ h1#sec-three-header {
     text-align: left;
   }
   &:first-of-type {
-    margin-bottom: 65px;
+    @include mq(small-tablet) {
+      margin-bottom: 65px;
+    }
     @include mq(small-laptop) {
       margin-bottom: 72px;
     }

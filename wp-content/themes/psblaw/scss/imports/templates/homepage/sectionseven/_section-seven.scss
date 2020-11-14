@@ -77,7 +77,8 @@ span#sec-seven-title {
 }
 
 #sec-seven-bottom {
-  padding-top: 30px;
+  padding-top: 5px;
+  //padding-top: 30px;
   @include mq(small-laptop) {
     padding-top: 67px;
     @include flex(space-between);
