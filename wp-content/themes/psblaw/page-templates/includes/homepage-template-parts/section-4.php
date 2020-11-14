@@ -256,7 +256,7 @@
 		
 					<div class='sec-four-slide-reg'>
 
-						<span class='sec-four-slide-number'>05</span><!-- sec-four-slide-number -->
+						<span class='sec-four-slide-number'>06</span><!-- sec-four-slide-number -->
 
 						<div class='sec-four-slide-title-wrapper'>
 

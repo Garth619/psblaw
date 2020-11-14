@@ -427,9 +427,11 @@ span#sidebar-required {
   .widget {
     h3 {
       &:before {
-        right: 60px;
-        @include mq(small-laptop) {
-          right: 35px;
+        @include mq(small-tablet) {
+          right: 60px;
+        }
+        @include mq(large-laptop) {
+          top: 67px;
         }
       }
     }

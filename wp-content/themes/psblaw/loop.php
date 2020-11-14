@@ -25,7 +25,7 @@
 
 			<div class='blog-post-featured-image'>
 
-				<?php the_post_thumbnail( 'medium' ); ?>
+ 				<?php the_post_thumbnail( 'medium' ); ?>
 
 			</div><!-- blog-post-featured-image -->
 
