@@ -191,6 +191,7 @@
   background: transparent;
   transition: all 200ms ease-in-out;
   display: none;
+  cursor: pointer;
   @include box(50px);
   @include mq(small-tablet) {
     flex-shrink: 0;

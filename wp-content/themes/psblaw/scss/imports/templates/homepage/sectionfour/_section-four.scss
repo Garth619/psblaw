@@ -440,6 +440,7 @@ span#sec-four-title {
   border-radius: 50%;
   border: 2px solid $color-bright-one;
   margin-top: -40px;
+  cursor: pointer;
   transition: all 200ms ease-in-out;
   @include box(40px);
   @include flex(center, center);
@@ -480,6 +481,7 @@ span#sec-four-title {
   border: 2px solid $color-bright-one;
   border-radius: 50px;
   flex-shrink: 0;
+  cursor: pointer;
   transition: all 200ms ease-in-out;
   @include flex(space-between, center);
   display: flex !important;

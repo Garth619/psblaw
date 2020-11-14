@@ -177,6 +177,7 @@ span#sec-ten-title {
   display: none;
   @include mq(small-tablet) {
     flex-shrink: 0;
+    cursor: pointer;
   }
   .sec-ten-arrow-inner {
     border-radius: 50%;

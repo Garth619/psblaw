@@ -319,6 +319,7 @@ span#sec-two-title {
   float: left;
   background: #62676d;
   padding: 10px 0px;
+  cursor: pointer;
   @include flex(center, center);
   @include mq(small-laptop) {
     border-radius: 50%;

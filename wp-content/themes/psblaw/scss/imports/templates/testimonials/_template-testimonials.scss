@@ -112,6 +112,7 @@ body.page-template-template-testimonials {
     background: #d6d9dd;
     position: relative;
     margin-top: 130px;
+    cursor: pointer;
     @include box(44px);
   }
   &:hover {

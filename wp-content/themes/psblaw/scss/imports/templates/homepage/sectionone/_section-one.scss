@@ -130,9 +130,6 @@
   @include abs(0, null, null, 0);
 }
 
-.hero-slide {
-}
-
 .hero-slide-inner {
   height: 456px;
   position: relative;
@@ -324,6 +321,7 @@ img.hero {
   float: left;
   background: $color-dark-four;
   padding: 10px 0;
+  cursor: pointer;
   @include flex(center, center);
   @include mq(small-tablet) {
     background: transparent;

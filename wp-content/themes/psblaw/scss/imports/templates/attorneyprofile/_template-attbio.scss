@@ -389,6 +389,7 @@ body.page-template-template-bio {
   .bio-arrow {
     padding: 12px 10px;
     flex-basis: 50%;
+    cursor: pointer;
     background: #62676d;
     transition: background 200ms ease-in-out;
     @include flex(center, center);

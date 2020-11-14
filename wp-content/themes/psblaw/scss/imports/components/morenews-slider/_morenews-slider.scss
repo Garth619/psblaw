@@ -281,6 +281,7 @@ span#more-news-title {
     border-radius: 50%;
     background: #d6d9dd;
     position: relative;
+    cursor: pointer;
     @include box(44px);
   }
   &:hover {

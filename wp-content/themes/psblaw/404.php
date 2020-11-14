@@ -1,27 +1,40 @@
 <?php get_header(); ?>
 
+
 <div id="internal-main">
+
+
+
+
+	<div id='page-descrip-wrapper'>
+
+		<h1 class="page-title page-large-content-title"><?php the_field( 'not_found_title','option'); ?></h1>
+
+		<span id='not_found_subtitle'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- not_found_subtitle -->
+
+	</div>	
+
+<div id="page-container" class="two-col no-banner-layout">
 	
-	<div class="page_container one_col">
+	<div class="page-content">
 
-		<div id='not_found_wrapper' class="internal_wrapper">
+		<div class='page-content-inner content'>
+
+			<?php the_field( 'not_found_content','option'); ?>
 		
-			<h1 id='internal_header'><?php the_field( 'not_found_title','option'); ?></h1><!-- internal_header -->
-
-			<span class='double_line not_found_header'></span><!-- double_line -->
-
-			<span id='not_found_subtitle'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- not_found_subtitle -->
-
-			<div id='not_found_content' class="content">
-			
-				<?php the_field( 'not_found_content','option'); ?>
-			
-			</div><!-- not_found_content -->
-
-		</div><!-- not_found_wrapper -->
+		</div><!-- page-content-inner -->
 		
-	</div><!-- page_container -->
+	</div><!-- page-content -->
+
+	<?php if(!get_field('disable_sidebar')) {
+
+		get_sidebar();
+
+	} ?>
 	
+</div><!-- page-container -->
+
+
 </div><!-- internal-main -->
 			
 <?php get_footer(); ?>
