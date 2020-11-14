@@ -5,7 +5,7 @@
 
 		<div id='more-news-inner'>
 
-			<?php if(is_page_template('page-template/template-bio')) { ?>
+			<?php if(is_page_template('page-templates/template-bio.php')) { ?>
 		
 				<span id='more-news-title'><?php the_title();?> in the News</span><!-- more-news-title -->
 
