@@ -216,7 +216,19 @@ span#more-news-title {
         @include mq(small-tablet) {
           margin-top: 20px;
         }
-        &.more-news-read-more {
+        &.no-image {
+          .more-news-read-more {
+            @include mq(small-laptop) {
+              right: auto;
+              left: 20px;
+            }
+            @include mq(large-laptop) {
+              left: 30px;
+            }
+            @include mq(small-monitor) {
+              left: 40px;
+            }
+          }
         }
         span {
           &.more-news-title {

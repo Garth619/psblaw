@@ -84,7 +84,7 @@
 											
 											<div class='more-news-content <?php if(!has_post_thumbnail()) {echo "no-image";};?>'>
 											
-												<span class='more-news-title'>Orange Unified School District Sued for Wrongful Death of Student Killed in Campus Golf Cart Crash<?php the_title();?></span><!-- more-news-title -->
+												<span class='more-news-title'><?php the_title();?></span><!-- more-news-title -->
 
 												<span class='button-two more-news-read-more'>Read article</span><!-- button-two -->
 											
@@ -122,7 +122,7 @@
 											
 											<?php } ?>
 											
-											<div class='more-news-content'>
+											<div class='more-news-content <?php if(!$outside_image) {echo "no-image";};?>'>
 											
 												<span class='more-news-title'><?php the_sub_field( 'outside_site_title' ); ?></span><!-- more-news-title -->
 
