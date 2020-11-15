@@ -375,7 +375,7 @@ header.header-layout-two {
       &:hover {
         color: $color-bright-two;
         @include mq(small-laptop) {
-          color: $color-bright-one;
+          color: $color-bright-two;
         }
       }
     }
@@ -591,6 +591,11 @@ header.default-banner-layout {
     a {
       @include mq(small-laptop) {
         color: $color-light-one;
+      }
+      &:hover {
+        @include mq(small-laptop) {
+          color: $color-bright-one;
+        }
       }
     }
   }
