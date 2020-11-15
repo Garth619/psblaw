@@ -10,7 +10,7 @@
   
     <p>Panish Shea & Boyle, LLP specialize in personal injury law in the Los Angeles and throughout California. We help victims of defective products, fraud, medical malpractice, car accidents, plane crashes, and more pursue their legal right to financial compensation.</p>
     
-    <p>It doesn’t matter who caused the injury or property damage – a large corporation, the government, or an individual – your Los Angeles personal injury attorney team will hold them accountable for their negligence and help win you fair compensation.</p>
+    <p>It doesn’t matter who caused the injury or property damage – a large corporation, the government, or an individual – your Los Angeles personal injury attorney team will hold them accountable for their negligence and help win you fair&nbsp;compensation.</p>
   
   </div><!-- sec-seven-content -->
 

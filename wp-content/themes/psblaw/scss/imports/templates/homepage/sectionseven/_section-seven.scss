@@ -8,7 +8,7 @@
     padding: 103px 116px 110px;
   }
   @include mq(large-laptop) {
-    padding: 160px 116px 125px;
+    padding: 124px 116px 125px;
   }
   @include mq(small-monitor) {
     padding: 160px 116px 125px;
@@ -69,7 +69,7 @@ span#sec-seven-title {
     padding-left: 45px;
   }
   @include mq(large-laptop) {
-    padding-left: 100px;
+    padding-left: 57px;
   }
   &.content {
     color: #62676d;
@@ -80,8 +80,11 @@ span#sec-seven-title {
   padding-top: 5px;
   //padding-top: 30px;
   @include mq(small-laptop) {
-    padding-top: 67px;
+    padding-top: 36px;
     @include flex(space-between);
+  }
+  @include mq(large-laptop) {
+    padding-top: 69px;
   }
 }
 

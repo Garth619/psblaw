@@ -7,7 +7,7 @@
     padding: 94px 85px 100px 100px;
   }
   @include mq(large-laptop) {
-    padding: 122px 85px 100px 100px;
+    padding: 122px 85px 60px 100px;
   }
   @include mq(small-monitor) {
     padding: 135px 85px 220px 100px;
@@ -230,7 +230,7 @@ h1#sec-three-header {
 #sec-three-slider {
   margin-top: 20px;
   @include mq(small-tablet) {
-    margin-top: 65px;
+    margin-top: 50px;
   }
 }
 
@@ -244,7 +244,7 @@ h1#sec-three-header {
       margin-bottom: 65px;
     }
     @include mq(small-laptop) {
-      margin-bottom: 72px;
+      margin-bottom: 85px;
     }
     @include mq(large-laptop) {
       margin-bottom: 110px;

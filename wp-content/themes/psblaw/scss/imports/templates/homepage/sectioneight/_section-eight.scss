@@ -64,6 +64,8 @@ span#sec-eight-title {
     }
     @include mq(small-laptop) {
       margin-top: 23px;
+      max-width: 318px;
+      @include margin_lr;
     }
   }
 }
@@ -75,7 +77,7 @@ span#sec-eight-title {
       size: 14px,
       height: 25px,
       family: $primaryfont,
-      color: $color-light-one,
+      color: #c1c6d5,
       align: center,
       weight: 600,
     )
@@ -87,6 +89,9 @@ span#sec-eight-title {
     font-size: 17px;
     max-width: 727px;
     @include margin_lr;
+  }
+  @include mq(large-laptop) {
+    max-width: 757px;
   }
   @include mq(small-monitor) {
     max-width: 757px;
@@ -124,10 +129,16 @@ span#sec-eight-title {
     @include mq(small-laptop) {
       margin: 0 10px;
     }
+    @include mq(large-laptop) {
+      margin: 0 17px;
+    }
   }
   .slick-list {
     @include mq(small-laptop) {
       margin: 0 -10px;
+    }
+    @include mq(large-laptop) {
+      margin: 0 -17px;
     }
   }
   .slick-dots {
@@ -213,7 +224,7 @@ span#sec-eight-title {
         border-bottom: 1px solid #e3e6e8;
         @include flex(null, center);
         @include mq(small-tablet) {
-          padding: 25px 16px;
+          padding: 17px 16px;
         }
         @include mq(small-laptop) {
           height: 69px;

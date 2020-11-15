@@ -94,6 +94,9 @@
     margin-top: 43px;
     font-size: 18px;
     padding: 15px 40px;
+    @include mq(large-laptop) {
+      margin-top: 89px;
+    }
     @include mq(small-monitor) {
       margin-top: 90px;
     }

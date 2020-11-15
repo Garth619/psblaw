@@ -309,10 +309,11 @@ nav {
         border: none;
       }
       a {
-        color: $color-dark-one;
+        color: #62676d;
         @include mq(small-laptop) {
           display: block;
           padding: 8px 13px;
+          color: $color-dark-one;
           transition: 200ms all ease-in-out;
         }
         @include mq(large-laptop) {

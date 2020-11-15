@@ -95,6 +95,7 @@ span#sec-ten-title {
     margin-top: 65px;
   }
   @include mq(large-laptop) {
+    margin-top: 42px;
     width: calc(100% - 400px);
   }
   @include mq(small-monitor) {
