@@ -16,16 +16,27 @@
 
 				<?php get_template_part( 'loop', 'single' ); ?>
 
+				<?php $related_news_list = get_field( 'related_news_list' ); ?>
+
+				<?php if ( $related_news_list ): ?>
+				
 				<div id='related-news'>
 				
-					<h3 id='related-news-title'>Related News</h3><!-- related-news-title -->
+					<h3 id='related-news-title'><?php the_field( 'related_news_title' ); ?></h3><!-- related-news-title -->
 
-					<ul>
-						<li><a href="">Orange Unified School District Sued for Wrongful Death of Student Killed in Campus Golf Cart Crash</a></li>
-						<li><a href="">Mother of Manny Perez Seeks Justice for Son Following Death at El Modena H.S.</a></li>
-					</ul>
-				
-				</div><!-- related-news -->
+ 						<ul>
+							<?php foreach ( $related_news_list as $post ):  ?>
+								<?php setup_postdata ( $post ); ?>
+
+									<li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+
+								<?php endforeach; ?>
+						<?php wp_reset_postdata(); ?>
+						</ul>
+			
+					</div><!-- related-news -->
+
+				<?php endif; ?>
 			
 			</div><!-- page-content-inner -->
 			

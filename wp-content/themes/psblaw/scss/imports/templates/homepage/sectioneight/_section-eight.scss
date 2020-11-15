@@ -242,7 +242,7 @@ span#sec-eight-title {
             margin-right: 28px;
           }
           path {
-            fill: $color-dark-one;
+            fill: $color-dark-one !important;
             transition: all 200ms ease-in-out;
           }
         }
@@ -264,7 +264,7 @@ span#sec-eight-title {
         &:hover {
           svg {
             path {
-              fill: $color-bright-two;
+              fill: $color-bright-two !important;
             }
           }
           span {

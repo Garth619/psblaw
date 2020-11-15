@@ -81,7 +81,6 @@ span#sec-seven-title {
 
 #sec-seven-bottom {
   padding-top: 5px;
-  //padding-top: 30px;
   @include mq(small-laptop) {
     padding-top: 36px;
     @include flex(space-between);
@@ -112,6 +111,7 @@ span#sec-seven-title {
   span.sec-seven-question {
     position: relative;
     width: 100%;
+    cursor: pointer;
     padding-right: 40px;
     transition: all 200ms ease-in-out;
     @include flex(space-between, center);
@@ -130,6 +130,9 @@ span#sec-seven-title {
     }
     @include mq(large-laptop) {
       @include quick_type(20px, 30px, null);
+    }
+    &:hover {
+      color: $color-dark-three;
     }
     &.open {
       color: $color-dark-three;
