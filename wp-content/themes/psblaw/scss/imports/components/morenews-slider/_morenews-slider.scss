@@ -6,11 +6,11 @@
     padding: 67px 40px;
   }
   @include mq(small-laptop) {
-    padding: 67px 60px;
+    padding: 51px 60px 120px;
     margin-top: -50px;
   }
   @include mq(large-laptop) {
-    padding: 60px 60px;
+    padding: 60px 60px 120px;
     margin-top: -30px;
   }
 }
@@ -51,12 +51,13 @@ span#more-news-title {
   overflow: hidden;
   @include margin_lr;
   @include mq(small-tablet) {
-    max-width: 695px;
+    max-width: 625px;
     margin-top: 33px;
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
     max-width: 1030px;
+    margin-top: 50px;
   }
   @include mq(large-laptop) {
     margin-top: 34px;
@@ -69,7 +70,7 @@ span#more-news-title {
 
 #more-news-slider-outer {
   @include mq(small-tablet) {
-    width: calc(100% - 150px);
+    width: calc(100% - 200px);
     overflow: hidden;
     @include margin_lr;
   }

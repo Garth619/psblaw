@@ -183,7 +183,7 @@ body.page-template-template-bio {
     .mywisita {
       height: 155px;
       @include mq(small-tablet) {
-        height: 165px;
+        height: 131px;
       }
       @include mq(small-laptop) {
         height: 137px;
@@ -368,7 +368,7 @@ body.page-template-template-bio {
       @include margin_lr;
     }
     @include mq(large-laptop) {
-      max-width: 270px;
+      max-width: 320px;
     }
     p {
       a {
