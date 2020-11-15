@@ -1,5 +1,6 @@
 #section-one {
   width: 100%;
+  overflow: hidden;
   background: $color-dark-three;
   @include mq(small-laptop) {
     @include flex();

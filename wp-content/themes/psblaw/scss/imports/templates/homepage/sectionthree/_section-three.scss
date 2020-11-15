@@ -102,11 +102,27 @@ h1#sec-three-header {
     max-width: 600px;
     @include flex();
   }
+  &:hover {
+    #sec-three-video-thumbnail {
+      img {
+        transform: scale(1.075);
+      }
+      #sec-three-video-overlay {
+        .play-button {
+          &:after {
+            @include tri(right, 12px, 19px, $color-bright-one);
+          }
+        }
+      }
+    }
+  }
   #sec-three-video-thumbnail {
     width: 100%;
     margin-top: -60px;
     margin-left: -25px;
     position: relative;
+    overflow: hidden;
+    cursor: pointer;
     @include mq(small-tablet) {
       width: calc(100% - 45px);
       margin-top: -30px;
@@ -117,8 +133,14 @@ h1#sec-three-header {
       height: 240px;
     }
     img {
+      transform: scale(1);
+      transition: all 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       @include image();
       width: 100%;
+    }
+    #mywistia {
+      @include box(100%);
+      @include abs(0, null, null, 0, 1);
     }
     #sec-three-video-overlay {
       @include box(100%);
@@ -139,7 +161,6 @@ h1#sec-three-header {
         }
         &:before {
           border-radius: 50%;
-          //box-shadow: 0px 1px 20px #8b8c8f;
           background: $color-light-one;
           @include box(51px);
           @include mq(small-tablet) {
@@ -152,6 +173,7 @@ h1#sec-three-header {
           @include mq(small-tablet) {
             top: 40px;
             left: 46px;
+            transition: all 200ms ease-in-out;
             @include tri(right, 12px, 19px, $color-bright-two);
           }
         }

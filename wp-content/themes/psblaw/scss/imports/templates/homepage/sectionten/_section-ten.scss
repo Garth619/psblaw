@@ -113,6 +113,9 @@ span#sec-ten-title {
   @include mq(small-laptop) {
     max-width: 100%;
   }
+  @include mq(small-monitor) {
+    height: 103px;
+  }
 }
 
 #sec-ten-slider {

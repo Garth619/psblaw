@@ -104,6 +104,14 @@ jQuery(document).ready(function ($) {
   }
 
   createWaypoint("section-one", "#sticky-header", "sticky", -200, null, true);
+  createWaypoint("section-three", "#sec-three-content", "visible", 300, null, true);
+  createWaypoint("section-four", "#section-four", "visible", 300, null, true);
+  createWaypoint("sec-four-tablet-arrows-wrapper", "#sec-four-tablet-arrows-wrapper", "visible", 850, null, true);
+  createWaypoint("section-five", "#section-five", "visible", 300, null, true);
+  createWaypoint("section-six", "#section-six", "visible", 300, null, true);
+  createWaypoint("section-eight", "#section-eight", "visible", 300, null, true);
+  createWaypoint("section-nine", "#section-nine", "visible", 300, null, true);
+  createWaypoint("consultation", "#consultation", "visible", 300, null, true);
 
   createWaypoint("internal-main", "#sticky-header", "sticky", -200, null, true);
   
@@ -206,6 +214,7 @@ $('header').clone().addClass('header-layout-two header-layout-three').removeClas
     dots: false,
     pauseOnHover:false,
     fade:true,
+    speed:800,
     autoplay: true,
     autoplaySpeed: 3000,
   });

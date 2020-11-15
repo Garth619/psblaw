@@ -20,6 +20,8 @@
 					
 						<img src='<?php bloginfo('template_directory');?>/images/psb-video-image.jpg' alt=''/>
 
+						<div id="mywistia" class='wistia_embed wistia_async_gscgru4eb5 popover=true popoverContent=html'></div><!-- mywistia -->
+
 						<div id='sec-three-video-overlay'>
 						
 							<div class='play-button'></div><!-- play-button -->

@@ -1,11 +1,15 @@
 #section-six {
   position: relative;
   padding: 63px 40px;
+  overflow: hidden;
   @include mq(small-laptop) {
     padding: 95px 40px 130px;
   }
   @include mq(large-laptop) {
     padding: 115px 40px 150px;
+  }
+  @include mq(small-monitor) {
+    height: 900px;
   }
 }
 
@@ -53,7 +57,8 @@
       font-size: 18px;
     }
   }
-  img#stars {
+  img#stars,
+  svg {
     width: 108px;
     margin-top: 25px;
     @include margin_lr;

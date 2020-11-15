@@ -113,6 +113,9 @@ span#sec-eight-title {
   @include mq(large-laptop) {
     margin-top: 90px;
   }
+  @include mq(small-monitor) {
+    height: 473px;
+  }
 }
 
 #sec-eight-slider {

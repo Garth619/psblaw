@@ -50,8 +50,7 @@
   "imports/templates/meetteam/template-meetteam",
   "imports/templates/videocenter/template-video",
   "imports/templates/contactpage/contact",
-  "imports/templates/blog/template-blog";
-// "imports/templates/404/not-found";
+  "imports/templates/blog/template-blog", "imports/templates/404/not-found";
 
 // // xd export variables
 
@@ -62,4 +61,4 @@
 
 // // animations (listed last so it will override styles above
 
-// @import	"imports/layout/animations";
+@import "imports/layout/animations";

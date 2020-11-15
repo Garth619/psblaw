@@ -36,6 +36,7 @@
 
 #sec-nine-img-wrapper {
   max-width: 380px;
+  overflow: hidden;
   @include margin_lr;
   @include mq(small-tablet) {
     flex-basis: 276px;
