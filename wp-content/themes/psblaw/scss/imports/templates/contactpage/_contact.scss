@@ -176,6 +176,8 @@ body.page-template-template-contact {
       }
       &.contact-map-address {
         margin-top: 10px;
+        max-width: 230px;
+        @include margin_lr;
         @include type(
           (
             size: 16px,
@@ -185,6 +187,15 @@ body.page-template-template-contact {
             weight: 600,
           )
         );
+        @include mq(mobile) {
+          max-width: 100%;
+        }
+        br {
+          display: none;
+          @include mq(mobile) {
+            display: inline-block;
+          }
+        }
       }
     }
     a {

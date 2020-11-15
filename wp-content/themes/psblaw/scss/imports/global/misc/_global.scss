@@ -25,14 +25,6 @@
 
 .page-title-wrapper {
   text-align: center;
-  @include mq(small-laptop) {
-    //text-align: left;
-  }
-  // .page-title.page-large-content-title {
-  //   @include mq(small-laptop) {
-  //     text-align: center;
-  //   }
-  // }
 }
 
 .page-title {
@@ -56,6 +48,7 @@
     text-align: left;
     width: 100%;
     margin: 0;
+    @include quick_type(50px, 55px, null);
   }
   &:before {
   }
@@ -92,7 +85,7 @@
     max-width: 1760px;
     padding: 105px 105px 10px;
     @include margin_lr;
-    @include quick_type(70px, 75px, null);
+    @include quick_type(80px, 85px, null);
   }
   &:after {
     @include mq(small-laptop) {
@@ -102,6 +95,17 @@
     @include mq(small-monitor) {
       margin-top: 53px;
     }
+  }
+}
+
+body.page-template-default {
+  .page-large-content-title {
+    @include mq(small-monitor) {
+      @include quick_type(70px, 75px, null);
+    }
+  }
+  #page-descrip-wrapper {
+    padding: 0;
   }
 }
 

@@ -66,22 +66,14 @@
     margin-top: 12px;
     @include quick_type(20px, 30px, null);
   }
-  &:after {
-    // background: $color-bright-two;
-    // margin: 31px 0 0;
-    // @include box(100%, 1px);
-    // @include contentdisplay();
-    // @include mq(small-tablet) {
-    //   max-width: 400px;
-    //   margin: 22px 0 0;
-    //   @include margin_lr;
-    // }
-    // @include mq(small-laptop) {
-    //   display: none;
-    // }
-  }
   p {
     margin-bottom: 20px;
+  }
+}
+
+body.page-template-default {
+  #banner-descrip {
+    max-width: 100%;
   }
 }
 

@@ -5,9 +5,32 @@ body.archive {
     padding-bottom: 0;
   }
   #banner-descrip {
-    max-width: 565px;
+    max-width: 345px;
+    @include mq(small-tablet) {
+      max-width: 555px;
+    }
+    @include mq(small-laptop) {
+      max-width: 680px;
+    }
+    &:after {
+      background: $color-bright-two;
+      margin: 33px 0 5px 0;
+      @include box(100%, 1px);
+      @include contentdisplay();
+      @include mq(small-tablet) {
+        margin: 21px auto 15px;
+        max-width: 400px;
+      }
+      @include mq(small-laptop) {
+        display: none;
+      }
+    }
   }
-
+  .page-title {
+    &:after {
+      display: none;
+    }
+  }
   .page-content-inner {
     padding-top: 0;
   }

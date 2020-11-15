@@ -103,14 +103,15 @@ body.tax-case_results_category {
 #case-results-wrapper {
   margin-top: 40px;
   position: relative;
+  max-width: 400px;
+  @include margin_lr;
   @include mq(small-tablet) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     grid-auto-rows: auto;
     grid-gap: 0px 50px;
     margin-top: 70px;
-    max-width: 750px;
-    @include margin_lr;
+    max-width: 840px;
   }
   @include mq(small-laptop) {
     max-width: 1070px;
@@ -118,7 +119,7 @@ body.tax-case_results_category {
   }
   @include mq(large-laptop) {
     margin-top: 133px;
-    max-width: 1160px;
+    max-width: 1260px;
     grid-gap: 0px 100px;
   }
   @include mq(small-monitor) {
@@ -280,12 +281,15 @@ span.featured-one {
 }
 
 .featured-on-inner {
-  @include flex();
+  @include mq(small-laptop) {
+    @include flex();
+  }
 }
 
 .featured-on-video {
   max-width: 331px;
   width: 100%;
+  @include margin_lr;
   @include mq(small-laptop) {
     flex-shrink: 0;
     width: 331px;
@@ -293,7 +297,6 @@ span.featured-one {
   .single-video {
     width: 100%;
     margin-bottom: 20px;
-    @include margin_lr;
     .mywisita {
       height: 182px;
     }

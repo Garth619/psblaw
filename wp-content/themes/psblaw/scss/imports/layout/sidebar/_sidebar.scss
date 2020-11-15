@@ -373,7 +373,7 @@ span#sidebar-required {
           > a {
             border-bottom: 1px solid transparent;
             &:before {
-              @include tri(down, 4px, 7px, $color-bright-two);
+              @include tri(down, 5px, 7px, $color-bright-two);
             }
           }
         }
@@ -397,7 +397,7 @@ span#sidebar-required {
       > li.current-menu-ancestor {
         > a {
           &:before {
-            @include tri(down, 4px, 7px, $color-bright-two);
+            @include tri(down, 5px, 7px, $color-bright-two);
           }
         }
       }
@@ -430,8 +430,12 @@ span#sidebar-required {
         @include mq(small-tablet) {
           right: 60px;
         }
+        @include mq(small-laptop) {
+          right: 30px;
+        }
         @include mq(large-laptop) {
           top: 67px;
+          right: 55px;
         }
       }
     }
