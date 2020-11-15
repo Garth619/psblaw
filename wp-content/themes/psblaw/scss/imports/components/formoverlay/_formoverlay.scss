@@ -26,13 +26,6 @@
     @include mq(large-laptop) {
       max-width: 1222px;
     }
-    ul {
-      li {
-        &:after {
-          top: 26px;
-        }
-      }
-    }
   }
 }
 
@@ -98,7 +91,7 @@
       }
       &:after {
         @include contentdisplay(block, "*");
-        @include abs(20px, 20px, null, null);
+        @include abs(21px, 20px, null, null);
         @include type(
           (
             size: 16px,

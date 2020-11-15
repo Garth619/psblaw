@@ -71,6 +71,9 @@ span#sec-seven-title {
   @include mq(large-laptop) {
     padding-left: 57px;
   }
+  @include mq(small-monitor) {
+    padding-left: 90px;
+  }
   &.content {
     color: #62676d;
   }

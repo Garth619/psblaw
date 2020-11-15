@@ -132,6 +132,9 @@ span#sec-eight-title {
     @include mq(large-laptop) {
       margin: 0 17px;
     }
+    @include mq(small-monitor) {
+      margin: 0 10px;
+    }
   }
   .slick-list {
     @include mq(small-laptop) {
@@ -139,6 +142,9 @@ span#sec-eight-title {
     }
     @include mq(large-laptop) {
       margin: 0 -17px;
+    }
+    @include mq(small-monitor) {
+      margin: 0 -10px;
     }
   }
   .slick-dots {

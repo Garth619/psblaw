@@ -249,6 +249,9 @@ h1#sec-three-header {
     @include mq(large-laptop) {
       margin-bottom: 110px;
     }
+    @include mq(small-monitor) {
+      margin-bottom: 155px;
+    }
   }
   &:last-of-type {
     img {
