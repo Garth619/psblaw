@@ -116,15 +116,19 @@
     
       <div class='sec-one-slide'>
 
-        <div class='sec-one-slide-inner'>
-        
-          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+        <a href="">
 
-          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+          <div class='sec-one-slide-inner'>
+          
+            <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
 
-          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+            <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
 
-        </div><!-- sec-one-slide-inner -->
+            <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+
+          </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
 
