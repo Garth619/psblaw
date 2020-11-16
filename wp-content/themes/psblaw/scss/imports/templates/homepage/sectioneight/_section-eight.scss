@@ -100,15 +100,18 @@ span#sec-eight-title {
 
 #sec-eight-slide-wrapper {
   margin-top: 35px;
+  min-height: 498px;
   @include mq(small-tablet) {
     max-width: 585px;
     margin-top: 50px;
+    min-height: 477px;
     @include margin_lr;
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
     max-width: 100%;
     margin-top: 45px;
+    min-height: 473px;
   }
   @include mq(large-laptop) {
     margin-top: 90px;

@@ -18,7 +18,7 @@
 
     <div id='sec-ten-bottom'>
     
-      <div id='sec-ten-slide-wrapper'>
+      <div id='sec-ten-slide-wrapper' class="preload-section">
       
         <div class='sec-ten-arrow sec-ten-arrow-left'>
 
@@ -30,7 +30,7 @@
         
         </div><!-- sec-ten-arrow sec-ten-arrow-left -->
 
-        <div id='sec-ten-slider'>
+        <div id='sec-ten-slider' class="preload-slider">
         
           <div class='sec-ten-slide'>
           

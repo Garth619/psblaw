@@ -1,6 +1,6 @@
 <section id='section-six'>
 
-	<div id='sec-six-slider-wrapper'>
+	<div id='sec-six-slider-wrapper' class="preload-section">
 	
 		<div class='sec-six-arrow sec-six-arrow-left'>
 		
@@ -14,7 +14,7 @@
 
 			<img id='stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
 
-			<div id='sec-six-slider'>
+			<div id='sec-six-slider' class="preload-slider">
 
 				<div class='sec-six-slide'>
 

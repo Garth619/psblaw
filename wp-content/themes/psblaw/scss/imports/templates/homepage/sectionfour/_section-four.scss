@@ -23,7 +23,6 @@
   @include mq(small-tablet) {
     max-width: 1160px;
     overflow: hidden;
-    //padding: 0 20px;
     @include margin_lr;
   }
   @include mq(large-laptop) {
@@ -141,14 +140,22 @@ span#sec-four-title {
 #sec-four-slider-wrapper {
   margin-top: 35px;
   max-width: 425px;
+  min-height: 425px;
   @include margin_lr;
   @include flex(space-between, center);
   @include mq(small-tablet) {
     margin-top: 45px;
     max-width: 100%;
+    min-height: 293px;
+  }
+  @include mq(small-laptop) {
+    min-height: 528px;
+  }
+  @include mq(large-laptop) {
+    min-height: 571px;
   }
   @include mq(small-monitor) {
-    height: 538px;
+    min-height: 538px;
   }
 }
 

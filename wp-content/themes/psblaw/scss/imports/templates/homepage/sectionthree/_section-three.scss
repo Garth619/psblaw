@@ -453,16 +453,31 @@ h1#sec-three-header {
   }
   &:last-of-type {
     max-width: 300px;
+    min-height: 470px;
     @include margin_lr;
     @include mq(small-tablet) {
       max-width: 100%;
       margin: 0;
+      min-height: unset;
     }
     @include mq(small-laptop) {
       margin-top: 6px;
     }
     @include mq(small-monitor) {
       margin-top: 17px;
+    }
+  }
+}
+
+#section-three {
+  .preload-section {
+    @include mq(small-tablet) {
+      opacity: 1;
+    }
+  }
+  .preload-slider {
+    @include mq(small-tablet) {
+      display: block;
     }
   }
 }

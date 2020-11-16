@@ -10,7 +10,7 @@
     
     </div><!-- sec-eight-descrip -->
 
-    <div id='sec-eight-slide-wrapper'>
+    <div id='sec-eight-slide-wrapper' class="preload-section">
     
       <div class='sec-eight-arrow sec-eight-arrow-left'>
       
@@ -18,7 +18,7 @@
       
       </div><!-- sec-eight-arrow sec-eight-arrow-left -->
 
-      <div id='sec-eight-slider'>
+      <div id='sec-eight-slider' class="preload-slider">
 
         <div class='sec-eight-slide'>
         

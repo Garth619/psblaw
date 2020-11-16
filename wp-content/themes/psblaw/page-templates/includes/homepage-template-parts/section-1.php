@@ -116,7 +116,7 @@
     
       <div class='sec-one-slide'>
 
-        <a href="">
+         <a href="">
 
           <div class='sec-one-slide-inner'>
           
@@ -134,6 +134,8 @@
 
       <div class='sec-one-slide'>
 
+      <a href="">
+
         <div class='sec-one-slide-inner'>
       
           <span class='sec-one-subtitle'>TRAUMATIC BRAIN INJURY</span><!-- sec-one-subtitle -->
@@ -143,10 +145,14 @@
         <span class='sec-one-descrip'>Verdict in a brian injury case involving assault by nightclub security</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
 
       <div class='sec-one-slide'>
+
+      <a href="">
 
         <div class='sec-one-slide-inner'>
         
@@ -157,10 +163,14 @@
           <span class='sec-one-descrip'>Verdict in burn injury case involving a defective product</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
 
       <div class='sec-one-slide'>
+
+      <a href="">
 
         <div class='sec-one-slide-inner'>
         
@@ -171,10 +181,14 @@
           <span class='sec-one-descrip'>Verdict in a spinal cord injury case involving a tire tread separation</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
 
       <div class='sec-one-slide'>
+
+      <a href="">
 
         <div class='sec-one-slide-inner'>
         
@@ -185,10 +199,14 @@
           <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
 
       <div class='sec-one-slide'>
+
+      <a href="">
 
         <div class='sec-one-slide-inner'>
         
@@ -199,6 +217,8 @@
           <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
 
         </div><!-- sec-one-slide-inner -->
+
+        </a>
       
       </div><!-- sec-one-slide -->
     

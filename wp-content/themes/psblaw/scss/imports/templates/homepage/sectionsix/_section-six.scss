@@ -16,6 +16,7 @@
 #sec-six-slider-wrapper {
   position: relative;
   z-index: 1;
+  min-height: 461px;
   @include mq(small-tablet) {
     max-width: 915px;
     @include margin_lr;
@@ -23,9 +24,11 @@
   }
   @include mq(small-laptop) {
     max-width: 1055px;
+    min-height: 603px;
   }
   @include mq(large-laptop) {
     max-width: 1185px;
+    min-height: 635px;
   }
   @include mq(small-monitor) {
     max-width: 1375px;

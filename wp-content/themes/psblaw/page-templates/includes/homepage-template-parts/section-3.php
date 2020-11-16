@@ -48,9 +48,9 @@
 				
 			</div><!-- sec-three-col -->
 
-			<div class='sec-three-col'>
+			<div class='sec-three-col preload-section'>
 			
-				<div id='sec-three-slider'>
+				<div id='sec-three-slider' class="preload-slider">
 				
 					<div class='sec-three-slide'>
 					

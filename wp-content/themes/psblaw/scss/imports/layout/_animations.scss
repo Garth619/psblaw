@@ -282,11 +282,4 @@
       }
     }
   }
-  // case results
-  body.post-type-archive-case_results .page-large-content-title,
-  body.tax-case_results_category .page-large-content-title {
-    &:after {
-      display: block;
-    }
-  }
 }

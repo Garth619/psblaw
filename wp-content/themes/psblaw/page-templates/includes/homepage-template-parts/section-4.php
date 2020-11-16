@@ -12,7 +12,7 @@
 		
 		</div><!-- sec-four-descrip -->
 
-		<div id='sec-four-slider-wrapper'>
+		<div id='sec-four-slider-wrapper' class="preload-section">
 
 			<div class='sec-four-arrow sec-four-arrow-left'>
 			
@@ -20,7 +20,7 @@
 			
 			</div><!-- sec-four-arrow -->
 		
-			<div id='sec-four-slider'>
+			<div id='sec-four-slider' class="preload-slider">
 		
 				<div class='sec-four-slide'>
 		

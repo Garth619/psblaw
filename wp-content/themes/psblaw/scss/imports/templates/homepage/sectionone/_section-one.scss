@@ -221,6 +221,18 @@ img.hero {
   text-align: center;
   padding: 35px 20px;
   height: 100%;
+  &:hover {
+    a {
+      .sec-one-slide-inner {
+        span.sec-one-title {
+          color: $color-bright-one;
+        }
+      }
+    }
+  }
+  a {
+    text-decoration: none;
+  }
   @include mq(small-tablet) {
     height: 161px;
     padding: 0 20px;
@@ -267,6 +279,7 @@ img.hero {
       }
       &.sec-one-title {
         margin-bottom: 18px;
+        transition: all 200ms ease-in-out;
         @include type(
           (
             size: 35px,
