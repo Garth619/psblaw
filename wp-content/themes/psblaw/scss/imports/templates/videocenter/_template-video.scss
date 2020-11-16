@@ -23,8 +23,24 @@
 .single-video {
   border-bottom: 1px solid #c6ced8;
   margin-bottom: 50px;
+  cursor: pointer;
   @include mq(large-laptop) {
     margin-bottom: 70px;
+  }
+  &:hover {
+    .video-title-wrapper {
+      span.video-title {
+        color: $color-bright-two;
+      }
+    }
+    .play-button {
+      &:before {
+        transform: scale(1.2);
+      }
+      &:after {
+        @include tri(right, 10px, 15px, $color-bright-one);
+      }
+    }
   }
   .video-thumb {
     border: 17px solid $color-light-one;
@@ -63,12 +79,15 @@
     &:before {
       border-radius: 50%;
       background: $color-light-one;
+      transform: scale(1);
+      transition: all 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       @include box(57px);
       @include mq(small-tablet) {
         @include box(66px);
       }
     }
     &:after {
+      transition: all 200ms ease-in-out;
       @include abs(32px, null, null, 36px);
       @include tri(right, 8px, 12px, $color-bright-two);
       @include mq(small-tablet) {
@@ -78,15 +97,16 @@
       }
     }
   }
-  .video_title_wrapper {
+  .video-title-wrapper {
     padding-top: 16px;
     padding-bottom: 20px;
     @include mq(small-tablet) {
       padding-bottom: 14px;
       padding-top: 29px;
     }
-    span.video_title {
+    span.video-title {
       display: block;
+      transition: all 200ms ease-in-out;
       @include type(
         (
           size: 17px,

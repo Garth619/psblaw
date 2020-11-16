@@ -113,6 +113,9 @@ jQuery(document).ready(function ($) {
   createWaypoint("section-nine", "#section-nine", "visible", 300, null, true);
   createWaypoint("consultation", "#consultation", "visible", 300, null, true);
 
+  createWaypoint("about-middle", "#about-middle", "visible", 300, null, true);
+  createWaypoint("about-bottom", "#about-bottom", "visible", 300, null, true);
+
   createWaypoint("internal-main", "#sticky-header", "sticky", -200, null, true);
   
 /* Sticky Header

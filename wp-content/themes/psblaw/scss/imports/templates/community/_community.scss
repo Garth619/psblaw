@@ -49,9 +49,15 @@ body.page-template-template-community {
   width: 250px;
   border-bottom: 1px solid #c6ced8;
   margin-bottom: 63px;
+  &:hover {
+    span.single-community-title {
+      color: $color-bright-two;
+    }
+  }
   a {
     text-decoration: none;
   }
+
   @include margin_lr;
   .single-community-box {
     background: $color-light-one;
@@ -68,6 +74,7 @@ body.page-template-template-community {
     padding: 0 10px;
     margin-top: 18px;
     margin-bottom: 20px;
+    transition: all 200ms ease-in-out;
     @include type(
       (
         size: 17px,

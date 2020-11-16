@@ -109,6 +109,9 @@ h1#sec-three-header {
       }
       #sec-three-video-overlay {
         .play-button {
+          &:before {
+            transform: scale(1.2);
+          }
           &:after {
             @include tri(right, 12px, 19px, $color-bright-one);
           }
@@ -162,6 +165,8 @@ h1#sec-three-header {
         &:before {
           border-radius: 50%;
           background: $color-light-one;
+          transform: scale(1);
+          transition: all 500ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
           @include box(51px);
           @include mq(small-tablet) {
             @include box(74px);

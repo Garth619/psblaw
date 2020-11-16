@@ -56,13 +56,13 @@ get_header(); ?>
 
 							</div><!-- video-thumb -->
 
-							<div class='video_title_wrapper'>
+							<div class='video-title-wrapper'>
 
 								<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
 
-								<span class='video_title'><?php the_sub_field( 'title' ); ?></span><!-- video_title -->
+								<span class='video-title'><?php the_sub_field( 'title' ); ?></span><!-- video-title -->
 
-							</div><!-- video_title_wrapper -->
+							</div><!-- video-title-wrapper -->
 
 						</div><!-- single-video -->
 				

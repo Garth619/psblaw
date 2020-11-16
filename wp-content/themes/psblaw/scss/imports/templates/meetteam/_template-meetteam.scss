@@ -42,6 +42,9 @@
         &:after {
           opacity: 1;
         }
+        img {
+          transform: scale(1.075);
+        }
       }
       span.single-att-title {
         color: $color-bright-two;
@@ -52,6 +55,7 @@
     text-decoration: none;
     .single-att-profile {
       position: relative;
+      overflow: hidden;
       &.placeholder {
         &:after {
           background: rgba(14, 19, 38, 1);
@@ -82,6 +86,8 @@
       img {
         @include image();
         width: 100%;
+        transform: scale(1);
+        transition: all 700ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
       }
     }
     span {

@@ -190,6 +190,16 @@ span#more-news-title {
   }
   .more-news-content-wrapper {
     height: 100%;
+    &:hover {
+      a {
+        .more-news-content {
+          .more-news-read-more {
+            background: $color-bright-two;
+            color: $color-light-one;
+          }
+        }
+      }
+    }
     &.no-morenews-list {
       margin-top: 17px;
     }

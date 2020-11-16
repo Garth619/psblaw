@@ -34,11 +34,11 @@ get_header(); ?>
 	
 					</div><!-- video-thumb -->
 
-					<div class='video_title_wrapper'>
+					<div class='video-title-wrapper'>
 		
-						<span class='video_title'><?php the_sub_field( 'video_title' ); ?></span><!-- video_title -->
+						<span class='video-title'><?php the_sub_field( 'video_title' ); ?></span><!-- video-title -->
 	
-					</div><!-- video_title_wrapper -->
+					</div><!-- video-title-wrapper -->
 
 				</div><!-- single-video -->
 
