@@ -38,114 +38,110 @@
 
 		<div id='sec-two-right'>
 		
-			<span id='sec-two-title'>Breaking News And Current Cases</span><!-- sec-two-title -->
+			<span id='sec-two-title'><?php the_field( 'section_two_featured_news_title' ); ?></span><!-- sec-two-title -->
 
 			<div id='sec-two-slide-wrapper' class="preload-section">
 			
 				<div id='sec-two-slider' class="preload-slider">
+
+				<?php if ( have_rows( 'section_two_featured_news_slider_new' ) ) : ?>
+					
+					<?php while ( have_rows( 'section_two_featured_news_slider_new' ) ) : the_row(); ?>
+						
+						<?php $post_object = get_sub_field( 'section_two_featured_news_slider' ); ?>
+						
+						<?php if ( $post_object ): ?>
+							
+							<?php $post = $post_object; ?>
+							
+							<?php setup_postdata( $post ); ?> 
 			
-					<div class='sec-two-slide'>
+								<div class='sec-two-slide'>
 
-					<a href="">
+									<a href="<?php the_permalink();?>">
+
+										<div class='sec-two-image-wrapper'>
+
+											<?php $image = get_sub_field( 'image' ); ?>
+			
+											<?php if ( $image ) : ?>
+												
+												<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+											
+											<?php else : ?>
+
+												<?php if(has_post_thumbnail()) { ?>
+
+													<?php the_post_thumbnail( 'large' ); ?>
+
+												<?php }?>
+											
+											<?php endif;?>
+
+										</div><!-- sec-two-image-wrapper -->
+
+										<?php if(get_sub_field('page_category')) : ?> 
+
+											<span class='sec-two-slide-cat'><?php the_sub_field( 'page_category' ); ?></span><!-- sec-two-slide-cat -->
+
+											<?php else: ?>
+
+											<?php 
+										
+											$myposts = 'post' == get_post_type(); 
+									
+											$mycaseresults = 'case_results' == get_post_type(); 
+									
+											if ($myposts || $mycaseresults) : ?>
+
+											<div class='post-categories'>
+
+												<?php if($myposts) {
+
+													$terms = get_the_terms($post->ID, 'category');
+
+												} 
+
+												if($mycaseresults) {
+
+													$terms = get_the_terms($post->ID, 'case_results_category');
+
+												} 
+									 
+												if (! empty($terms)) {
+												
+													echo "<ul>";
+												
+													foreach ($terms as $term) {
 					
-						<div class='sec-two-image-wrapper'>
-						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-1.jpg' alt=''/>
-						
-						</div><!-- sec-two-image-wrapper -->
+														echo "<li>{$term->name}</li>";
+												
+													}
+											
+													echo "</ul>";
 
-						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
+											} ?>
 
-						<span class='sec-two-slide-title'>$800 Million Settlement Reached with MGM for Route 91 Las Vegas Shooting Victims</span><!-- sec-two-slide-title -->
+										</div><!-- post-categories -->
 
-						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
+									<?php endif;?>
+								
+								<?php endif; ?>
+										
+								<span class='sec-two-slide-title'><?php the_title();?></span><!-- sec-two-slide-title -->
 
-						</a>
-					
-					</div><!-- sec-two-slide -->
+								<span class='sec-two-slide-date'><?php $pfx_date = get_the_date(); echo $pfx_date ?></span><!-- sec-two-slide-date -->
 
-					<div class='sec-two-slide'>
+							</a>
 
-						<a href="">
-					
-						<div class='sec-two-image-wrapper'>
-						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
-						
-						</div><!-- sec-two-image-wrapper -->
+							</div><!-- sec-two-slide -->
 
-						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-						<span class='sec-two-slide-title'>Rahul Ravipudi Appointed Public Entity Co-Lead Counsel in JUUL Labs Product Cases</span><!-- sec-two-slide-title -->
-
-						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-
-						</a>
-					
-					</div><!-- sec-two-slide -->
-
-					<div class='sec-two-slide'>
-
-						<a href="">
-					
-						<div class='sec-two-image-wrapper'>
-						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
-						
-						</div><!-- sec-two-image-wrapper -->
-
-						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-						<span class='sec-two-slide-title'>Rahul Ravipudi Appointed Public Entity Co-Lead Counsel in JUUL Labs Product Cases</span><!-- sec-two-slide-title -->
-
-						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-
-						</a>
-					
-					</div><!-- sec-two-slide -->
-
-					<div class='sec-two-slide'>
-
-						<a href="">
-					
-						<div class='sec-two-image-wrapper'>
-						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
-						
-						</div><!-- sec-two-image-wrapper -->
-
-						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-						<span class='sec-two-slide-title'>Rahul Ravipudi Appointed Public Entity Co-Lead Counsel in JUUL Labs Product Cases</span><!-- sec-two-slide-title -->
-
-						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-
-						</a>
-					
-					</div><!-- sec-two-slide -->
-
-					<div class='sec-two-slide'>
-
-						<a href="">
-					
-						<div class='sec-two-image-wrapper'>
-						
-							<img class='sec-two-image' src='<?php bloginfo('template_directory');?>/images/featurednews-2.jpg' alt=''/>
-						
-						</div><!-- sec-two-image-wrapper -->
-
-						<span class='sec-two-slide-cat'>Featured News</span><!-- sec-two-slide-cat -->
-
-						<span class='sec-two-slide-title'>Rahul Ravipudi Appointed Public Entity Co-Lead Counsel in JUUL Labs Product Cases</span><!-- sec-two-slide-title -->
-
-						<span class='sec-two-slide-date'>October 3, 2019</span><!-- sec-two-slide-date -->
-
-						</a>
-					
-					</div><!-- sec-two-slide -->
-
-					
-				</div><!-- sec-two-slider -->
+							<?php wp_reset_postdata(); ?>
+						<?php endif; ?>
+					<?php endwhile; ?>
+				<?php endif; ?>
+			
+			</div><!-- sec-two-slider -->
 
 				<div class='sec-two-arrow sec-two-arrow-left'>
 				
