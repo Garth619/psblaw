@@ -10,7 +10,6 @@
 
 		<h1 class="page-title page-large-content-title"><?php the_field( 'not_found_title','option'); ?></h1>
 
-		<span id='not_found_subtitle'><?php the_field( 'not_found_subtitle','option'); ?></span><!-- not_found_subtitle -->
 
 	</div>	
 
@@ -19,6 +18,8 @@
 	<div class="page-content">
 
 		<div class='page-content-inner content'>
+
+		
 
 			<?php the_field( 'not_found_content','option'); ?>
 		

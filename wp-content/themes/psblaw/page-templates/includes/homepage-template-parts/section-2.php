@@ -5,14 +5,32 @@
 		<div id='sec-two-left'>
 
 			<div id='psb-playbook-wrapper'>
-			
-				<img id='psb-playbook' src='<?php bloginfo('template_directory');?>/images/psb-playbook.png' alt=''/>
-			
-				<span id='sec-two-left-title'>Webinar Wednesday:</span><!-- sec-two-left-title -->
 
-				<span id='sec-two-descrip'>At 1pm (PDT) join Attorney Pete Kaufman & Shareholder Virginia Buchanan this Wednesday as they take us inside the multi-district litigation involving Allergan BIOCELL® textured breast implants...</span><!-- sec-two-descrip -->
+				<?php $section_two_info_image = get_field( 'section_two_info_image' ); ?>
+				
+				<?php if ( $section_two_info_image ) { ?>
+					
+					<img id='psb-playbook' src="<?php echo $section_two_info_image['url']; ?>" alt="<?php echo $section_two_info_image['alt']; ?>" />
+				
+				<?php } ?>
 
-				<a class='button sec-two-button' href=''>Register Now</a><!-- class -->
+				<?php if ( get_field( 'section_two_info_title' ) ) { ?>
+			
+					<span id='sec-two-left-title'><?php the_field( 'section_two_info_title' ); ?></span><!-- sec-two-left-title -->
+
+				<?php } ?>
+
+				<?php if ( get_field( 'section_two_info_description' ) ) { ?>
+
+					<span id='sec-two-descrip'><?php the_field( 'section_two_info_description' ); ?></span><!-- sec-two-descrip -->
+
+				<?php } ?>
+
+				<?php if ( get_field( 'section_two_info_button_link' ) ) { ?>
+
+					<a class='button sec-two-button' href='<?php the_field( 'section_two_info_button_link' ); ?>'><?php the_field( 'section_two_info_button_verbiage' ); ?></a><!-- class -->
+
+				<?php } ?>
 
 			</div><!-- psb-playbook-wrapper -->
 		

@@ -12,7 +12,7 @@
       
       </div><!-- sec-ten-content -->
 
-      <a class='button sec-ten-button desktop' href=''>View All</a><!-- button sec-ten-button -->
+      <a class='button sec-ten-button desktop' href='<?php bloginfo('url');?>/community-sponsorship'>View All</a><!-- button sec-ten-button -->
     
     </div><!-- sec-ten-top -->
 

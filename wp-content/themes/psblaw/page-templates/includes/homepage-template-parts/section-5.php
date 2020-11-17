@@ -56,7 +56,7 @@
 					
 					</div><!-- sec-five-image -->
 
-					<a class='button sec-five-img-button' href=''>Meet our Attorneys</a><!-- button sec-five-img-button -->
+					<a class='button sec-five-img-button' href='<?php bloginfo('url');?>/our-team'>Meet our Attorneys</a><!-- button sec-five-img-button -->
 				
 				</div><!-- sec-five-image-wrapper -->
 

@@ -4,13 +4,13 @@
 
     <div id='sec-one-content-inner'>
   
-      <span id='sec-one-subtitle'>Why Choose Us?</span><!-- sec-one-subtitle -->
+      <span id='sec-one-subtitle'><?php the_field( 'section_one_subtitle' ); ?></span><!-- sec-one-subtitle -->
 
-      <span id='sec-one-title'>We Win...Big</span><!-- sec-one-title -->
+      <span id='sec-one-title'><?php the_field( 'section_one_title' ); ?></span><!-- sec-one-title -->
 
-      <span id='sec-one-descrip'>More verdicts & settlements over $10,000,000 than any law firm in California history.</span><!-- sec-one-descrip -->
+      <span id='sec-one-descrip'><?php the_field( 'section_one_description' ); ?></span><!-- sec-one-descrip -->
 
-      <a class='button free-consult-button'>Request Free Consultation</a><!-- button -->
+      <a class='button free-consult-button'><?php the_field( 'free_consultation_verbiage' ); ?></a><!-- button -->
   
   </div><!-- sec-one-content-inner -->
 
@@ -113,114 +113,32 @@
   <div id='sec-one-slider-wrapper'>
   
     <div id='sec-one-slider' class="preload-slider">
-    
-      <div class='sec-one-slide'>
 
-         <a href="">
+    <?php if ( have_rows( 'section_one_case_results_slider' ) ) : ?>
+	    
+      <?php while ( have_rows( 'section_one_case_results_slider' ) ) : the_row(); ?>
 
-          <div class='sec-one-slide-inner'>
-          
-            <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
+        <div class='sec-one-slide'>
 
-            <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
+          <a href="<?php the_sub_field( 'link' ); ?>">
 
-            <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
+            <div class='sec-one-slide-inner'>
+ 
+              <span class='sec-one-subtitle'><?php the_sub_field( 'title' ); ?></span><!-- sec-one-subtitle -->
 
-          </div><!-- sec-one-slide-inner -->
+              <span class='sec-one-title'><?php the_sub_field( 'amount' ); ?></span><!-- sec-one-title -->
 
-        </a>
-      
-      </div><!-- sec-one-slide -->
+              <span class='sec-one-descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec-one-descrip -->
 
-      <div class='sec-one-slide'>
+            </div><!-- sec-one-slide-inner -->
 
-      <a href="">
+          </a>
 
-        <div class='sec-one-slide-inner'>
-      
-          <span class='sec-one-subtitle'>TRAUMATIC BRAIN INJURY</span><!-- sec-one-subtitle -->
+        </div><!-- sec-one-slide -->
+		
+	    <?php endwhile; ?>
 
-          <span class='sec-one-title'>$160.5 million</span><!-- sec-one-title -->
-
-        <span class='sec-one-descrip'>Verdict in a brian injury case involving assault by nightclub security</span><!-- sec-one-descrip -->
-
-        </div><!-- sec-one-slide-inner -->
-
-        </a>
-      
-      </div><!-- sec-one-slide -->
-
-      <div class='sec-one-slide'>
-
-      <a href="">
-
-        <div class='sec-one-slide-inner'>
-        
-          <span class='sec-one-subtitle'>GRIGGS VS. CATERPILLAR, ET AL.</span><!-- sec-one-subtitle -->
-
-          <span class='sec-one-title'>$58 million</span><!-- sec-one-title -->
-
-          <span class='sec-one-descrip'>Verdict in burn injury case involving a defective product</span><!-- sec-one-descrip -->
-
-        </div><!-- sec-one-slide-inner -->
-
-        </a>
-      
-      </div><!-- sec-one-slide -->
-
-      <div class='sec-one-slide'>
-
-      <a href="">
-
-        <div class='sec-one-slide-inner'>
-        
-          <span class='sec-one-subtitle'>LAMPE VS. CONTINENTAL GENERAL TIRE</span><!-- sec-one-subtitle -->
-
-          <span class='sec-one-title'>$55.4 million</span><!-- sec-one-title -->
-
-          <span class='sec-one-descrip'>Verdict in a spinal cord injury case involving a tire tread separation</span><!-- sec-one-descrip -->
-
-        </div><!-- sec-one-slide-inner -->
-
-        </a>
-      
-      </div><!-- sec-one-slide -->
-
-      <div class='sec-one-slide'>
-
-      <a href="">
-
-        <div class='sec-one-slide-inner'>
-        
-          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
-
-          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
-
-          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
-
-        </div><!-- sec-one-slide-inner -->
-
-        </a>
-      
-      </div><!-- sec-one-slide -->
-
-      <div class='sec-one-slide'>
-
-      <a href="">
-
-        <div class='sec-one-slide-inner'>
-        
-          <span class='sec-one-subtitle'>ANDERSON V. GENERAL MOTORS</span><!-- sec-one-subtitle -->
-
-          <span class='sec-one-title'>$4.9 billion</span><!-- sec-one-title -->
-
-          <span class='sec-one-descrip'>Verdict in an auto defect injury case</span><!-- sec-one-descrip -->
-
-        </div><!-- sec-one-slide-inner -->
-
-        </a>
-      
-      </div><!-- sec-one-slide -->
+    <?php endif; ?>
     
     </div><!-- sec-one-slider -->
 

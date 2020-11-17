@@ -62,7 +62,7 @@
         
         </div><!-- sec-nine-amounts -->
 
-        <a class='button sec-nine-button' href=''>See Complete List</a><!-- button sec-nine-button -->
+        <a class='button sec-nine-button' href='<?php bloginfo('url');?>/referrals'>See Complete List</a><!-- button sec-nine-button -->
       
       </div><!-- sec-nine-amount-wrapper -->
     

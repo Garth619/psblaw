@@ -252,7 +252,7 @@
     
     </div><!-- sec-eight-slide-wrapper -->
 
-    <a class='button sec-eight-button' href=''>See all practice areas</a><!-- button sec-eight-button -->
+    <a class='button sec-eight-button' href='<?php bloginfo('url');?>/practice-areas'>See all practice areas</a><!-- button sec-eight-button -->
   
   </div><!-- sec-eight-inner -->
 
