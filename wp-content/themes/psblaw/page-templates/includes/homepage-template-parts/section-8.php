@@ -4,9 +4,9 @@
   
     <span id='sec-eight-title'>Our Practice Areas</span><!-- sec-eight-title -->
 
-    <div id='sec-eight-descrip'>
+    <div id='sec-eight-descrip' class="content">
     
-      <p>The Los Angeles Personal Injury lawyers at Panish Shea & Boyle LLP handle many types of cases. If you don’t see the category for your type of case, please call us at (310) 477-1700 to speak with our trial lawyers and discuss your legal matter. Also serving Orange County, Riverside, San Bernardino, and Las Vegas.</p>
+      <p>The Los Angeles Personal Injury lawyers at Panish Shea & Boyle LLP handle many types of cases. If you don’t see the category for your type of case, please call us at <a href="tel:3104771700">(310) 477-1700</a> to speak with our trial lawyers and discuss your legal matter. Also serving Orange County, Riverside, San Bernardino, and Las Vegas.</p>
     
     </div><!-- sec-eight-descrip -->
 

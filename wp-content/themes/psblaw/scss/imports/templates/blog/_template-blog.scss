@@ -43,12 +43,16 @@ span.date {
       size: 14px,
       height: 16px,
       spacing: 1.4px,
+      align: center,
       family: $primaryfont,
       color: $color-bright-two,
       weight: 800,
       transform: uppercase,
     )
   );
+  @include mq(small-laptop) {
+    text-align: left;
+  }
 }
 
 .blog-post {
@@ -111,6 +115,7 @@ span.date {
   .blog-content {
     margin-top: 20px;
     margin-bottom: 25px;
+
     @include mq(small-laptop) {
       margin-top: 5px;
     }
@@ -122,7 +127,11 @@ span.date {
 
 body.single {
   .blog-content {
+    position: relative;
     margin-top: 30px;
+    @include mq(small-laptop) {
+      margin-top: 50px;
+    }
   }
   .page-content {
     @include mq(small-tablet) {
@@ -309,5 +318,38 @@ body.single {
         }
       }
     }
+  }
+}
+
+span.myshare {
+  display: block;
+  margin-bottom: 7px;
+  @include type(
+    (
+      size: 10px,
+      spacing: 1px,
+      family: $primaryfont,
+      color: $color-dark-one,
+      weight: 800,
+      align: center,
+      transform: uppercase,
+    )
+  );
+}
+
+.at-above-post {
+  margin-bottom: 50px;
+  @include mq(small-laptop) {
+    @include flex();
+    @include abs(-70px, 0, null, null);
+  }
+}
+.at-share-btn-elements {
+  @include flex(center, center);
+}
+
+span.myshare {
+  @include mq(small-laptop) {
+    margin-right: 10px;
   }
 }

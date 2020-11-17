@@ -121,49 +121,10 @@ jQuery(document).ready(function ($) {
 /* Sticky Header
 --------------------------------------------------------------------------------------- */
 
-// $(function() {
-
-//   var header = $("#header");
-
-//   $(window).on('scroll',_.debounce(function () {
-
-//   var scroll = $(window).scrollTop();
-//     if (scroll >= 170) {
-//       header.hide();
-//     }
-//     if (scroll >= 180) {
-//       // internal pages
-//       header.addClass("header-layout-three sticky");
-//       // homepage
-//       if ($('body').hasClass('page-template-template-home')){
-//         header.addClass("header-layout-two header-layout-three sticky");
-//       }
-//     } 
-//     if (scroll >= 265) {
-//         header.show();
-//     } 
-//     if (scroll < 265) {
-//       header.hide();
-//     }
-//     if (scroll < 180) {
-//       // internal pages
-//       header.removeClass("header-layout-three sticky");
-//       // homepage
-//       if ($('body').hasClass('page-template-template-home')){
-//         header.removeClass("header-layout-two header-layout-three sticky");
-//       }
-//     }
-//     if (scroll < 170) {
-//       header.show();
-//     }
-//   },50));
-
-// });
-
 
 $('header').clone().addClass('header-layout-two header-layout-three').removeClass('header-layout-one default-banner-layout').appendTo("#sticky-header");
 
-
+$('.at-above-post').wrapInner('<span class="myshare">Share</span>');
 
   /* Slick Carousel ( http://kenwheeler.github.io/slick/ )
 --------------------------------------------------------------------------------------- */
