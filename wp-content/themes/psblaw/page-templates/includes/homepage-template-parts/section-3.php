@@ -4,23 +4,31 @@
 
 		<div id='sec-three-header-wrapper'>
 		
-			<span id='sec-three-subtitle'>STRENGTH BY YOUR SIDE<span>TM</span></span><!-- sec-three-subtitle -->
+			<span id='sec-three-subtitle'><?php the_field( 'section_three_subtitle' ); ?></span><!-- sec-three-subtitle -->
 
-			<h1 id='sec-three-header'>Los Angeles Personal Injury Lawyers</h1><!-- sec-three-header -->
+			<h1 id='sec-three-header'><?php the_field( 'section_three_title' ); ?></h1><!-- sec-three-header -->
 		
 		</div><!-- sec-three-header-wrapper -->
 
 		<div id='sec-three-content'>
 		
 			<div class='sec-three-col content'>
+
+				<?php if(get_field('section_three_wistia_id')) { ?>
 			
 				<div id='sec-three-video-wrapper'>
 				
 					<div id='sec-three-video-thumbnail'>
 					
-						<img src='<?php bloginfo('template_directory');?>/images/psb-video-image.jpg' alt=''/>
+						<?php $section_three_video_image = get_field( 'section_three_video_image' ); ?>
+						
+						<?php if ( $section_three_video_image ) { ?>
+							
+							<img src="<?php echo $section_three_video_image['url']; ?>" alt="<?php echo $section_three_video_image['alt']; ?>" />
+						
+						<?php } ?>
 
-						<div id="mywistia" class='wistia_embed wistia_async_gscgru4eb5 popover=true popoverContent=html'></div><!-- mywistia -->
+						<div id="mywistia" class='wistia_embed wistia_async_<?php the_field( 'section_three_wistia_id' ); ?> popover=true popoverContent=html'></div><!-- mywistia -->
 
 						<div id='sec-three-video-overlay'>
 						
@@ -30,84 +38,71 @@
 					
 					</div><!-- sec-three-video-thumbnail -->
 
-					<span id='sec-three-video-descrip'>Learn in 90 seconds how Panish Shea Boyle, LLP can help you with your case.</span><!-- sec-three-video-descrip -->
+					<span id='sec-three-video-descrip'><?php the_field( 'section_three_video_description' ); ?></span><!-- sec-three-video-descrip -->
 				
 				</div><!-- sec-three-video-wrapper -->
 
-				<div id='sec-three-intro'>
-				
-					<p>Panish Shea & Boyle LLP is a plaintiff’s personal injury law firm located in Los Angeles, California. Our trial lawyers focus solely on injury claims and are dedicated to protecting the rights of seriously injured people throughout Southern California.</p>
-				
-				</div><!-- sec-three-intro -->
+				<?php } ?>
 
-				<p>We regularly take on large corporations and government agencies or entities whose negligence causes our clients’ injuries and hold them accountable. Our top rated Los Angeles personal injury lawyers have always been champions of consumer rights. The size, clout or financial strength of wrongdoers is never a deterrent to our pursuit for justice.</p>
-				
-				<p>Our accident attorneys have the experience, skill and resources necessary to thoroughly investigate any injury case and achieve the best possible outcome for our clients. We have helped injury victims in cases involving car accidents, truck accidents, brain injury, spinal cord injury, medical malpractice, product defects, wrongful death and more. If you or a loved one have suffered a serious injury in Los Angeles, CA, our personal injury attorneys can help secure financial compensation for medical treatment, lost wages, pain, suffering and other losses you may have incurred.</p>
+				<?php if(get_field('section_three_intro')) { ?>
 
-				<h2>Panish Shea & Boyle LLP, the strength by your side<span>TM</span></h2>
+					<div id='sec-three-intro'>
+				
+						<?php the_field( 'section_three_intro' ); ?>
+				
+					</div><!-- sec-three-intro -->
+
+				<?php } ?>
+
+			<?php the_field( 'section_three_content' ); ?>
 				
 			</div><!-- sec-three-col -->
 
 			<div class='sec-three-col preload-section'>
 			
 				<div id='sec-three-slider' class="preload-slider">
-				
-					<div class='sec-three-slide'>
+
+				<?php if ( have_rows( 'section_three_awards' ) ) : ?>
 					
-						<img class='sec-three-desktop-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
-
-						<span class='sec-three-slide-title'>Award Winning Law Firm</span><!-- sec-three-slide-title -->
-
-						<span class='sec-three-descrip'>Ranked by U.S. News & World Report and Best Lawyers<span>®</span> as a “Tier 1” Firm for Plaintiffs Personal Injury Litigation</span><!-- sec-three-descrip -->
-
-						<div class='sec-three-extended-descrip'>
+					<?php while ( have_rows( 'section_three_awards' ) ) : the_row(); ?>
+		
+						<div class='sec-three-slide'>
 						
-							<div class="sec-three-mobile-img-wrapper">
-							
-								<img class='sec-three-mobile-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
+							<img class='sec-three-desktop-img' src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt=''/>
+
+							<span class='sec-three-slide-title'><?php the_sub_field( 'title' ); ?></span><!-- sec-three-slide-title -->
+
+							<span class='sec-three-descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec-three-descrip -->
+
+							<div class='sec-three-extended-descrip'>
 						
-							</div><!-- sec-three-mobile-img-wrapper -->
+								<div class="sec-three-mobile-img-wrapper">
 
-							<div class='sec-three-extended-content'>
-							
-								<p>Our attorneys have been repeatedly recognized for excellence by other trial attorneys, legal organizations and publications nationwide. The firm has been ranked by U.S. News & World Report and Best Lawyers® as a “Tier 1” Firm for Plaintiffs Personal Injury Litigation – the highest ranking a firm can receive– and among the top 12 best Plaintiff’s law firms in the country by the National Law Journal.</p>
-
-								<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
-							
-							</div><!-- sec-three-extended-content -->
+									<?php $img = get_sub_field( 'img' ); ?>
+									
+									<?php if ( $img ) { ?>
+										
+										<img class='sec-three-mobile-img' src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" />
+									
+									<?php } ?>
 						
-						</div><!-- sec-three-extended-descrip -->
+								</div><!-- sec-three-mobile-img-wrapper -->
 
-					</div><!-- sec-three-slide -->
+								<div class='sec-three-extended-content'>
+							
+									<?php the_sub_field( 'content' ); ?>
 
-					<div class='sec-three-slide'>
+									<a class='button sec-three-button' href='<?php the_sub_field( 'learn_more_button_link' ); ?>'><?php the_sub_field( 'learn_more_button_verbiage' ); ?></a><!-- button sec-three-button -->
+							
+								</div><!-- sec-three-extended-content -->
+						
+							</div><!-- sec-three-extended-descrip -->
+
+						</div><!-- sec-three-slide -->
 					
-						<img class='sec-three-desktop-img' src='<?php bloginfo('template_directory');?>/images/award-clay.jpg' alt=''/>
+					<?php endwhile; ?>
 
-						<span class='sec-three-slide-title'>Award Winning Attorneys</span><!-- sec-three-slide-title -->
-
-						<span class='sec-three-descrip'>Brian J. Panish and Deborah S. Chang named 2019 California Lawyer Attorneys of the Year</span><!-- sec-three-descrip -->
-
-						<div class='sec-three-extended-descrip'>
-
-							<div class="sec-three-mobile-img-wrapper">
-							
-								<img class='sec-three-mobile-img' src='<?php bloginfo('template_directory');?>/images/award-clay.jpg' alt=''/>
-							
-							</div><!-- sec-three-mobile-img-wrapper -->
-
-
-							<div class='sec-three-extended-content'>
-							
-								<p>The 23rd Annual CLAY awards publication recognizes attorneys in 20 areas of legal practice whose work made a significant impact during the previous year; Mr. Panish, Ms. Chang and veteran appellate specialist Alan Charles Dell’Ario were selected in the area of Personal Injury for a case resolving the standard of care a school owes its students.</p>
-
-								<a class='button sec-three-button' href=''>Learn More</a><!-- button sec-three-button -->
-							
-							</div><!-- sec-three-extended-content -->
-
-						</div><!-- sec-three-extended-descrip -->
-
-					</div><!-- sec-three-slide -->
+				<?php endif; ?>
 				
 				</div><!-- sec-three-slider -->
 
