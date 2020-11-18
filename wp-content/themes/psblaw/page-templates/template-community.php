@@ -22,7 +22,7 @@ get_header(); ?>
 
   <?php } ?>
 
-  <p>Panish Shea & Boyle LLP is proud to support the following schools and other organizations that make a difference in our community.</p>
+  <?php the_field( 'community_description' ); ?>
 	
 </div><!-- page-descrip-wrapper -->
 

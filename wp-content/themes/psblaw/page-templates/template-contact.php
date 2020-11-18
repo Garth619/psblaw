@@ -18,13 +18,13 @@
 				
 					<div class='contact-top-phone'>
 				
-						<span>Phone</span><a href="tel:3104771700">(310) 477-1700</a>
+						<span>Phone</span><a href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('toll_free_phone', 'option')); ?>"><?php the_field( 'toll_free_phone','option'); ?></a>
 
 					</div><!-- contact-top-phone -->
 
 					<div class='contact-top-phone'>
 			
-						<span>Fax</span><a>(310) 477-1700</a>
+						<span>Fax</span><a><?php the_field( 'fax_number','option'); ?></a>
 
 					</div><!-- contact-top-phone -->
 				
@@ -44,19 +44,19 @@
 				
 					<div class='contact-map-left'>
 					
-						<span class='contact-map-title'>Los Angeles</span><!-- contact-map-title -->
+						<span class='contact-map-title'><?php the_field( 'location_title_one','option'); ?></span><!-- contact-map-title -->
 
-						<span class='contact-map-address'>11111 Santa Monica Blvd #700,<br/> Los Angeles, CA 90025</span><!-- contact-map-address -->
+						<span class='contact-map-address'><?php the_field( 'address_one','option'); ?></span><!-- contact-map-address -->
 
-						<a class='contact-map-phone' href="tel:+13104771700">(310) 477-1700</a><!-- contact-map-phone -->
+						<a class='contact-map-phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_phone_one', 'option')); ?>"><?php the_field( 'location_phone_one','option'); ?></a><!-- contact-map-phone -->
 
-						<a class='button-three contact-get-directions' href="https://www.google.com/maps/place/11111+Santa+Monica+Blvd+%23700,+Los+Angeles,+CA+90025/@33.8334069,-118.3453654,11z/data=!4m13!1m7!3m6!1s0x80c2bb77512ee2f7:0xe3c37c4d687a647a!2s11111+Santa+Monica+Blvd+%23700,+Los+Angeles,+CA+90025!3b1!8m2!3d34.0484137!4d-118.4454251!3m4!1s0x80c2bb77512ee2f7:0xe3c37c4d687a647a!8m2!3d34.0484137!4d-118.4454251" target="_blank">directions</a><!-- button-three contact-get-directions -->
+						<a class='button-three contact-get-directions' href="<?php the_field( 'get_directions_link_one','option'); ?>" target="_blank"><?php the_field( 'get_directions_verbiage_one','option'); ?></a><!-- button-three contact-get-directions -->
 					
 					</div><!-- contact-map-left -->
 
 					<div class='contact-map-right'>
 					
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d191825.79933966018!2d-118.34536544285201!3d33.83340694122103!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c2bb77512ee2f7%3A0xe3c37c4d687a647a!2s11111%20Santa%20Monica%20Blvd%20%23700%2C%20Los%20Angeles%2C%20CA%2090025!5e0!3m2!1sen!2sus!4v1604958146067!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						<?php the_field( 'location_one_google_map_link','option'); ?>
 					
 					</div><!-- contact-map-right -->
 				
@@ -66,19 +66,19 @@
 				
 					<div class='contact-map-left'>
 					
-						<span class='contact-map-title'>Newport Beach</span><!-- contact-map-title -->
+						<span class='contact-map-title'><?php the_field( 'location_title_two','option'); ?></span><!-- contact-map-title -->
 
-						<span class='contact-map-address'>5160 Birch St #210<br/> Newport Beach, CA 92660</span><!-- contact-map-address -->
+						<span class='contact-map-address'><?php the_field( 'address_two','option'); ?></span><!-- contact-map-address -->
 
-						<a class='contact-map-phone' href="tel:+9494685777">(949) 468-5777</a><!-- contact-map-phone -->
+						<a class='contact-map-phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_phone_two', 'option')); ?>"><?php the_field( 'location_phone_two','option'); ?></a><!-- contact-map-phone -->
 
-						<a class='button-three contact-get-directions' href="https://www.google.com/maps/place/5160+Birch+St+%23210,+Newport+Beach,+CA+92660/@33.6646834,-117.8593852,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcde5dd5f3fa9d:0xff9dd9da0a4ce9ce!8m2!3d33.6646834!4d-117.8571965" target="_blank">directions</a><!-- button-three contact-get-directions -->
+						<a class='button-three contact-get-directions' href="<?php the_field( 'get_directions_link_two','option'); ?>" target="_blank"><?php the_field( 'get_directions_verbiage_two','option'); ?></a><!-- button-three contact-get-directions -->
 					
 					</div><!-- contact-map-left -->
 
 					<div class='contact-map-right'>
 					
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3320.709690437653!2d-117.85938518479514!3d33.664683380713164!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80dcde5dd5f3fa9d%3A0xff9dd9da0a4ce9ce!2s5160%20Birch%20St%20%23210%2C%20Newport%20Beach%2C%20CA%2092660!5e0!3m2!1sen!2sus!4v1604964886379!5m2!1sen!2sus" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+						<?php the_field( 'location_two_google_map_link','option'); ?>
 					
 					</div><!-- contact-map-right -->
 				

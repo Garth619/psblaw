@@ -50,27 +50,39 @@
 			
 				<p><?php the_field( 'contact_banner_subtitle' ); ?></p>
 
-				<div id='social-media-wrapper'>
-            
-              <a href="" target="_blank" rel="noopener">
+				<?php if ( have_rows( 'social_media','option') ) : ?>
+                
+        	<div id='social-media-wrapper'>
+	              
+          	<?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
+                
+            	<a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
 
-                <?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
-              
+              	<?php if(get_sub_field('icon') == "Instagram") { ?>
+
+                	<?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
+
+                <?php } ?>
+
+                <?php if(get_sub_field('icon') == "Facebook") { ?>
+
+                	<?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
+
+                <?php } ?>
+
+              	<?php if(get_sub_field('icon') == "Twitter") { ?>
+
+	              	<?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
+
+                <?php } ?>
+
               </a>
-
-              <a href="" target="_blank" rel="noopener">
-
-              <?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
-            
-            </a>
-
-            <a href="" target="_blank" rel="noopener">
-
-              <?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
-            
-            </a>
-            
+		
+	          <?php endwhile; ?>
+          
           </div><!-- social-media-wrapper -->
+        
+        <?php endif; ?>
 			
 			</div><!-- banner-descrip -->
 
