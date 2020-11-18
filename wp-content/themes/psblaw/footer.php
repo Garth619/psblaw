@@ -4,43 +4,43 @@
   
     <div id='footer-top'>
     
-      <span id='footer-form-title'>How can we help you?</span><!-- footer-form-title -->
+      <span id='footer-form-title'><?php the_field( 'form_title','option'); ?></span><!-- footer-form-title -->
 
-      <span id='footer-form-descrip'>Fill out the form below for a<br/> no-obligation review of your case</span><!-- footer-form-descrip -->
+      <span id='footer-form-descrip'><?php the_field( 'form_title_description','option'); ?></span><!-- footer-form-descrip -->
 
       <?php gravity_form(3, false, false, false, '', true, 1345); ?>
 
-      <span id='required'><span>*</span>Required Fields</span><!-- required -->
+      <span id='required'><span>*</span><?php the_field( 'required_field_verbiage','option'); ?></span><!-- required -->
     
     </div><!-- footer-top -->
 
     <div id='footer-bottom'>
     
-      <span id='footer-bottom-title'>Panish Shea & Boyle, LLP is here to help - once and for all™</span><!-- footer-bottom-title -->
+      <span id='footer-bottom-title'><?php the_field( 'footer_description','option'); ?></span><!-- footer-bottom-title -->
 
       <div id='footer-bottom-col-wrapper'>
       
         <div class='footer-bottom-col'>
         
-          <span class='footer-bottom-col-title'>Los Angeles</span><!-- footer-bottom-title -->
+          <span class='footer-bottom-col-title'><?php the_field( 'location_title_one','option'); ?></span><!-- footer-bottom-title -->
 
-          <span class='footer-bottom-content'>11111 Santa Monica Blvd #700,<br/> Los Angeles, CA 90025</span><!-- footer-bottom-content -->
+          <span class='footer-bottom-content'><?php the_field( 'address_one','option'); ?></span><!-- footer-bottom-content -->
 
-          <a class='footer-bottom-content footer-phone' href="tel:+13104771700">(310) 477-1700</a><!-- footer-bottom-content -->
+          <a class='footer-bottom-content footer-phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_phone_one', 'option')); ?>"><?php the_field( 'location_phone_one','option'); ?></a><!-- footer-bottom-content -->
 
-          <a class='footer-bottom-content get-directions-button' href="https://www.google.com/maps/place/11111+Santa+Monica+Blvd+%23700,+Los+Angeles,+CA+90025/@34.0484137,-118.4476138,17z/data=!3m1!4b1!4m5!3m4!1s0x80c2bb77512ee2f7:0xe3c37c4d687a647a!8m2!3d34.0484137!4d-118.4454251" target="_blank" rel="noopener">Directions</a><!-- get-directions-button -->
+          <a class='footer-bottom-content get-directions-button' href="<?php the_field( 'get_directions_link_one','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage_one','option'); ?></a><!-- get-directions-button -->
         
         </div><!-- footer-bottom-col -->
 
         <div class='footer-bottom-col'>
         
-          <span class='footer-bottom-col-title'>Newport Beach</span><!-- footer-bottom-title -->
+          <span class='footer-bottom-col-title'><?php the_field( 'location_title_two','option'); ?></span><!-- footer-bottom-title -->
 
-          <span class='footer-bottom-content'>5160 Birch St #210,<br/> Newport Beach, CA 92660</span><!-- footer-bottom-content -->
+          <span class='footer-bottom-content'><?php the_field( 'address_two','option'); ?></span><!-- footer-bottom-content -->
 
-          <a class='footer-bottom-content footer-phone' href="tel:+9494685777">(949) 468-5777</a><!-- footer-bottom-content -->
+          <a class='footer-bottom-content footer-phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('location_phone_two', 'option')); ?>"><?php the_field( 'location_phone_two','option'); ?></a><!-- footer-bottom-content -->
 
-          <a class='footer-bottom-content get-directions-button' href="https://www.google.com/maps/place/5160+Birch+St+%23210,+Newport+Beach,+CA+92660/@33.6646878,-117.8593905,17z/data=!3m1!4b1!4m5!3m4!1s0x80dcde5dd5f3fa9d:0xff9dd9da0a4ce9ce!8m2!3d33.6646834!4d-117.8571965" target="_blank" rel="noopener">Directions</a><!-- get-directions-button -->
+          <a class='footer-bottom-content get-directions-button' href="<?php the_field( 'get_directions_link_two','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'get_directions_verbiage_two','option'); ?></a><!-- get-directions-button -->
         
         </div><!-- footer-bottom-col -->
 
@@ -48,47 +48,59 @@
         
           <div class='footer-bottom-sub-col'>
           
-            <span class='footer-bottom-col-title'>Toll Free</span><!-- footer-bottom-title -->
+            <span class='footer-bottom-col-title'><?php the_field( 'toll_free_title','option'); ?></span><!-- footer-bottom-title -->
 
-            <a class='footer-bottom-content footer-phone' href="tel:+8884986487">(888) 498-6487</a><!-- footer-bottom-content -->
+            <a class='footer-bottom-content footer-phone' href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('toll_free_phone', 'option')); ?>"><?php the_field( 'toll_free_phone','option'); ?></a><!-- footer-bottom-content -->
           
           </div><!-- footer-bottom-sub-col -->
 
           <div class='footer-bottom-sub-col'>
           
-            <span class='footer-bottom-col-title'>Fax</span><!-- footer-bottom-title -->
+            <span class='footer-bottom-col-title'><?php the_field( 'fax_title','option'); ?></span><!-- footer-bottom-title -->
 
-            <a class='footer-bottom-content footer-phone'>(888) 498-6487</a><!-- footer-bottom-content -->
+            <a class='footer-bottom-content footer-phone'><?php the_field( 'fax_number','option'); ?></a><!-- footer-bottom-content -->
           
           </div><!-- footer-bottom-sub-col -->
 
           <div class='footer-bottom-sub-col'>
 
             <?php if(!is_page_template('page-templates/template-contact.php')) { ?>
+
+              <?php if ( have_rows( 'social_media','option') ) : ?>
+                
+                <div id='social-media-wrapper'>
+	              
+                <?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
+                
+                <a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+
+                  <?php if(get_sub_field('icon') == "Instagram") { ?>
+
+                    <?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
+
+                  <?php } ?>
+
+                  <?php if(get_sub_field('icon') == "Facebook") { ?>
+
+                    <?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
+
+                  <?php } ?>
+
+                  <?php if(get_sub_field('icon') == "Twitter") { ?>
+
+                    <?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
+
+                  <?php } ?>
+
+                </a>
+		
+	          <?php endwhile; ?>
           
-            <div id='social-media-wrapper'>
-            
-              <a href="" target="_blank" rel="noopener">
-
-                <?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
-              
-              </a>
-
-              <a href="" target="_blank" rel="noopener">
-
-              <?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
-            
-            </a>
-
-            <a href="" target="_blank" rel="noopener">
-
-              <?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
-            
-            </a>
-            
-            </div><!-- social-media-wrapper -->
-
-            <?php } ?>
+          </div><!-- social-media-wrapper -->
+        
+        <?php endif; ?>
+          
+        <?php } ?>
           
           </div><!-- footer-bottom-sub-col -->
         
@@ -103,11 +115,33 @@
       <div id='copyright-inner'>
       
         <ul>
-          <li>Copyright &copy; <?php echo date("Y"); ?> Panish Shea & Boyle</li>
-          <li>All rights reserved.</li>
-          <li><a href="">DISCLAIMER</a></li>
-          <li><a href="" target="_blank" rel="noopener">SITEMAP</a></li>
-          <li><a href="" target="_blank" rel="noopener">Google Maps</a></li>
+          <li>Copyright &copy; <?php echo date("Y"); ?> <?php the_field( 'copyright_law_firm_name','option'); ?></li>
+          
+          <li><?php the_field( 'all_rights_reserved','option'); ?></li>
+          
+          <?php if(get_field('disclaimer','option')) { ?>
+            
+            <li><a href="<?php the_field( 'disclaimer','option'); ?>"><?php the_field( 'disclaimer_title','option'); ?></a></li>
+         
+          <?php } ?>
+
+          <?php if(get_field('privacy_policy','option')) { ?>
+
+            <li><a href="<?php the_field( 'privacy_policy','option'); ?>"><?php the_field( 'privacy_policy_title','option'); ?></a></li>
+
+          <?php } ?>
+
+          <?php if(get_field('site_map','option')) { ?>
+
+            <li><a href="<?php the_field( 'site_map','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'site_map_title','option'); ?></a></li>
+
+          <?php } ?>
+
+          <?php if(get_field('google_maps_link','option')) { ?>
+
+            <li><a href="<?php the_field( 'google_maps_link','option'); ?>" target="_blank" rel="noopener"><?php the_field( 'google_maps_title','option'); ?></a></li>
+
+          <?php } ?>
         </ul>
 
         <a id="ilawyer" href="//ilawyermarketing.com" target="_blank" rel="noopener">

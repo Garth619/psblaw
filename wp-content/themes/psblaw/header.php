@@ -127,32 +127,56 @@
 				<a class='logo' href="<?php bloginfo('url');?>">
 			
 					<div class="logo-mobile">
+
+					<?php $logom = get_field( 'logo','option'); ?>
+
+					<?php if ( $logom ) { 
 						
-						<?php echo file_get_contents( get_template_directory() . '/images/pbs-logo-stacked.svg' ); ?>
+						echo file_get_contents( $logom);
+					
+					} ?>
 
 					</div><!-- logo-mobile -->
 
 					<div class="logo-desktop">
 						
-						<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-main.svg' ); ?>
+					<?php $logod = get_field( 'logo_two','option'); ?>
+
+					<?php if ( $logom ) { 
+	
+						echo file_get_contents( $logod);
+
+					} ?>
 
 					</div><!-- logo-desktop -->
 
 					<div class="logo-sticky">
-						
-						<?php echo file_get_contents( get_template_directory() . '/images/psb-logo-three.svg' ); ?>
+
+						<?php $logos = get_field( 'logo_three','option'); ?>
+
+						<?php if ( $logos ) { 
+
+							echo file_get_contents( $logos);
+
+						} ?>
 
 					</div><!-- logo-sticky -->
 			
 				</a><!-- logo -->
 
-				<div class='translate-wrapper'>
-				
-					<a href=''>Es</a>
-					<a href=''>Cn</a>
-					<a href=''>Kr</a>
+				<?php if ( have_rows( 'translation','option') ) : ?>
+					
+					<div class='translate-wrapper'>
+					
+					<?php while ( have_rows( 'translation','option') ) : the_row(); ?>
+					
+						<a href="<?php the_sub_field( 'link' ); ?>"><?php the_sub_field( 'title' ); ?></a>
+					
+					<?php endwhile; ?>
 				
 				</div><!-- translate-wrapper -->
+			
+			<?php endif; ?>
 
 			</div><!-- header-left -->
 
@@ -160,12 +184,12 @@
 			
 				<div class='free-consult-wrapper'>
 				
-					<span>Free Consultation</span>
-					<span>Available 24/7</span>
+					<span><?php the_field( 'free_consultation_title','option'); ?></span>
+					<span><?php the_field( 'available_247_title','option'); ?></span>
 				
 				</div><!-- free-consult-wrapper -->
 
-				<a class="header-phone" href="tel:+13109286200">(310) 928-6200</a><!-- header-phone -->
+				<a class="header-phone" href="tel:+1<?php echo str_replace(['-', '(', ')', ' '], '', get_field('header_phone', 'option')); ?>"><?php the_field( 'header_phone','option'); ?></a><!-- header-phone -->
 			
 			</div><!-- header-right -->
 
