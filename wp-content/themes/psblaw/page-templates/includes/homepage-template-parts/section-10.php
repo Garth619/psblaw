@@ -4,15 +4,19 @@
   
     <div id='sec-ten-top'>
     
-      <span id='sec-ten-title'>Involved in the community</span><!-- sec-ten-title -->
+      <span id='sec-ten-title'><?php the_field( 'section_ten_title' ); ?></span><!-- sec-ten-title -->
 
       <div id='sec-ten-content' class="content">
       
-        <p>Panish Shea & Boyle LLP is proud to support the following schools and other organizations that make a difference in our community.</p>
+        <?php the_field( 'section_ten_content' ); ?>
       
       </div><!-- sec-ten-content -->
 
-      <a class='button sec-ten-button desktop' href='<?php bloginfo('url');?>/community-sponsorship'>View All</a><!-- button sec-ten-button -->
+      <?php if(get_field('section_ten_button_verbiage')) { ?>
+
+        <a class='button sec-ten-button desktop' href='<?php the_field( 'section_ten_button_link' ); ?>'><?php the_field( 'section_ten_button_verbiage' ); ?></a><!-- button sec-ten-button -->
+
+      <?php } ?>
     
     </div><!-- sec-ten-top -->
 
@@ -31,66 +35,34 @@
         </div><!-- sec-ten-arrow sec-ten-arrow-left -->
 
         <div id='sec-ten-slider' class="preload-slider">
+
+        <?php if ( have_rows( 'section_ten_community_logos' ) ) : ?>
+	        
+          <?php while ( have_rows( 'section_ten_community_logos' ) ) : the_row(); ?>
+
+            <div class='sec-ten-slide'>
+          
+              <div class='sec-ten-slide-inner'>
+
+                <a <?php if(get_sub_field('link')) {echo 'href="'.get_sub_field('link').'" target="_blank" rel="noopener"';};?>>
+          
+                  <?php $logo = get_sub_field( 'logo' ); ?>
+		              
+                  <?php if ( $logo ) { ?>
+			            
+                    <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+		              
+                  <?php } ?>
+
+                </a>
+          
+              </div><!-- sec-ten-slide-inner -->
         
-          <div class='sec-ten-slide'>
-          
-            <div class='sec-ten-slide-inner'>
-            
-              <img src='<?php bloginfo('template_directory');?>/images/1.png' alt=''/>
-            
-            </div><!-- sec-ten-slide-inner -->
-          
-          </div><!-- sec-ten-slide -->
+            </div><!-- sec-ten-slide -->
+	        
+          <?php endwhile; ?>
 
-          <div class='sec-ten-slide'>
-          
-            <div class='sec-ten-slide-inner'>
-            
-              <img src='<?php bloginfo('template_directory');?>/images/2.png' alt=''/>
-            
-            </div><!-- sec-ten-slide-inner -->
-          
-          </div><!-- sec-ten-slide -->
-
-          <div class='sec-ten-slide'>
-          
-            <div class='sec-ten-slide-inner'>
-            
-              <img src='<?php bloginfo('template_directory');?>/images/3.png' alt=''/>
-            
-            </div><!-- sec-ten-slide-inner -->
-          
-          </div><!-- sec-ten-slide -->
-
-          <div class='sec-ten-slide'>
-          
-            <div class='sec-ten-slide-inner'>
-            
-              <img src='<?php bloginfo('template_directory');?>/images/4.png' alt=''/>
-            
-            </div><!-- sec-ten-slide-inner -->
-          
-          </div><!-- sec-ten-slide -->
-
-          <div class='sec-ten-slide'>
-          
-            <div class='sec-ten-slide-inner'>
-            
-              <img src='<?php bloginfo('template_directory');?>/images/5.png' alt=''/>
-            
-            </div><!-- sec-ten-slide-inner -->
-          
-          </div><!-- sec-ten-slide -->
-
-          <div class='sec-ten-slide'>
-          
-          <div class='sec-ten-slide-inner'>
-          
-            <img src='<?php bloginfo('template_directory');?>/images/6.png' alt=''/>
-          
-          </div><!-- sec-ten-slide-inner -->
-        
-        </div><!-- sec-ten-slide -->
+        <?php endif; ?>
         
         </div><!-- sec-ten-slider -->
 
