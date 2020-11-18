@@ -140,7 +140,7 @@ span#sec-four-title {
 #sec-four-slider-wrapper {
   margin-top: 35px;
   max-width: 425px;
-  min-height: 425px;
+  min-height: 331px;
   @include margin_lr;
   @include flex(space-between, center);
   @include mq(small-tablet) {
@@ -366,6 +366,9 @@ span#sec-four-title {
       @include mq(small-laptop) {
         font-size: 16px;
         margin-bottom: 32px;
+      }
+      br {
+        display: none;
       }
     }
     &.sec-four-hover-title {

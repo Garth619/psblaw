@@ -4,13 +4,11 @@
 
   <div id='sec-seven-top'>
 
-  <span id='sec-seven-title'>Frequently asked questions about personal injury cases</span><!-- sec-seven-title -->
+  <span id='sec-seven-title'><?php the_field( 'section_seven_title' ); ?></span><!-- sec-seven-title -->
 
   <div id='sec-seven-content' class="content">
   
-    <p>Panish Shea & Boyle, LLP specialize in personal injury law in the Los Angeles and throughout California. We help victims of defective products, fraud, medical malpractice, car accidents, plane crashes, and more pursue their legal right to financial compensation.</p>
-    
-    <p>It doesn’t matter who caused the injury or property damage – a large corporation, the government, or an individual – your Los Angeles personal injury attorney team will hold them accountable for their negligence and help win you fair&nbsp;compensation.</p>
+    <?php the_field( 'section_seven_intro' ); ?>
   
   </div><!-- sec-seven-content -->
 
@@ -19,120 +17,46 @@
   <div id='sec-seven-bottom'>
 
     <div class='sec-seven-faq-col'>
+
+    <?php if ( have_rows( 'section_seven_faqs_column_one' ) ) : ?>
+	    <?php while ( have_rows( 'section_seven_faqs_column_one' ) ) : the_row(); ?>
+
+        <div class='sec-seven-faq'>
+      
+          <span class='sec-seven-question'><?php the_sub_field( 'question' ); ?></span><!-- sec-seven-question -->
+
+          <div class='sec-seven-answer content'>
+      
+            <?php the_sub_field( 'answer' ); ?>
+      
+          </div><!-- sec-seven-answer -->
     
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>What is a personal injury case?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>How much does a personal injury attorney in Los Angeles charge?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>How do I know if I have a claim?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>Who can file an injury claim?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>What are California personal injury laws?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
+        </div><!-- sec-seven-faq -->
+		
+	    <?php endwhile; ?>
+    <?php endif; ?>
 
     </div><!-- sec-seven-faq-col -->
 
     <div class='sec-seven-faq-col'>
     
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>Is there a time limit on filing a claim?</span><!-- sec-seven-question -->
+      <?php if ( have_rows( 'section_seven_faqs_column_two' ) ) : ?>
+        <?php while ( have_rows( 'section_seven_faqs_column_two' ) ) : the_row(); ?>
 
-        <div class='sec-seven-answer content'>
+          <div class='sec-seven-faq'>
         
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
+            <span class='sec-seven-question'><?php the_sub_field( 'question' ); ?></span><!-- sec-seven-question -->
 
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>How much is my case worth?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
+            <div class='sec-seven-answer content'>
         
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
+              <?php the_sub_field( 'answer' ); ?>
         
-        </div><!-- sec-seven-answer -->
+            </div><!-- sec-seven-answer -->
       
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
+          </div><!-- sec-seven-faq -->
       
-        <span class='sec-seven-question'>How long will my case take?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
-
-      <div class='sec-seven-faq'>
-      
-        <span class='sec-seven-question'>Do I need a personal injury lawyer?</span><!-- sec-seven-question -->
-
-        <div class='sec-seven-answer content'>
-        
-          <p>When the willful or negligent act of another person or entities cause someone to suffer an injury, that person may file a claim under personal injury law. Each state has different laws detailing what qualifies as a personal injury. For example, workers’ compensation covers any injury that occurs at work. To better determine whether your situation qualifies under California law, contact the Los Angeles accident lawyers at Panish, Shea, and Boyle, LLP to schedule a free consultation.</p>
-        
-        </div><!-- sec-seven-answer -->
-      
-      </div><!-- sec-seven-faq -->
+        <?php endwhile; ?>
+      <?php endif; ?>
 
     </div><!-- sec-seven-faq-col -->
 

@@ -106,7 +106,7 @@ jQuery(document).ready(function ($) {
   createWaypoint("section-one", "#sticky-header", "sticky", -200, null, true);
   createWaypoint("section-three", "#sec-three-content", "visible", 300, null, true);
   createWaypoint("section-four", "#section-four", "visible", 300, null, true);
-  createWaypoint("sec-four-tablet-arrows-wrapper", "#sec-four-tablet-arrows-wrapper", "visible", 850, null, true);
+  createWaypoint("sec-four-tablet-arrows-wrapper", "#sec-four-tablet-arrows-wrapper", "visible", 1050, null, true);
   createWaypoint("section-five", "#section-five", "visible", 300, null, true);
   createWaypoint("section-six", "#section-six", "visible", 300, null, true);
   createWaypoint("section-eight", "#section-eight", "visible", 300, null, true);

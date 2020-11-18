@@ -2,11 +2,11 @@
 
   <div id='sec-eight-inner'>
   
-    <span id='sec-eight-title'>Our Practice Areas</span><!-- sec-eight-title -->
+    <span id='sec-eight-title'><?php the_field( 'section_eight_title' ); ?></span><!-- sec-eight-title -->
 
     <div id='sec-eight-descrip' class="content">
     
-      <p>The Los Angeles Personal Injury lawyers at Panish Shea & Boyle LLP handle many types of cases. If you don’t see the category for your type of case, please call us at <a href="tel:3104771700">(310) 477-1700</a> to speak with our trial lawyers and discuss your legal matter. Also serving Orange County, Riverside, San Bernardino, and Las Vegas.</p>
+      <?php the_field( 'section_eight_description' ); ?>
     
     </div><!-- sec-eight-descrip -->
 
@@ -20,229 +20,51 @@
 
       <div id='sec-eight-slider' class="preload-slider">
 
-        <div class='sec-eight-slide'>
+      <?php if ( have_rows( 'practice_areas_slider' ) ) : ?>
+	      
+        <?php while ( have_rows( 'practice_areas_slider' ) ) : the_row(); ?>
+		
+          <div class='sec-eight-slide'>
         
-          <div class='sec-eight-slide-title'>
-          
-            <span>Transportation Accidents</span>
-          
+            <div class='sec-eight-slide-title'>
+        
+              <span><?php the_sub_field( 'title' ); ?></span>
+        
           </div><!-- sec-eight-slide-title -->
 
           <div class='sec-eight-slide-inner'>
-          
-            <div class='sec-eight-slide-item'>
 
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-auto.svg' ); ?>
+		      <?php if ( have_rows( 'practice_area' ) ) : ?>
 
-                <span>Auto & Car Accidents</span>
+            <?php while ( have_rows( 'practice_area' ) ) : the_row(); ?>
+				
+              <div class='sec-eight-slide-item'>
 
-              </a>
-          
+                <a href="<?php the_sub_field( 'link' ); ?>">
+
+                  <?php $svg = get_sub_field( 'svg' );?>
+        
+                  <?php echo file_get_contents( $svg); ?>
+
+                  <span><?php the_sub_field( 'title' ); ?></span>
+
+                </a>
+        
             </div><!-- sec-eight-slide-item -->
 
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-aviation.svg' ); ?>
+        <?php endwhile; ?>
+	
+      <?php endif; ?>
 
-                <span>Aviation Disasters</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-truck.svg' ); ?>
-
-                <span>Truck Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-wrongful.svg' ); ?>
-
-                <span>Wrongful Death</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-bus.svg' ); ?>
-
-                <span>Bus Accidents</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            </div><!-- sec-eight-slide-inner -->
-        
-        </div><!-- sec-eight-slide -->
-
-        <div class='sec-eight-slide'>
-        
-          <div class='sec-eight-slide-title'>
-          
-            <span>Product Liability/ Product Recalls</span>
-          
-          </div><!-- sec-eight-slide-title -->
-
-          <div class='sec-eight-slide-inner'>
-          
-            <div class='sec-eight-slide-item'>
-
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-autoproduct.svg' ); ?>
-
-                <span>Auto Product Liability/Defects</span>
-
-              </a>
-          
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-food.svg' ); ?>
-
-                <span>Food Poisoning</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-productdefect.svg' ); ?>
-
-                <span>Product Defects</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-pharma.svg' ); ?>
-
-                <span>Pharmaceutical Litigation</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-            <div class='sec-eight-slide-item'>
-            
-              <a href="">
-          
-                <?php echo file_get_contents( get_template_directory() . '/images/pa-defective.svg' ); ?>
-
-                <span>Defective Medical Devices</span>
-
-              </a>
-            
-            </div><!-- sec-eight-slide-item -->
-
-          </div><!-- sec-eight-slide-inner -->
-        
-        </div><!-- sec-eight-slide -->
-
-        <div class='sec-eight-slide'>
-        
-        <div class='sec-eight-slide-title'>
-        
-          <span>Other Areas of Practice</span>
-        
-        </div><!-- sec-eight-slide-title -->
-
-        <div class='sec-eight-slide-inner'>
-        
-          <div class='sec-eight-slide-item'>
-
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-brain.svg' ); ?>
-
-              <span>Brain Injury</span>
-
-            </a>
-        
-          </div><!-- sec-eight-slide-item -->
-
-          <div class='sec-eight-slide-item'>
-          
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-burn.svg' ); ?>
-
-              <span>Burn Injury</span>
-
-            </a>
-          
-          </div><!-- sec-eight-slide-item -->
-
-          <div class='sec-eight-slide-item'>
-          
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-cast.svg' ); ?>
-
-              <span>Catastrophic Injury</span>
-
-            </a>
-          
-          </div><!-- sec-eight-slide-item -->
-
-          <div class='sec-eight-slide-item'>
-          
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-toxic.svg' ); ?>
-
-              <span>Toxic Torts</span>
-
-            </a>
-          
-          </div><!-- sec-eight-slide-item -->
-
-          <div class='sec-eight-slide-item'>
-          
-            <a href="">
-        
-              <?php echo file_get_contents( get_template_directory() . '/images/pa-spinal.svg' ); ?>
-
-              <span>Spinal Cord Injury</span>
-
-            </a>
-          
-          </div><!-- sec-eight-slide-item -->
-
-        </div><!-- sec-eight-slide-inner -->
+      </div><!-- sec-eight-slide-inner -->
       
-      </div><!-- sec-eight-slide -->
-      
-      </div><!-- sec-eight-slider -->
+    </div><!-- sec-eight-slide -->
+
+	  <?php endwhile; ?>
+
+  <?php endif; ?>
+
+    </div><!-- sec-eight-slider -->
 
       <div class='sec-eight-arrow sec-eight-arrow-right'>
       
@@ -252,7 +74,11 @@
     
     </div><!-- sec-eight-slide-wrapper -->
 
-    <a class='button sec-eight-button' href='<?php bloginfo('url');?>/practice-areas'>See all practice areas</a><!-- button sec-eight-button -->
+    <?php if(get_field('section_nine_title')) { ?>
+
+      <a class='button sec-eight-button' href='<?php the_field( 'section_eight_button_link' ); ?>'><?php the_field( 'section_eight_button_verbiage' ); ?></a><!-- button sec-eight-button -->
+
+    <?php } ?>
   
   </div><!-- sec-eight-inner -->
 

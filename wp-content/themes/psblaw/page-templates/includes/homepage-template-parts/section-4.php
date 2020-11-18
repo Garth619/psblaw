@@ -2,13 +2,13 @@
 
 	<div id='sec-four-inner'>
 
-		<span id='sec-four-subtitle'>WHY IS PANISH SHEA & BOYLE, LLP THE BEST CHOICE FOR YOU?</span><!-- sec-four-subtitle -->
+		<span id='sec-four-subtitle'><?php the_field( 'section_four_subtitle' ); ?></span><!-- sec-four-subtitle -->
 
-		<span id='sec-four-title'>10 reasons to have our experienced personal injury law firm on your side</span><!-- sec-four-title -->
+		<span id='sec-four-title'><?php the_field( 'section_four_title' ); ?></span><!-- sec-four-title -->
 
-		<div id='sec-four-descrip'>
+		<div id='sec-four-descrip' class="content">
 		
-			<p>Hiring a personal injury attorney in Los Angeles can be a tough decision and, undoubtedly, one that will have a considerable impact on the outcome of your case. Here are some important qualities should you look for in selecting the best attorney for you.</p>
+			<?php the_field( 'section_four_description' ); ?>
 		
 		</div><!-- sec-four-descrip -->
 
@@ -21,466 +21,56 @@
 			</div><!-- sec-four-arrow -->
 		
 			<div id='sec-four-slider' class="preload-slider">
-		
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
 
-						<span class='sec-four-slide-number'>01</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-						
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-					<div class='sec-four-hover-data-inner'>
-
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
+			<?php if ( have_rows( 'section_four_selling_points' ) ): $i = 0; ?>
 				
+				<?php while ( have_rows( 'section_four_selling_points' ) ) : the_row(); $i++; ?>
 		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
+					<div class='sec-four-slide'>
 		
-					<div class='sec-four-slide-reg'>
+						<div class='sec-four-slide-reg'>
 
-						<span class='sec-four-slide-number'>02</span><!-- sec-four-slide-number -->
+							<span class='sec-four-slide-number'><?php if($i < 10) {echo "0" . $i;} else {echo $i;} ?></span><!-- sec-four-slide-number -->
 
-						<div class='sec-four-slide-title-wrapper'>
-						
-							<span class='sec-four-slide-title'>Skilled with<br/> Settlements</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
+								<div class='sec-four-slide-title-wrapper'>
+								
+									<span class='sec-four-slide-title'><?php the_sub_field( 'title' ); ?></span><!-- sec-four-slide-title -->
+								
+								</div><!-- sec-four-slide-title-wrapper -->
 
-						<img src='<?php bloginfo('template_directory');?>/images/sp-2-skilled.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
+								<?php $image = get_sub_field( 'image' ); ?>
 
-					<div class='sec-four-hover-data'>
-
-					<div class='sec-four-hover-data-inner'>
-
-						<span class='sec-four-hover-subtitle'>Skilled with Settlements</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
+								<?php if ( $image ) { ?>
+								
+									<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+								
+								<?php } ?>
 							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
+							</div><!-- sec-four-slide-reg -->
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class='sec-four-hover-data'>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+							<div class='sec-four-hover-data-inner'>
 
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
+								<span class='sec-four-hover-subtitle'><?php the_sub_field( 'title' ); ?></span><!-- sec-four-hover-title -->
 
-						</div><!-- sec-four-data-inner -->
+								<span class='sec-four-hover-title'><?php the_sub_field( 'overlay_title' ); ?></span><!-- sec-four-hover-title -->
+								
+								<div class='sec-four-content'>
+								
+									<?php the_sub_field( 'overlay_description' ); ?>
+								
+								</div><!-- sec-four-content -->
 
-				</div><!-- sec-four-hover-data -->
+								</div><!-- sec-four-data-inner -->
 
-				
-		
-				</div><!-- sec-four-slide -->
+						</div><!-- sec-four-hover-data -->
 
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
+					</div><!-- sec-four-slide -->
 
-						<span class='sec-four-slide-number'>03</span><!-- sec-four-slide-number -->
+				<?php endwhile; ?>
 
-						<div class='sec-four-slide-title-wrapper'>
-						
-							<span class='sec-four-slide-title'>Dealing with<br/> Insurance<br/> Companies</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-3-dealing.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-
-						<span class='sec-four-hover-subtitle'>Dealing with Insurance Companies</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>04</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-						
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-4-stellar.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>05</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-5-prompt.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>06</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>07</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>08</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>09</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
-
-				<div class='sec-four-slide'>
-		
-					<div class='sec-four-slide-reg'>
-
-						<span class='sec-four-slide-number'>10</span><!-- sec-four-slide-number -->
-
-						<div class='sec-four-slide-title-wrapper'>
-
-							<span class='sec-four-slide-title'>Record<br/> Jury Verdicts</span><!-- sec-four-slide-title -->
-						
-						</div><!-- sec-four-slide-title-wrapper -->
-
-						<img src='<?php bloginfo('template_directory');?>/images/sp-1-record.jpg' alt=''/>
-					
-					</div><!-- sec-four-slide-reg -->
-
-					<div class='sec-four-hover-data'>
-
-						<div class='sec-four-hover-data-inner'>
-						
-						<span class='sec-four-hover-subtitle'>Record Jury Verdicts</span><!-- sec-four-hover-title -->
-
-						<span class='sec-four-hover-title'>Most personal injury lawsuits end at the settlement negotiation table and never proceed to trial.</span><!-- sec-four-hover-title -->
-						
-						<div class='sec-four-content'>
-						
-							<p>While the trial value of a Los Angeles personal injury claim will likely eclipse the possible settlement value, reaching a speedy resolution in a settlement is beneficial to all parties.</p>
-							
-							<p>Our attorneys have the negotiating skills and legal acumen to maximize our clients’ recoveries at the settlement phase, and defense firms in the areas know our firm’s reputation for success with jury verdicts. This inherently encourages more amicable settlement negotiations with our clients.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-						
-						</div><!-- sec-four-content -->
-
-						</div><!-- sec-four-hover-data-inner -->
-
-				</div><!-- sec-four-hover-data -->
-
-				
-		
-				</div><!-- sec-four-slide -->
+			<?php endif; ?>
 	
 		</div><!-- sec-four-slider -->
 
