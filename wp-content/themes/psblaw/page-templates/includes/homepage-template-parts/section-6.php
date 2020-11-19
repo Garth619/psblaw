@@ -12,7 +12,8 @@
 
       <span id='sec-six-slide-title'><?php the_field('section_six_title');?></span><!-- sec-six-slide-title -->
 
-      <img id='stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt='' />
+      <img id='stars' class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg'
+        alt='' />
 
       <div id='sec-six-slider' class="preload-slider">
 
@@ -46,6 +47,7 @@
 
   </div><!-- sec-six-slider-wrapper -->
 
-  <img id='sec-six-hero' src='<?php bloginfo('template_directory');?>/images/test-bg.jpg' alt='' />
+  <img id='sec-six-hero' class="lazyload" data-src='<?php bloginfo('template_directory');?>/images/test-bg.jpg'
+    alt='' />
 
 </section><!-- section-six -->

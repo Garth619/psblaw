@@ -24,7 +24,7 @@
 
             <?php if ($section_three_video_image) {?>
 
-            <img src="<?php echo $section_three_video_image['url']; ?>"
+            <img class="lazyload" data-src="<?php echo $section_three_video_image['url']; ?>"
               alt="<?php echo $section_three_video_image['alt']; ?>" />
 
             <?php }?>
@@ -72,8 +72,8 @@
 
           <div class='sec-three-slide'>
 
-            <img class='sec-three-desktop-img'
-              src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt='' />
+            <img class='sec-three-desktop-img lazyload'
+              data-src='<?php bloginfo('template_directory');?>/images/awards-bestlawfirms.jpg' alt='' />
 
             <span class='sec-three-slide-title'><?php the_sub_field('title');?></span><!-- sec-three-slide-title -->
 
@@ -87,7 +87,8 @@
 
                 <?php if ($img) {?>
 
-                <img class='sec-three-mobile-img' src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>" />
+                <img class='sec-three-mobile-img lazyload' data-src="<?php echo $img['url']; ?>"
+                  alt="<?php echo $img['alt']; ?>" />
 
                 <?php }?>
 

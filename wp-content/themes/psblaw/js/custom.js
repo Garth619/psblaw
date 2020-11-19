@@ -9,8 +9,8 @@
 jQuery(document).ready(function ($) {
   $("body").addClass("ready");
 
-  /* Wistia - Call function when script needs to be loaded either by hover or waypoints
-     --------------------------------------------------------------------------------------- */
+/* Wistia - Call function when script needs to be loaded either by hover or waypoints
+--------------------------------------------------------------------------------------- */
 
   // loads wistia on click to improve initial page speed
   $(".wistia_embed").click(function () {

@@ -53,7 +53,7 @@
 
                 <?php if ($logo) {?>
 
-                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
+                <img class="lazyload" data-src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" />
 
                 <?php }?>
 

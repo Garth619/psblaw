@@ -49,10 +49,12 @@ span#more-news-title {
   margin-top: 25px;
   max-width: 400px;
   overflow: hidden;
+  min-height: 315px;
   @include margin_lr;
   @include mq(small-tablet) {
     max-width: 625px;
     margin-top: 33px;
+    min-height: 192px;
     @include flex(space-between, center);
   }
   @include mq(small-laptop) {
@@ -62,9 +64,11 @@ span#more-news-title {
   @include mq(large-laptop) {
     margin-top: 34px;
     max-width: 1280px;
+    min-height: 211px;
   }
   @include mq(small-monitor) {
     max-width: 1670px;
+    min-height: 233px;
   }
 }
 

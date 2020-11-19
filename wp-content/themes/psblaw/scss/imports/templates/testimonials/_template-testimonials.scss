@@ -33,19 +33,23 @@ body.page-template-template-testimonials {
   padding: 0 45px;
   max-width: 515px;
   width: 100%;
+  min-height: 445px;
   @include margin_lr;
   @include flex(space-between);
   @include mq(small-tablet) {
     max-width: 615px;
+    min-height: 431px;
   }
   @include mq(tablet) {
     max-width: 1015px;
   }
   @include mq(small-laptop) {
     max-width: 1215px;
+    min-height: 495px;
   }
   @include mq(large-laptop) {
     max-width: 1365px;
+    min-height: 490px;
   }
   @include mq(small-monitor) {
     max-width: 1675px;

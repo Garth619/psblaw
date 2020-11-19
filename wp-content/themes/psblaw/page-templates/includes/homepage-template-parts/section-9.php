@@ -10,7 +10,8 @@
 
       <div id='sec-nine-img-wrapper'>
 
-        <img src="<?php echo $section_nine_image['url']; ?>" alt="<?php echo $section_nine_image['alt']; ?>" />
+        <img class="lazyload" data-src="<?php echo $section_nine_image['url']; ?>"
+          alt="<?php echo $section_nine_image['alt']; ?>" />
 
       </div><!-- sec-nine-img-wrapper -->
 

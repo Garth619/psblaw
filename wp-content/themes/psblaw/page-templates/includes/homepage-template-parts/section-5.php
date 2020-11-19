@@ -43,7 +43,8 @@
 
           <div class='sec-five-image'>
 
-            <img src="<?php echo $section_five_image['url']; ?>" alt="<?php echo $section_five_image['alt']; ?>" />
+            <img class="lazyload" data-src="<?php echo $section_five_image['url']; ?>"
+              alt="<?php echo $section_five_image['alt']; ?>" />
 
           </div><!-- sec-five-image -->
 

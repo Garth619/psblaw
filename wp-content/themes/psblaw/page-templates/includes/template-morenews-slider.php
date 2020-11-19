@@ -14,7 +14,7 @@
 
     <?php }?>
 
-    <div id='more-news-slider-wrapper'>
+    <div id='more-news-slider-wrapper' class="preload-section">
 
       <div class='more-news-arrow more-news-left-arrow'>
 
@@ -24,7 +24,7 @@
 
       <div id='more-news-slider-outer'>
 
-        <div id='more-news-slider'>
+        <div id='more-news-slider' class="preload-slider">
 
           <?php while (have_rows('more_news_slider_new')): the_row();?>
 

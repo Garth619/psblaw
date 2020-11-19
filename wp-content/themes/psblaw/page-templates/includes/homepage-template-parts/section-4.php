@@ -44,7 +44,7 @@
 
             <?php if ($image) {?>
 
-            <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+            <img class="lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
             <?php }?>
 

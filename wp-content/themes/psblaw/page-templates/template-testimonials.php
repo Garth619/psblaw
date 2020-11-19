@@ -28,7 +28,7 @@ get_header();?>
 
   <div id="page-container">
 
-    <div id='testi-slide-wrapper'>
+    <div id='testi-slide-wrapper' class="preload-section">
 
       <div class='testi-arrow testi-arrow-left'>
 
@@ -38,7 +38,7 @@ get_header();?>
 
       <?php if (have_rows('testimonial_videos')): ?>
 
-      <div id='testi-slider'>
+      <div id='testi-slider' class="preload-slider">
 
         <?php while (have_rows('testimonial_videos')): the_row();?>
 

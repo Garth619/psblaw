@@ -387,3 +387,14 @@ function taxonomy_rewrite_fix($wp_rewrite)
     $wp_rewrite->rules = $r;
 }
 add_filter('generate_rewrite_rules', 'taxonomy_rewrite_fix');
+
+// allows html in text editor and revents it from being stripped out
+
+function override_mce_options($initArray)
+{
+    $opts = '*[*]';
+    $initArray['valid_elements'] = $opts;
+    $initArray['extended_valid_elements'] = $opts;
+    return $initArray;
+}
+add_filter('tiny_mce_before_init', 'override_mce_options');

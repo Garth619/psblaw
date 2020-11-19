@@ -1,6 +1,6 @@
 <section id='section-two'>
 
-  <div id='sec-two-inner' class="">
+  <div id='sec-two-inner' class="preload-section">
 
     <div id='sec-two-left'>
 
@@ -10,7 +10,7 @@
 
         <?php if ($section_two_info_image) {?>
 
-        <img id='psb-playbook' src="<?php echo $section_two_info_image['url']; ?>"
+        <img id='psb-playbook' class="lazyload" data-src="<?php echo $section_two_info_image['url']; ?>"
           alt="<?php echo $section_two_info_image['alt']; ?>" />
 
         <?php }?>
@@ -69,7 +69,7 @@
 
                 <?php if ($image): ?>
 
-                <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                <img class="lazyload" data-src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
 
                 <?php else: ?>
 
