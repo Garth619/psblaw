@@ -1,129 +1,133 @@
-<?php 
+<?php
 
 /* Template Name: Testimonials */
 
-get_header(); ?>
+get_header();?>
 
 <div id="internal-main">
 
-<div class='page-title-wrapper'>
+  <div class='page-title-wrapper'>
 
-  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-</div><!-- page-title-wrapper -->
+  </div><!-- page-title-wrapper -->
 
-	<?php if(get_field('testimonials_page_description')) { ?>
+  <?php if (get_field('testimonials_page_description')) {?>
 
-  	<div id='page-descrip-wrapper'>
+  <div id='page-descrip-wrapper'>
 
-			<?php the_field( 'testimonials_page_description' ); ?>
+    <?php the_field('testimonials_page_description');?>
 
-		</div><!-- page-descrip-wrapper -->
+  </div><!-- page-descrip-wrapper -->
 
-		<a class='button testi-button' href='<?php bloginfo('bloginfo');?>/href'><?php the_field( 'testimonials_button_verbiage' ); ?></a><!-- button testi-button -->
+  <a class='button testi-button'
+    href='<?php bloginfo('bloginfo');?>/href'><?php the_field('testimonials_button_verbiage');?></a>
+  <!-- button testi-button -->
 
-	<?php  } ?>
+  <?php }?>
 
-	<div id="page-container">
-			
-		<div id='testi-slide-wrapper'>
+  <div id="page-container">
 
-			<div class='testi-arrow testi-arrow-left'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/arrow-left.svg' ); ?>
-			
-			</div><!-- testi-arrow testi-arrow-left -->
+    <div id='testi-slide-wrapper'>
 
-			<?php if ( have_rows( 'testimonial_videos' ) ) : ?>
+      <div class='testi-arrow testi-arrow-left'>
 
-				<div id='testi-slider'>
-			
-				<?php while ( have_rows( 'testimonial_videos' ) ) : the_row(); ?>
+        <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
 
-					<div class='testi-slide'>
-					
-						<div class='single-video'>
-			
-							<div class='video-thumb'>
+      </div><!-- testi-arrow testi-arrow-left -->
 
-								<div class='mywisita wistia_embed wistia_async_<?php the_sub_field( 'wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
+      <?php if (have_rows('testimonial_videos')): ?>
 
-								<div class='video-overlay'>
+      <div id='testi-slider'>
 
-									<div class='play-button'></div><!-- play-button -->
+        <?php while (have_rows('testimonial_videos')): the_row();?>
 
-								</div><!-- video-overlay -->
+        <div class='testi-slide'>
 
-							</div><!-- video-thumb -->
+          <div class='single-video'>
 
-							<div class='video-title-wrapper'>
+            <div class='video-thumb'>
 
-								<img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
+              <div
+                class='mywisita wistia_embed wistia_async_<?php the_sub_field('wistia_id');?> popover=true popoverContent=thumbnail'>
+              </div><!-- wistia -->
 
-								<span class='video-title'><?php the_sub_field( 'title' ); ?></span><!-- video-title -->
+              <div class='video-overlay'>
 
-							</div><!-- video-title-wrapper -->
+                <div class='play-button'></div><!-- play-button -->
 
-						</div><!-- single-video -->
-				
-				</div><!-- testi-slide -->
-		
-				<?php endwhile; ?>
+              </div><!-- video-overlay -->
 
-				</div><!-- testi-slider -->
-		
-			<?php endif; ?>
+            </div><!-- video-thumb -->
 
-			<div class='testi-arrow testi-arrow-right'>
-			
-				<?php echo file_get_contents( get_template_directory() . '/images/arrow-right.svg' ); ?>
-			
-			</div><!-- testi-arrow testi-arrow-right -->
+            <div class='video-title-wrapper'>
 
-		</div><!-- testi-slide-wrapper -->
+              <img id='video-stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt='' />
 
-		<?php if ( have_rows( 'testi_page' ) ) : ?>
-			
-			<div id='testi-wrapper'>
+              <span class='video-title'><?php the_sub_field('title');?></span><!-- video-title -->
 
-			<?php while ( have_rows( 'testi_page' ) ) : the_row(); ?>
+            </div><!-- video-title-wrapper -->
 
-				<div class='single-testi'>
-			
-					<img src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
+          </div><!-- single-video -->
 
-					<span class='single-testi-title'><?php the_sub_field( 'title' ); ?></span><!-- single-testi-title -->
+        </div><!-- testi-slide -->
 
-					<div class='single-test-descrip content'>
-			
-						<?php the_sub_field( 'description' ); ?>
-			
-					</div><!-- single-test-descrip  -->
+        <?php endwhile;?>
 
-					<span class='single-testi-name'><?php the_sub_field( 'name' ); ?></span><!-- class -->
+      </div><!-- testi-slider -->
 
-					<?php if(get_sub_field('description_two')) { ?>
+      <?php endif;?>
 
-						<div class='single-testi-descrip-two content'>
-				
-							<?php the_sub_field( 'description_two' ); ?>
+      <div class='testi-arrow testi-arrow-right'>
 
-						</div><!-- single-testi-descrip-two -->
+        <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
 
-					<?php } ?>
-		
-				</div><!-- single-testi -->
+      </div><!-- testi-arrow testi-arrow-right -->
 
-			<?php endwhile; ?>
+    </div><!-- testi-slide-wrapper -->
 
-			</div><!-- testi-wrapper -->
+    <?php if (have_rows('testi_page')): ?>
 
-		<?php endif; ?>
+    <div id='testi-wrapper'>
 
-	</div><!-- page-container -->
-	
+      <?php while (have_rows('testi_page')): the_row();?>
+
+      <div class='single-testi'>
+
+        <img src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt='' />
+
+        <span class='single-testi-title'><?php the_sub_field('title');?></span><!-- single-testi-title -->
+
+        <div class='single-test-descrip content'>
+
+          <?php the_sub_field('description');?>
+
+        </div><!-- single-test-descrip  -->
+
+        <span class='single-testi-name'><?php the_sub_field('name');?></span><!-- class -->
+
+        <?php if (get_sub_field('description_two')) {?>
+
+        <div class='single-testi-descrip-two content'>
+
+          <?php the_sub_field('description_two');?>
+
+        </div><!-- single-testi-descrip-two -->
+
+        <?php }?>
+
+      </div><!-- single-testi -->
+
+      <?php endwhile;?>
+
+    </div><!-- testi-wrapper -->
+
+    <?php endif;?>
+
+  </div><!-- page-container -->
+
 </div><!-- internal-main -->
 
 <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
-<?php get_footer(); ?>
+<?php get_footer();?>

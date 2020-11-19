@@ -1,174 +1,173 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div id="internal-main">
 
-<div class='page-title-wrapper'>
+  <div class='page-title-wrapper'>
 
-	<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-	
-	</div><!-- page-title-wrapper -->
-	
-	<div id="page-container" class="two-col no-banner-layout">
-		
-		<div class="page-content">
+    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-			<div class='page-content-inner content'>
+  </div><!-- page-title-wrapper -->
 
-			<?php if(get_field('case_results_featured_video_wistia_id') || get_field('featured_on_info')) { ?>
+  <div id="page-container" class="two-col no-banner-layout">
 
-				<div class='featured-on-wrapper'>
+    <div class="page-content">
 
-					<span class='featured-one'><?php the_field( 'featured_on_title' ); ?></span><!-- featured-one -->
-				
-					<div class='featured-on-inner'>
+      <div class='page-content-inner content'>
 
-					<?php if(get_field('case_results_featured_video_wistia_id')) { ?>
-				
-						<div class='featured-on-video'>
-					
-							<div class='single-video'>
-					
-								<div class='video-thumb'>
-		
-									<div class='mywisita wistia_embed wistia_async_<?php the_field( 'case_results_featured_video_wistia_id' ); ?> popover=true popoverContent=thumbnail'></div><!-- wistia -->
-		
-										<div class='video-overlay'>
-		
-											<div class='play-button'></div><!-- play-button -->
-		
-										</div><!-- video-overlay -->
-		
-									</div><!-- video-thumb -->
-		
-								</div><!-- single-video -->
-		
-							<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-					
-						</div><!-- featured-on-video -->
+        <?php if (get_field('case_results_featured_video_wistia_id') || get_field('featured_on_info')) {?>
 
-					<?php } ?>
+        <div class='featured-on-wrapper'>
 
-						<?php if ( have_rows( 'featured_on_info' ) ) : ?>
+          <span class='featured-one'><?php the_field('featured_on_title');?></span><!-- featured-one -->
 
-							<div class='featured-content'>
-						
-							<?php while ( have_rows( 'featured_on_info' ) ) : the_row(); ?>
+          <div class='featured-on-inner'>
 
-								<div class='featured-row'>
-						
-									<h2 class='featured-row-title'><?php the_sub_field( 'title' ); ?></h2><!-- featured-row-title -->
+            <?php if (get_field('case_results_featured_video_wistia_id')) {?>
 
-									<?php the_sub_field( 'content' ); ?>
-						
-								</div><!-- featured-row -->
-			
-							<?php endwhile; ?>
+            <div class='featured-on-video'>
 
-							</div><!-- featured-content -->
+              <div class='single-video'>
 
-						<?php endif; ?>
-					
-					</div><!-- featured-on-inner -->
-				
-				</div><!-- featured-on-wrapper -->
+                <div class='video-thumb'>
 
-			<?php } ?>
+                  <div
+                    class='mywisita wistia_embed wistia_async_<?php the_field('case_results_featured_video_wistia_id');?> popover=true popoverContent=thumbnail'>
+                  </div><!-- wistia -->
 
-			<?php if(get_field('case_synopsis') || get_field('case_synopsis_content')) { ?>
+                  <div class='video-overlay'>
 
-				<div class='case-synopsis-wrapper'>
-			
-					<h2><?php the_field( 'case_synopsis' ); ?></h2>
+                    <div class='play-button'></div><!-- play-button -->
 
-					<?php the_field( 'case_synopsis_content' ); ?>
-			
-				</div><!-- case-synopsis-wrapper -->
+                  </div><!-- video-overlay -->
 
-			<?php } ?>
+                </div><!-- video-thumb -->
 
-			<?php if ( have_rows( 'case_articles' ) ) : ?>
+              </div><!-- single-video -->
 
-			<div class='case-articles'>
+              <script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
 
-				<h2><?php the_field( 'case_articles_title' ); ?></h2>
+            </div><!-- featured-on-video -->
 
-			
-			
-					<?php while ( have_rows( 'case_articles' ) ) : the_row(); ?>
+            <?php }?>
 
-					<div class='case-article-row'>
-			
-						<?php $image = get_sub_field( 'image' ); ?>
-			
-						<?php if ( $image ) { ?>
-			
-							<img class='case-article-image' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
-	
-						<?php } ?>
+            <?php if (have_rows('featured_on_info')): ?>
 
-						<?php if ( have_rows( 'article' ) ) : ?>
-			
-							<?php while ( have_rows( 'article' ) ) : the_row(); ?>
-							
-								<a class='case-article-link' href='<?php the_sub_field( 'link' ); ?>'>	<?php the_sub_field( 'title' ); ?></a><!-- case-article-link -->
+            <div class='featured-content'>
 
-								<?php the_sub_field( 'description' ); ?>
-						
-							<?php endwhile; ?>
-				
-					<?php endif; ?>
+              <?php while (have_rows('featured_on_info')): the_row();?>
 
-					</div><!-- case-article-row -->
-				
-				<?php endwhile; ?>
+              <div class='featured-row'>
 
-		</div><!-- case-articles -->
+                <h2 class='featured-row-title'><?php the_sub_field('title');?></h2><!-- featured-row-title -->
 
-		<?php endif; ?>
+                <?php the_sub_field('content');?>
 
-		<?php if ( have_rows( 'other_publications' ) ) : ?>
+              </div><!-- featured-row -->
 
-			<div class='other-publications'>
-			
-				<h2><?php the_field( 'other_publications_title' ); ?></h2>
+              <?php endwhile;?>
 
-				
-					<?php while ( have_rows( 'other_publications' ) ) : the_row(); ?>
+            </div><!-- featured-content -->
 
-					<a class='case-article-link' href='<?php the_sub_field( 'link' ); ?>'><?php the_sub_field( 'title' ); ?></a><!-- case-article-link -->
+            <?php endif;?>
 
-					<?php the_sub_field( 'description' ); ?>
-					
-					<?php endwhile; ?>
-			
-			</div><!-- other-publications -->
+          </div><!-- featured-on-inner -->
 
-			<?php endif; ?>
+        </div><!-- featured-on-wrapper -->
 
-			<?php if(get_the_content()) { 
+        <?php }?>
 
-				the_content();
+        <?php if (get_field('case_synopsis') || get_field('case_synopsis_content')) {?>
 
-			} ?>
-			
-			</div><!-- page-content-inner -->
-			
-		</div><!-- page-content -->
+        <div class='case-synopsis-wrapper'>
 
-		<?php if(!get_field('disable_sidebar')) {
+          <h2><?php the_field('case_synopsis');?></h2>
 
-			get_sidebar('case-results');
+          <?php the_field('case_synopsis_content');?>
 
-		} ?>
-		
-	</div><!-- page-container -->
+        </div><!-- case-synopsis-wrapper -->
+
+        <?php }?>
+
+        <?php if (have_rows('case_articles')): ?>
+
+        <div class='case-articles'>
+
+          <h2><?php the_field('case_articles_title');?></h2>
+
+
+
+          <?php while (have_rows('case_articles')): the_row();?>
+
+          <div class='case-article-row'>
+
+            <?php $image = get_sub_field('image');?>
+
+            <?php if ($image) {?>
+
+            <img class='case-article-image' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+
+            <?php }?>
+
+            <?php if (have_rows('article')): ?>
+
+            <?php while (have_rows('article')): the_row();?>
+
+            <a class='case-article-link' href='<?php the_sub_field('link');?>'> <?php the_sub_field('title');?></a>
+            <!-- case-article-link -->
+
+            <?php the_sub_field('description');?>
+
+            <?php endwhile;?>
+
+            <?php endif;?>
+
+          </div><!-- case-article-row -->
+
+          <?php endwhile;?>
+
+        </div><!-- case-articles -->
+
+        <?php endif;?>
+
+        <?php if (have_rows('other_publications')): ?>
+
+        <div class='other-publications'>
+
+          <h2><?php the_field('other_publications_title');?></h2>
+
+
+          <?php while (have_rows('other_publications')): the_row();?>
+
+          <a class='case-article-link' href='<?php the_sub_field('link');?>'><?php the_sub_field('title');?></a>
+          <!-- case-article-link -->
+
+          <?php the_sub_field('description');?>
+
+          <?php endwhile;?>
+
+        </div><!-- other-publications -->
+
+        <?php endif;?>
+
+        <?php if (get_the_content()) {
+
+    the_content();
+
+}?>
+
+      </div><!-- page-content-inner -->
+
+    </div><!-- page-content -->
+
+    <?php if (!get_field('disable_sidebar')) {
+
+    get_sidebar('case-results');
+
+}?>
+
+  </div><!-- page-container -->
 
 </div><!-- internal-main -->
-		
-
-<?php get_footer(); ?>
 
 
-
-
-
+<?php get_footer();?>

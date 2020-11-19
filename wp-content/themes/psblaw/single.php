@@ -1,63 +1,58 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div id="internal-main">
 
-<div class='page-title-wrapper'>
+  <div class='page-title-wrapper'>
 
-	<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
-	
-	</div><!-- page-title-wrapper -->
-	
-	<div id="page-container" class="two-col no-banner-layout">
-		
-		<div class="page-content">
+    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-			<div class='page-content-inner content'>
+  </div><!-- page-title-wrapper -->
 
-				<?php get_template_part( 'loop', 'single' ); ?>
+  <div id="page-container" class="two-col no-banner-layout">
 
-				<?php $related_news_list = get_field( 'related_news_list' ); ?>
+    <div class="page-content">
 
-				<?php if ( $related_news_list ): ?>
-				
-				<div id='related-news'>
-				
-					<h3 id='related-news-title'><?php the_field( 'related_news_title' ); ?></h3><!-- related-news-title -->
+      <div class='page-content-inner content'>
 
- 						<ul>
-							<?php foreach ( $related_news_list as $post ):  ?>
-								<?php setup_postdata ( $post ); ?>
+        <?php get_template_part('loop', 'single');?>
 
-									<li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+        <?php $related_news_list = get_field('related_news_list');?>
 
-								<?php endforeach; ?>
-						<?php wp_reset_postdata(); ?>
-						</ul>
-			
-					</div><!-- related-news -->
+        <?php if ($related_news_list): ?>
 
-				<?php endif; ?>
-			
-			</div><!-- page-content-inner -->
-			
-		</div><!-- page-content -->
+        <div id='related-news'>
 
-		<?php if(!get_field('disable_sidebar')) {
+          <h3 id='related-news-title'><?php the_field('related_news_title');?></h3><!-- related-news-title -->
 
-			get_sidebar('blog');
+          <ul>
+            <?php foreach ($related_news_list as $post): ?>
+            <?php setup_postdata($post);?>
 
-		} ?>
-		
-	</div><!-- page-container -->
-	
-	<?php get_template_part('page-templates/includes/template','morenews-slider'); ?>
+            <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+
+            <?php endforeach;?>
+            <?php wp_reset_postdata();?>
+          </ul>
+
+        </div><!-- related-news -->
+
+        <?php endif;?>
+
+      </div><!-- page-content-inner -->
+
+    </div><!-- page-content -->
+
+    <?php if (!get_field('disable_sidebar')) {
+
+    get_sidebar('blog');
+
+}?>
+
+  </div><!-- page-container -->
+
+  <?php get_template_part('page-templates/includes/template', 'morenews-slider');?>
 
 </div><!-- internal-main -->
-		
-
-<?php get_footer(); ?>
 
 
-
-
-
+<?php get_footer();?>

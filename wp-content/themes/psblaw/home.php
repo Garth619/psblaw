@@ -1,31 +1,31 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div id="internal-main">
 
-	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
-	
-	<div id="page-container" class="two-col default-banner-layout">
-		
-		<div class="page-content">
+  <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
 
-			<div class='page-content-inner'>
+  <div id="page-container" class="two-col default-banner-layout">
 
-				<?php get_template_part( 'loop', 'index' ); ?>
-			
-			</div><!-- page-content-inner -->
-			
-		</div><!-- page-content -->
+    <div class="page-content">
 
-		<?php if(!get_field('disable_sidebar')) {
+      <div class='page-content-inner'>
 
-			get_sidebar('blog');
+        <?php get_template_part('loop', 'index');?>
 
-		} ?>
-		
-	</div><!-- page-container -->
-	
-	
+      </div><!-- page-content-inner -->
+
+    </div><!-- page-content -->
+
+    <?php if (!get_field('disable_sidebar')) {
+
+    get_sidebar('blog');
+
+}?>
+
+  </div><!-- page-container -->
+
+
 </div><!-- internal-main -->
-		
 
-<?php get_footer(); ?>
+
+<?php get_footer();?>

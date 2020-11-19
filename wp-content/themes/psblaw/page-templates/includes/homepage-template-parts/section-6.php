@@ -1,51 +1,51 @@
 <section id='section-six'>
 
-	<div id='sec-six-slider-wrapper' class="preload-section">
-	
-		<div class='sec-six-arrow sec-six-arrow-left'>
-		
-			<?php echo file_get_contents( get_template_directory() . '/images/arrow-left.svg' ); ?>
-		
-		</div><!-- sec-six-arrow sec-six-arrow-left -->
+  <div id='sec-six-slider-wrapper' class="preload-section">
 
-		<div id='sec-six-slider-outer'>
+    <div class='sec-six-arrow sec-six-arrow-left'>
 
-			<span id='sec-six-slide-title'><?php the_field( 'section_six_title' ); ?></span><!-- sec-six-slide-title -->
+      <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
 
-			<img id='stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt=''/>
+    </div><!-- sec-six-arrow sec-six-arrow-left -->
 
-			<div id='sec-six-slider' class="preload-slider">
+    <div id='sec-six-slider-outer'>
 
-				<?php if ( have_rows( 'section_six_slider' ) ) : ?>
-					
-					<?php while ( have_rows( 'section_six_slider' ) ) : the_row(); ?>
+      <span id='sec-six-slide-title'><?php the_field('section_six_title');?></span><!-- sec-six-slide-title -->
 
-						<div class='sec-six-slide'>
+      <img id='stars' src='<?php bloginfo('template_directory');?>/images/test-stars-large.svg' alt='' />
 
-							<span class='sec-six-slide-intro'><?php the_sub_field( 'intro' ); ?></span><!-- sec-six-slide-intro -->
+      <div id='sec-six-slider' class="preload-slider">
 
-							<span class='sec-six-slide-title'><?php the_sub_field( 'case_name' ); ?></span><!-- sec-six-slide-title -->
+        <?php if (have_rows('section_six_slider')): ?>
 
-							<span class='sec-six-slide-descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec-six-slide-descrip -->
+        <?php while (have_rows('section_six_slider')): the_row();?>
 
-						</div><!-- sec-six-slide -->
-	
-					<?php endwhile; ?>
+        <div class='sec-six-slide'>
 
-				<?php endif; ?>
-		
-			</div><!-- sec-six-slider -->
+          <span class='sec-six-slide-intro'><?php the_sub_field('intro');?></span><!-- sec-six-slide-intro -->
 
-		</div><!-- sec-six-slider-outer -->
+          <span class='sec-six-slide-title'><?php the_sub_field('case_name');?></span><!-- sec-six-slide-title -->
 
-		<div class='sec-six-arrow sec-six-arrow-right'>
-		
-			<?php echo file_get_contents( get_template_directory() . '/images/arrow-right.svg' ); ?>
-		
-		</div><!-- sec-six-arrow sec-six-arrow-right -->
-	
-	</div><!-- sec-six-slider-wrapper -->
+          <span class='sec-six-slide-descrip'><?php the_sub_field('description');?></span><!-- sec-six-slide-descrip -->
 
-	<img id='sec-six-hero' src='<?php bloginfo('template_directory');?>/images/test-bg.jpg' alt=''/>
+        </div><!-- sec-six-slide -->
+
+        <?php endwhile;?>
+
+        <?php endif;?>
+
+      </div><!-- sec-six-slider -->
+
+    </div><!-- sec-six-slider-outer -->
+
+    <div class='sec-six-arrow sec-six-arrow-right'>
+
+      <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+
+    </div><!-- sec-six-arrow sec-six-arrow-right -->
+
+  </div><!-- sec-six-slider-wrapper -->
+
+  <img id='sec-six-hero' src='<?php bloginfo('template_directory');?>/images/test-bg.jpg' alt='' />
 
 </section><!-- section-six -->

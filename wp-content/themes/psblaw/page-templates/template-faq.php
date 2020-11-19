@@ -1,54 +1,54 @@
-<?php 
+<?php
 
 /* Template Name: FAQs */
 
-get_header(); ?>
+get_header();?>
 
 <div id="internal-main">
 
-<div class='page-title-wrapper'>
+  <div class='page-title-wrapper'>
 
-  <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-</div><!-- page-title-wrapper -->
+  </div><!-- page-title-wrapper -->
 
-<?php if(get_field('faqs_page_description')) { ?>
+  <?php if (get_field('faqs_page_description')) {?>
 
   <div id='page-descrip-wrapper'>
 
-    <?php the_field( 'faqs_page_description' ); ?>
-	
+    <?php the_field('faqs_page_description');?>
+
   </div><!-- page-descrip-wrapper -->
 
-<?php  } ?>
+  <?php }?>
 
-	<div id="page-container">
-			
-		<div id='faq-wrapper' class="content">
+  <div id="page-container">
 
-    <?php if ( have_rows( 'faqs' ) ) :?>
-	    <?php while ( have_rows( 'faqs' ) ) : the_row(); ?>
+    <div id='faq-wrapper' class="content">
 
-        <div class='single-faq'>
-      
-          <span class='question'><?php the_sub_field( 'question' ); ?></span><!-- question -->
-      
-          <div class='answer'>
-      
-           <?php the_sub_field( 'answer' ); ?>
-      
+      <?php if (have_rows('faqs')): ?>
+      <?php while (have_rows('faqs')): the_row();?>
+
+      <div class='single-faq'>
+
+        <span class='question'><?php the_sub_field('question');?></span><!-- question -->
+
+        <div class='answer'>
+
+          <?php the_sub_field('answer');?>
+
         </div><!-- answer -->
 
       </div><!-- single-faq -->
-		
-	    <?php endwhile; ?>
 
-    <?php endif; ?>
+      <?php endwhile;?>
 
-		</div><!-- faq-wrapper -->
+      <?php endif;?>
 
-	</div><!-- page-container -->
-	
+    </div><!-- faq-wrapper -->
+
+  </div><!-- page-container -->
+
 </div><!-- internal-main -->
-		
-<?php get_footer(); ?>
+
+<?php get_footer();?>

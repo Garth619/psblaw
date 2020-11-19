@@ -1,68 +1,68 @@
-<?php get_header(); ?>
+<?php get_header();?>
 
 <div id="internal-main">
 
-	<?php get_template_part('page-templates/includes/template','default-page-banner'); ?>
+  <?php get_template_part('page-templates/includes/template', 'default-page-banner');?>
 
-	<?php if(get_field('disable_banner_new')) { ?>
+  <?php if (get_field('disable_banner_new')) {?>
 
-		<div id='page-descrip-wrapper'>
+  <div id='page-descrip-wrapper'>
 
-			<h1 class="page-title page-large-content-title"><?php the_title();?></h1>
+    <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
-		</div>	
-	
-	<?php } ?>
+  </div>
 
-	<?php // banner/no banner on internal pages
-	if(basename(get_page_template()) === 'page.php') {
-		if(get_field('disable_banner_new') == 'Yes') {
-			$banner = ' no-banner-layout';
-		} else {
-			$banner = ' default-banner-layout';
-		}
-	} ?>
-	
-	<div id="page-container" class="two-col <?php echo $banner;?>">
-		
-		<div class="page-content">
+  <?php }?>
 
-			<div class='page-title-wrapper'>
+  <?php // banner/no banner on internal pages
+if (basename(get_page_template()) === 'page.php') {
+    if (get_field('disable_banner_new') == 'Yes') {
+        $banner = ' no-banner-layout';
+    } else {
+        $banner = ' default-banner-layout';
+    }
+}?>
 
-				<?php if(!get_field('disable_banner_new')) : ?>
-				
-					<?php if(get_field('banner_h1') == "Yes") : ?>
-				
-						<h2 class="page-title"><?php the_title();?></h2>
-		
-						<?php else:?>
-		
-						<h1 class="page-title"><?php the_title();?></h1>
-		
-					<?php endif;?>
+  <div id="page-container" class="two-col <?php echo $banner; ?>">
 
-				<?php endif; ?>
+    <div class="page-content">
 
-			</div><!-- page-title-wrapper -->
+      <div class='page-title-wrapper'>
 
-			<div class='page-content-inner content'>
+        <?php if (!get_field('disable_banner_new')): ?>
 
-				<?php get_template_part( 'loop', 'page' ); ?>
-			
-			</div><!-- page-content-inner -->
-			
-		</div><!-- page-content -->
+        <?php if (get_field('banner_h1') == "Yes"): ?>
 
-		<?php if(!get_field('disable_sidebar')) {
+        <h2 class="page-title"><?php the_title();?></h2>
 
-			get_sidebar();
+        <?php else: ?>
 
-		} ?>
-		
-	</div><!-- page-container -->
-	
-	
+        <h1 class="page-title"><?php the_title();?></h1>
+
+        <?php endif;?>
+
+        <?php endif;?>
+
+      </div><!-- page-title-wrapper -->
+
+      <div class='page-content-inner content'>
+
+        <?php get_template_part('loop', 'page');?>
+
+      </div><!-- page-content-inner -->
+
+    </div><!-- page-content -->
+
+    <?php if (!get_field('disable_sidebar')) {
+
+    get_sidebar();
+
+}?>
+
+  </div><!-- page-container -->
+
+
 </div><!-- internal-main -->
-		
 
-<?php get_footer(); ?>
+
+<?php get_footer();?>

@@ -1,3 +1,3 @@
 <?php
-	
-	/* Template Name: Blog */ ?>
+
+/* Template Name: Blog */?>

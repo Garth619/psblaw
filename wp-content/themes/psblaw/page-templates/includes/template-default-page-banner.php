@@ -1,187 +1,191 @@
-<?php if(!get_field('disable_banner_new')) { ?>
-	
-	<div id="internal-banner">
-		
-		<div id="internal-banner-content">
+<?php if (!get_field('disable_banner_new')) {?>
 
-		<?php // blog main feed
-		
-			if(is_home()) { ?>
+<div id="internal-banner">
 
-			<h1 class="banner-title page-title"><?php the_field( 'internal_banner_blog_title','option'); ?></h1><!-- banner_title -->
+  <div id="internal-banner-content">
 
-			<?php if(get_field('blog_banner_description', 'option')) { ?>
-			
-			<div id='banner-descrip'>
-			
-				<?php the_field('blog_banner_description','option'); ?>
-			
-			</div><!-- banner-descrip -->
+    <?php // blog main feed
 
-			<?php } ?>
+    if (is_home()) {?>
 
-		<?php } ?>
+    <h1 class="banner-title page-title"><?php the_field('internal_banner_blog_title', 'option');?></h1>
+    <!-- banner_title -->
 
-		<?php // category feed
-			
-			if(is_category()) { ?>
+    <?php if (get_field('blog_banner_description', 'option')) {?>
 
-			<h1 class="banner-title page-title"><?php single_cat_title() ?></h1><!-- banner_title -->
+    <div id='banner-descrip'>
 
-		<?php } ?>
+      <?php the_field('blog_banner_description', 'option');?>
 
-		<?php // archive feed
-		
-		if(is_archive() && !is_category()) { ?>
-			
-			<h1 class="banner-title page-title"><?php printf( __( '<span>%s</span>'), get_the_date( _x( 'Y', 'yearly archives date format', 'twentyten' ) ) ); ?></h1>
+    </div><!-- banner-descrip -->
 
-		<?php } ?>
+    <?php }?>
 
-		<?php 
+    <?php }?>
 
-			// contact page
-		
-			if(is_page_template('page-templates/template-contact.php')) { ?>
+    <?php // category feed
 
-			<h1 class="banner-title page-title"><?php the_title(); ?></h1><!-- banner_title -->
+    if (is_category()) {?>
 
-			<div id='banner-descrip'>
-			
-				<p><?php the_field( 'contact_banner_subtitle' ); ?></p>
+    <h1 class="banner-title page-title"><?php single_cat_title()?></h1><!-- banner_title -->
 
-				<?php if ( have_rows( 'social_media','option') ) : ?>
-                
-        	<div id='social-media-wrapper'>
-	              
-          	<?php while ( have_rows( 'social_media','option') ) : the_row(); ?>
-                
-            	<a href="<?php the_sub_field( 'link' ); ?>" target="_blank" rel="noopener">
+    <?php }?>
 
-              	<?php if(get_sub_field('icon') == "Instagram") { ?>
+    <?php // archive feed
 
-                	<?php echo file_get_contents( get_template_directory() . '/images/social-ig.svg' ); ?>
+    if (is_archive() && !is_category()) {?>
 
-                <?php } ?>
+    <h1 class="banner-title page-title">
+      <?php printf(__('<span>%s</span>'), get_the_date(_x('Y', 'yearly archives date format', 'twentyten')));?>
+    </h1>
 
-                <?php if(get_sub_field('icon') == "Facebook") { ?>
+    <?php }?>
 
-                	<?php echo file_get_contents( get_template_directory() . '/images/social-fb.svg' ); ?>
+    <?php
 
-                <?php } ?>
+    // contact page
 
-              	<?php if(get_sub_field('icon') == "Twitter") { ?>
+    if (is_page_template('page-templates/template-contact.php')) {?>
 
-	              	<?php echo file_get_contents( get_template_directory() . '/images/social-twitter.svg' ); ?>
+    <h1 class="banner-title page-title"><?php the_title();?></h1><!-- banner_title -->
 
-                <?php } ?>
+    <div id='banner-descrip'>
 
-              </a>
-		
-	          <?php endwhile; ?>
-          
-          </div><!-- social-media-wrapper -->
-        
-        <?php endif; ?>
-			
-			</div><!-- banner-descrip -->
+      <p><?php the_field('contact_banner_subtitle');?></p>
 
-		<?php } ?>
+      <?php if (have_rows('social_media', 'option')): ?>
 
-		<?php 
-		
-		// pa pages
-		
-		if(!is_home() && !is_archive() && basename(get_page_template()) === 'page.php') { ?>
+      <div id='social-media-wrapper'>
 
-		<?php if(get_field('banner_title')) : ?>
-			
-			<?php if(get_field('banner_h1') == "Yes") : ?>
-		
-				<h1 class="banner-title page-title"><?php the_field( 'banner_title' ); ?></h1><!-- banner_title -->
-			
-				<?php else: ?>
-			
-				<span class="banner-title page-title"><?php the_field( 'banner_title' ); ?></span><!-- banner_title -->
-			
-			<?php endif;?>
-		
-		<?php else:?>
-		
-		<?php if(get_field('banner_h1') == "Yes") : ?>
-		
-			<h1 class="banner-title page-title"><?php the_field( 'global_banner_title','option'); ?></h1><!-- banner_title -->
+        <?php while (have_rows('social_media', 'option')): the_row();?>
 
-			<?php else: ?>
-		
-			<span class="banner-title page-title"><?php the_field( 'global_banner_title','option'); ?></span><!-- banner_title -->
+        <a href="<?php the_sub_field('link');?>" target="_blank" rel="noopener">
 
-		<?php endif;?>
-		
-		<?php endif;?>
+          <?php if (get_sub_field('icon') == "Instagram") {?>
 
-			<?php if(get_field('global_internal_banner_description', 'option')) { ?>
-			
-			<div id='banner-descrip'>
-			
-				<?php the_field('global_internal_banner_description','option'); ?>
-			
-			</div><!-- banner-descrip -->
+          <?php echo file_get_contents(get_template_directory() . '/images/social-ig.svg'); ?>
 
-			<?php } ?>
+          <?php }?>
 
-			<?php } ?>
+          <?php if (get_sub_field('icon') == "Facebook") {?>
 
-		</div><!-- internal-banner-content -->
+          <?php echo file_get_contents(get_template_directory() . '/images/social-fb.svg'); ?>
 
-		<div id='internal-banner-slider-wrapper'>
-		
-			<div id='internal-banner-slider'>
-			
-				<div class='internal-banner-slide'>
+          <?php }?>
 
-					<div class='internal-banner-slide-inner'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/int-image-la.jpg' alt=''/>
+          <?php if (get_sub_field('icon') == "Twitter") {?>
 
-					</div><!-- internal-banner-slide-inner -->
-				
-				</div><!-- internal-banner-slide -->
+          <?php echo file_get_contents(get_template_directory() . '/images/social-twitter.svg'); ?>
 
-				<div class='internal-banner-slide'>
+          <?php }?>
 
-					<div class='internal-banner-slide-inner'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/int-image-sf.jpg' alt=''/>
+        </a>
 
-					</div><!-- internal-banner-slide-inner -->
-				
-				</div><!-- internal-banner-slide -->
+        <?php endwhile;?>
 
-				<div class='internal-banner-slide'>
+      </div><!-- social-media-wrapper -->
 
-					<div class='internal-banner-slide-inner'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/int-image-oc.jpg' alt=''/>
+      <?php endif;?>
 
-					</div><!-- internal-banner-slide-inner -->
-				
-				</div><!-- internal-banner-slide -->
+    </div><!-- banner-descrip -->
 
-				<div class='internal-banner-slide'>
+    <?php }?>
 
-					<div class='internal-banner-slide-inner'>
-					
-						<img src='<?php bloginfo('template_directory');?>/images/int-image-sd.jpg' alt=''/>
+    <?php
 
-					</div><!-- internal-banner-slide-inner -->
-				
-				</div><!-- internal-banner-slide -->
-		
-		</div><!-- internal-banner-slider -->
-		
-		</div><!-- internal-banner-slider-wrapper -->
-		
-	</div><!-- internal-banner -->
+    // pa pages
 
-	<?php } ?>
+    if (!is_home() && !is_archive() && basename(get_page_template()) === 'page.php') {?>
+
+    <?php if (get_field('banner_title')): ?>
+
+    <?php if (get_field('banner_h1') == "Yes"): ?>
+
+    <h1 class="banner-title page-title"><?php the_field('banner_title');?></h1><!-- banner_title -->
+
+    <?php else: ?>
+
+    <span class="banner-title page-title"><?php the_field('banner_title');?></span><!-- banner_title -->
+
+    <?php endif;?>
+
+    <?php else: ?>
+
+    <?php if (get_field('banner_h1') == "Yes"): ?>
+
+    <h1 class="banner-title page-title"><?php the_field('global_banner_title', 'option');?></h1><!-- banner_title -->
+
+    <?php else: ?>
+
+    <span class="banner-title page-title"><?php the_field('global_banner_title', 'option');?></span>
+    <!-- banner_title -->
+
+    <?php endif;?>
+
+    <?php endif;?>
+
+    <?php if (get_field('global_internal_banner_description', 'option')) {?>
+
+    <div id='banner-descrip'>
+
+      <?php the_field('global_internal_banner_description', 'option');?>
+
+    </div><!-- banner-descrip -->
+
+    <?php }?>
+
+    <?php }?>
+
+  </div><!-- internal-banner-content -->
+
+  <div id='internal-banner-slider-wrapper'>
+
+    <div id='internal-banner-slider'>
+
+      <div class='internal-banner-slide'>
+
+        <div class='internal-banner-slide-inner'>
+
+          <img src='<?php bloginfo('template_directory');?>/images/int-image-la.jpg' alt='' />
+
+        </div><!-- internal-banner-slide-inner -->
+
+      </div><!-- internal-banner-slide -->
+
+      <div class='internal-banner-slide'>
+
+        <div class='internal-banner-slide-inner'>
+
+          <img src='<?php bloginfo('template_directory');?>/images/int-image-sf.jpg' alt='' />
+
+        </div><!-- internal-banner-slide-inner -->
+
+      </div><!-- internal-banner-slide -->
+
+      <div class='internal-banner-slide'>
+
+        <div class='internal-banner-slide-inner'>
+
+          <img src='<?php bloginfo('template_directory');?>/images/int-image-oc.jpg' alt='' />
+
+        </div><!-- internal-banner-slide-inner -->
+
+      </div><!-- internal-banner-slide -->
+
+      <div class='internal-banner-slide'>
+
+        <div class='internal-banner-slide-inner'>
+
+          <img src='<?php bloginfo('template_directory');?>/images/int-image-sd.jpg' alt='' />
+
+        </div><!-- internal-banner-slide-inner -->
+
+      </div><!-- internal-banner-slide -->
+
+    </div><!-- internal-banner-slider -->
+
+  </div><!-- internal-banner-slider-wrapper -->
+
+</div><!-- internal-banner -->
+
+<?php }?>

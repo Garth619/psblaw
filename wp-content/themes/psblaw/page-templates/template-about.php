@@ -1,216 +1,216 @@
-<?php 
+<?php
 
 /* Template Name: About */
 
-get_header(); ?>
+get_header();?>
 
 <div id="internal-main">
 
-<div class='page-title-wrapper'>
+  <div class='page-title-wrapper'>
 
-	<h1 class="page-title page-large-content-title page-about-title"><?php the_field( 'top_title' ); ?></h1>
+    <h1 class="page-title page-large-content-title page-about-title"><?php the_field('top_title');?></h1>
 
-</div><!-- page-title-wrapper -->
-	
-<div id='about-top'>
+  </div><!-- page-title-wrapper -->
 
-		
-		<?php if(get_field('top_description')) { ?>
+  <div id='about-top'>
 
-			<div id='page-descrip-wrapper'>
 
-				<span id='page-subtitle'><?php the_field( 'top_subtitle' ); ?></span><!-- about-top-subtitle -->
+    <?php if (get_field('top_description')) {?>
 
-				<?php if(get_field('top_description')) { ?>
-				
-					<div id='page-descrip'>
+    <div id='page-descrip-wrapper'>
 
-						<?php the_field( 'top_description' ); ?>
-	
-					</div><!-- page-descrip -->
+      <span id='page-subtitle'><?php the_field('top_subtitle');?></span><!-- about-top-subtitle -->
 
-				<?php } ?>
+      <?php if (get_field('top_description')) {?>
 
-			</div><!-- page-descrip-wrapper -->
+      <div id='page-descrip'>
 
-		<?php } ?>
+        <?php the_field('top_description');?>
 
-<div id='about-content' class="content">
+      </div><!-- page-descrip -->
 
-	<div class='about-col'>
+      <?php }?>
 
-		<?php the_field( 'top_content' ); ?>
+    </div><!-- page-descrip-wrapper -->
 
-	</div><!-- about-col -->
+    <?php }?>
 
-	<div class='about-col'>
+    <div id='about-content' class="content">
 
-		<?php $top_image = get_field( 'top_image' ); ?>
-				
-		<?php if ( $top_image ) { ?>
+      <div class='about-col'>
 
-			<div id='about-img-wrapper'>
-		
-				<div id='about-img'>
-			
-					<img src="<?php echo $top_image['url']; ?>" alt="<?php echo $top_image['alt']; ?>" />
-				
-				</div><!-- about-img -->
-		
-			</div><!-- about-img-wrapper -->
+        <?php the_field('top_content');?>
 
-		<?php } ?>
+      </div><!-- about-col -->
 
-		<?php the_field( 'top_content_two' ); ?>
+      <div class='about-col'>
 
-	</div><!-- about-col -->
+        <?php $top_image = get_field('top_image');?>
 
-</div><!-- about-content -->
+        <?php if ($top_image) {?>
 
-</div><!-- about-top -->
+        <div id='about-img-wrapper'>
 
-<div id='about-middle'>
+          <div id='about-img'>
 
-		<span id='about-middle-title'><?php the_field( 'middle_title' ); ?></span><!-- about-middle-title -->
+            <img src="<?php echo $top_image['url']; ?>" alt="<?php echo $top_image['alt']; ?>" />
 
-			<div id='about-middle-col-wrapper'>
-			
-				<div class='about-middle-col'>
+          </div><!-- about-img -->
 
-					<?php if ( have_rows( 'about_attorneys' ) ) : ?>
-					
-						<?php while ( have_rows( 'about_attorneys' ) ) : the_row(); ?>
-						
-							<?php $post_object = get_sub_field( 'about_attorney' ); ?>
-							
-							<?php if ( $post_object ): ?>
-							
-								<?php $post = $post_object; ?>
-								<?php setup_postdata( $post ); ?> 
+        </div><!-- about-img-wrapper -->
 
-								<div class='about-middle-att'>
-						
-									<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
-									
-									<?php if ( $attorney_profile ) { ?>
-									
-										<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
-									
-									<?php } ?>
+        <?php }?>
 
-									<span class='about-middle-att-title'><?php the_title();?></span><!-- about-middle-att-title -->
+        <?php the_field('top_content_two');?>
 
-									<div class='about-middle-att-content content'>
-						
-										<?php the_sub_field( 'excerpt' ); ?>
+      </div><!-- about-col -->
 
-									<div class='additional-content'>
-							
-									<?php the_sub_field( 'content' ); ?>
-							
-								</div><!-- additional-content -->
-						
-							</div><!-- about-middle-att-content -->
+    </div><!-- about-content -->
 
-							<a class='button-three about-read-more'>Read More</a><!-- button-two -->
-					
-						</div><!-- about-middle-att -->
-								
-					<?php wp_reset_postdata(); ?>
-							
-				<?php endif; ?>
-			
-			<?php endwhile; ?>
+  </div><!-- about-top -->
 
-		<?php endif; ?>
-				
-		</div><!-- about-middle-col -->
+  <div id='about-middle'>
 
-		<div class='about-middle-col'>
-				
-				<?php if ( have_rows( 'about_attorneys_two' ) ) : ?>
-					
-					<?php while ( have_rows( 'about_attorneys_two' ) ) : the_row(); ?>
-					
-						<?php $post_object = get_sub_field( 'about_attorney' ); ?>
-						
-						<?php if ( $post_object ): ?>
-						
-							<?php $post = $post_object; ?>
-							<?php setup_postdata( $post ); ?> 
+    <span id='about-middle-title'><?php the_field('middle_title');?></span><!-- about-middle-title -->
 
-							<div class='about-middle-att'>
-					
-								<?php $attorney_profile = get_field( 'attorney_profile' ); ?>
-								
-								<?php if ( $attorney_profile ) { ?>
-								
-									<img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
-								
-								<?php } ?>
+    <div id='about-middle-col-wrapper'>
 
-								<span class='about-middle-att-title'><?php the_title();?></span><!-- about-middle-att-title -->
+      <div class='about-middle-col'>
 
-								<div class='about-middle-att-content content'>
-					
-									<?php the_sub_field( 'excerpt' ); ?>
+        <?php if (have_rows('about_attorneys')): ?>
 
-								<div class='additional-content'>
-						
-								<?php the_sub_field( 'content' ); ?>
-						
-							</div><!-- additional-content -->
-					
-						</div><!-- about-middle-att-content -->
+        <?php while (have_rows('about_attorneys')): the_row();?>
 
-						<a class='button-three about-read-more'>Read More</a><!-- button-two -->
-				
-					</div><!-- about-middle-att -->
-							
-				<?php wp_reset_postdata(); ?>
-						
-			<?php endif; ?>
-		
-		<?php endwhile; ?>
+        <?php $post_object = get_sub_field('about_attorney');?>
 
-	<?php endif; ?>
-				
-				</div><!-- about-middle-col -->
-			
-			</div><!-- about-middle-col-wrapper -->
-		
-		</div><!-- about-middle -->
+        <?php if ($post_object): ?>
 
-		<div id='about-bottom'>
+        <?php $post = $post_object;?>
+        <?php setup_postdata($post);?>
 
-			<div class='page-title-wrapper'>
+        <div class='about-middle-att'>
 
-				<span class="page-title page-large-content-title page-about-title"><?php the_field( 'bottom_title' ); ?></span>
+          <?php $attorney_profile = get_field('attorney_profile');?>
 
-			</div>
+          <?php if ($attorney_profile) {?>
 
-			<?php if(get_field('bottom_description')) { ?>
+          <img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
 
-			<div id='page-descrip-wrapper'>
+          <?php }?>
 
-				<div id='page-descrip'>
+          <span class='about-middle-att-title'><?php the_title();?></span><!-- about-middle-att-title -->
 
-					<?php the_field( 'bottom_description' ); ?>
+          <div class='about-middle-att-content content'>
 
-				</div><!-- page-descrip -->
+            <?php the_sub_field('excerpt');?>
 
-		</div><!-- page-descrip-wrapper -->
+            <div class='additional-content'>
 
-	<?php } ?>
+              <?php the_sub_field('content');?>
 
-		<div id='about-bottom-content' class="content">
+            </div><!-- additional-content -->
 
-			<?php the_field( 'bottom_content' ); ?>	
+          </div><!-- about-middle-att-content -->
 
-		</div><!-- about-bottom-content  class="content"-->
+          <a class='button-three about-read-more'>Read More</a><!-- button-two -->
 
-	</div><!-- about-bottom -->
-		
+        </div><!-- about-middle-att -->
+
+        <?php wp_reset_postdata();?>
+
+        <?php endif;?>
+
+        <?php endwhile;?>
+
+        <?php endif;?>
+
+      </div><!-- about-middle-col -->
+
+      <div class='about-middle-col'>
+
+        <?php if (have_rows('about_attorneys_two')): ?>
+
+        <?php while (have_rows('about_attorneys_two')): the_row();?>
+
+        <?php $post_object = get_sub_field('about_attorney');?>
+
+        <?php if ($post_object): ?>
+
+        <?php $post = $post_object;?>
+        <?php setup_postdata($post);?>
+
+        <div class='about-middle-att'>
+
+          <?php $attorney_profile = get_field('attorney_profile');?>
+
+          <?php if ($attorney_profile) {?>
+
+          <img src="<?php echo $attorney_profile['url']; ?>" alt="<?php echo $attorney_profile['alt']; ?>" />
+
+          <?php }?>
+
+          <span class='about-middle-att-title'><?php the_title();?></span><!-- about-middle-att-title -->
+
+          <div class='about-middle-att-content content'>
+
+            <?php the_sub_field('excerpt');?>
+
+            <div class='additional-content'>
+
+              <?php the_sub_field('content');?>
+
+            </div><!-- additional-content -->
+
+          </div><!-- about-middle-att-content -->
+
+          <a class='button-three about-read-more'>Read More</a><!-- button-two -->
+
+        </div><!-- about-middle-att -->
+
+        <?php wp_reset_postdata();?>
+
+        <?php endif;?>
+
+        <?php endwhile;?>
+
+        <?php endif;?>
+
+      </div><!-- about-middle-col -->
+
+    </div><!-- about-middle-col-wrapper -->
+
+  </div><!-- about-middle -->
+
+  <div id='about-bottom'>
+
+    <div class='page-title-wrapper'>
+
+      <span class="page-title page-large-content-title page-about-title"><?php the_field('bottom_title');?></span>
+
+    </div>
+
+    <?php if (get_field('bottom_description')) {?>
+
+    <div id='page-descrip-wrapper'>
+
+      <div id='page-descrip'>
+
+        <?php the_field('bottom_description');?>
+
+      </div><!-- page-descrip -->
+
+    </div><!-- page-descrip-wrapper -->
+
+    <?php }?>
+
+    <div id='about-bottom-content' class="content">
+
+      <?php the_field('bottom_content');?>
+
+    </div><!-- about-bottom-content  class="content"-->
+
+  </div><!-- about-bottom -->
+
 </div><!-- internal-main -->
-		
-<?php get_footer(); ?>
+
+<?php get_footer();?>

@@ -3,162 +3,174 @@
   <div id='sec-one-content'>
 
     <div id='sec-one-content-inner'>
-  
-      <span id='sec-one-subtitle'><?php the_field( 'section_one_subtitle' ); ?></span><!-- sec-one-subtitle -->
 
-      <span id='sec-one-title'><?php the_field( 'section_one_title' ); ?></span><!-- sec-one-title -->
+      <span id='sec-one-subtitle'><?php the_field('section_one_subtitle');?></span><!-- sec-one-subtitle -->
 
-      <span id='sec-one-descrip'><?php the_field( 'section_one_description' ); ?></span><!-- sec-one-descrip -->
+      <span id='sec-one-title'><?php the_field('section_one_title');?></span><!-- sec-one-title -->
 
-      <a class='button free-consult-button'><?php the_field( 'free_consultation_verbiage' ); ?></a><!-- button -->
-  
-  </div><!-- sec-one-content-inner -->
+      <span id='sec-one-descrip'><?php the_field('section_one_description');?></span><!-- sec-one-descrip -->
 
-  <div id='hero-slider'>
-  
-    <div class='hero-slide'>
+      <a class='button free-consult-button'><?php the_field('free_consultation_verbiage');?></a><!-- button -->
 
-      <div class='hero-slide-inner'>
-      
-        <picture>
+    </div><!-- sec-one-content-inner -->
 
-          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+    <div id='hero-slider'>
 
-          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1920.jpg'>
+      <div class='hero-slide'>
 
-          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-1400.jpg'>
+        <div class='hero-slide-inner'>
 
-          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-la-tablet.jpg'>
+          <picture>
 
-          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-la-mobile.jpg' alt='' />
+            <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-        </picture>
+            <source media='(min-width: 1380px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-la-1920.jpg'>
 
-      </div><!-- hero-slide-inner -->
+            <source media='(min-width: 1170px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-la-1400.jpg'>
 
-    </div><!-- hero-slide -->
+            <source media='(min-width: 768px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-la-tablet.jpg'>
 
-    <div class='hero-slide'>
+            <img class='hero' src='<?php bloginfo('template_directory');?>/images/hero-image-la-mobile.jpg' alt='' />
 
-      <div class='hero-slide-inner'>
-    
-        <picture>
+          </picture>
 
-          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+        </div><!-- hero-slide-inner -->
 
-          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-1920.jpg'>
+      </div><!-- hero-slide -->
 
-          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-1400.jpg'>
+      <div class='hero-slide'>
 
-          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-tablet.jpg'>
+        <div class='hero-slide-inner'>
 
-          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-oc-mobile.jpg' alt='' />
+          <picture>
 
-        </picture>
+            <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-      </div><!-- hero-slide-inner -->
+            <source media='(min-width: 1380px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-oc-1920.jpg'>
 
-    </div><!-- hero-slide -->
+            <source media='(min-width: 1170px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-oc-1400.jpg'>
 
-    <div class='hero-slide'>
+            <source media='(min-width: 768px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-oc-tablet.jpg'>
 
-      <div class='hero-slide-inner'>
-      
-        <picture>
+            <img class='hero' src='<?php bloginfo('template_directory');?>/images/hero-image-oc-mobile.jpg' alt='' />
 
-          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+          </picture>
 
-          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-1920.jpg'>
+        </div><!-- hero-slide-inner -->
 
-          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-1400.jpg'>
+      </div><!-- hero-slide -->
 
-          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-tablet.jpg'>
+      <div class='hero-slide'>
 
-          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-sd-mobile.jpg' alt='' />
+        <div class='hero-slide-inner'>
 
-        </picture>
+          <picture>
 
-      </div><!-- hero-slide-inner -->
+            <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-    </div><!-- hero-slide -->
+            <source media='(min-width: 1380px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sd-1920.jpg'>
 
-    <div class='hero-slide'>
+            <source media='(min-width: 1170px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sd-1400.jpg'>
 
-      <div class='hero-slide-inner'>
-      
-        <picture>
+            <source media='(min-width: 768px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sd-tablet.jpg'>
 
-          <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
+            <img class='hero' src='<?php bloginfo('template_directory');?>/images/hero-image-sd-mobile.jpg' alt='' />
 
-          <source media='(min-width: 1380px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-1920.jpg'>
+          </picture>
 
-          <source media='(min-width: 1170px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-1400.jpg'>
+        </div><!-- hero-slide-inner -->
 
-          <source media='(min-width: 768px)' srcset='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-tablet.jpg'>
+      </div><!-- hero-slide -->
 
-          <img class='hero' src='<?php bloginfo('template_directory'); ?>/images/hero-image-sf-mobile.jpg' alt='' />
+      <div class='hero-slide'>
 
-        </picture>
+        <div class='hero-slide-inner'>
 
-      </div><!-- hero-slide-inner -->
+          <picture>
 
-    </div><!-- hero-slide -->
+            <!-- <source media='(min-width: 1170px)' data-srcset='' type='image/webp'> -->
 
-  </div><!-- hero-slider -->
+            <source media='(min-width: 1380px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sf-1920.jpg'>
 
-</div><!-- sec-one-content -->
+            <source media='(min-width: 1170px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sf-1400.jpg'>
 
-<div id='sec-one-cr-wrapper' class="preload-section">
+            <source media='(min-width: 768px)'
+              srcset='<?php bloginfo('template_directory');?>/images/hero-image-sf-tablet.jpg'>
 
-  <div id='sec-one-slider-wrapper'>
-  
-    <div id='sec-one-slider' class="preload-slider">
+            <img class='hero' src='<?php bloginfo('template_directory');?>/images/hero-image-sf-mobile.jpg' alt='' />
 
-    <?php if ( have_rows( 'section_one_case_results_slider' ) ) : ?>
-	    
-      <?php while ( have_rows( 'section_one_case_results_slider' ) ) : the_row(); ?>
+          </picture>
+
+        </div><!-- hero-slide-inner -->
+
+      </div><!-- hero-slide -->
+
+    </div><!-- hero-slider -->
+
+  </div><!-- sec-one-content -->
+
+  <div id='sec-one-cr-wrapper' class="preload-section">
+
+    <div id='sec-one-slider-wrapper'>
+
+      <div id='sec-one-slider' class="preload-slider">
+
+        <?php if (have_rows('section_one_case_results_slider')): ?>
+
+        <?php while (have_rows('section_one_case_results_slider')): the_row();?>
 
         <div class='sec-one-slide'>
 
-          <a href="<?php the_sub_field( 'link' ); ?>">
+          <a href="<?php the_sub_field('link');?>">
 
             <div class='sec-one-slide-inner'>
- 
-              <span class='sec-one-subtitle'><?php the_sub_field( 'title' ); ?></span><!-- sec-one-subtitle -->
 
-              <span class='sec-one-title'><?php the_sub_field( 'amount' ); ?></span><!-- sec-one-title -->
+              <span class='sec-one-subtitle'><?php the_sub_field('title');?></span><!-- sec-one-subtitle -->
 
-              <span class='sec-one-descrip'><?php the_sub_field( 'description' ); ?></span><!-- sec-one-descrip -->
+              <span class='sec-one-title'><?php the_sub_field('amount');?></span><!-- sec-one-title -->
+
+              <span class='sec-one-descrip'><?php the_sub_field('description');?></span><!-- sec-one-descrip -->
 
             </div><!-- sec-one-slide-inner -->
 
           </a>
 
         </div><!-- sec-one-slide -->
-		
-	    <?php endwhile; ?>
 
-    <?php endif; ?>
-    
-    </div><!-- sec-one-slider -->
+        <?php endwhile;?>
 
-  </div><!-- sec-one-slider-wrapper -->
+        <?php endif;?>
 
-  <div class='sec-one-arrow sec-one-arrow-left'>
-  
-    <?php echo file_get_contents( get_template_directory() . '/images/arrow-left.svg' ); ?>
-  
-  </div><!-- sec-one-arrow sec-one-arrow-left -->
+      </div><!-- sec-one-slider -->
 
-  <div class='sec-one-arrow sec-one-arrow-right'>
-  
-    <?php echo file_get_contents( get_template_directory() . '/images/arrow-right.svg' ); ?>
-  
-  </div><!-- sec-one-arrow sec-one-arrow-right -->
-  
+    </div><!-- sec-one-slider-wrapper -->
 
-</div><!-- sec-one-cr-wrapper -->
+    <div class='sec-one-arrow sec-one-arrow-left'>
 
-<div style="clear:both"></div>
+      <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
+
+    </div><!-- sec-one-arrow sec-one-arrow-left -->
+
+    <div class='sec-one-arrow sec-one-arrow-right'>
+
+      <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+
+    </div><!-- sec-one-arrow sec-one-arrow-right -->
+
+
+  </div><!-- sec-one-cr-wrapper -->
+
+  <div style="clear:both"></div>
 
 </section><!-- section-one -->
