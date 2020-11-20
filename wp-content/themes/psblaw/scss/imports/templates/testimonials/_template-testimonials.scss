@@ -219,6 +219,9 @@ body.page-template-template-testimonials {
   .single-test-descrip {
     &.content {
       @include mq(large-laptop) {
+        @include quick_type(18px, 30px, null);
+      }
+      @include mq(small-monitor) {
         @include quick_type(20px, 35px, null);
       }
     }
@@ -230,7 +233,7 @@ body.page-template-template-testimonials {
       @include quick_type(14px, 25px, null);
 
       @include mq(large-laptop) {
-        @include quick_type(17px, 35px, null);
+        @include quick_type(15px, 30px, null);
       }
     }
   }

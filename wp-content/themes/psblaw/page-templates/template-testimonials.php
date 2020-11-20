@@ -20,9 +20,15 @@ get_header();?>
 
   </div><!-- page-descrip-wrapper -->
 
-  <a class='button testi-button'
-    href='<?php bloginfo('bloginfo');?>/href'><?php the_field('testimonials_button_verbiage');?></a>
+  <?php
+
+    // this button needs to be coded further to open a form or something if needed
+
+    if (get_field('testimonials_button_verbiage')) {?>
+  <a class='button testi-button' href=''><?php the_field('testimonials_button_verbiage');?></a>
   <!-- button testi-button -->
+
+  <?php }?>
 
   <?php }?>
 

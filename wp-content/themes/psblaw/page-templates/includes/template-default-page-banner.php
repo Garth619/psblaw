@@ -138,45 +138,35 @@
 
   </div><!-- internal-banner-content -->
 
+  <?php if (have_rows('global_internal_banner_location_images', 'option') || get_field('banner_image')): ?>
+
   <div id='internal-banner-slider-wrapper'>
 
     <div id='internal-banner-slider'>
 
-      <div class='internal-banner-slide'>
+      <?php while (have_rows('global_internal_banner_location_images', 'option')): the_row();
 
-        <div class='internal-banner-slide-inner'>
+        $randoms[] = get_sub_field('image');
 
-          <img src='<?php bloginfo('template_directory');?>/images/int-image-la.jpg' alt='' />
+    endwhile;
 
-        </div><!-- internal-banner-slide-inner -->
-
-      </div><!-- internal-banner-slide -->
+    shuffle($randoms);?>
 
       <div class='internal-banner-slide'>
 
         <div class='internal-banner-slide-inner'>
 
-          <img src='<?php bloginfo('template_directory');?>/images/int-image-sf.jpg' alt='' />
+          <?php $banner_image = get_field('banner_image');?>
 
-        </div><!-- internal-banner-slide-inner -->
+          <?php if ($banner_image): ?>
 
-      </div><!-- internal-banner-slide -->
+          <img src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>" />
 
-      <div class='internal-banner-slide'>
+          <?php else: ?>
 
-        <div class='internal-banner-slide-inner'>
+          <img src="<?php echo $randoms[0]; ?>" alt="Banner Location Image" />
 
-          <img src='<?php bloginfo('template_directory');?>/images/int-image-oc.jpg' alt='' />
-
-        </div><!-- internal-banner-slide-inner -->
-
-      </div><!-- internal-banner-slide -->
-
-      <div class='internal-banner-slide'>
-
-        <div class='internal-banner-slide-inner'>
-
-          <img src='<?php bloginfo('template_directory');?>/images/int-image-sd.jpg' alt='' />
+          <?php endif;?>
 
         </div><!-- internal-banner-slide-inner -->
 
@@ -185,6 +175,8 @@
     </div><!-- internal-banner-slider -->
 
   </div><!-- internal-banner-slider-wrapper -->
+
+  <?php endif;?>
 
 </div><!-- internal-banner -->
 

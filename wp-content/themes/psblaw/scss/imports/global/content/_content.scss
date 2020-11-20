@@ -11,7 +11,7 @@
   @include mq(small-tablet) {
     @include quick_type(16px, 30px, null);
   }
-  @include mq(small-laptop) {
+  @include mq(small-monitor) {
     @include quick_type(17px, 30px, null);
   }
   strong {

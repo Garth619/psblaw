@@ -2,12 +2,16 @@
   display: none;
   padding: 47px 45px;
   overflow: hidden;
+  background: $color-dark-three;
   @include mq(small-tablet) {
     padding: 66px 95px;
     position: relative;
   }
   @include mq(small-laptop) {
     display: block;
+    height: 417px;
+  }
+  @include mq(large-laptop) {
     height: 490px;
   }
 }
@@ -15,6 +19,9 @@
 #internal-banner-content {
   text-align: center;
   @include mq(small-laptop) {
+    padding-top: 133px;
+  }
+  @include mq(large-laptop) {
     padding-top: 150px;
   }
 }

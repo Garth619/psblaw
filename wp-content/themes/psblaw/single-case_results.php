@@ -6,6 +6,8 @@
 
     <h1 class="page-title page-large-content-title"><?php the_title();?></h1>
 
+    <span class='button-two case-results-read-more return-to-results go-back'>Return to Results</span>
+
   </div><!-- page-title-wrapper -->
 
   <div id="page-container" class="two-col no-banner-layout">

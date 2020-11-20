@@ -159,7 +159,7 @@ $('.at-above-post').wrapInner('<span class="myshare">Share</span>');
         breakpoint: 1170,
         settings: {
           slidesToShow: 4,
-          slidesToScroll: 4,
+          slidesToScroll: 1,
           vertical:true,
         },
         
@@ -403,17 +403,17 @@ $("#sec-ten-slider").slick({
   ],
 });
 
-$("#internal-banner-slider").slick({
-  infinite: true,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  arrows: false,
-  dots: false,
-  fade:true,
-  pauseOnHover:false,
-  autoplay: true,
-  autoplaySpeed: 3000,
-});
+// $("#internal-banner-slider").slick({
+//   infinite: true,
+//   slidesToShow: 1,
+//   slidesToScroll: 1,
+//   arrows: false,
+//   dots: false,
+//   fade:true,
+//   pauseOnHover:false,
+//   autoplay: true,
+//   autoplaySpeed: 3000,
+// });
 
 
 
@@ -533,6 +533,7 @@ $("#testi-slider").slick({
     }
   ],
 });
+
 
 /* Case Results
 --------------------------------------------------------------------------------------- */
