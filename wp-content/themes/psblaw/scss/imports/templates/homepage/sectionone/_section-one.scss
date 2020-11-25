@@ -211,6 +211,11 @@ img.hero {
     margin: 0;
     padding: 0 35px;
     width: calc(100% - 52px);
+    height: 704px;
+    overflow: hidden;
+  }
+  @include mq(large-laptop) {
+    height: 834px;
   }
   @include mq(small-monitor) {
     padding: 0 42px;
@@ -244,17 +249,19 @@ img.hero {
     text-align: left;
     border-right: none;
     border-bottom: 1px solid #2d58a6;
-    padding: 15px 10px 25px;
-    height: auto;
+    padding: 15px 10px;
+    height: 176px;
   }
   @include mq(large-laptop) {
-    padding: 45px 5px 45px;
+    padding: 35px 5px;
+    height: 208px;
   }
   .sec-one-slide-inner {
     height: 100%;
     @include flex(center, center, column);
     @include mq(small-laptop) {
       display: block;
+      align-items: flex-start;
     }
     span {
       display: block;

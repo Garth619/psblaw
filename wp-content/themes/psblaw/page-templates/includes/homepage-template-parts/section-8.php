@@ -20,6 +20,12 @@
 
       <div id='sec-eight-slider' class="preload-slider">
 
+        <?php $autho = stream_context_create(array(
+    'http' => array(
+        'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
+)
+);?>
+
         <?php if (have_rows('practice_areas_slider')): ?>
 
         <?php while (have_rows('practice_areas_slider')): the_row();?>
@@ -44,7 +50,7 @@
 
                 <?php $svg = get_sub_field('svg');?>
 
-                <?php echo file_get_contents($svg); ?>
+                <?php echo file_get_contents($svg, false, $autho); ?>
 
                 <span><?php the_sub_field('title');?></span>
 

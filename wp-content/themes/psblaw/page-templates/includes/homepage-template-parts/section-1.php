@@ -83,7 +83,10 @@
 
               <span class='sec-one-title'><?php the_sub_field('amount');?></span><!-- sec-one-title -->
 
-              <span class='sec-one-descrip'><?php the_sub_field('description');?></span><!-- sec-one-descrip -->
+              <span class='sec-one-descrip'><?php echo wp_trim_words(get_sub_field('description'), 20, '...'); ?></span>
+              <!-- sec-one-descrip -->
+
+
 
             </div><!-- sec-one-slide-inner -->
 

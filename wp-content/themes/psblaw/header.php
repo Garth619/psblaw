@@ -123,11 +123,17 @@ echo $banner; ?>">
 
             <div class="logo-mobile">
 
+              <?php $auth = stream_context_create(array(
+    'http' => array(
+        'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
+)
+);?>
+
               <?php $logom = get_field('logo', 'option');?>
 
               <?php if ($logom) {
 
-    echo file_get_contents($logom);
+    echo file_get_contents($logom, false, $auth);
 
 }?>
 
@@ -139,7 +145,7 @@ echo $banner; ?>">
 
               <?php if ($logom) {
 
-    echo file_get_contents($logod);
+    echo file_get_contents($logod, false, $auth);
 
 }?>
 
@@ -151,7 +157,7 @@ echo $banner; ?>">
 
               <?php if ($logos) {
 
-    echo file_get_contents($logos);
+    echo file_get_contents($logos, false, $auth);
 
 }?>
 
