@@ -6,12 +6,12 @@
 function load_my_styles_scripts()
 {
 
-    wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
+    //wp_enqueue_style('styles', get_template_directory_uri() . '/style.css', '', 5, 'all');
 
     // disables jquery then registers it again to go into footer
 
     wp_deregister_script('jquery');
-    wp_register_script('jquery', includes_url('/js/jquery/jquery.js'), false, null, true);
+    wp_register_script('jquery', includes_url('/js/jquery/jquery.min.js'), false, null, true);
     wp_enqueue_script('jquery');
 
     // custom js to fall uner jquery in footer
@@ -77,15 +77,36 @@ add_action("gform_enqueue_scripts", "deregister_scripts");
 /* CSS in Header for Lighthouse
 -------------------------------------------------------------- */
 
-// function internal_css_print() {
-//    echo '<style>';
+add_action('wp_head', 'merge_include_css');
+function merge_include_css()
+{
+    $theme = wp_get_theme();
 
-//    include_once get_template_directory() . '/style.css';
+    $styles = file_get_contents(get_stylesheet_directory() . '/style.css');
+    $styles = str_replace("images", site_url() . "/wp-content/themes/$theme->template/images", $styles);
 
-//    echo '</style>';
-// }
+    $mergedCSS .= $styles;
 
-// add_action( 'wp_head', 'internal_css_print' );
+    // $mergedCSS = preg_replace('!/\*[^*]*\*+([^/][^*]*\*+)*/!', '', $mergedCSS);
+    // $mergedCSS = str_replace(': ', ':', $mergedCSS);
+    // $mergedCSS = str_replace(array("\r\n", "\r", "\n", "\t", '  ', '    ', '    '), '', $mergedCSS);
+
+    $mergedCSS = preg_replace('/\/\*((?!\*\/).)*\*\//', '', $mergedCSS);
+    $mergedCSS = preg_replace('/\s{2,}/', ' ', $mergedCSS);
+    $mergedCSS = preg_replace('/\s*([:;{}])\s*/', '$1', $mergedCSS);
+    $mergedCSS = preg_replace('/;}/', '}', $mergedCSS);
+
+    file_put_contents(get_stylesheet_directory() . '/styles-in-head.php', $mergedCSS);
+
+    {
+        echo '<style>';
+
+        include_once get_template_directory() . '/styles-in-head.php';
+
+        echo '</style>';
+    }
+
+}
 
 /* Remove margin from admin bar
 -------------------------------------------------------------- */
@@ -398,3 +419,11 @@ function override_mce_options($initArray)
     return $initArray;
 }
 add_filter('tiny_mce_before_init', 'override_mce_options');
+
+// Add Categories to Pages
+
+function add_categories_to_pages()
+{
+    register_taxonomy_for_object_type('category', 'page');
+}
+add_action('init', 'add_categories_to_pages');

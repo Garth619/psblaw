@@ -79,6 +79,7 @@
   }
   @include mq(large-laptop) {
     padding: 66px 105px 0;
+    max-width: 1080px;
     @include quick_type(55px, 60px, null);
   }
   @include mq(small-monitor) {

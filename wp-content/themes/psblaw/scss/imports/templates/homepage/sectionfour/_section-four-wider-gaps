@@ -1,0 +1,518 @@
+#section-four {
+  background: $color-dark-one;
+  padding: 55px 12px 45px;
+  @include mq(small-tablet) {
+    padding: 85px 40px 105px;
+  }
+  @include mq(small-laptop) {
+    padding: 105px 65px 117px;
+  }
+  @include mq(large-laptop) {
+    padding: 102px 65px 105px;
+  }
+}
+
+#sec-four-inner {
+  text-align: center;
+  position: relative;
+  max-width: 515px;
+  @include margin_lr;
+  @include mq(small-tablet) {
+    max-width: 100%;
+  }
+  @include mq(large-laptop) {
+    max-width: 1190px;
+    overflow: hidden;
+    padding: 0 70px;
+    @include margin_lr;
+  }
+}
+
+span#sec-four-subtitle {
+  display: block;
+  max-width: 308px;
+  @include margin_lr;
+  @include type(
+    (
+      size: 14px,
+      height: 20px,
+      spacing: 1.6px,
+      family: $primaryfont,
+      color: $color-bright-two,
+      weight: 800,
+      transform: uppercase,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 100%;
+  }
+  @include mq(small-laptop) {
+    font-size: 16px;
+  }
+  @include mq(large-laptop) {
+    font-size: 18px;
+  }
+}
+
+span#sec-four-title {
+  display: block;
+  margin-top: 12px;
+  @include type(
+    (
+      size: 33px,
+      height: 38px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+    )
+  );
+  @include mq(small-tablet) {
+    margin-top: 18px;
+    max-width: 553px;
+    @include margin_lr;
+    @include quick_type(50px, 55px, null);
+  }
+  @include mq(small-laptop) {
+    margin-top: 27px;
+    max-width: 813px;
+    @include quick_type(60px, 65px, null);
+  }
+  @include mq(large-laptop) {
+    max-width: 1035px;
+    @include quick_type(75px, 85px, null);
+  }
+}
+
+#sec-four-descrip {
+  margin: 12px auto 0;
+  padding-top: 20px;
+  max-width: 266px;
+  @include type(
+    (
+      size: 14px,
+      height: 22px,
+      family: $primaryfont,
+      color: $color-light-one,
+      weight: 600,
+      align: center,
+    )
+  );
+  @include mq(small-tablet) {
+    max-width: 560px;
+    @include quick_type(16px, 30px, null);
+  }
+  @include mq(small-laptop) {
+    max-width: 830px;
+    @include quick_type(17px, 30px, null);
+  }
+  @include mq(large-laptop) {
+    line-height: 33px;
+  }
+  &:before {
+    background: $color-bright-two;
+    margin-bottom: 24px;
+    @include box(100%, 1px);
+    @include contentdisplay();
+    @include mq(small-tablet) {
+      max-width: 355px;
+      @include margin_lr;
+    }
+    @include mq(small-laptop) {
+      margin-bottom: 35px;
+    }
+    @include mq(large-laptop) {
+      margin-bottom: 30px;
+    }
+  }
+  p {
+    margin-bottom: 10px;
+  }
+}
+
+#sec-four-slider-wrapper {
+  margin-top: 35px;
+  @include flex(space-between, center);
+  @include mq(small-tablet) {
+    margin-top: 45px;
+  }
+}
+
+#sec-four-slider {
+  width: calc(100% - 108px);
+  @include mq(small-tablet) {
+    width: 100%;
+  }
+  @include mq(small-laptop) {
+    margin-top: 130px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 173px;
+  }
+  .slick-slide {
+    @include mq(small-tablet) {
+      margin: 0 9px;
+    }
+    .slick-track {
+      @include mq(small-laptop) {
+        padding: 100px 0;
+      }
+    }
+    @include mq(small-laptop) {
+      //margin: 0 45px;
+    }
+  }
+
+  .slick-list {
+    @include mq(small-tablet) {
+      margin: 0 -9px;
+    }
+    @include mq(small-laptop) {
+      overflow: inherit;
+      //margin: 0 -45px;
+    }
+  }
+  .slick-active {
+    &:hover {
+      .sec-four-hover-data {
+        opacity: 1;
+        transform: translateY(0);
+        transition: opacity 300ms ease-in-out,
+          transform 600ms cubic-bezier(0.17, 0.66, 0.34, 0.98);
+      }
+    }
+  }
+  .slick-dots {
+    position: static;
+    margin-top: 15px;
+    li.slick-active {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li:hover {
+      button {
+        &:before {
+          color: $color-bright-one;
+        }
+      }
+    }
+    li {
+      margin: 0;
+      width: 20px;
+      button {
+        width: 20px;
+        &:before {
+          width: 20px;
+          opacity: 1;
+          color: $color-light-one;
+          font-size: 25px;
+          transition: all 200ms ease-in-out;
+        }
+      }
+    }
+  }
+}
+
+.sec-four-slide {
+  position: relative;
+
+  &:before {
+  }
+}
+
+.sec-four-slide-reg {
+  width: 100%;
+  height: 290px;
+  position: relative;
+  @include mq(small-laptop) {
+    height: 395px;
+  }
+  img {
+    object-fit: cover;
+    @include abs(0, null, null, 0);
+    @include image();
+    @include box(100%);
+  }
+  .sec-four-slide-title-wrapper {
+    @include abs(null, null, 23px, 0, 1);
+    @include mq(large-laptop) {
+      bottom: 50px;
+    }
+    span.sec-four-slide-title {
+      display: block;
+      padding: 0 20px;
+      @include type(
+        (
+          size: 30px,
+          height: 30px,
+          spacing: 0.75px,
+          family: $secondaryfont,
+          color: $color-light-one,
+          weight: 500,
+          align: left,
+        )
+      );
+      @include mq(small-laptop) {
+        @include quick_type(37px, 38px, null);
+      }
+    }
+  }
+  span.sec-four-slide-number {
+    background: $color-bright-one;
+    display: block;
+    @include flex(center, center);
+    @include box(45px);
+    @include abs(0, 0, null, null, 1);
+    @include type(
+      (
+        size: 20px,
+        family: $secondaryfont,
+        color: $color-light-one,
+        weight: 500,
+      )
+    );
+  }
+}
+
+.sec-four-hover-data {
+  display: none;
+  @include mq(small-laptop) {
+    display: block;
+    overflow-y: scroll;
+    opacity: 0;
+    transform: translateY(-20px);
+    background: $color-light-one;
+    padding: 0 34px;
+    -webkit-overflow-scrolling: touch;
+    @include box(133%, 595px);
+    @include abs(-100px, null, null, -16.5%, 2);
+  }
+  @include mq(large-laptop) {
+    left: -23.5%;
+    width: 147%;
+  }
+}
+
+.sec-four-hover-clone {
+  .sec-four-hover-data {
+    display: block;
+  }
+  .sec-four-hover-data-inner {
+    &:after {
+      display: none;
+    }
+  }
+}
+
+.sec-four-hover-data-inner {
+  text-align: left;
+  @include mq(small-laptop) {
+    padding: 45px 0;
+    position: relative;
+    z-index: 1;
+  }
+  span,
+  div {
+    position: relative;
+    z-index: 1;
+  }
+  span {
+    display: block;
+    &.sec-four-hover-subtitle {
+      margin-bottom: 18px;
+      @include type(
+        (
+          size: 14px,
+          height: 16px,
+          family: $primaryfont,
+          color: $color-dark-three,
+          weight: 800,
+        )
+      );
+      @include mq(small-laptop) {
+        font-size: 16px;
+        margin-bottom: 32px;
+      }
+    }
+    &.sec-four-hover-title {
+      @include type(
+        (
+          size: 22px,
+          height: 25px,
+          family: $secondaryfont,
+          color: $color-dark-one,
+          weight: 500,
+        )
+      );
+      @include mq(small-laptop) {
+        @include quick_type(30px, 34px, null);
+      }
+    }
+  }
+  .sec-four-content {
+    margin-top: 18px;
+    @include type(
+      (
+        size: 13px,
+        height: 20px,
+        color: #707070,
+        family: $primaryfont,
+        weight: 600,
+      )
+    );
+    @include mq(small-laptop) {
+      @include quick_type(15px, 25px, null);
+    }
+    p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.sec-four-hover-overlay {
+  width: 90%;
+  background: $color-light-one;
+  transform: translateX(-50%);
+  max-width: 460px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 200ms ease-in-out;
+  -webkit-overflow-scrolling: touch;
+  @include abs(null, null, -10px, 50%);
+  @include mq(small-tablet) {
+    bottom: 65px;
+  }
+  &.open {
+    opacity: 1;
+    visibility: visible;
+    @include mq(small-laptop) {
+      display: none;
+    }
+  }
+}
+
+.sec-four-hover-overlay-inner {
+  text-align: left;
+  padding: 00px 25px 20px;
+  margin-top: 50px;
+  position: relative;
+  height: 505px;
+  overflow-y: scroll;
+}
+
+.sec-four-overlay-close {
+  background: $color-bright-one;
+  @include fixed(0, 0, null, null, 1);
+  @include box(45px);
+  @include flex(center, center);
+  @include type(
+    (
+      size: 20px,
+      family: $secondaryfont,
+      color: $color-light-one,
+      weight: 500,
+    )
+  );
+}
+
+.sec-four-arrow {
+  background: transparent;
+  border-radius: 50%;
+  border: 2px solid $color-bright-one;
+  margin-top: -40px;
+  transition: all 200ms ease-in-out;
+  @include box(40px);
+  @include flex(center, center);
+  @include mq(small-tablet) {
+    display: none;
+  }
+  &:hover {
+    background: #242938;
+  }
+  svg {
+    @include box(7px, 16px);
+  }
+}
+
+.sec-four-arrow-left {
+  svg {
+    margin-left: -4px;
+  }
+}
+
+#sec-four-tablet-arrows-wrapper {
+  display: none;
+  @include mq(small-tablet) {
+    margin-top: 70px;
+    @include flex(space-between, center);
+  }
+  @include mq(small-laptop) {
+    margin-top: 128px;
+  }
+  @include mq(large-laptop) {
+    margin-top: 170px;
+  }
+}
+
+.sec-four-tablet-arrow {
+  padding: 8px 20px;
+  background: transparent;
+  border: 2px solid $color-bright-one;
+  border-radius: 50px;
+  flex-shrink: 0;
+  transition: all 200ms ease-in-out;
+  @include flex(space-between, center);
+  display: flex !important;
+  @include mq(small-laptop) {
+    padding: 13px 24px;
+  }
+  &:hover {
+    background: #242938;
+  }
+  span {
+    @include type(
+      (
+        size: 16px,
+        height: 18px,
+        family: $secondaryfont,
+        color: $color-light-one,
+        weight: 500,
+        transform: lowercase,
+      )
+    );
+    @include mq(small-laptop) {
+      font-size: 18px;
+    }
+  }
+  svg {
+    @include box(9px, 22px);
+    @include mq(small-laptop) {
+      @include box(10px, 24px);
+    }
+  }
+}
+
+.sec-four-tablet-arrow-left {
+  margin-right: 13px;
+  svg {
+    margin-right: 13px;
+    @include mq(small-laptop) {
+      margin-right: 21px;
+    }
+  }
+}
+
+.sec-four-tablet-arrow-right {
+  margin-left: 13px;
+  svg {
+    margin-left: 13px;
+  }
+}
+
+span.sec-four-arrow-divider {
+  flex-grow: 1;
+  background: #1f2a56;
+  @include box(100%, 1px);
+}

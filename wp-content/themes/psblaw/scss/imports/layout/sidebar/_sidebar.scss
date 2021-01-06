@@ -196,6 +196,7 @@ span#sidebar-required {
   h3 {
     display: block;
     margin-bottom: 15px;
+    cursor: pointer;
     word-break: break-all;
     @include type(
       (

@@ -2,6 +2,14 @@ body.page-template-template-contact {
   #internal-banner {
     display: block;
   }
+  #internal-banner-content {
+    @include mq(small-laptop) {
+      padding-top: 93px;
+    }
+    @include mq(large-laptop) {
+      padding-top: 150px;
+    }
+  }
   #page-container {
     padding-top: 0;
     @include mq(small-laptop) {

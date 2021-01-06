@@ -156,6 +156,26 @@
 
         <div class='internal-banner-slide-inner'>
 
+          <?php // blog main feed
+
+    if (basename(get_page_template()) === 'page.php' || is_home() || is_category() || is_archive() && !is_category()) {
+
+        if (is_home() || is_category() || is_archive() && !is_category()): ?>
+
+          <?php $banner_image = get_field('blog_banner_image', 'option');?>
+
+          <?php if ($banner_image): ?>
+
+          <img src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt']; ?>" />
+          <?php else: ?>
+
+          <img src="<?php echo $randoms[0]; ?>" alt="Banner Location Image" />
+
+          <?php endif;?>
+
+          <?php endif;?>
+
+          <?php if (basename(get_page_template()) === 'page.php'): ?>
           <?php $banner_image = get_field('banner_image');?>
 
           <?php if ($banner_image): ?>
@@ -167,6 +187,10 @@
           <img src="<?php echo $randoms[0]; ?>" alt="Banner Location Image" />
 
           <?php endif;?>
+
+          <?php endif;?>
+
+          <?php }?>
 
         </div><!-- internal-banner-slide-inner -->
 

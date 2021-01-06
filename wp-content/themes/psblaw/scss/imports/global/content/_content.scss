@@ -81,16 +81,16 @@
     padding-bottom: 18px;
     @include type(
       (
-        size: 19px,
+        size: 17px,
         height: 30px,
         family: $primaryfont,
         color: $color-dark-three,
         weight: 800,
       )
     );
-    @include mq(small-laptop) {
-      font-size: 22px;
-    }
+    // @include mq(small-laptop) {
+    //   font-size: 19px;
+    // }
   }
   ul {
     list-style: none;

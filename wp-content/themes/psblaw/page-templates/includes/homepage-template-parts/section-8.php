@@ -19,8 +19,8 @@
       </div><!-- sec-eight-arrow sec-eight-arrow-left -->
 
       <div id='sec-eight-slider' class="preload-slider">
-
-        <?php $autho = stream_context_create(array(
+          
+           <?php $autho = stream_context_create(array(
     'http' => array(
         'header' => "Authorization: Basic " . base64_encode("ilawyer:ilawyer")),
 )
