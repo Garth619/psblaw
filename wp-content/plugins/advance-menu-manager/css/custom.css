@@ -1,0 +1,44 @@
+@charset "utf-8";
+/* CSS Document */
+.dotstore_introduction_menu_advance_manager.flat-table table.table-outer tr td { border: 1px solid #ddd; }
+
+.menu_advance_manager_premium_method td.fr-2 { text-align: center; }
+.menu_advance_manager_premium_method .flat-table { width: 69%; display: block; box-sizing: border-box; margin: 0 auto; float: none !important; }
+.menu_advance_manager_premium_method .flat-table h2 { font-size: 19px; font-weight: bold; color: #333; border: 1px solid #ddd; padding: 16px; border-bottom: 0; background: #e9e9e9; text-align: center !important; }
+.menu_advance_manager_premium_method .tab-dot { background: #ffffff; width: 69%; margin: 0 auto; border: 1px solid #e5e5e5; border-radius: 8px; }
+.menu_advance_manager_premium_method .flat-table { width: 100%; }
+.menu_advance_manager_premium_method .tab-dot table.table-outer { width: 90%; margin: 30px auto; border: 1px solid #e5e5e5; }
+.menu_advance_manager_premium_method .wrapper { width: 100%; margin: 0 auto; }
+.menu_advance_manager_premium_method .tab-dot table.table-outer tr.blue th:first-child { border-radius: 0px 0 0 0; }
+.menu_advance_manager_premium_method .tab-dot table.table-outer tr.blue th:nth-child(3) { border-radius: 0 0px 0 0; }
+.menu_advance_manager_premium_method .tab-dot table.table-outer tr.dark.radius-s td.pad { border-radius: 0 0 0 0px; }
+.menu_advance_manager_premium_method .tab-dot table.table-outer tr td.green.red { border-radius: 0px 0px 0px 0; }
+
+p.advance_menu_manager_overview { max-width: 100% !important; margin-left: auto; margin-right: auto; font-size: 15px; line-height: 1.5; }
+.advance_menu_manager_content_ul ul li { margin-left: 3%; list-style: initial; line-height: 23px; }
+.other_feature { margin-top: 3%; }
+
+.dotstore_plugin_supports_feature .image_box {
+  max-width: 100px;
+  width: 100%;
+  margin: 0 auto;
+}
+.dotstore_plugin_supports_feature .image_box img {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+.dotstore_plugin_supports_feature .content_box h3{margin-top: 5px;}
+.dotstore_plugin_supports_feature .content_box {
+  text-align: center;
+  padding: 0 14px;
+}
+.dotstore_plugin_supports_feature .content_box a.btn_style {
+  background-color: #0085ba;
+  PADDING: 10px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: #fff;
+  font-weight: 600;
+}

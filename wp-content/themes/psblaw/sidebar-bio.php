@@ -6,13 +6,18 @@
 
   </div><!-- bio-mobile -->
 
-  <?php if (get_field('attorney_accolades')) {?>
+  <?php
+
+$mycats = get_field('article_categories');
+$mytags = get_field('article_tags');
+
+if ($mycats || $mytags) {?>
 
   <div class="sidebar-box sidebar-bio">
 
     <div class='widget'>
 
-      <h3><?php the_field('verdicts_and_settlements_title');?></h3>
+      <h3><?php the_field('articles_by');?> <?php the_title();?></h3>
 
       <div id='bio-list'>
 
@@ -22,14 +27,34 @@
 
         <?php }?>
 
-        <?php if (have_rows('attorney_accolades')): ?>
-        <ul>
-          <?php while (have_rows('attorney_accolades')): the_row();?>
-          <li><a><?php the_sub_field('list_item');?></a></li>
-          <?php endwhile;?>
-        </ul>
-        <?php endif;?>
+        <?php
 
+    $args = array(
+        'post_type' => 'post',
+        'posts_per_page' => -1,
+        'orderby' => 'date',
+        'tax_query' => array(
+            'relation' => 'OR',
+            array(
+                'taxonomy' => 'category',
+                'field' => 'id',
+                'terms' => $mycats,
+            ),
+            array(
+                'taxonomy' => 'post_tag',
+                'field' => 'id',
+                'terms' => $mytags,
+            ),
+        ),
+    );
+
+    $articles_query = new WP_Query($args);
+    echo "<ul>";
+    while ($articles_query->have_posts()): $articles_query->the_post();?>
+        <li><a href="<?php the_permalink();?>"><?php the_title();?></a></li>
+        <?php endwhile;
+    echo "</ul>";?>
+        <?php wp_reset_postdata();?>
 
       </div><!-- bio-list -->
 
@@ -38,56 +63,88 @@
 
     <?php }?>
 
-    <?php if (get_field('attorney_accolades_slider')) {?>
+    <?php if (get_field('attorney_accolades')) {?>
 
-    <div class='widget articles'>
+    <div class="sidebar-box sidebar-bio">
 
-      <h3><?php the_field('articles_by');?> <?php the_title();?></h3>
+      <div class='widget'>
 
-      <div id='bio-slider-wrapper'>
+        <h3><?php the_field('verdicts_and_settlements_title');?></h3>
 
-        <?php if (have_rows('attorney_accolades_slider')): ?>
-        <div id='bio-slider'>
-          <?php while (have_rows('attorney_accolades_slider')): the_row();?>
+        <div id='bio-list'>
 
-          <div class='bio-slide'>
+          <?php if (get_field('sidebar_list_intro')) {?>
 
-            <span class='bio-slide-title'><?php the_sub_field('title');?></span><!-- bio-slide-title -->
+          <span id='bio-list-decrip'><?php the_field('sidebar_list_intro');?></span><!-- bio-list-decrip -->
 
-            <div class='bio-slide-content content'>
+          <?php }?>
 
-              <?php the_sub_field('content');?>
+          <?php if (have_rows('attorney_accolades')): ?>
+          <ul>
+            <?php while (have_rows('attorney_accolades')): the_row();?>
+            <li><a><?php the_sub_field('list_item');?></a></li>
+            <?php endwhile;?>
+          </ul>
+          <?php endif;?>
 
-            </div><!-- bio-slide-content content -->
 
-          </div><!-- bio-slide -->
+        </div><!-- bio-list -->
 
-          <?php endwhile;?>
-        </div><!-- bio-slider -->
-        <?php endif;?>
 
-        <div class='bio-slider-arrow-wrapper'>
+      </div><!-- widget -->
 
-          <div class='bio-arrow bio-arrow-left'>
+      <?php }?>
 
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
+      <?php if (get_field('attorney_accolades_slider')) {?>
 
-          </div><!-- bio-arrow bio-arrow-left -->
+      <div class='widget articles'>
 
-          <div class='bio-arrow bio-arrow-right'>
+        <h3><?php the_field('articles_by');?> <?php the_title();?></h3>
 
-            <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+        <div id='bio-slider-wrapper'>
 
-          </div><!-- bio-arrow bio-arrow-right -->
+          <?php if (have_rows('attorney_accolades_slider')): ?>
+          <div id='bio-slider'>
+            <?php while (have_rows('attorney_accolades_slider')): the_row();?>
 
-        </div><!-- bio-slider-arrow -->
+            <div class='bio-slide'>
 
-      </div><!-- bio-slider-wrapper -->
+              <span class='bio-slide-title'><?php the_sub_field('title');?></span><!-- bio-slide-title -->
 
-    </div><!-- widget -->
+              <div class='bio-slide-content content'>
 
-    <?php }?>
+                <?php the_sub_field('content');?>
 
-  </div><!-- sidebar-box -->
+              </div><!-- bio-slide-content content -->
 
-</div><!-- sidebar_wrapper -->
+            </div><!-- bio-slide -->
+
+            <?php endwhile;?>
+          </div><!-- bio-slider -->
+          <?php endif;?>
+
+          <div class='bio-slider-arrow-wrapper'>
+
+            <div class='bio-arrow bio-arrow-left'>
+
+              <?php echo file_get_contents(get_template_directory() . '/images/arrow-left.svg'); ?>
+
+            </div><!-- bio-arrow bio-arrow-left -->
+
+            <div class='bio-arrow bio-arrow-right'>
+
+              <?php echo file_get_contents(get_template_directory() . '/images/arrow-right.svg'); ?>
+
+            </div><!-- bio-arrow bio-arrow-right -->
+
+          </div><!-- bio-slider-arrow -->
+
+        </div><!-- bio-slider-wrapper -->
+
+      </div><!-- widget -->
+
+      <?php }?>
+
+    </div><!-- sidebar-box -->
+
+  </div><!-- sidebar_wrapper -->
