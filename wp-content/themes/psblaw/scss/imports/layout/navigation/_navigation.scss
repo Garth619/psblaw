@@ -169,6 +169,19 @@ nav {
       }
     }
     > li.current-menu-ancestor {
+      &#menu-item-29826 {
+        &:hover {
+          > a {
+            color: $color-bright-one;
+          }
+        }
+        > a {
+          color: $color-light-one;
+          &::before {
+            opacity: 0;
+          }
+        }
+      }
       > a {
         color: $color-bright-two;
         &:before {
@@ -249,6 +262,13 @@ nav {
         }
       }
     }
+  }
+}
+
+body.home nav ul.sub-menu li.current-menu-item > a {
+  color: #0e1326;
+  &:hover {
+    color: #bf7b30;
   }
 }
 

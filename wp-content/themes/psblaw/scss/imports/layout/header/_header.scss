@@ -181,7 +181,6 @@ header {
   @include mq(small-laptop) {
     margin-right: 18px;
   }
-
   span {
     display: inline-block;
     @include type(
@@ -194,6 +193,10 @@ header {
         transform: uppercase,
       )
     );
+    > a {
+      color: #fff;
+      text-decoration: none;
+    }
     @media screen and (min-width: 450px) {
       @include flex(center, center);
     }

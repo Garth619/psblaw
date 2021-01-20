@@ -2417,6 +2417,10 @@ header:after {
   font-style: normal;
   text-decoration: none;
 }
+.free-consult-wrapper span > a {
+  color: #fff;
+  text-decoration: none;
+}
 @media screen and (min-width: 450px) {
   .free-consult-wrapper span {
     display: flex;
@@ -3267,6 +3271,15 @@ nav ul.menu > li.current-menu-item > a {
     opacity: 1;
   }
 }
+nav ul.menu > li.current-menu-ancestor#menu-item-29826:hover > a {
+  color: #f29b3b;
+}
+nav ul.menu > li.current-menu-ancestor#menu-item-29826 > a {
+  color: #fff;
+}
+nav ul.menu > li.current-menu-ancestor#menu-item-29826 > a::before {
+  opacity: 0;
+}
 nav ul.menu > li.current-menu-ancestor > a {
   color: #bf7b30;
 }
@@ -3352,6 +3365,13 @@ nav ul.menu > li.menu-item-has-children > a.active:after {
   nav ul.menu > li.menu-item-has-children > a.active:after {
     content: "+";
   }
+}
+
+body.home nav ul.sub-menu li.current-menu-item > a {
+  color: #0e1326;
+}
+body.home nav ul.sub-menu li.current-menu-item > a:hover {
+  color: #bf7b30;
 }
 
 nav ul.sub-menu {
