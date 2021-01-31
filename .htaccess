@@ -1,7 +1,12 @@
-# BEGIN LSCACHE
-# END LSCACHE
-# BEGIN NON_LSCACHE
-# END NON_LSCACHE
+# BEGIN iThemes Security - Do not modify or remove this line
+# iThemes Security Config Details: 2
+	# Pass through Authorization header.
+	<IfModule mod_rewrite.c>
+		RewriteEngine On
+		RewriteCond %{HTTP:Authorization} ^(.*)
+		RewriteRule .* - [e=HTTP_AUTHORIZATION:%1]
+	</IfModule>
+# END iThemes Security - Do not modify or remove this line
 
 # BEGIN WordPress
 # The directives (lines) between "BEGIN WordPress" and "END WordPress" are
@@ -18,58 +23,3 @@ RewriteRule . /index.php [L]
 </IfModule>
 
 # END WordPress
-
-allow from 37.120.131.40
-allow from 5.134.119.194
-allow from 165.227.116.222
-allow from 92.38.139.226
-allow from 213.159.1.75
-allow from 197.189.253.162
-allow from 185.149.235.173
-allow from 184.73.187.186
-allow from 34.226.106.116
-allow from 31.22.115.186
-allow from 199.59.247.242
-allow from 146.88.239.197
-allow from 185.25.204.8
-allow from 79.172.239.249
-allow from 92.38.132.176
-allow from 164.52.202.100
-allow from 156.67.209.151
-allow from 45.132.244.92
-allow from 103.28.90.190
-allow from 46.250.220.133
-allow from 64.225.34.246
-allow from 45.56.77.123
-allow from 45.76.17.119
-allow from 181.215.183.135
-allow from 139.162.89.149
-allow from 163.47.20.24
-allow from 102.129.254.77
-allow from 2.58.28.32
-allow from 91.228.7.67
-allow from 137.220.36.137
-allow from 45.32.210.159
-allow from 45.124.65.86
-allow from 204.10.163.237
-allow from 5.134.119.103
-allow from 5.196.169.11
-allow from 31.220.21.249
-allow from 38.129.107.18
-allow from 49.12.102.29
-allow from 51.68.231.18
-allow from 51.222.28.21
-allow from 64.227.16.93
-allow from 94.75.232.90
-allow from 95.217.200.8
-allow from 185.53.57.40
-allow from 185.53.57.89
-allow from 185.53.57.94
-allow from 185.53.57.240
-allow from 185.53.57.254
-allow from 192.99.38.117
-allow from 194.36.144.221
-allow from 213.184.87.74
-allow from 213.184.87.75
-allow from 18.188.223.222
-allow from 3.122.18.67

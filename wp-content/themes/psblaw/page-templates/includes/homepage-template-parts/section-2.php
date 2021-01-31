@@ -9,9 +9,10 @@
         <?php $section_two_info_image = get_field('section_two_info_image');?>
 
         <?php if ($section_two_info_image) {?>
-
+		<?php if (get_field('section_two_info_button_link')) {?><a href='<?php the_field('section_two_info_button_link');?>'><?php }?>
         <img id='psb-playbook' class="lazyload" data-src="<?php echo $section_two_info_image['url']; ?>"
           alt="<?php echo $section_two_info_image['alt']; ?>" />
+		  <?php if (get_field('section_two_info_button_link')) {?></a><?php }?>
 
         <?php }?>
 

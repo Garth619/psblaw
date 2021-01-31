@@ -158,7 +158,7 @@
 
           <?php // blog main feed
 
-    if (basename(get_page_template()) === 'page.php' || is_home() || is_category() || is_archive() && !is_category()) {
+    if (basename(get_page_template()) === 'page.php' || is_page_template('page-templates/template-contact.php') || is_home() || is_category() || is_archive() && !is_category()) {
 
         if (is_home() || is_category() || is_archive() && !is_category()): ?>
 
@@ -175,7 +175,7 @@
 
           <?php endif;?>
 
-          <?php if (basename(get_page_template()) === 'page.php'): ?>
+          <?php if (is_page_template('page-templates/template-contact.php') || basename(get_page_template()) === 'page.php'): ?>
           <?php $banner_image = get_field('banner_image');?>
 
           <?php if ($banner_image): ?>

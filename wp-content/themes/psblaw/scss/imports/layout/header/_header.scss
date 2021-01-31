@@ -194,7 +194,7 @@ header {
       )
     );
     > a {
-      color: #fff;
+      color: $color-light-one;
       text-decoration: none;
     }
     @media screen and (min-width: 450px) {
@@ -461,6 +461,9 @@ header.header-layout-two {
       &:last-of-type {
         padding-right: 3px;
       }
+      > a {
+        color: $color-bright-two;
+      }
     }
   }
   nav {
@@ -505,6 +508,16 @@ header.header-layout-two {
       > li.current-menu-item {
         > a {
           color: $color-bright-two;
+        }
+      }
+      li.current-menu-ancestor {
+        &#menu-item-29826 {
+          > a {
+            color: $color-dark-one;
+            &:hover {
+              color: $color-bright-two;
+            }
+          }
         }
       }
       > li.menu-item-has-children {
@@ -580,6 +593,11 @@ header.default-banner-layout {
     span {
       @include mq(small-laptop) {
         color: $color-light-one;
+      }
+      > a {
+        @include mq(small-laptop) {
+          color: $color-light-one;
+        }
       }
       &:first-of-type {
         &:after {
@@ -674,6 +692,12 @@ header.header-layout-three {
   .logo-sticky {
     @include mq(small-laptop) {
       display: block;
+      svg {
+        width: 96px;
+        height: auto;
+        top: 3px;
+        position: relative;
+      }
     }
   }
   .header-left {
@@ -730,7 +754,7 @@ header.header-layout-three {
     @include mq(small-monitor) {
       @include flex();
       right: 7px;
-      top: 9px;
+      top: 13px;
     }
     a.header-phone {
       @include mq(small-laptop) {
@@ -745,17 +769,17 @@ header.header-layout-three {
   nav {
     @include mq(small-laptop) {
       max-width: 778px;
-      @include abs(7px, null, null, 133px);
+      @include abs(8px, null, null, 133px);
     }
     @include mq(large-laptop) {
       max-width: 935px;
     }
     @include mq(small-monitor) {
       max-width: 1085px;
-      @include abs(7px, null, null, 135px);
+      @include abs(8px, null, null, 135px);
     }
     @media screen and (min-width: 1835px) {
-      @include abs(7px, null, null, 158px);
+      @include abs(8px, null, null, 158px);
     }
     ul {
       li {

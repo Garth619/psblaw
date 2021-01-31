@@ -44,26 +44,48 @@
 
     <div id='case-results-dropdown'>
 
-      <?php $terms = get_terms('case_results_category');
+      <?php
 
-echo '<ul>';
+$landmarkcat = 62;
 
-foreach ($terms as $term) {
-    $term_link = get_term_link($term);
+echo "<ul>";
 
-    // If there was an error, continue to the next term.
-    if (is_wp_error($term_link)) {
-        continue;
+$landmarkterm = get_term($landmarkcat, $taxonomy);
+$landmarktermlink = get_term_link($landmarkcat);
+
+echo "<li><a href='" . esc_url($landmarktermlink) . "'>" . $landmarkterm->name . "</a></li>";
+
+$args = array(
+    'taxonomy' => array('case_results_category'),
+    'order' => 'ASC',
+    'orderby' => 'name',
+    'hide_empty' => false,
+    'exclude' => array($landmarkcat),
+);
+
+$term_query = new WP_Term_Query($args);
+
+if (!empty($term_query) && !is_wp_error($term_query)) {
+    foreach ($term_query->terms as $term) {
+        $term_link = get_term_link($term);
+
+        if (is_wp_error($term_link)) {
+            continue;
+        }
+
+        echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
     }
-
-    echo '<li><a href="' . esc_url($term_link) . '">' . $term->name . '</a></li>';
 }
 
 if (is_tax('case_results_category')) {
     echo "<li><a href='" . get_post_type_archive_link('case_results') . "'>View All+</a></li>";
 }
 
-echo '</ul>';?>
+echo "<ul>";
+
+?>
+
+
 
     </div><!-- case-results-dropdown -->
 
@@ -145,20 +167,20 @@ while ($wp_query->have_posts()): $wp_query->the_post();?>
 
     <div class='single-cr'>
 
+      <span class='single-cr-title'><?php the_title();?></span><!-- single-cr-amount -->
+
+      <span class='single-cr-amount'><?php the_field('case_result_amount');?></span><!-- single-cr-amount -->
+
       <?php $terms = get_the_terms($post->ID, 'case_results_category');
 
     if (!empty($terms)) {
         echo "<ul>";
         foreach ($terms as $term) {
             $url = get_term_link($term->slug, 'case_results_category');
-            echo "<li><a href='{$url}'>{$term->name}</a></li>";
+            echo "<li>{$term->name}</li>";
         }
         echo "</ul>";
     }?>
-
-      <span class='single-cr-amount'><?php the_field('case_result_amount');?></span><!-- single-cr-amount -->
-
-      <span class='single-cr-title'><?php the_title();?></span><!-- single-cr-amount -->
 
       <a class='button-two case-results-read-more' href='<?php the_permalink();?>'>Read More</a><!-- button-two -->
 

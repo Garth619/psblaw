@@ -159,6 +159,9 @@ span#sec-two-title {
     font-size: 20px;
     margin-left: 70px;
   }
+  @include mq(small-monitor) {
+    margin-left: 108px;
+  }
 }
 
 #sec-two-slide-wrapper {
